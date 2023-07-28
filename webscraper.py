@@ -1,34 +1,24 @@
-from requests_html import HTMLSession
+import csv
+import requests
 from bs4 import BeautifulSoup
 
-s = HTMLSession()
-url = 'https://books.toscrape.com/catalogue/page-1.html'
-base_url = 'https://books.toscrape.com/catalogue/page-{}.html'
-all_titles = []
+url = 'https://www.autotrader.co.uk/car-search?postcode=SW1A%200AA&make=&include-delivery-option=on&advertising-location=at_cars&page=1'
 
+def scrape_autotrader(url):
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, "html.parser")
 
-def getData(url):
-    r = s.get(url)
-    soup = BeautifulSoup(r.text, 'html.parser')
-    return soup
+    car_details = []
+    search_results = soup.find_all("li", class_="search-page__result")
+    for result in search_results:
+        make = result.find("h2", class_="listing-title").text.strip()
+        price = result.find("div", class_="vehicle-price").text.strip()
+        car_details.append({"make": make, "price": price})
 
+    return car_details
 
-def getTitles(soup):
-    titles = soup.find_all('a', {'title': True})
-    return [title.get('title') for title in titles]
-
-
-for page_number in range(1, 51):
-    page_url = base_url.format(page_number)
-    titles = getTitles(getData(page_url))
-    all_titles.extend(titles)
-
-print(len(all_titles))
-
-
-def testing():
-    for i in range(5):
-        print(len(all_titles))
-
-           
-print(testing())
+scraped_data = scrape_autotrader(url)
+for car in scraped_data:
+    print(f"Make: {car['make']}, Price: {car['price']}")
+    
+print("hello world!")
