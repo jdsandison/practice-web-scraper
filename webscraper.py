@@ -2,13 +2,16 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 
+headers = {"User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"}
+
+
 def find_listings(search_url):
-    response = requests.get(search_url)
+    response = requests.get(search_url, headers=headers)
     soup = BeautifulSoup(response.content, "html.parser")
 
-    listing_links = soup.find_all("a", attrs={"data-testid": "search-listing-title"})
-    for link in listing_links:
-        car_title = link.find("h3").text.strip()
+    car_titles = soup.find_all("p", attrs={"data-testid": "search-listing-subtitle", "class": "sc-kcuKUB sc-fWFeAW gZMaoW VTOnK"})
+    for title in car_titles:
+        car_title = title.text.strip()
         print(car_title)
 
 def main():
