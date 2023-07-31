@@ -9,13 +9,14 @@ def find_listings(search_url):
     response = requests.get(search_url, headers=headers)
     soup = BeautifulSoup(response.content, "html.parser")
 
-    car_titles = soup.find_all("p", attrs={"data-testid": "search-listing-subtitle", "class": "sc-kcuKUB sc-fWFeAW gZMaoW VTOnK"})
+    parent_div = soup.find("div", adid="30186438")
+    car_titles = parent_div.find("div", class_="result-item__description hidden-xs")
     for title in car_titles:
         car_title = title.text.strip()
         print(car_title)
 
 def main():
-    search_url = 'https://www.autotrader.co.uk/car-search?postcode=SW1A%200AA&make=&include-delivery-option=on&advertising-location=at_cars&page=1'
+    search_url = 'https://www.exchangeandmart.co.uk/used-cars-for-sale'
     find_listings(search_url)
 
 if __name__ == "__main__":
