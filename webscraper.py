@@ -24,33 +24,23 @@ def get_info(search_url):
         models.append(div.get("model", "Unknown model"))
         id_values.append(div.get("adid", "Unknown id"))
 
-
+    print(id_values)
 def manufacture_link(advert_base_url, id):
     return advert_base_url + "/ad/" + str(id)
 
 
 def advert_info(url):
-    info_dictionary = {
-        'wheel_drive': 0,
-        'doors': 0,
-        'seats': 0,
-        'boot_capacity': 0,
-        'engine_power': 0,
-        'top_speed': 0,
-        'acceleration': 0,
-        'co2': 0,
-        'range_of_tank': 0,
-        'tax': 0}
     for i in range(0, len(id_values)):
-        current_advert_link = manufacture_link("https://www.exchangeandmart.co.uk/", id_values[i])
+        current_advert_link = manufacture_link("https://www.exchangeandmart.co.uk", id_values[i])
         soup = get_soup(current_advert_link)
-
-        div_elements = soup.find_all("div", class_="adSpecItem")
-        div_elements.pop()
-        
-        keys_to_update = ['wheel_drive', 'doors', 'seats', 'boot_capacity', 'engine_power', 'top_speed', 'acceleration', 'co2', 'range_of_tank', 'tax']
-        for key, value in zip(keys_to_update, div_elements):
-            info_dictionary[key] = value
+        specs = {}
+        ad_spec_items = soup.find_all("div", class_="adSpecItem")
+        for item in ad_spec_items:
+            data = list(item.stripped_strings)
+            key = data[0].strip(':')
+            value = data[1]
+            specs[key] = value
+        print(specs)
 
 def main():
     base_url = 'https://www.exchangeandmart.co.uk/used-cars-for-sale/under-1-miles-from-dn3-3eh/page'
@@ -64,6 +54,7 @@ def main():
             break
 
         get_info(current_url)
+        advert_info(current_url)
         page_number += 1
 
 
