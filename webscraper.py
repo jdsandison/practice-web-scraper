@@ -1,13 +1,18 @@
 import requests
 from bs4 import BeautifulSoup
 import csv
-import json
+import pandas as pd
 
 headers = {"User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"}
 
 makes = []
 models = []
 id_values = []
+
+# creating an empty dataframe
+columns = ["Make", "Model", "Ad_ID", "Wheel drive", "Doors", "Seats", "Engine power", "Top speed", "Acceleration (0-62 mph)", "CO2 rating", "Annual tax"]
+df = pd.DataFrame(columns=columns)
+
 
 
 def get_soup(url):
