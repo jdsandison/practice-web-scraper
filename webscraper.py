@@ -63,12 +63,14 @@ def advert_info(url, makes, models, id_values):
             df_row['Make'] = makes[i]
             df_row['Model'] = models[i]
             df_row['Ad_ID'] = id_values[i]
-            df_updated = pd.concat([df_updated, pd.DataFrame([df_row])], ignore_index=True)    
+            df_updated = pd.concat([df_updated, pd.DataFrame([df_row])], ignore_index=True)
+            print('Done')
 
         if 'Annual tax' in specs:
             df['Annual tax'] = df['Annual tax'].str.replace('£', '')
     
-        print(df_updated)
+
+    df_updated.to_csv('data.csv')
 
 def main():
     base_url = 'https://www.exchangeandmart.co.uk/used-cars-for-sale/under-1-miles-from-dn3-3eh/page'
@@ -83,7 +85,6 @@ def main():
 
         advert_info(current_url, makes, models, id_values)
         page_number += 1
-
 
 
 if __name__ == "__main__":
