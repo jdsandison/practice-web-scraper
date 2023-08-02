@@ -17,8 +17,7 @@ def get_soup(url):
 
 
 def get_info(search_url):
-    global makes, models, ad_id
-    
+    global makes, models, id_values
     soup = get_soup(search_url)
     div_elements = soup.find_all("div", class_="result-item")
 
@@ -32,18 +31,23 @@ def get_info(search_url):
             models.append(model)
             id_values.append(ad_id)
 
-    #print(id_values, makes, models)
+    first_set_of_data = {
+        'Makes': makes,
+        'Models': models,
+        'ID values': id_values
+    }
+    first_dataframe = pd.DataFrame(first_set_of_data)
+
+    return first_dataframe
 
 
 def manufacture_link(advert_base_url, id):
     return advert_base_url + "/ad/" + str(id)
 
 
-def advert_info(url, makes, models, id_values):
+def advert_info(url, first_dataframe):
     get_info(url)
     specs_list = []
-    columns = ["Make", "Model", "Ad_ID", "Wheel drive", "Doors", "Seats", "Engine power", "Top speed", "Acceleration (0-62 mph)", "CO2 rating", "Annual tax"]
-    df = pd.DataFrame(columns=columns)
     for i in range(0, len(id_values)):
         current_advert_link = manufacture_link("https://www.exchangeandmart.co.uk", id_values[i])
         soup = get_soup(current_advert_link)
@@ -54,27 +58,39 @@ def advert_info(url, makes, models, id_values):
             key = data[0].strip(':')
             value = data[1]
             specs[key] = value
+
+        if specs:
             specs_list.append(specs)
-            
-        df_updated = df.copy()    
-        for i in range(len(id_values)):
-            values_to_write = [specs.get(info, '') for info in columns[3:]]
-            df_row = dict(zip(columns[3:], values_to_write))
-            df_row['Make'] = makes[i]
-            df_row['Model'] = models[i]
-            df_row['Ad_ID'] = id_values[i]
-            df_updated = pd.concat([df_updated, pd.DataFrame([df_row])], ignore_index=True)
-            print('Done')
 
-        if 'Annual tax' in specs:
-            df['Annual tax'] = df['Annual tax'].str.replace('£', '')
-    
+    second_dataframe = pd.DataFrame(specs_list)
 
-    df_updated.to_csv('data.csv')
+    big_dataframe = pd.concat([first_dataframe, second_dataframe], axis=1)
+
+    big_dataframe.to_csv('data.csv', index=False, encoding='utf-8')
+
+    #print(second_dataframe)
+    #second_dataframe.to_csv('data.csv', index=False, encoding='utf-8')
+
+    # with open("specs.csv", "w", newline="") as csvfile:
+    #     info_included = ["Wheel drive", "Doors", "Seats", "Engine power", "Top speed", "Acceleration (0-62 mph)", "CO2 rating", "Annual tax"]
+    #     writer = csv.writer(csvfile)
+    #     writer.writerow(info_included)
+    #     for specs in specs_list:
+    #         values_to_write = []
+    #
+    #         for info in info_included:
+    #             value = specs.get(info, '')
+    #             if info == 'Annual tax':
+    #                 value = value.replace('£', '')
+    #             values_to_write.append(value)
+    #
+    #         writer.writerow(values_to_write)
+
 
 def main():
     base_url = 'https://www.exchangeandmart.co.uk/used-cars-for-sale/under-1-miles-from-dn3-3eh/page'
     page_number = 1
+    max_page = 3
 
     while True:
         current_url = base_url + str(page_number)
@@ -83,7 +99,11 @@ def main():
         if not soup.find("div", class_="result-item"):
             break
 
-        advert_info(current_url, makes, models, id_values)
+        if page_number > max_page:
+            break
+
+        first_dataframe = get_info(current_url)
+        advert_info(current_url, first_dataframe)
         page_number += 1
 
 
