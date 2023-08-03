@@ -1,31 +1,51 @@
-,Make,Model,Ad_ID,Wheel drive,Doors,Seats,Engine power,Top speed,Acceleration (0-62 mph),CO2 rating,Annual tax
-0,Vauxhall,Corsa,30186438,,,,,,,,
-1,Vauxhall,Mokka,30086781,,,,,,,,
-2,Vauxhall,Corsa,30086788,,,,,,,,
-3,Vauxhall,Mokka,30086785,,,,,,,,
-4,Vauxhall,Mokka,30086782,,,,,,,,
-5,Vauxhall,Corsa,30009858,,,,,,,,
-6,Vauxhall,Mokka,30275102,,,,,,,,
-7,Vauxhall,Mokka,30086779,,,,,,,,
-8,Nissan,Qashqai,30270084,,,,,,,,
-9,Vauxhall,Mokka X,30058754,,,,,,,,
-10,Seat,Ateca,30170511,,,,,,,,
-11,Vauxhall,Crossland X,29904968,,,,,,,,
-12,Volkswagen,Caddy Maxi Life,30319796,,,,,,,,
-13,Vauxhall,Mokka X,29976631,,,,,,,,
-14,Toyota,Yaris,30079016,,,,,,,,
-15,Toyota,Yaris,30105839,,,,,,,,
-16,Vauxhall,Astra,30032361,,,,,,,,
-17,Vauxhall,Insignia,30170512,,,,,,,,
-18,Mitsubishi,Eclipse Cross,30092819,,,,,,,,
-19,Vauxhall,Grandland X,30304813,,,,,,,,
-20,Volkswagen,Golf,29904967,,,,,,,,
-21,Vauxhall,Mokka X,30058752,,,,,,,,
-22,Vauxhall,Combo Life,30016385,,,,,,,,
-23,Ford,Fiesta,30315097,,,,,,,,
-24,Citroen,C5 Aircross,30170509,,,,,,,,
-25,Vauxhall,Grandland X,30097879,,,,,,,,
-26,Mercedes-Benz,A Class,30184837,,,,,,,,
-27,Volkswagen,Tiguan,29306648,,,,,,,,
-28,Audi,A4,30272964,,,,,,,,
-29,Peugeot,3008,30109001,,,,,,,,
+Makes,Models,ID values,Wheel drive,Doors,Seats,Engine power,Top speed,Acceleration (0-62 mph),CO2 rating,Tank range,Annual tax,Insurance,Delivery,Boot capacity
+Vauxhall,Corsa,30186438,Front Wheel Drive,5,5,99 bhp,121 mph,9.3 seconds,116 g/km,526 miles,£180,(Get a quote),Home delivery available,
+Vauxhall,Mokka,30086781,Front Wheel Drive,5,5,128 bhp,125 mph,9.1 seconds,126 g/km,497 miles,£180,(Get a quote),Home delivery available,1105
+Vauxhall,Corsa,30009858,Front Wheel Drive,5,5,99 bhp,119 mph,10.2 seconds,99 g/km,,£180,(Get a quote),Home delivery available,
+Vauxhall,Corsa,30086788,Front Wheel Drive,5,5,134 bhp,93 mph,7.6 seconds,0 g/km,,,(Get a quote),Home delivery available,1081
+Vauxhall,Mokka,30086785,Front Wheel Drive,5,5,128 bhp,125 mph,9.1 seconds,126 g/km,497 miles,£180,(Get a quote),Home delivery available,1105
+Vauxhall,Mokka,30275102,Front Wheel Drive,5,5,128 bhp,124 mph,9.2 seconds,135 g/km,448 miles,£180,(Get a quote),Home delivery available,1105
+Vauxhall,Mokka,30086782,Front Wheel Drive,5,5,128 bhp,124 mph,9.2 seconds,132 g/km,464 miles,£180,(Get a quote),Home delivery available,1105
+Vauxhall,Mokka,30086779,Front Wheel Drive,5,5,128 bhp,125 mph,9.1 seconds,126 g/km,497 miles,£180,(Get a quote),Home delivery available,1105
+Nissan,Qashqai,30270084,Front Wheel Drive,5,5,158 bhp,124 mph,8.6 seconds,153 g/km,502 miles,£180,(Get a quote),Home delivery available,430
+Vauxhall,Mokka X,30058754,Front Wheel Drive,5,5,138 bhp,122 mph,9.6 seconds,147 g/km,457 miles,£180,(Get a quote),Home delivery available,356
+Vauxhall,Corsa,30186438,Front Wheel Drive,5,5,99 bhp,121 mph,9.3 seconds,116 g/km,526 miles,£180,(Get a quote),Home delivery available,
+Vauxhall,Mokka,30086781,Front Wheel Drive,5,5,128 bhp,125 mph,9.1 seconds,126 g/km,497 miles,£180,(Get a quote),Home delivery available,1105
+Vauxhall,Corsa,30009858,Front Wheel Drive,5,5,99 bhp,119 mph,10.2 seconds,99 g/km,,£180,(Get a quote),Home delivery available,
+Vauxhall,Corsa,30086788,Front Wheel Drive,5,5,134 bhp,93 mph,7.6 seconds,0 g/km,,,(Get a quote),Home delivery available,1081
+Vauxhall,Mokka,30086785,Front Wheel Drive,5,5,128 bhp,125 mph,9.1 seconds,126 g/km,497 miles,£180,(Get a quote),Home delivery available,1105
+Vauxhall,Mokka,30275102,Front Wheel Drive,5,5,128 bhp,124 mph,9.2 seconds,135 g/km,448 miles,£180,(Get a quote),Home delivery available,1105
+Vauxhall,Mokka,30086782,Front Wheel Drive,5,5,128 bhp,124 mph,9.2 seconds,132 g/km,464 miles,£180,(Get a quote),Home delivery available,1105
+Vauxhall,Mokka,30086779,Front Wheel Drive,5,5,128 bhp,125 mph,9.1 seconds,126 g/km,497 miles,£180,(Get a quote),Home delivery available,1105
+Nissan,Qashqai,30270084,Front Wheel Drive,5,5,158 bhp,124 mph,8.6 seconds,153 g/km,502 miles,£180,(Get a quote),Home delivery available,430
+Vauxhall,Mokka X,30058754,Front Wheel Drive,5,5,138 bhp,122 mph,9.6 seconds,147 g/km,457 miles,£180,(Get a quote),Home delivery available,356
+Seat,Ateca,30170511,Front Wheel Drive,5,5,148 bhp,123 mph,8.5 seconds,126 g/km,478 miles,£180,(Get a quote),Home delivery available,510
+Vauxhall,Crossland X,29904968,Front Wheel Drive,5,5,128 bhp,123 mph,9.5 seconds,113 g/km,437 miles,£180,(Get a quote),Home delivery available,410
+Volkswagen,Caddy Maxi Life,30319796,Front Wheel Drive,5,7,101 bhp,106 mph,13.4 seconds,142 g/km,611 miles,£180,(Get a quote),Home delivery available,
+Vauxhall,Mokka X,29976631,Front Wheel Drive,5,5,138 bhp,119 mph,10.1 seconds,157 g/km,434 miles,£180,(Get a quote),Home delivery available,356
+Toyota,Yaris,30079016,Front Wheel Drive,5,5,109 bhp,108 mph,11.2 seconds,108 g/km,544 miles,£180,(Get a quote),Home delivery available,286
+Toyota,Yaris,30105839,Front Wheel Drive,5,5,109 bhp,108 mph,11.0 seconds,109 g/km,544 miles,£180,(Get a quote),Home delivery available,286
+Vauxhall,Astra,30032361,Front Wheel Drive,5,5,160 bhp,127 mph,10.3 seconds,159 g/km,560 miles,£180,(Get a quote),Home delivery available,
+Vauxhall,Insignia,30170512,Front Wheel Drive,5,5,128 bhp,117 mph,9.5 seconds,146 g/km,532 miles,£180,(Get a quote),Home delivery available,514
+Mitsubishi,Eclipse Cross,30092819,Front Wheel Drive,5,5,148 bhp,123 mph,8.5 seconds,126 g/km,478 miles,£180,(Get a quote),Home delivery available,510
+Vauxhall,Grandland X,30304813,Front Wheel Drive,5,5,128 bhp,123 mph,9.5 seconds,113 g/km,437 miles,£180,(Get a quote),Home delivery available,410
+Seat,Ateca,30170511,Front Wheel Drive,5,7,101 bhp,106 mph,13.4 seconds,142 g/km,611 miles,£180,(Get a quote),Home delivery available,
+Vauxhall,Crossland X,29904968,Front Wheel Drive,5,5,138 bhp,119 mph,10.1 seconds,157 g/km,434 miles,£180,(Get a quote),Home delivery available,356
+Volkswagen,Caddy Maxi Life,30319796,Front Wheel Drive,5,5,109 bhp,108 mph,11.2 seconds,108 g/km,544 miles,£180,(Get a quote),Home delivery available,286
+Vauxhall,Mokka X,29976631,Front Wheel Drive,5,5,109 bhp,108 mph,11.0 seconds,109 g/km,544 miles,£180,(Get a quote),Home delivery available,286
+Toyota,Yaris,30079016,Front Wheel Drive,5,5,160 bhp,127 mph,10.3 seconds,159 g/km,560 miles,£180,(Get a quote),Home delivery available,
+Toyota,Yaris,30105839,Front Wheel Drive,5,5,128 bhp,117 mph,9.5 seconds,146 g/km,532 miles,£180,(Get a quote),Home delivery available,514
+Vauxhall,Astra,30032361,Front Wheel Drive,5,5,128 bhp,130 mph,8.8 seconds,113 g/km,648 miles,£180,(Get a quote),Home delivery available,380
+Vauxhall,Insignia,30170512,Front Wheel Drive,5,5,138 bhp,122 mph,9.6 seconds,147 g/km,457 miles,£180,(Get a quote),Home delivery available,356
+Mitsubishi,Eclipse Cross,30092819,Front Wheel Drive,5,5,128 bhp,115 mph,10.6 seconds,114 g/km,554 miles,£180,(Get a quote),Home delivery available,
+Vauxhall,Grandland X,30304813,Front Wheel Drive,5,5,128 bhp,123 mph,9.5 seconds,113 g/km,437 miles,£180,(Get a quote),Home delivery available,410
+MINI,Hatch,30285616,Front Wheel Drive,5,5,129 bhp,117 mph,10.5 seconds,119 g/km,514 miles,£180,(Get a quote),Home delivery available,580
+Volkswagen,Golf,29904967,Front Wheel Drive,5,5,128 bhp,117 mph,9.5 seconds,114 g/km,532 miles,£180,(Get a quote),Home delivery available,514
+Kia,Venga,30295723,Front Wheel Drive,5,5,128 bhp,130 mph,8.8 seconds,113 g/km,648 miles,£180,(Get a quote),Home delivery available,380
+Vauxhall,Mokka X,30058752,Front Wheel Drive,5,5,138 bhp,122 mph,9.6 seconds,147 g/km,457 miles,£180,(Get a quote),Home delivery available,356
+Vauxhall,Combo Life,30016385,Front Wheel Drive,5,5,128 bhp,115 mph,10.6 seconds,114 g/km,554 miles,£180,(Get a quote),Home delivery available,
+Ford,Fiesta,30315097,Front Wheel Drive,5,5,129 bhp,117 mph,10.5 seconds,119 g/km,514 miles,£180,(Get a quote),Home delivery available,580
+Vauxhall,Viva,30295727,Front Wheel Drive,5,5,128 bhp,117 mph,9.5 seconds,114 g/km,532 miles,£180,(Get a quote),Home delivery available,514
+Vauxhall,Crossland X,30292485,Front Wheel Drive,5,5,134 bhp,134 mph,8.8 seconds,122 g/km,270 miles,£180,(Get a quote),Home delivery available,370
+Citroen,C5 Aircross,30170509,Front Wheel Drive,4,5,148 bhp,140 mph,8.9 seconds,163 g/km,466 miles,£170,(Get a quote),Home delivery available,
+Vauxhall,Grandland X,30097879,,,,,,,,,,,,

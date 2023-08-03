@@ -45,7 +45,7 @@ def manufacture_link(advert_base_url, id):
     return advert_base_url + "/ad/" + str(id)
 
 
-def advert_info(url, first_dataframe):
+def advert_info(url, first_dataframe, another_dataframe):
     get_info(url)
     specs_list = []
     for i in range(0, len(id_values)):
@@ -68,23 +68,34 @@ def advert_info(url, first_dataframe):
 
     big_dataframe.to_csv('data.csv', index=False, encoding='utf-8')
 
-    #print(second_dataframe)
-    #second_dataframe.to_csv('data.csv', index=False, encoding='utf-8')
 
-    # with open("specs.csv", "w", newline="") as csvfile:
-    #     info_included = ["Wheel drive", "Doors", "Seats", "Engine power", "Top speed", "Acceleration (0-62 mph)", "CO2 rating", "Annual tax"]
-    #     writer = csv.writer(csvfile)
-    #     writer.writerow(info_included)
-    #     for specs in specs_list:
-    #         values_to_write = []
-    #
-    #         for info in info_included:
-    #             value = specs.get(info, '')
-    #             if info == 'Annual tax':
-    #                 value = value.replace('£', '')
-    #             values_to_write.append(value)
-    #
-    #         writer.writerow(values_to_write)
+testing_list = []
+
+
+def more_info(url):
+    soup = get_soup(url)
+    list_of_extra_info = []
+    my_list = []
+    info_dictionary = {}
+    extra_info = soup.find_all("div", class_="adDetsItem")
+    types_of_data = ['Year', 'Engine size', 'Mileage', 'Fuel type', 'Transmission', 'Colour', 'Body type', 'Mpg']
+
+    for info in extra_info:
+        data = info.text.strip()
+        my_list.append(data)
+
+    for i in range(len(types_of_data)):
+        key = types_of_data[i]
+        value = my_list[i]
+
+        info_dictionary[key] = value
+
+    if info_dictionary:
+        list_of_extra_info.append(info_dictionary)
+
+    extra_dataframe = pd.DataFrame(list_of_extra_info)
+
+    return extra_dataframe
 
 
 def main():
@@ -102,8 +113,13 @@ def main():
         if page_number > max_page:
             break
 
-        first_dataframe = get_info(current_url)
-        advert_info(current_url, first_dataframe)
+        #first_dataframe = get_info(current_url)
+        #advert_info(current_url, first_dataframe, another_dataframe)
+
+        testing_url = 'https://www.exchangeandmart.co.uk/ad/30026731'
+        extra_dataframe = more_info(testing_url)
+        print(extra_dataframe)
+
         page_number += 1
 
 
