@@ -47,13 +47,10 @@ def manufacture_link(advert_base_url, id):
 
 def advert_info(url, first_dataframe):
     get_info(url)
-    mega_extra_dataframe = pd.DataFrame()
     specs_list = []
     for i in range(0, len(id_values)):
         current_advert_link = manufacture_link("https://www.exchangeandmart.co.uk", id_values[i])
         soup = get_soup(current_advert_link)
-        extra_dataframe = more_info(current_advert_link)
-        mega_extra_dataframe = pd.concat([mega_extra_dataframe, extra_dataframe], axis=1)
         specs = {}
         ad_spec_items = soup.find_all("div", class_="adSpecItem")
         for item in ad_spec_items:
@@ -67,7 +64,7 @@ def advert_info(url, first_dataframe):
 
     second_dataframe = pd.DataFrame(specs_list)
 
-    big_dataframe = pd.concat([first_dataframe, second_dataframe, mega_extra_dataframe], axis=1)
+    big_dataframe = pd.concat([first_dataframe, second_dataframe], axis=1)
 
     big_dataframe.to_csv('data.csv', index=False, encoding='utf-8')
 
@@ -98,6 +95,17 @@ def more_info(url):
     return extra_dataframe
 
 
+def temp_function():
+    bigger_dataset = pd.DataFrame()
+    for i in range(len(id_values)):
+        current_advert_link = manufacture_link("https://www.exchangeandmart.co.uk", id_values[i])
+        print(current_advert_link)
+        #smaller_dataset = more_info(current_advert_link)
+        #bigger_dataset = pd.concat([bigger_dataset, smaller_dataset], axis=0)
+
+    return bigger_dataset
+
+
 def main():
     base_url = 'https://www.exchangeandmart.co.uk/used-cars-for-sale/under-1-miles-from-dn3-3eh/page'
     page_number = 1
@@ -115,10 +123,9 @@ def main():
 
         first_dataframe = get_info(current_url)
 
-        advert_info(current_url, first_dataframe)
+        #advert_info(current_url, first_dataframe)
 
-
-
+        temp_function()
         page_number += 1
 
 
