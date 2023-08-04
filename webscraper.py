@@ -45,12 +45,15 @@ def manufacture_link(advert_base_url, id):
     return advert_base_url + "/ad/" + str(id)
 
 
-def advert_info(url, first_dataframe, another_dataframe):
+def advert_info(url, first_dataframe):
     get_info(url)
+    mega_extra_dataframe = pd.DataFrame()
     specs_list = []
     for i in range(0, len(id_values)):
         current_advert_link = manufacture_link("https://www.exchangeandmart.co.uk", id_values[i])
         soup = get_soup(current_advert_link)
+        extra_dataframe = more_info(current_advert_link)
+        mega_extra_dataframe = pd.concat([mega_extra_dataframe, extra_dataframe], axis=1)
         specs = {}
         ad_spec_items = soup.find_all("div", class_="adSpecItem")
         for item in ad_spec_items:
@@ -64,12 +67,9 @@ def advert_info(url, first_dataframe, another_dataframe):
 
     second_dataframe = pd.DataFrame(specs_list)
 
-    big_dataframe = pd.concat([first_dataframe, second_dataframe], axis=1)
+    big_dataframe = pd.concat([first_dataframe, second_dataframe, mega_extra_dataframe], axis=1)
 
     big_dataframe.to_csv('data.csv', index=False, encoding='utf-8')
-
-
-testing_list = []
 
 
 def more_info(url):
@@ -113,12 +113,11 @@ def main():
         if page_number > max_page:
             break
 
-        #first_dataframe = get_info(current_url)
-        #advert_info(current_url, first_dataframe, another_dataframe)
+        first_dataframe = get_info(current_url)
 
-        testing_url = 'https://www.exchangeandmart.co.uk/ad/30026731'
-        extra_dataframe = more_info(testing_url)
-        print(extra_dataframe)
+        advert_info(current_url, first_dataframe)
+
+
 
         page_number += 1
 
