@@ -80,6 +80,8 @@ def more_info(url):
     for info in extra_info:
         data = info.text.strip()
         my_list.append(data)
+    if len(my_list) != 8:
+        pass
 
     for i in range(len(types_of_data)):
         key = types_of_data[i]
@@ -99,9 +101,9 @@ def temp_function():
     bigger_dataset = pd.DataFrame()
     for i in range(len(id_values)):
         current_advert_link = manufacture_link("https://www.exchangeandmart.co.uk", id_values[i])
-        print(current_advert_link)
-        #smaller_dataset = more_info(current_advert_link)
-        #bigger_dataset = pd.concat([bigger_dataset, smaller_dataset], axis=0)
+        #print(current_advert_link)
+        smaller_dataset = more_info(current_advert_link)
+        bigger_dataset = pd.concat([bigger_dataset, smaller_dataset], axis=0)
 
     return bigger_dataset
 
