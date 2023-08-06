@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
-import csv
 import pandas as pd
+import re
 
 headers = {"User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"}
 
@@ -72,25 +72,44 @@ def advert_info(url, first_dataframe):
 def more_info(url):
     soup = get_soup(url)
     list_of_extra_info = []
-    my_list = []
-    info_dictionary = {}
     extra_info = soup.find_all("div", class_="adDetsItem")
     types_of_data = ['Year', 'Engine size', 'Mileage', 'Fuel type', 'Transmission', 'Colour', 'Body type', 'Mpg']
 
     for info in extra_info:
         data = info.text.strip()
-        my_list.append(data)
-    if len(my_list) != 8:
-        pass
+        print(data)
+        # regex
+        year_pattern = re.compile(r'(\d+(\.\d+)?)(L)')
+        engine_size_pattern = re.compile(r'(\d+(\.\d+)?)(L)')
+        mileage_pattern = re.compile(r'(\d{1,3}(,\d{3})*(\.\d+)?)(\s*)miles')
+        fuel_type_pattern = re.compile(r'(Petrol|Diesel|Hybrid|Electric)')
+        transmission_pattern = re.compile(r'(manual|automatic|semiauto)', re.IGNORECASE)
+        color_pattern = re.compile(r'(red|blue|green|black|white|silver|grey|pink|yellow|orange|purple)', re.IGNORECASE)
+        body_type_pattern = re.compile(r'(hatchback|suv|coupe|covertible)', re.IGNORECASE)
+        mpg_pattern = re.compile(r'(\d+(\.\d+)?)\s*mpg')
 
-    for i in range(len(types_of_data)):
-        key = types_of_data[i]
-        value = my_list[i]
+        # Extracting the data
+        year = re.search(year_pattern, data).group(1) if re.search(year_pattern, data) else None
+        engine_size = re.search(engine_size_pattern, data).group(1) if re.search(engine_size_pattern, data) else None
+        mileage = re.search(mileage_pattern, data).group(1) if re.search(mileage_pattern, data) else None
+        fuel_type = re.search(fuel_type_pattern, data).group(1) if re.search(fuel_type_pattern, data) else None
+        transmission = re.search(transmission_pattern, data).group(1) if re.search(transmission_pattern, data) else None
+        color = re.search(color_pattern, data).group(1) if re.search(color_pattern, data) else None
+        body_type = re.search(body_type_pattern, data).group(1) if re.search(body_type_pattern, data) else None
+        mpg = re.search(mpg_pattern, data).group(1) if re.search(mpg_pattern, data) else None
 
-        info_dictionary[key] = value
+    info_dict = {
+        'Year': year,
+        'Engine size': engine_size,
+        'Mileage': mileage,
+        'Fuel type': fuel_type,
+        'Transmission': transmission,
+        'Colour': color,
+        'Body type': body_type,
+        'Mpg': mpg
+    }
 
-    if info_dictionary:
-        list_of_extra_info.append(info_dictionary)
+    #print(info_dict)
 
     extra_dataframe = pd.DataFrame(list_of_extra_info)
 
