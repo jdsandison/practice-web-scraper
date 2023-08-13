@@ -16,7 +16,7 @@ def get_soup(url):
     return soup
 
 
-def get_info(search_url):
+def get_page_info(search_url):
     global makes, models, id_values
     soup = get_soup(search_url)
     div_elements = soup.find_all("div", class_="result-item")
@@ -31,28 +31,31 @@ def get_info(search_url):
             models.append(model)
             id_values.append(ad_id)
 
-    first_set_of_data = {
+    search_data = {
         'Makes': makes,
         'Models': models,
         'ID values': id_values
     }
-    first_dataframe = pd.DataFrame(first_set_of_data)
+    search_dataframe = pd.DataFrame(search_data)
 
-    return first_dataframe
+    return search_dataframe
 
 
-def manufacture_link(advert_base_url, id):
+def create_url(advert_base_url, id):
     return advert_base_url + "/ad/" + str(id)
 
 
-def advert_info(url, first_dataframe):
-    get_info(url)
+def advert_info(url, search_dataframe):
+    get_page_info(url)
     specs_list = []
+    accumulated_data = []
+    table_data_dataframe = pd.DataFrame()
     for i in range(0, len(id_values)):
-        current_advert_link = manufacture_link("https://www.exchangeandmart.co.uk", id_values[i])
+        current_advert_link = create_url("https://www.exchangeandmart.co.uk", id_values[i])
         soup = get_soup(current_advert_link)
         specs = {}
         ad_spec_items = soup.find_all("div", class_="adSpecItem")
+        table_of_info = soup.find_all("div", class_="adDetsItem")
         for item in ad_spec_items:
             data = list(item.stripped_strings)
             key = data[0].strip(':')
@@ -62,11 +65,23 @@ def advert_info(url, first_dataframe):
         if specs:
             specs_list.append(specs)
 
+        types_of_data = ['Year', 'Engine size', 'Mileage', 'Fuel type', 'Transmission', 'Colour', 'Body type', 'Mpg']
+        list_of_table_data = []
+        for info in table_of_info:
+            data = info.text.strip()
+            list_of_table_data.append(data)
+
+        if len(list_of_table_data) == 8:
+            #print(list_of_table_data, current_advert_link)
+            accumulated_data.append(list_of_table_data)
+
+    testing = pd.DataFrame(accumulated_data)
+    #print(testing)
     second_dataframe = pd.DataFrame(specs_list)
 
-    big_dataframe = pd.concat([first_dataframe, second_dataframe], axis=1)
+    big_dataframe = pd.concat([search_dataframe, second_dataframe], axis=1)
 
-    big_dataframe.to_csv('data.csv', index=False, encoding='utf-8')
+    #big_dataframe.to_csv('data.csv', index=False, encoding='utf-8')
 
 
 def more_info(url):
@@ -78,36 +93,38 @@ def more_info(url):
     for info in extra_info:
         data = info.text.strip()
         print(data)
-        # regex
-        year_pattern = re.compile(r'(\d+(\.\d+)?)(L)')
-        engine_size_pattern = re.compile(r'(\d+(\.\d+)?)(L)')
-        mileage_pattern = re.compile(r'(\d{1,3}(,\d{3})*(\.\d+)?)(\s*)miles')
-        fuel_type_pattern = re.compile(r'(Petrol|Diesel|Hybrid|Electric)')
-        transmission_pattern = re.compile(r'(manual|automatic|semiauto)', re.IGNORECASE)
-        color_pattern = re.compile(r'(red|blue|green|black|white|silver|grey|pink|yellow|orange|purple)', re.IGNORECASE)
-        body_type_pattern = re.compile(r'(hatchback|suv|coupe|covertible)', re.IGNORECASE)
-        mpg_pattern = re.compile(r'(\d+(\.\d+)?)\s*mpg')
 
-        # Extracting the data
-        year = re.search(year_pattern, data).group(1) if re.search(year_pattern, data) else None
-        engine_size = re.search(engine_size_pattern, data).group(1) if re.search(engine_size_pattern, data) else None
-        mileage = re.search(mileage_pattern, data).group(1) if re.search(mileage_pattern, data) else None
-        fuel_type = re.search(fuel_type_pattern, data).group(1) if re.search(fuel_type_pattern, data) else None
-        transmission = re.search(transmission_pattern, data).group(1) if re.search(transmission_pattern, data) else None
-        color = re.search(color_pattern, data).group(1) if re.search(color_pattern, data) else None
-        body_type = re.search(body_type_pattern, data).group(1) if re.search(body_type_pattern, data) else None
-        mpg = re.search(mpg_pattern, data).group(1) if re.search(mpg_pattern, data) else None
 
-    info_dict = {
-        'Year': year,
-        'Engine size': engine_size,
-        'Mileage': mileage,
-        'Fuel type': fuel_type,
-        'Transmission': transmission,
-        'Colour': color,
-        'Body type': body_type,
-        'Mpg': mpg
-    }
+    #     # regex
+    #     year_pattern = re.compile(r'(\d+(\.\d+)?)(L)')
+    #     engine_size_pattern = re.compile(r'(\d+(\.\d+)?)(L)')
+    #     mileage_pattern = re.compile(r'(\d{1,3}(,\d{3})*(\.\d+)?)(\s*)miles')
+    #     fuel_type_pattern = re.compile(r'(Petrol|Diesel|Hybrid|Electric)')
+    #     transmission_pattern = re.compile(r'(manual|automatic|semiauto)', re.IGNORECASE)
+    #     color_pattern = re.compile(r'(red|blue|green|black|white|silver|grey|pink|yellow|orange|purple)', re.IGNORECASE)
+    #     body_type_pattern = re.compile(r'(hatchback|suv|coupe|covertible)', re.IGNORECASE)
+    #     mpg_pattern = re.compile(r'(\d+(\.\d+)?)\s*mpg')
+    #
+    #     # Extracting the data
+    #     year = re.search(year_pattern, data).group(1) if re.search(year_pattern, data) else None
+    #     engine_size = re.search(engine_size_pattern, data).group(1) if re.search(engine_size_pattern, data) else None
+    #     mileage = re.search(mileage_pattern, data).group(1) if re.search(mileage_pattern, data) else None
+    #     fuel_type = re.search(fuel_type_pattern, data).group(1) if re.search(fuel_type_pattern, data) else None
+    #     transmission = re.search(transmission_pattern, data).group(1) if re.search(transmission_pattern, data) else None
+    #     color = re.search(color_pattern, data).group(1) if re.search(color_pattern, data) else None
+    #     body_type = re.search(body_type_pattern, data).group(1) if re.search(body_type_pattern, data) else None
+    #     mpg = re.search(mpg_pattern, data).group(1) if re.search(mpg_pattern, data) else None
+    #
+    # info_dict = {
+    #     'Year': year,
+    #     'Engine size': engine_size,
+    #     'Mileage': mileage,
+    #     'Fuel type': fuel_type,
+    #     'Transmission': transmission,
+    #     'Colour': color,
+    #     'Body type': body_type,
+    #     'Mpg': mpg
+    # }
 
     #print(info_dict)
 
@@ -119,7 +136,7 @@ def more_info(url):
 def temp_function():
     bigger_dataset = pd.DataFrame()
     for i in range(len(id_values)):
-        current_advert_link = manufacture_link("https://www.exchangeandmart.co.uk", id_values[i])
+        current_advert_link = create_url("https://www.exchangeandmart.co.uk", id_values[i])
         #print(current_advert_link)
         smaller_dataset = more_info(current_advert_link)
         bigger_dataset = pd.concat([bigger_dataset, smaller_dataset], axis=0)
@@ -142,11 +159,11 @@ def main():
         if page_number > max_page:
             break
 
-        first_dataframe = get_info(current_url)
+        first_dataframe = get_page_info(current_url)
+        print(first_dataframe)
+        advert_info(current_url, first_dataframe)
 
-        #advert_info(current_url, first_dataframe)
-
-        temp_function()
+        #temp_function()
         page_number += 1
 
 
