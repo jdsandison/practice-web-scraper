@@ -50,6 +50,7 @@ def advert_info():
 
     full_table_data = []
     accepted_ids = []
+    rejected_ids_for_spec = []
 
     specs_list = []
     accumulated_data = []
@@ -70,6 +71,7 @@ def advert_info():
             specs_list.append(specs)
         else:
             print('no given specification tab', id_values[i])
+            rejected_ids_for_spec.append(id_values[i])
 
         list_of_table_data = []
         for info in table_of_info:
@@ -90,7 +92,19 @@ def advert_info():
     table_data_and_id_dataframe.columns = types_of_data
     specification_tab_and_id = pd.concat([accepted_ids_dataframe, specification_tab_dataframe], axis=1)
     specification_tab_and_id = specification_tab_and_id.drop(columns=['Boot capacity', 'Delivery', 'Insurance', 'Annual tax'])
+
+    for advert_id in rejected_ids_for_spec:
+        rows_to_drop_table = table_data_and_id_dataframe[table_data_and_id_dataframe.iloc[:, 0] == advert_id].index
+        rows_to_drop_specification = specification_tab_and_id[specification_tab_and_id.iloc[:, 0] == advert_id].index
+        table_data_and_id_dataframe.drop(rows_to_drop_table, inplace=True)
+        table_data_and_id_dataframe.reset_index(drop=True, inplace=True)
+        specification_tab_and_id.drop(rows_to_drop_specification, inplace=True)
+        specification_tab_and_id.reset_index(drop=True, inplace=True)
+        print('Dropping rows with', advert_id)
+
     print(table_data_and_id_dataframe)
+    print(specification_tab_and_id)
+
 
 def main():
     base_url = 'https://www.exchangeandmart.co.uk/used-cars-for-sale/under-1-miles-from-dn3-3eh/page'
