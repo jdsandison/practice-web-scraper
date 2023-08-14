@@ -102,8 +102,23 @@ def advert_info():
         specification_tab_and_id.reset_index(drop=True, inplace=True)
         print('Dropping rows with', advert_id)
 
-    print(table_data_and_id_dataframe)
-    print(specification_tab_and_id)
+    rows_with_nan_values = []
+    for index, row in specification_tab_and_id.iterrows():
+        if row.isna().any():
+            rows_with_nan_values.append(index)
+
+    print(rows_with_nan_values)
+    specification_tab_and_id.drop(rows_with_nan_values, inplace=True)
+    specification_tab_and_id.reset_index(drop=True, inplace=True)
+    table_data_and_id_dataframe.drop(rows_with_nan_values, inplace=True)
+    table_data_and_id_dataframe.reset_index(drop=True, inplace=True)
+
+    table_data_and_id_dataframe = table_data_and_id_dataframe.drop(columns=table_data_and_id_dataframe.columns[0])
+    specification_tab_and_id = specification_tab_and_id.drop(columns=specification_tab_and_id.columns[0])
+
+    combined_dataframe = pd.concat([table_data_and_id_dataframe, specification_tab_and_id], axis=1)
+
+    return combined_dataframe
 
 
 def main():
@@ -125,8 +140,19 @@ def main():
 
         page_number += 1
 
-    advert_info()
+    second_dataframe = advert_info()
 
+    final_dataframe = pd.concat([first_dataframe, second_dataframe], axis=1)
+
+    rows_with_nan_values = []
+    for index, row in final_dataframe.iterrows():
+        if row.isna().any():
+            rows_with_nan_values.append(index)
+
+    final_dataframe.drop(rows_with_nan_values, inplace=True)
+    final_dataframe.reset_index(drop=True, inplace=True)
+
+    final_dataframe.to_csv('data.csv', index=False, encoding='utf-8')
 
 if __name__ == "__main__":
     main()
