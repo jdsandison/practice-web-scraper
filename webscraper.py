@@ -48,7 +48,8 @@ def create_url(advert_base_url, id):
 
 def advert_info():
 
-    my_list = []
+    full_table_data = []
+    accepted_ids = []
 
     specs_list = []
     accumulated_data = []
@@ -68,43 +69,34 @@ def advert_info():
         if specs:
             specs_list.append(specs)
 
-        types_of_data = ['Year', 'Engine size', 'Mileage', 'Fuel type', 'Transmission', 'Colour', 'Body type', 'Mpg']
+        types_of_data = ['Accepted id value', 'Year', 'Engine size', 'Mileage', 'Fuel type', 'Transmission', 'Colour', 'Body type', 'Mpg']
         list_of_table_data = []
         for info in table_of_info:
             data = info.text.strip()
             list_of_table_data.append(data)
 
         if len(list_of_table_data) == 8:
+            accepted_ids.append(id_values[i])
             accumulated_data.append(list_of_table_data)
-            my_list.append(accumulated_data[-1])
+            full_table_data.append(accumulated_data[-1])
         else:
-            print('not all data present', list_of_table_data)
+            print('not all data present', list_of_table_data, 'rejected id value', id_values[i])
 
-    testing = pd.DataFrame(accumulated_data)
-    #print(testing)
-    second_dataframe = pd.DataFrame(specs_list)
-    print(len(my_list), my_list)
-
-
-def more_info(url):
-    soup = get_soup(url)
-    list_of_extra_info = []
-    extra_info = soup.find_all("div", class_="adDetsItem")
-    types_of_data = ['Year', 'Engine size', 'Mileage', 'Fuel type', 'Transmission', 'Colour', 'Body type', 'Mpg']
-
-    for info in extra_info:
-        data = info.text.strip()
-        print(data)
-
-    extra_dataframe = pd.DataFrame(list_of_extra_info)
-
-    return extra_dataframe
+    specification_tab_dataframe = pd.DataFrame(specs_list)
+    table_data_dataframe = pd.DataFrame(full_table_data)
+    accepted_ids_dataframe = pd.DataFrame(accepted_ids)
+    table_data_and_id_dataframe = pd.concat([accepted_ids_dataframe, table_data_dataframe], axis=1)
+    table_data_and_id_dataframe.columns = types_of_data
+    #print(table_data_and_id_dataframe)
+    specification_tab_and_id = pd.concat([accepted_ids_dataframe, specification_tab_dataframe], axis=1)
+    specification_tab_and_id = specification_tab_dataframe.drop(columns=['Boot capacity', 'Delivery', 'Insurance', 'Annual tax'])
+    print(specification_tab_and_id)
 
 
 def main():
     base_url = 'https://www.exchangeandmart.co.uk/used-cars-for-sale/under-1-miles-from-dn3-3eh/page'
     page_number = 1
-    max_page = 5
+    max_page = 3
 
     while True:
         current_url = base_url + str(page_number)
