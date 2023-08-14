@@ -36,6 +36,7 @@ def get_page_info(search_url):
         'Models': models,
         'ID values': id_values
     }
+
     search_dataframe = pd.DataFrame(search_data)
 
     return search_dataframe
@@ -45,8 +46,10 @@ def create_url(advert_base_url, id):
     return advert_base_url + "/ad/" + str(id)
 
 
-def advert_info(url, search_dataframe):
-    get_page_info(url)
+def advert_info():
+
+    my_list = []
+
     specs_list = []
     accumulated_data = []
     table_data_dataframe = pd.DataFrame()
@@ -54,9 +57,9 @@ def advert_info(url, search_dataframe):
         current_advert_link = create_url("https://www.exchangeandmart.co.uk", id_values[i])
         soup = get_soup(current_advert_link)
         specs = {}
-        ad_spec_items = soup.find_all("div", class_="adSpecItem")
+        specification_tab = soup.find_all("div", class_="adSpecItem")
         table_of_info = soup.find_all("div", class_="adDetsItem")
-        for item in ad_spec_items:
+        for item in specification_tab:
             data = list(item.stripped_strings)
             key = data[0].strip(':')
             value = data[1]
@@ -72,16 +75,15 @@ def advert_info(url, search_dataframe):
             list_of_table_data.append(data)
 
         if len(list_of_table_data) == 8:
-            #print(list_of_table_data, current_advert_link)
             accumulated_data.append(list_of_table_data)
+            my_list.append(accumulated_data[-1])
+        else:
+            print('not all data present', list_of_table_data)
 
     testing = pd.DataFrame(accumulated_data)
     #print(testing)
     second_dataframe = pd.DataFrame(specs_list)
-
-    big_dataframe = pd.concat([search_dataframe, second_dataframe], axis=1)
-
-    #big_dataframe.to_csv('data.csv', index=False, encoding='utf-8')
+    print(len(my_list), my_list)
 
 
 def more_info(url):
@@ -94,60 +96,15 @@ def more_info(url):
         data = info.text.strip()
         print(data)
 
-
-    #     # regex
-    #     year_pattern = re.compile(r'(\d+(\.\d+)?)(L)')
-    #     engine_size_pattern = re.compile(r'(\d+(\.\d+)?)(L)')
-    #     mileage_pattern = re.compile(r'(\d{1,3}(,\d{3})*(\.\d+)?)(\s*)miles')
-    #     fuel_type_pattern = re.compile(r'(Petrol|Diesel|Hybrid|Electric)')
-    #     transmission_pattern = re.compile(r'(manual|automatic|semiauto)', re.IGNORECASE)
-    #     color_pattern = re.compile(r'(red|blue|green|black|white|silver|grey|pink|yellow|orange|purple)', re.IGNORECASE)
-    #     body_type_pattern = re.compile(r'(hatchback|suv|coupe|covertible)', re.IGNORECASE)
-    #     mpg_pattern = re.compile(r'(\d+(\.\d+)?)\s*mpg')
-    #
-    #     # Extracting the data
-    #     year = re.search(year_pattern, data).group(1) if re.search(year_pattern, data) else None
-    #     engine_size = re.search(engine_size_pattern, data).group(1) if re.search(engine_size_pattern, data) else None
-    #     mileage = re.search(mileage_pattern, data).group(1) if re.search(mileage_pattern, data) else None
-    #     fuel_type = re.search(fuel_type_pattern, data).group(1) if re.search(fuel_type_pattern, data) else None
-    #     transmission = re.search(transmission_pattern, data).group(1) if re.search(transmission_pattern, data) else None
-    #     color = re.search(color_pattern, data).group(1) if re.search(color_pattern, data) else None
-    #     body_type = re.search(body_type_pattern, data).group(1) if re.search(body_type_pattern, data) else None
-    #     mpg = re.search(mpg_pattern, data).group(1) if re.search(mpg_pattern, data) else None
-    #
-    # info_dict = {
-    #     'Year': year,
-    #     'Engine size': engine_size,
-    #     'Mileage': mileage,
-    #     'Fuel type': fuel_type,
-    #     'Transmission': transmission,
-    #     'Colour': color,
-    #     'Body type': body_type,
-    #     'Mpg': mpg
-    # }
-
-    #print(info_dict)
-
     extra_dataframe = pd.DataFrame(list_of_extra_info)
 
     return extra_dataframe
 
 
-def temp_function():
-    bigger_dataset = pd.DataFrame()
-    for i in range(len(id_values)):
-        current_advert_link = create_url("https://www.exchangeandmart.co.uk", id_values[i])
-        #print(current_advert_link)
-        smaller_dataset = more_info(current_advert_link)
-        bigger_dataset = pd.concat([bigger_dataset, smaller_dataset], axis=0)
-
-    return bigger_dataset
-
-
 def main():
     base_url = 'https://www.exchangeandmart.co.uk/used-cars-for-sale/under-1-miles-from-dn3-3eh/page'
     page_number = 1
-    max_page = 3
+    max_page = 5
 
     while True:
         current_url = base_url + str(page_number)
@@ -160,11 +117,10 @@ def main():
             break
 
         first_dataframe = get_page_info(current_url)
-        print(first_dataframe)
-        advert_info(current_url, first_dataframe)
 
-        #temp_function()
         page_number += 1
+
+    advert_info()
 
 
 if __name__ == "__main__":
