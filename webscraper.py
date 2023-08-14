@@ -70,7 +70,7 @@ def advert_info():
         if specs:
             specs_list.append(specs)
         else:
-            print('no given specification tab', id_values[i])
+            #print('no given specification tab', id_values[i])
             rejected_ids_for_spec.append(id_values[i])
 
         list_of_table_data = []
@@ -100,14 +100,13 @@ def advert_info():
         table_data_and_id_dataframe.reset_index(drop=True, inplace=True)
         specification_tab_and_id.drop(rows_to_drop_specification, inplace=True)
         specification_tab_and_id.reset_index(drop=True, inplace=True)
-        print('Dropping rows with', advert_id)
+        #print('Dropping rows with', advert_id)
 
     rows_with_nan_values = []
     for index, row in specification_tab_and_id.iterrows():
         if row.isna().any():
             rows_with_nan_values.append(index)
 
-    print(rows_with_nan_values)
     specification_tab_and_id.drop(rows_with_nan_values, inplace=True)
     specification_tab_and_id.reset_index(drop=True, inplace=True)
     table_data_and_id_dataframe.drop(rows_with_nan_values, inplace=True)
@@ -122,9 +121,9 @@ def advert_info():
 
 
 def main():
-    base_url = 'https://www.exchangeandmart.co.uk/used-cars-for-sale/under-1-miles-from-dn3-3eh/page'
+    base_url = 'https://www.exchangeandmart.co.uk/used-cars-for-sale/any-distance-from-b30-3aa/page'
     page_number = 1
-    max_page = 3
+    max_page = 5
 
     while True:
         current_url = base_url + str(page_number)
