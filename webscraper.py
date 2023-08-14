@@ -53,7 +53,7 @@ def advert_info():
 
     specs_list = []
     accumulated_data = []
-    table_data_dataframe = pd.DataFrame()
+    types_of_data = ['Accepted id value', 'Year', 'Engine size', 'Mileage', 'Fuel type', 'Transmission', 'Colour', 'Body type', 'Mpg']
     for i in range(0, len(id_values)):
         current_advert_link = create_url("https://www.exchangeandmart.co.uk", id_values[i])
         soup = get_soup(current_advert_link)
@@ -68,8 +68,9 @@ def advert_info():
 
         if specs:
             specs_list.append(specs)
+        else:
+            print('no given specification tab', id_values[i])
 
-        types_of_data = ['Accepted id value', 'Year', 'Engine size', 'Mileage', 'Fuel type', 'Transmission', 'Colour', 'Body type', 'Mpg']
         list_of_table_data = []
         for info in table_of_info:
             data = info.text.strip()
@@ -87,11 +88,9 @@ def advert_info():
     accepted_ids_dataframe = pd.DataFrame(accepted_ids)
     table_data_and_id_dataframe = pd.concat([accepted_ids_dataframe, table_data_dataframe], axis=1)
     table_data_and_id_dataframe.columns = types_of_data
-    #print(table_data_and_id_dataframe)
     specification_tab_and_id = pd.concat([accepted_ids_dataframe, specification_tab_dataframe], axis=1)
-    specification_tab_and_id = specification_tab_dataframe.drop(columns=['Boot capacity', 'Delivery', 'Insurance', 'Annual tax'])
-    print(specification_tab_and_id)
-
+    specification_tab_and_id = specification_tab_and_id.drop(columns=['Boot capacity', 'Delivery', 'Insurance', 'Annual tax'])
+    print(table_data_and_id_dataframe)
 
 def main():
     base_url = 'https://www.exchangeandmart.co.uk/used-cars-for-sale/under-1-miles-from-dn3-3eh/page'
