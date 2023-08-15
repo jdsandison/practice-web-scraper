@@ -17,6 +17,11 @@ def get_soup(url):
 
 
 def get_page_info(search_url):
+    """
+    :param search_url: the url of the listings on a specific page number
+    :return: search_dataframe: dataframe containing all the makes, models and id of specific ad pages
+    """
+
     global makes, models, id_values
     soup = get_soup(search_url)
     div_elements = soup.find_all("div", class_="result-item")
@@ -43,10 +48,20 @@ def get_page_info(search_url):
 
 
 def create_url(advert_base_url, id):
+    """
+    :param advert_base_url: base url
+    :param id: advert id of specific ads
+    :return: the url of the ad page
+    """
     return advert_base_url + "/ad/" + str(id)
 
 
 def advert_info():
+    """
+    function that scrapes data from 2 different sections of the website. The 'table' and the 'specification tab'.
+
+    :return: combined_dataframe: dataframe composed of the 2 sections of data to be scraped
+    """
 
     full_table_data = []
     accepted_ids = []
