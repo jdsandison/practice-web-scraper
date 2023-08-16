@@ -8,6 +8,7 @@ headers = {"User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit
 makes = []
 models = []
 id_values = []
+available_makes_filtered = []
 
 
 def get_soup(url):
@@ -22,7 +23,7 @@ def get_page_info(search_url):
     :return: search_dataframe: dataframe containing all the makes, models and id of specific ad pages
     """
 
-    global makes, models, id_values
+    global makes, models, id_values, available_makes_filtered
     soup = get_soup(search_url)
     div_elements = soup.find_all("div", class_="result-item")
 
@@ -43,6 +44,22 @@ def get_page_info(search_url):
     }
 
     search_dataframe = pd.DataFrame(search_data)
+    available_makes_unfiltered = []
+
+    list_of_available_makes = soup.find_all("div", class_="c-column-section")
+    list_of_available_makes = list_of_available_makes[1]
+    for potential_make in list_of_available_makes:
+        make_text = potential_make.text
+        available_makes_unfiltered.append(make_text)
+
+    for i in range(len(available_makes_unfiltered)):
+        if available_makes_unfiltered[i] == '\n':
+            pass
+        else:
+            available_makes_filtered.append(available_makes_unfiltered[i])
+
+    available_makes_filtered = [brand.replace('Used ', '') for brand in available_makes_filtered]
+    print(available_makes_filtered)
 
     return search_dataframe
 
@@ -54,6 +71,18 @@ def create_url(advert_base_url, id):
     :return: the url of the ad page
     """
     return advert_base_url + "/ad/" + str(id)
+
+
+def removing_nan_values(dataframe):
+    rows_with_nan_values = []
+    for index, row in dataframe.iterrows():
+        if row.isna().any():
+            rows_with_nan_values.append(index)
+
+    dataframe.drop(rows_with_nan_values, inplace=True)
+    dataframe.reset_index(drop=True, inplace=True)
+
+    return dataframe
 
 
 def advert_info():
@@ -106,7 +135,7 @@ def advert_info():
     table_data_and_id_dataframe = pd.concat([accepted_ids_dataframe, table_data_dataframe], axis=1)
     table_data_and_id_dataframe.columns = types_of_data
     specification_tab_and_id = pd.concat([accepted_ids_dataframe, specification_tab_dataframe], axis=1)
-    specification_tab_and_id = specification_tab_and_id.drop(columns=['Boot capacity', 'Delivery', 'Insurance', 'Annual tax'])
+    specification_tab_and_id = specification_tab_and_id.drop(columns=['Boot capacity', 'Delivery', 'Insurance', 'Annual tax'], errors='ignore')
 
     for advert_id in rejected_ids_for_spec:
         rows_to_drop_table = table_data_and_id_dataframe[table_data_and_id_dataframe.iloc[:, 0] == advert_id].index

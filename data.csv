@@ -1,18 +1,615 @@
 Makes,Models,ID values,Year,Engine size,Mileage,Fuel type,Transmission,Colour,Body type,Mpg,Wheel drive,Doors,Seats,Engine power,Top speed,Acceleration (0-62 mph),CO2 rating,Tank range
-Vauxhall,Corsa,30186438,2023,1.2L,1 miles,Petrol,Manual,Grey,Hatchback,54.3 mpg,Front Wheel Drive,5,5,99 bhp,121 mph,9.3 seconds,116 g/km,526 miles
-Vauxhall,Mokka,30086781,2023,1.2L,1 miles,Petrol,Manual,Red,SUV,51.4 mpg,Front Wheel Drive,5,5,128 bhp,125 mph,9.1 seconds,126 g/km,497 miles
-Vauxhall,Corsa,30009858,2022,1.2L,"3,341 miles",Petrol,Automatic,White,SUV,46.3 mpg,Front Wheel Drive,5,5,128 bhp,125 mph,9.1 seconds,126 g/km,497 miles
-Vauxhall,Corsa,30086788,2022,1.2L,"3,623 miles",Petrol,Automatic,Green,SUV,47.9 mpg,Front Wheel Drive,5,5,128 bhp,124 mph,9.2 seconds,135 g/km,448 miles
-Vauxhall,Mokka,30086785,2023,1.2L,"4,791 miles",Petrol,Manual,Grey,SUV,51.4 mpg,Front Wheel Drive,5,5,128 bhp,124 mph,9.2 seconds,132 g/km,464 miles
-Vauxhall,Mokka,30275102,2021,1.2L,"4,890 miles",Petrol,Manual,Black,Hatchback,54.3 mpg,Front Wheel Drive,5,5,128 bhp,125 mph,9.1 seconds,126 g/km,497 miles
-Vauxhall,Mokka,30086782,2020,1.3L,"5,727 miles",Petrol,Manual,Grey,SUV,41.5 mpg,Front Wheel Drive,5,5,74 bhp,108 mph,12.4 seconds,118 g/km,478 miles
-Vauxhall,Mokka,30086779,2019,1.5L,"8,186 miles",Petrol,Manual,Red,SUV,43.5 mpg,Front Wheel Drive,5,5,158 bhp,124 mph,8.6 seconds,153 g/km,502 miles
-Vauxhall,Corsa,30272967,2019,1.4L,"9,219 miles",Petrol,Semiauto,Black,SUV,37.2 mpg,Front Wheel Drive,5,5,148 bhp,123 mph,8.5 seconds,126 g/km,478 miles
-Nissan,Qashqai,30270084,2018,1.5L,"9,645 miles",Petrol,Automatic,Grey,Hatchback,58.9 mpg,Front Wheel Drive,5,5,138 bhp,119 mph,10.1 seconds,157 g/km,434 miles
-Seat,Ateca,30170511,2017,1.5L,"9,751 miles",Petrol,Manual,Red,Hatchback,58.9 mpg,Front Wheel Drive,5,5,109 bhp,108 mph,11.2 seconds,108 g/km,544 miles
-Vauxhall,Mokka X,29976631,2018,1.5L,"12,858 miles",Petrol,Manual,Red,SUV,40.4 mpg,Front Wheel Drive,5,5,109 bhp,108 mph,11.0 seconds,109 g/km,544 miles
-Toyota,Yaris,30079016,2020,1.2L,"13,963 miles",Petrol,Manual,Blue,SUV,45.6 mpg,Front Wheel Drive,5,5,160 bhp,127 mph,10.3 seconds,159 g/km,560 miles
-Toyota,Yaris,30105839,2019,1.4L,"15,891 miles",Petrol,Manual,Silver,SUV,39.2 mpg,Front Wheel Drive,5,5,138 bhp,122 mph,9.6 seconds,147 g/km,457 miles
-Vauxhall,Astra,30032361,2019,1.4L,"15,891 miles",Petrol,Manual,Silver,SUV,39.2 mpg,Front Wheel Drive,5,5,129 bhp,117 mph,10.5 seconds,119 g/km,514 miles
-Mitsubishi,Eclipse Cross,30092819,2018,1.2L,"16,943 miles",Petrol,Semiauto,Red,Hatchback,57.6 mpg,Front Wheel Drive,5,5,128 bhp,117 mph,9.5 seconds,114 g/km,532 miles
-Vauxhall,Grandland X,30304813,2020,1.2L,"21,227 miles",Petrol,Semiauto,Grey,SUV,44.1 mpg,Front Wheel Drive,4,5,148 bhp,140 mph,8.9 seconds,163 g/km,466 miles
+Ford,Fiesta,30297341,2021,1L,"8,669 miles",Petrol,Manual,Grey,Hatchback,56.5 mpg,Front Wheel Drive,5,5,99 bhp,112 mph,10.8 seconds,114 g/km,533 miles
+Ford,Mustang,30236286,2020,1L,"17,855 miles",Petrol,Manual,Blue,Hatchback,53.3 mpg,Front Wheel Drive,5,5,113 bhp,121 mph,9.8 seconds,112 g/km,586 miles
+Hyundai,Bayon,30065767,2022,1L,"17,902 miles",Petrol,Manual,Silver,Hatchback,55.4 mpg,Front Wheel Drive,5,5,82 bhp,105 mph,13.2 seconds,98 g/km,509 miles
+Ford,Puma,30357277,2020,1L,"20,047 miles",Petrol,Automatic,Silver,Hatchback,51.4 mpg,Front Wheel Drive,3,5,84 bhp,105 mph,14.0 seconds,101 g/km,593 miles
+Ford,Focus,30258559,2020,1L,"20,789 miles",Petrol,Manual,White,Hatchback,55.4 mpg,Front Wheel Drive,5,5,175 bhp,125 mph,8.9 seconds,177 g/km,494 miles
+Ford,Fiesta,30319514,2019,1L,"21,971 miles",Petrol,Manual,Black,Hatchback,53.3 mpg,Front Wheel Drive,5,5,175 bhp,125 mph,8.9 seconds,158 g/km,494 miles
+Ford,Fiesta,30369832,2020,1L,"30,978 miles",Petrol,Manual,Blue,Hatchback,58.9 mpg,Front Wheel Drive,5,5,175 bhp,125 mph,8.9 seconds,158 g/km,494 miles
+Ford,Fiesta,30357276,2019,1.1L,"31,646 miles",Petrol,Manual,Grey,Hatchback,55.4 mpg,Front Wheel Drive,5,5,74 bhp,108 mph,12.4 seconds,118 g/km,478 miles
+Ford,Fiesta,30211388,2018,1L,"32,424 miles",Petrol,Manual,Red,Hatchback,55.4 mpg,Front Wheel Drive,5,5,74 bhp,108 mph,12.4 seconds,118 g/km,478 miles
+Ford,Focus,30151611,2018,1.1L,"32,527 miles",Petrol,Manual,Blue,Hatchback,64.2 mpg,Front Wheel Drive,5,5,74 bhp,108 mph,12.4 seconds,118 g/km,478 miles
+Ford,Focus,30391343,2020,1L,"30,978 miles",Petrol,Manual,Blue,Hatchback,58.9 mpg,Front Wheel Drive,5,5,74 bhp,108 mph,12.4 seconds,118 g/km,478 miles
+Ford,Fiesta,30230125,2020,1.6L,"31,244 miles",Petrol,Semiauto,Blue,SUV,36.2 mpg,Front Wheel Drive,5,5,89 bhp,106 mph,13.9 seconds,150 g/km,394 miles
+Ford,Puma,30391340,2018,1.1L,"32,527 miles",Petrol,Manual,Blue,Hatchback,64.2 mpg,Front Wheel Drive,5,5,128 bhp,130 mph,9.7 seconds,125 g/km,588 miles
+Ford,Fiesta,30363971,2019,1.6L,"32,558 miles",Petrol,Semiauto,Grey,SUV,36.2 mpg,Front Wheel Drive,5,5,108 bhp,116 mph,10.2 seconds,140 g/km,466 miles
+Ford,Fiesta,30092598,2020,1L,"41,885 miles",Petrol,Manual,Black,Hatchback,58.9 mpg,Front Wheel Drive,5,5,128 bhp,123 mph,9.9 seconds,139 g/km,451 miles
+Ford,Puma,30375980,2020,1L,"30,857 miles",Petrol,Manual,Blue,Hatchback,54.3 mpg,Front Wheel Drive,3,5,123 bhp,126 mph,8.9 seconds,120 g/km,597 miles
+Ford,Kuga,30314676,2020,1.6L,"31,244 miles",Petrol,Semiauto,Blue,SUV,36.2 mpg,Front Wheel Drive,5,5,140 bhp,121 mph,9.4 seconds,135 g/km,511 miles
+Ford,Puma,30369834,2021,1.2L,"8,591 miles",Petrol,Manual,Grey,Hatchback,54.3 mpg,Front Wheel Drive,3,5,74 bhp,101 mph,15.5 seconds,128 g/km,431 miles
+Kia,Venga,30157443,2021,1.2L,"11,738 miles",Petrol,Manual,Blue,Hatchback,54.3 mpg,Front Wheel Drive,5,5,148 bhp,129 mph,8.4 seconds,150 g/km,480 miles
+Ford,Fiesta,30269906,2021,1.2L,"13,426 miles",Petrol,Manual,Orange,Hatchback,54.3 mpg,Front Wheel Drive,5,5,118 bhp,112 mph,12.0 seconds,126 g/km,485 miles
+Ford,Focus,30369831,2021,1.2L,"15,000 miles",Petrol,Manual,Red,Hatchback,54.3 mpg,Front Wheel Drive,5,5,148 bhp,121 mph,10.7 seconds,137 g/km,574 miles
+Ford,Focus,30110776,2018,1.4L,"17,223 miles",Petrol,Automatic,White,Hatchback,39.8 mpg,Front Wheel Drive,5,5,113 bhp,123 mph,9.5 seconds,109 g/km,546 miles
+Ford,Fiesta,30319512,2017,1.6L,"44,300 miles",Petrol,Manual,Black,MPV,44.1 mpg,Front Wheel Drive,5,5,130 bhp,130 mph,9.1 seconds,119 g/km,578 miles
+Ford,Fiesta,30164149,2023,1.2L,1 miles,Petrol,Manual,Black,Hatchback,51.4 mpg,Rear Wheel Drive,2,4,201 bhp,153 mph,6.7 seconds,127 g/km,723 miles
+Ford,Kuga,30211384,2020,1.2L,"14,832 miles",Petrol,Manual,Grey,SUV,47.1 mpg,Four Wheel Drive,5,7,178 bhp,117 mph,8.4 seconds,139 g/km,633 miles
+Ford,Puma,30395290,2021,1.2L,"19,337 miles",Petrol,Semiauto,Orange,SUV,45.6 mpg,Front Wheel Drive,5,5,128 bhp,124 mph,9.2 seconds,133 g/km,464 miles
+Ford,Focus,30314678,2017,1.5L,"20,938 miles",Diesel,Manual,Black,Hatchback,72.4 mpg,Front Wheel Drive,5,5,128 bhp,123 mph,9.5 seconds,147 g/km,437 miles
+Ford,EcoSport,30211381,2017,1.2L,"32,149 miles",Petrol,Manual,Grey,Hatchback,60.1 mpg,Front Wheel Drive,5,5,113 bhp,124 mph,9.5 seconds,111 g/km,407 miles
+Ford,Fiesta,30333727,2019,1L,"32,646 miles",Petrol,Manual,Silver,SUV,44.1 mpg,Front Wheel Drive,5,5,129 bhp,128 mph,9.5 seconds,121 g/km,706 miles
+Ford,Puma,30369830,2018,1.4L,"33,521 miles",Petrol,Manual,Red,Hatchback,54.3 mpg,Front Wheel Drive,5,5,94 bhp,109 mph,11.4 seconds,124 g/km,452 miles
+Ford,Fiesta,30075876,2018,1.3L,"27,296 miles",Petrol,Manual,White,SUV,42.2 mpg,Front Wheel Drive,5,5,140 bhp,121 mph,9.4 seconds,135 g/km,511 miles
+Ford,Fiesta,30319515,2019,1.4L,"31,899 miles",Petrol,Manual,Grey,Hatchback,43.5 mpg,Rear Wheel Drive,4,5,178 bhp,136 mph,7.5 seconds,114 g/km,954 miles
+Seat,Leon,30314679,2017,1.2L,"32,149 miles",Petrol,Manual,Grey,Hatchback,60.1 mpg,Front Wheel Drive,3,5,74 bhp,101 mph,15.5 seconds,128 g/km,431 miles
+Citroen,C3,30297343,2021,1.5L,"32,637 miles",Petrol,Manual,Grey,SUV,42.8 mpg,Front Wheel Drive,5,5,242 bhp,155 mph,6.0 seconds,155 g/km,409 miles
+Ford,Kuga,30230122,2019,1L,"32,646 miles",Petrol,Manual,Silver,SUV,44.1 mpg,Front Wheel Drive,5,5,148 bhp,129 mph,8.4 seconds,150 g/km,480 miles
+Ford,Fiesta,30092597,2019,1.7L,"32,954 miles",Diesel,Manual,White,SUV,43.5 mpg,Front Wheel Drive,5,5,148 bhp,121 mph,10.7 seconds,137 g/km,574 miles
+Ford,Fiesta,30357279,2018,1.4L,"33,521 miles",Petrol,Manual,Red,Hatchback,54.3 mpg,Front Wheel Drive,5,5,113 bhp,123 mph,9.5 seconds,109 g/km,546 miles
+Ford,Fiesta,30314669,2018,1L,"33,675 miles",Petrol,Manual,Grey,Hatchback,49.6 mpg,Rear Wheel Drive,5,5,136 bhp,130 mph,8.7 seconds,131 g/km,420 miles
+Ford,Fiesta,30309836,2019,1.2L,"33,957 miles",Petrol,Manual,Grey,Hatchback,49.6 mpg,Front Wheel Drive,5,5,148 bhp,136 mph,8.2 seconds,110 g/km,648 miles
+Ford,Fiesta,30363973,2017,2.1L,"61,896 miles",Diesel,Semiauto,Grey,Coupe,65.7 mpg,Front Wheel Drive,5,5,128 bhp,117 mph,9.5 seconds,114 g/km,532 miles
+Ford,Fiesta,30357279,2017,2L,"70,662 miles",Diesel,Automatic,Red,SUV,53.3 mpg,Rear Wheel Drive,4,5,178 bhp,136 mph,7.5 seconds,114 g/km,954 miles
+Hyundai,Tucson,30409644,2023,1.2L,2 miles,Petrol,Automatic,Green,SUV,47.9 mpg,Front Wheel Drive,5,5,242 bhp,155 mph,6.0 seconds,155 g/km,409 miles
+Ford,Fiesta,30314669,2020,1.2L,"9,618 miles",Petrol,Semiauto,Grey,SUV,44.1 mpg,Front Wheel Drive,5,5,94 bhp,116 mph,10.8 seconds,106 g/km,401 miles
+Ford,Fiesta,30309836,2019,1L,"14,032 miles",Petrol,Semiauto,Grey,Hatchback,46.3 mpg,Front Wheel Drive,4,5,148 bhp,139 mph,8.2 seconds,113 g/km,621 miles
+Ford,Fiesta,30363973,2021,1.5L,"15,546 miles",Diesel,Semiauto,Blue,Hatchback,64.2 mpg,Rear Wheel Drive,5,5,136 bhp,130 mph,8.7 seconds,131 g/km,420 miles
+Hyundai,Tucson,30419032,2021,1L,"18,155 miles",Petrol,Manual,White,SUV,51.4 mpg,Front Wheel Drive,5,5,130 bhp,113 mph,11.1 seconds,174 g/km,501 miles
+Ford,Focus,30395285,2018,1.3L,"27,296 miles",Petrol,Manual,White,SUV,42.2 mpg,Front Wheel Drive,5,5,174 bhp,127 mph,8.9 seconds,173 g/km,476 miles
+Ford,Fiesta,30085730,2019,2L,"27,978 miles",Diesel,Manual,Silver,Hatchback,70.6 mpg,Rear Wheel Drive,4,5,181 bhp,149 mph,7.7 seconds,140 g/km,672 miles
+Ford,Puma,30423906,2018,2L,"28,597 miles",Diesel,Manual,White,Saloon,65.7 mpg,Front Wheel Drive,5,5,82 bhp,106 mph,13.6 seconds,143 g/km,466 miles
+Ford,Fiesta,30423905,2019,1.4L,"31,899 miles",Petrol,Manual,Grey,Hatchback,43.5 mpg,Front Wheel Drive,5,5,114 bhp,109 mph,11.1 seconds,119 g/km,837 miles
+Ford,Focus,30423903,2019,2L,"32,035 miles",Petrol,Manual,White,Hatchback,37.2 mpg,Front Wheel Drive,5,5,99 bhp,113 mph,10.5 seconds,97 g/km,607 miles
+Hyundai,Tucson,30409644,2021,1.5L,"32,637 miles",Petrol,Manual,Grey,SUV,42.8 mpg,Front Wheel Drive,5,5,108 bhp,109 mph,11.8 seconds,122 g/km,566 miles
+Hyundai,Tucson,30419032,2019,1.7L,"32,954 miles",Diesel,Manual,White,SUV,43.5 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,13.2 seconds,120 g/km,537 miles
+Vauxhall,Corsa,29464541,2018,1L,"33,675 miles",Petrol,Manual,Grey,Hatchback,49.6 mpg,Front Wheel Drive,3,4,69 bhp,103 mph,14.9 seconds,128 g/km,374 miles
+Vauxhall,Corsa,29464547,2018,1.5L,"36,979 miles",Petrol,Semiauto,Blue,Hatchback,36.7 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,14.0 seconds,110 g/km,453 miles
+Vauxhall,Corsa,29464544,2020,1.2L,"37,866 miles",Petrol,Manual,Black,SUV,45.6 mpg,Front Wheel Drive,3,4,69 bhp,99 mph,12.9 seconds,113 g/km,356 miles
+Vauxhall,Corsa,29464546,2018,2L,"28,597 miles",Diesel,Manual,White,Saloon,65.7 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,14.0 seconds,110 g/km,453 miles
+Vauxhall,Corsa,29743634,2019,2L,"32,035 miles",Petrol,Manual,White,Hatchback,37.2 mpg,Front Wheel Drive,5,5,158 bhp,123 mph,9.9 seconds,122 g/km,495 miles
+Vauxhall,Corsa,29464548,2018,1.5L,"34,017 miles",Petrol,Semiauto,Black,Hatchback,45.6 mpg,Front Wheel Drive,5,5,99 bhp,121 mph,9.3 seconds,120 g/km,516 miles
+Vauxhall,Corsa,30312697,2018,1.5L,"34,183 miles",Petrol,Semiauto,Blue,Saloon,56.5 mpg,Front Wheel Drive,5,5,101 bhp,109 mph,12.9 seconds,155 g/km,554 miles
+Audi,e-tron,29464574,2018,1.5L,"36,979 miles",Petrol,Semiauto,Blue,Hatchback,36.7 mpg,Front Wheel Drive,5,5,94 bhp,116 mph,10.8 seconds,121 g/km,469 miles
+Ford,C-MAX,29464589,2021,1.6L,"38,312 miles",Petrol,Manual,White,SUV,36.7 mpg,Front Wheel Drive,5,5,108 bhp,116 mph,10.2 seconds,133 g/km,466 miles
+Dacia,Sandero Stepway,30349093,2018,1.6L,"42,265 miles",Petrol,Manual,Black,SUV,34.9 mpg,Front Wheel Drive,5,5,66 bhp,100 mph,13.8 seconds,113 g/km,435 miles
+Vauxhall,Astra,30295448,2018,1.5L,"44,269 miles",Petrol,Semiauto,Blue,Saloon,46.3 mpg,Front Wheel Drive,5,4,66 bhp,100 mph,14.1 seconds,110 g/km,453 miles
+Vauxhall,Crossland X,30385081,2020,1.2L,"45,895 miles",Petrol,Manual,Orange,SUV,47.1 mpg,Front Wheel Drive,5,5,89 bhp,111 mph,11.9 seconds,108 g/km,418 miles
+Vauxhall,Crossland,30057499,2020,1.2L,"47,350 miles",Petrol,Automatic,Grey,Hatchback,48.7 mpg,Front Wheel Drive,5,5,99 bhp,117 mph,9.9 seconds,119 g/km,547 miles
+Mercedes-Benz,A Class,30184216,2017,1.7L,"49,111 miles",Diesel,Manual,Black,SUV,61.4 mpg,Front Wheel Drive,5,5,120 bhp,122 mph,10.8 seconds,126 g/km,488 miles
+Fiat,500,30312698,2018,1L,"51,912 miles",Petrol,Manual,Blue,Hatchback,65.7 mpg,Front Wheel Drive,5,5,100 bhp,116 mph,11.8 seconds,118 g/km,458 miles
+Hyundai,Kona,30401495,2018,1398cc,"5,185 miles",Petrol,Manual,Grey,Hatchback,54.3 mpg,Front Wheel Drive,5,5,113 bhp,120 mph,10.2 seconds,116 g/km,421 miles
+Seat,Leon,30295455,2019,1229cc,"6,271 miles",Petrol,Manual,Blue,Hatchback,44.8 mpg,Front Wheel Drive,5,5,128 bhp,122 mph,9.8 seconds,112 g/km,499 miles
+Renault,Kadjar,30290351,2020,1595cc,"6,379 miles",Petrol,Semi Automatic,Grey,SUV,44.8 mpg,Front Wheel Drive,5,5,118 bhp,114 mph,9.9 seconds,130 g/km,518 miles
+Ford,Focus,30017575,2021,998cc,"3,061 miles",Petrol,Manual,Grey,Hatchback,58.9 mpg,Front Wheel Drive,5,5,89 bhp,114 mph,9.7 seconds,120 g/km,516 miles
+Vauxhall,Corsa,30389804,2017,1198cc,"3,113 miles",Petrol,Manual,White,Hatchback,57.7 mpg,Front Wheel Drive,3,4,70 bhp,104 mph,13.8 seconds,119 g/km,410 miles
+Fiat,500,30312698,2020,1242cc,"3,308 miles",Petrol,Semi Automatic,White,Hatchback,46.3 mpg,Front Wheel Drive,5,4,67 bhp,99 mph,14.3 seconds,95 g/km,530 miles
+Skoda,Karoq,30367920,2021,998cc,"3,938 miles",Petrol,Manual,Red,Hatchback,58.9 mpg,Front Wheel Drive,5,5,83 bhp,100 mph,13.2 seconds,137 g/km,369 miles
+Hyundai,Kona,30401495,2019,998cc,"4,024 miles",Petrol,Semi Automatic,White,Hatchback,67.3 mpg,Front Wheel Drive,5,5,129 bhp,117 mph,11.8 seconds,139 g/km,673 miles
+Nissan,X Trail,30251682,2020,1332cc,"4,272 miles",Petrol,Semi Automatic,Silver,SUV,40.9 mpg,Front Wheel Drive,5,5,59 bhp,98 mph,15.9 seconds,108 g/km,466 miles
+Seat,Leon,30295455,2021,1199cc,"4,376 miles",Petrol,Manual,Grey,Hatchback,53.3 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,14.2 seconds,93 g/km,435 miles
+Volkswagen,Golf,30272567,2020,1499cc,"4,584 miles",Diesel,Manual,White,MPV,50.4 mpg,Front Wheel Drive,5,5,90 bhp,109 mph,11.1 seconds,121 g/km,634 miles
+Peugeot,308,30104104,2021,999cc,"4,608 miles",Petrol,Manual,Blue,Hatchback,53.3 mpg,Front Wheel Drive,5,5,65 bhp,100 mph,13.8 seconds,101 g/km,494 miles
+Mercedes-Benz,C Class,30263029,2020,1199cc,"4,951 miles",Petrol,Manual,White,SUV,47.1 mpg,Front Wheel Drive,5,5,148 bhp,121 mph,10.5 seconds,140 g/km,685 miles
+Land Rover,Discovery Sport,29622305,2019,998cc,"4,981 miles",Petrol,Manual,Silver,Hatchback,56.5 mpg,Front Wheel Drive,3,4,69 bhp,99 mph,12.9 seconds,114 g/km,427 miles
+Vauxhall,Mokka,30300342,2022,998cc,"5,000 miles",Petrol,Manual,Yellow,Hatchback,58.9 mpg,Front Wheel Drive,5,5,105 bhp,108 mph,10.4 seconds,147 g/km,452 miles
+Vauxhall,Crossland X,30025013,2019,1998cc,"5,208 miles",Petrol,Automatic,Silver,Hatchback,43.5 mpg,Front Wheel Drive,5,5,129 bhp,124 mph,9.2 seconds,138 g/km,456 miles
+Volkswagen,Polo,30017576,2020,999cc,"5,440 miles",Petrol,Manual,Silver,Hatchback,49.6 mpg,Front Wheel Drive,5,5,66 bhp,100 mph,13.8 seconds,113 g/km,435 miles
+Citroen,C4,30057502,2020,1199cc,"5,745 miles",Petrol,Manual,Red,Hatchback,53.3 mpg,Front Wheel Drive,5,7,161 bhp,124 mph,9.6 seconds,172 g/km,450 miles
+Seat,Arona,30032708,2019,1398cc,"5,791 miles",Petrol,Manual,Silver,Hatchback,44.8 mpg,Rear Wheel Drive,2,4,154 bhp,138 mph,8.9 seconds,157 g/km,41 miles
+Renault,Kadjar,30290351,2019,999cc,"6,066 miles",Petrol,Manual,Grey,Hatchback,47.9 mpg,Front Wheel Drive,5,5,118 bhp,115 mph,10.9 seconds,146 g/km,485 miles
+Ford,Focus,30017575,2020,1199cc,"6,253 miles",Petrol,Automatic,Grey,Hatchback,42.8 mpg,Front Wheel Drive,5,5,109 bhp,111 mph,11.5 seconds,121 g/km,456 miles
+Jaguar,XF,30413380,2019,998cc,"6,331 miles",Petrol,Manual,Grey,Hatchback,47.1 mpg,Front Wheel Drive,5,5,64 bhp,99 mph,17.1 seconds,119 g/km,502 miles
+Mercedes-Benz,C Class,30413379,2021,1496cc,"6,389 miles",Petrol,Manual,Black,Hatchback,53.3 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,12.1 seconds,99 g/km,579 miles
+Vauxhall,Corsa,30389804,2020,1199cc,"6,443 miles",Petrol,Manual,Orange,Hatchback,52.3 mpg,Front Wheel Drive,5,5,118 bhp,113 mph,12.4 seconds,132 g/km,659 miles
+Volkswagen,Golf,30413377,2020,999cc,"7,178 miles",Petrol,Manual,White,Hatchback,53.3 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,13.8 seconds,114 g/km,435 miles
+Skoda,Karoq,30367920,2018,998cc,"7,194 miles",Petrol,Manual,Green,Hatchback,68.9 mpg,Front Wheel Drive,5,4,66 bhp,100 mph,14.1 seconds,115 g/km,427 miles
+Nissan,X Trail,30251682,2020,998cc,"7,214 miles",Petrol,Manual,Black,Hatchback,56.5 mpg,Rear Wheel Drive,5,4,90 bhp,103 mph,10.8 seconds,112 g/km,375 miles
+Volkswagen,Golf,30272567,2021,1999cc,"7,271 miles",Diesel,Semi Automatic,Red,SUV,47.9 mpg,Front Wheel Drive,5,5,84 bhp,107 mph,11.6 seconds,106 g/km,473 miles
+BMW,4 Series,30349094,2019,1229cc,"7,274 miles",Petrol,Manual,Blue,Hatchback,44.8 mpg,Front Wheel Drive,5,5,150 bhp,125 mph,9.9 seconds,167 g/km,660 miles
+BMW,1 Series,30349095,2020,998cc,"7,326 miles",Petrol,Manual,Red,Hatchback,58.9 mpg,Front Wheel Drive,5,5,75 bhp,103 mph,14.5 seconds,127 g/km,499 miles
+Audi,A3,30256219,2018,1248cc,"7,347 miles",Petrol,Automatic,Black,Hatchback,47.9 mpg,Front Wheel Drive,2,4,227 bhp,155 mph,6.0 seconds,141 g/km,509 miles
+Vauxhall,Grandland X,30337971,2021,1499cc,"7,389 miles",Diesel,Semi Automatic,Black,SUV,57.7 mpg,Front Wheel Drive,5,5,66 bhp,97 mph,14.7 seconds,117 g/km,529 miles
+Jaguar,XF,30413380,2020,999cc,"7,511 miles",Petrol,Manual,Grey,Hatchback,50.4 mpg,Front Wheel Drive,5,5,94 bhp,116 mph,10.8 seconds,101 g/km,565 miles
+Mercedes-Benz,C Class,30413379,2019,999cc,"7,543 miles",Petrol,Manual,White,Hatchback,47.1 mpg,Front Wheel Drive,5,5,134 bhp,112 mph,10.8 seconds,114 g/km,676 miles
+Volkswagen,Golf,30413377,2019,998cc,"13,851 miles",Petrol,Manual,Grey,Hatchback,56.5 mpg,Front Wheel Drive,5,5,109 bhp,109 mph,11.0 seconds,116 g/km,443 miles
+Volkswagen,Polo,30423265,2019,898cc,"13,914 miles",Petrol,Manual,White,Hatchback,57.6 mpg,Front Wheel Drive,5,5,148 bhp,121 mph,9.7 seconds,160 g/km,466 miles
+Audi,A3,30300343,2017,998cc,"14,012 miles",Petrol,Manual,Blue,Hatchback,64.2 mpg,Rear Wheel Drive,4,5,187 bhp,146 mph,7.2 seconds,108 g/km,720 miles
+BMW,1 Series,30349095,2020,1999cc,"14,107 miles",Diesel,Manual,Black,SUV,47.9 mpg,Front Wheel Drive,5,5,118 bhp,112 mph,11.5 seconds,123 g/km,551 miles
+Kia,Sportage,30421964,2020,1199cc,"14,130 miles",Petrol,Manual,Orange,Hatchback,53.3 mpg,Front Wheel Drive,5,5,69 bhp,99 mph,15.3 seconds,114 g/km,533 miles
+Kia,Sportage,30423264,2019,1242cc,"14,156 miles",Petrol,Manual,Grey,Hatchback,55.4 mpg,Four Wheel Drive,5,5,174 bhp,125 mph,8.8 seconds,174 g/km,443 miles
+Mercedes-Benz,C Class,30413378,2021,1498cc,"14,306 miles",Petrol,Manual,Yellow,Hatchback,42.8 mpg,Four Wheel Drive,5,5,174 bhp,125 mph,8.8 seconds,174 g/km,438 miles
+Vauxhall,Crossland X,30421961,2020,1199cc,"14,418 miles",Petrol,Manual,Black,Hatchback,52.3 mpg,Front Wheel Drive,5,5,74 bhp,110 mph,12.3 seconds,114 g/km,458 miles
+Vauxhall,Corsa,30421962,2021,999cc,"14,442 miles",Petrol,Manual,Black,Hatchback,51.4 mpg,Front Wheel Drive,5,5,128 bhp,126 mph,9.4 seconds,115 g/km,493 miles
+Kia,Sportage,30184215,2021,1199cc,"8,311 miles",Petrol,Semi Automatic,Black,Hatchback,47.1 mpg,Front Wheel Drive,5,5,140 bhp,126 mph,10.4 seconds,153 g/km,510 miles
+Ford,Fiesta,30280469,2019,998cc,"8,314 miles",Petrol,Manual,White,Hatchback,56.5 mpg,Front Wheel Drive,5,7,148 bhp,121 mph,10.7 seconds,158 g/km,622 miles
+Vauxhall,Combo Life,30408488,2022,1497cc,"8,326 miles",Petrol,Semi Automatic,Silver,SUV,37.2 mpg,Front Wheel Drive,5,5,114 bhp,128 mph,9.9 seconds,118 g/km,485 miles
+BMW,1 Series,30289979,2020,1595cc,"8,364 miles",Petrol,Manual,White,Convertible,2.8 mpg,Front Wheel Drive,5,5,69 bhp,99 mph,15.3 seconds,114 g/km,533 miles
+Mercedes-Benz,GLA Class,30207671,2019,998cc,"8,402 miles",Petrol,Semi Automatic,Grey,Hatchback,48.7 mpg,Front Wheel Drive,5,5,134 bhp,134 mph,9.2 seconds,123 g/km,270 miles
+Peugeot,308,30373179,2019,998cc,"8,446 miles",Petrol,Manual,Red,Hatchback,58.9 mpg,Front Wheel Drive,5,4,71 bhp,100 mph,13.8 seconds,93 g/km,530 miles
+Vauxhall,Corsa,30188256,2020,998cc,"8,452 miles",Petrol,Manual,Black,Hatchback,44.1 mpg,Front Wheel Drive,5,5,118 bhp,116 mph,9.9 seconds,136 g/km,514 miles
+Vauxhall,Adam,29906017,2019,988cc,"8,454 miles",Petrol,Manual,Silver,Hatchback,44.1 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,12.1 seconds,99 g/km,579 miles
+Mercedes-Benz,GLA Class,30389380,2021,999cc,"8,497 miles",Petrol,Manual,White,Hatchback,54.3 mpg,Front Wheel Drive,5,5,148 bhp,134 mph,8.0 seconds,119 g/km,478 miles
+Citroen,C1,30317311,2018,898cc,"8,543 miles",Petrol,Manual,Grey,Hatchback,64.2 mpg,Front Wheel Drive,5,5,118 bhp,118 mph,10.7 seconds,128 g/km,554 miles
+Skoda,Kamiq,30063539,2018,1499cc,"8,584 miles",Diesel,Semi Automatic,Grey,MPV,56.5 mpg,Front Wheel Drive,5,5,110 bhp,105 mph,12.5 seconds,157 g/km,353 miles
+Ford,Ka+,30050265,2017,998cc,"8,639 miles",Petrol,Semi Automatic,Grey,Hatchback,67.3 mpg,Front Wheel Drive,3,4,69 bhp,101 mph,12.9 seconds,116 g/km,427 miles
+Fiat,500,30417237,2020,998cc,"8,654 miles",Petrol,Manual,Red,Hatchback,56.5 mpg,Front Wheel Drive,5,5,148 bhp,127 mph,8.4 seconds,140 g/km,493 miles
+Audi,Q2,30384382,2022,998cc,"8,757 miles",Petrol,Manual,Yellow,Hatchback,55.4 mpg,Front Wheel Drive,5,5,90 bhp,106 mph,13.1 seconds,110 g/km,666 miles
+Seat,Arona,30407504,2019,898cc,"8,759 miles",Petrol,Manual,Grey,Hatchback,48.7 mpg,Front Wheel Drive,5,5,79 bhp,105 mph,14.7 seconds,107 g/km,421 miles
+Volkswagen,Golf,30267166,2019,1194cc,"15,922 miles",Petrol,Manual,Black,Hatchback,47.9 mpg,Front Wheel Drive,3,5,74 bhp,101 mph,15.5 seconds,128 g/km,431 miles
+Hyundai,i10,30283987,2020,1999cc,"16,033 miles",Diesel,Manual,Black,SUV,44.8 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,13.2 seconds,120 g/km,537 miles
+Citroen,C1,30421757,2018,1149cc,"16,079 miles",Petrol,Manual,White,Hatchback,50.4 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,13.2 seconds,128 g/km,431 miles
+Peugeot,108,30384497,2018,1984cc,"16,120 miles",Petrol,Manual,Black,Coupe,46.3 mpg,Rear Wheel Drive,5,4,70 bhp,94 mph,15.9 seconds,97 g/km,518 miles
+MG,ZS,29974698,2019,998cc,"16,124 miles",Petrol,Manual,Grey,Hatchback,60.1 mpg,Front Wheel Drive,5,5,89 bhp,110 mph,12.1 seconds,117 g/km,466 miles
+Nissan,Qashqai,30050135,2017,1242cc,"16,380 miles",Petrol,Manual,White,Hatchback,60.1 mpg,Front Wheel Drive,5,5,123 bhp,119 mph,9.8 seconds,126 g/km,466 miles
+Vauxhall,Corsa,30417331,2018,999cc,"16,473 miles",Petrol,Manual,Orange,Hatchback,64.2 mpg,Rear Wheel Drive,3,5,136 bhp,130 mph,8.7 seconds,131 g/km,420 miles
+Citroen,Berlingo,30050218,2020,998cc,"16,581 miles",Petrol,Manual,Black,Hatchback,58.9 mpg,Front Wheel Drive,5,5,119 bhp,119 mph,9.0 seconds,141 g/km,452 miles
+Volkswagen,Polo,30325193,2019,1598cc,"16,598 miles",Diesel,Manual,Black,SUV,49.6 mpg,Front Wheel Drive,5,5,134 bhp,131 mph,9.9 seconds,121 g/km,837 miles
+Vauxhall,Crossland X,30417335,2019,1496cc,"16,600 miles",Petrol,Manual,Red,Hatchback,47.9 mpg,Front Wheel Drive,5,5,130 bhp,113 mph,11.1 seconds,147 g/km,611 miles
+MINI,Hatch,30417172,2019,1498cc,"16,644 miles",Petrol,Manual,Silver,SUV,35.3 mpg,Front Wheel Drive,5,5,110 bhp,118 mph,9.6 seconds,99 g/km,723 miles
+Kia,Picanto,30337792,2020,1995cc,"16,837 miles",Diesel,Semi Automatic,Black,Saloon,49.6 mpg,Rear Wheel Drive,5,5,116 bhp,124 mph,10.5 seconds,111 g/km,610 miles
+Kia,Picanto,30132604,2018,1586cc,"16,933 miles",Petrol,Manual,Grey,Hatchback,53.3 mpg,Front Wheel Drive,5,5,113 bhp,121 mph,9.3 seconds,131 g/km,443 miles
+Suzuki,Swift,30090148,2017,1198cc,"16,948 miles",Petrol,Manual,Yellow,Hatchback,57.7 mpg,Front Wheel Drive,5,5,138 bhp,120 mph,10.5 seconds,130 g/km,489 miles
+Peugeot,208,30407547,2018,1591cc,"16,967 miles",Petrol,Automatic,Red,SUV,32.5 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,14.2 seconds,95 g/km,531 miles
+Mazda,Mazda3,30003879,2018,998cc,"17,040 miles",Petrol,Manual,Red,Hatchback,56.5 mpg,Front Wheel Drive,5,4,71 bhp,100 mph,13.8 seconds,93 g/km,530 miles
+Renault,Clio,30384705,2018,1591cc,"17,120 miles",Petrol,Automatic,Silver,SUV,32.1 mpg,Front Wheel Drive,5,5,74 bhp,110 mph,12.3 seconds,113 g/km,458 miles
+Vauxhall,Corsa,30208711,2019,898cc,"17,121 miles",Petrol,Manual,Silver,Hatchback,46.3 mpg,Front Wheel Drive,5,5,90 bhp,106 mph,13.1 seconds,122 g/km,518 miles
+Vauxhall,Corsa,29993452,2020,1498cc,"17,196 miles",Petrol,Manual,Blue,Hatchback,44.8 mpg,Front Wheel Drive,5,5,120 bhp,122 mph,10.8 seconds,128 g/km,473 miles
+Vauxhall,Corsa,30401149,2018,1398cc,"17,237 miles",Petrol,Manual,Grey,Hatchback,54.3 mpg,Front Wheel Drive,4,5,95 bhp,113 mph,11.8 seconds,129 g/km,418 miles
+Toyota,Yaris,30421755,2020,1333cc,"17,404 miles",Petrol,Manual,Red,SUV,42.16 mpg,Front Wheel Drive,5,5,99 bhp,121 mph,9.3 seconds,119 g/km,516 miles
+Peugeot,108,30267318,2021,1749cc,"17,578 miles",Diesel,Manual,Red,SUV,47.1 mpg,Front Wheel Drive,3,4,69 bhp,99 mph,12.9 seconds,122 g/km,356 miles
+Volkswagen,T-Cross,30178669,2018,999cc,"17,658 miles",Petrol,Semi Automatic,Grey,Hatchback,44.1 mpg,Front Wheel Drive,5,5,138 bhp,132 mph,8.5 seconds,139 g/km,383 miles
+Vauxhall,Grandland X,30348688,2018,1198cc,"17,737 miles",Petrol,Manual,Black,Hatchback,57.7 mpg,Rear Wheel Drive,2,4,191 bhp,147 mph,7.7 seconds,126 g/km,635 miles
+Kia,Stonic,30132328,2019,1332cc,"17,754 miles",Petrol,Manual,White,Hatchback,28.5 mpg,Front Wheel Drive,5,5,115 bhp,117 mph,11.7 seconds,135 g/km,670 miles
+Mazda,Mazda2,30178652,2019,998cc,"17,878 miles",Petrol,Manual,Red,Hatchback,68.9 mpg,Front Wheel Drive,5,5,124 bhp,126 mph,10.9 seconds,110 g/km,596 miles
+Vauxhall,Corsa,30421697,2018,1998cc,"17,901 miles",Petrol,Automatic,Red,Hatchback,48.7 mpg,Front Wheel Drive,3,4,70 bhp,104 mph,13.8 seconds,106 g/km,435 miles
+Ford,Ka+,30208549,2018,1498cc,"18,010 miles",Petrol,Semi Automatic,Grey,Hatchback,43.5 mpg,Front Wheel Drive,5,5,72 bhp,106 mph,13.1 seconds,117 g/km,326 miles
+MINI,Hatch,30421765,2019,999cc,"18,030 miles",Petrol,Manual,Grey,Hatchback,49.6 mpg,Front Wheel Drive,5,5,158 bhp,123 mph,9.9 seconds,131 g/km,482 miles
+Fiat,500,30421743,2020,998cc,"18,054 miles",Petrol,Manual,Brown,Hatchback,50.4 mpg,Front Wheel Drive,5,5,120 bhp,116 mph,10.6 seconds,134 g/km,537 miles
+Citroen,C1,30281207,2019,1498cc,"18,055 miles",Petrol,Manual,Grey,SUV,35.3 mpg,Front Wheel Drive,4,5,134 bhp,134 mph,9.0 seconds,138 g/km,431 miles
+Toyota,Aygo,30384339,2019,1598cc,"18,103 miles",Petrol,Manual,Black,Hatchback,34.9 mpg,Four Wheel Drive,5,5,134 bhp,112 mph,11.6 seconds,137 g/km,593 miles
+Toyota,Yaris,30079807,2018,1461cc,"18,271 miles",Diesel,Manual,Silver,Hatchback,67.3 mpg,Front Wheel Drive,5,5,99 bhp,117 mph,9.9 seconds,97 g/km,516 miles
+Ford,Kuga,30348802,2019,1398cc,"18,433 miles",Petrol,Manual,Black,Hatchback,43.5 mpg,Front Wheel Drive,5,5,150 bhp,125 mph,9.9 seconds,143 g/km,532 miles
+Vauxhall,Adam,30079595,2017,1398cc,"18,489 miles",Petrol,Manual,Blue,Hatchback,54.3 mpg,Front Wheel Drive,5,5,148 bhp,131 mph,8.5 seconds,152 g/km,464 miles
+Citroen,C1,30050236,2019,1398cc,"18,500 miles",Petrol,Manual,Blue,Hatchback,43.5 mpg,Front Wheel Drive,5,5,109 bhp,120 mph,9.4 seconds,106 g/km,509 miles
+Kia,Picanto,30407489,2018,999cc,"18,554 miles",Petrol,Manual,Orange,Hatchback,67.3 mpg,Front Wheel Drive,3,4,69 bhp,101 mph,12.9 seconds,108 g/km,396 miles
+Citroen,C5 Aircross,30025505,2020,999cc,"18,690 miles",Petrol,Manual,White,Hatchback,50.4 mpg,Front Wheel Drive,3,4,69 bhp,103 mph,14.9 seconds,128 g/km,374 miles
+MINI,Hatch,30240329,2019,1499cc,"18,877 miles",Petrol,Semi Automatic,Orange,Hatchback,36.7 mpg,Front Wheel Drive,5,5,148 bhp,121 mph,9.7 seconds,164 g/km,517 miles
+Ford,Puma,30312189,2019,998cc,"18,934 miles",Petrol,Manual,White,Hatchback,58.9 mpg,Front Wheel Drive,5,5,89 bhp,114 mph,9.7 seconds,120 g/km,516 miles
+Mercedes-Benz,GLA Class,30347378,2019,1998cc,"18,944 miles",Petrol,Manual,Silver,Hatchback,42.8 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,13.2 seconds,120 g/km,537 miles
+MINI,Hatch,30348886,2017,1199cc,"18,996 miles",Petrol,Manual,Red,Hatchback,65.7 mpg,Front Wheel Drive,5,5,89 bhp,114 mph,9.7 seconds,120 g/km,516 miles
+Skoda,Fabia,30079581,2018,1496cc,"18,999 miles",Diesel,Manual,Black,Hatchback,53.3 mpg,Front Wheel Drive,5,5,72 bhp,106 mph,13.1 seconds,118 g/km,326 miles
+Renault,Captur,30208499,2020,999cc,"19,040 miles",Petrol,Manual,Black,Hatchback,50.4 mpg,Front Wheel Drive,5,5,148 bhp,121 mph,9.7 seconds,164 g/km,517 miles
+Toyota,Aygo,30289946,2017,998cc,"19,159 miles",Petrol,Manual,Red,Hatchback,69 mpg,Front Wheel Drive,5,5,120 bhp,116 mph,10.6 seconds,141 g/km,512 miles
+Dacia,Sandero,30308321,2018,998cc,"19,191 miles",Petrol,Manual,White,Hatchback,68.9 mpg,Front Wheel Drive,5,5,163 bhp,135 mph,8.8 seconds,123 g/km,576 miles
+Kia,Picanto,29969095,2019,898cc,"19,252 miles",Petrol,Manual,White,Hatchback,46.3 mpg,Front Wheel Drive,5,5,120 bhp,130 mph,9.1 seconds,158 g/km,565 miles
+Land Rover,Discovery Sport,30046045,2019,898cc,"19,309 miles",Petrol,Manual,Orange,Hatchback,52.3 mpg,Rear Wheel Drive,5,4,90 bhp,103 mph,11.9 seconds,117 g/km,356 miles
+Vauxhall,Corsa,30103680,2019,1368cc,"19,333 miles",Petrol,Manual,Silver,Saloon,42.2 mpg,Front Wheel Drive,5,5,153 bhp,124 mph,9.0 seconds,128 g/km,458 miles
+Fiat,500,30188275,2021,1199cc,"19,402 miles",Petrol,Manual,White,Hatchback,53.3 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,14.2 seconds,93 g/km,435 miles
+Ford,EcoSport,30335114,2017,1364cc,"10,944 miles",Petrol,Manual,White,SUV,47.1 mpg,Front Wheel Drive,5,5,90 bhp,112 mph,12.2 seconds,105 g/km,595 miles
+MG,MG3,30188165,2019,1242cc,"10,953 miles",Petrol,Manual,White,Hatchback,46.3 mpg,Front Wheel Drive,5,5,94 bhp,113 mph,10.3 seconds,104 g/km,487 miles
+Vauxhall,Corsa,30392892,2020,1499cc,"10,964 miles",Petrol,Manual,White,Hatchback,41.5 mpg,Front Wheel Drive,5,5,119 bhp,119 mph,9.0 seconds,141 g/km,452 miles
+Ford,Puma,30354628,2021,1496cc,"10,996 miles",Diesel,Manual,Grey,Hatchback,58.9 mpg,Front Wheel Drive,3,4,69 bhp,103 mph,14.9 seconds,125 g/km,446 miles
+Ford,EcoSport,30233590,2021,1461cc,"11,061 miles",Diesel,Manual,Grey,Hatchback,55.38 mpg,Front Wheel Drive,5,5,134 bhp,134 mph,9.2 seconds,129 g/km,270 miles
+BMW,2 Series,30267208,2020,998cc,"11,073 miles",Petrol,Manual,White,Hatchback,55.4 mpg,Four Wheel Drive,5,5,148 bhp,128 mph,9.2 seconds,132 g/km,556 miles
+DS,DS 3 Crossback,30384367,2019,988cc,"19,734 miles",Petrol,Manual,Red,Hatchback,58.9 mpg,Front Wheel Drive,5,5,148 bhp,134 mph,8.4 seconds,109 g/km,492 miles
+Kia,Picanto,30063573,2021,999cc,"19,762 miles",Petrol,Manual,Grey,Hatchback,56.5 mpg,Four Wheel Drive,5,5,211 bhp,138 mph,7.3 seconds,172 g/km,540 miles
+Nissan,X Trail,30079653,2020,1199cc,"19,805 miles",Petrol,Manual,White,Hatchback,53.3 mpg,Front Wheel Drive,5,5,148 bhp,124 mph,9.5 seconds,143 g/km,653 miles
+Mercedes-Benz,C Class,30095384,2018,999cc,"19,917 miles",Petrol,Manual,Blue,Hatchback,46.3 mpg,Front Wheel Drive,5,5,90 bhp,106 mph,13.1 seconds,95 g/km,777 miles
+Ford,Fiesta,30113727,2019,1332cc,"19,973 miles",Petrol,Semi Automatic,Grey,SUV,39.8 mpg,Front Wheel Drive,5,5,114 bhp,122 mph,10.3 seconds,122 g/km,546 miles
+Vauxhall,Corsa,30281382,2021,1998cc,"20,025 miles",Petrol,Manual,Blue,Hatchback,47.9 mpg,Front Wheel Drive,5,5,75 bhp,103 mph,14.5 seconds,127 g/km,499 miles
+Suzuki,Celerio,30075059,2020,1332cc,"20,046 miles",Petrol,Semi Automatic,Black,Coupe,45.6 mpg,Front Wheel Drive,5,5,113 bhp,125 mph,9.8 seconds,109 g/km,740 miles
+Kia,Xceed,30384604,2019,1598cc,"20,176 miles",Diesel,Automatic,Blue,SUV,43.5 mpg,Front Wheel Drive,5,5,94 bhp,116 mph,10.8 seconds,106 g/km,460 miles
+Suzuki,Vitara,30233592,2018,1999cc,"20,275 miles",Diesel,Manual,White,Hatchback,60.1 mpg,Front Wheel Drive,5,5,128 bhp,133 mph,9.2 seconds,125 g/km,565 miles
+Renault,Clio,30348820,2017,1242cc,"20,276 miles",Petrol,Manual,White,Hatchback,55.4 mpg,Front Wheel Drive,5,5,148 bhp,127 mph,8.4 seconds,154 g/km,456 miles
+Nissan,Juke,30401211,2020,1199cc,"20,288 miles",Petrol,Manual,White,Hatchback,53.3 mpg,Front Wheel Drive,5,5,86 bhp,103 mph,13.8 seconds,141 g/km,421 miles
+Nissan,Micra,29860531,2020,999cc,"20,638 miles",Petrol,Manual,Orange,Hatchback,49.6 mpg,Front Wheel Drive,5,7,148 bhp,126 mph,9.8 seconds,129 g/km,633 miles
+Audi,Q2,30312174,2019,1499cc,"20,667 miles",Diesel,Manual,Black,Hatchback,80.7 mpg,Front Wheel Drive,4,5,148 bhp,130 mph,8.7 seconds,128 g/km,460 miles
+Ford,C-MAX,30384372,2019,1999cc,"20,674 miles",Diesel,Manual,White,SUV,44.8 mpg,Front Wheel Drive,5,4,59 bhp,100 mph,13.9 seconds,96 g/km,518 miles
+Toyota,Aygo,30384520,2019,1199cc,"11,523 miles",Petrol,Manual,Grey,Hatchback,51.4 mpg,Front Wheel Drive,5,5,197 bhp,147 mph,6.7 seconds,138 g/km,350 miles
+Toyota,Aygo,30417175,2019,1242cc,"11,526 miles",Petrol,Manual,Grey,Hatchback,51.4 mpg,Four Wheel Drive,5,5,211 bhp,138 mph,7.3 seconds,172 g/km,540 miles
+Kia,Picanto,30421736,2021,1333cc,"11,564 miles",Petrol,Semi Automatic,White,Hatchback,44.8 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,12.6 seconds,93 g/km,530 miles
+Renault,Twingo,29974749,2019,1229cc,"11,572 miles",Petrol,Manual,Blue,Hatchback,44.8 mpg,Front Wheel Drive,5,4,68 bhp,99 mph,14.2 seconds,95 g/km,531 miles
+Ford,Ka+,30148688,2019,1498cc,"11,642 miles",Petrol,Manual,Silver,SUV,39.2 mpg,Four Wheel Drive,5,5,150 bhp,122 mph,10.4 seconds,142 g/km,622 miles
+Kia,Picanto,30392972,2020,1598cc,"11,650 miles",Diesel,Automatic,White,SUV,48.7 mpg,Front Wheel Drive,5,5,97 bhp,105 mph,11.0 seconds,86 g/km,685 miles
+Land Rover,Range Rover Evoque,30188250,2018,1398cc,"11,741 miles",Petrol,Manual,Silver,Hatchback,54.3 mpg,Four Wheel Drive,5,7,178 bhp,117 mph,8.9 seconds,170 g/km,524 miles
+Renault,Clio,30148634,2020,999cc,"11,807 miles",Petrol,Manual,Grey,Hatchback,51.4 mpg,Front Wheel Drive,5,5,123 bhp,119 mph,9.8 seconds,96 g/km,475 miles
+Audi,TT,30354478,2017,1242cc,"11,812 miles",Petrol,Manual,Red,Hatchback,60.1 mpg,Front Wheel Drive,5,5,158 bhp,123 mph,9.9 seconds,145 g/km,542 miles
+Hyundai,i10,29969065,2021,1496cc,"11,911 miles",Petrol,Manual,White,Hatchback,53.3 mpg,Front Wheel Drive,5,5,138 bhp,119 mph,10.1 seconds,157 g/km,434 miles
+Fiat,500,30289923,2019,999cc,"11,947 miles",Petrol,Manual,White,Hatchback,46.3 mpg,Front Wheel Drive,5,5,94 bhp,116 mph,10.8 seconds,121 g/km,469 miles
+Volkswagen,Polo,30103819,2019,1498cc,"12,065 miles",Petrol,Manual,Black,SUV,39.2 mpg,Front Wheel Drive,5,5,83 bhp,107 mph,12.5 seconds,125 g/km,458 miles
+Volkswagen,Polo,30103525,2020,1998cc,"12,175 miles",Petrol,Manual,Red,Hatchback,45.6 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,13.8 seconds,93 g/km,444 miles
+Peugeot,108,30392939,2019,1490cc,"12,203 miles",Petrol,Automatic,White,Hatchback,42.2 mpg,Front Wheel Drive,5,5,114 bhp,126 mph,10.5 seconds,101 g/km,652 miles
+Kia,Sportage,29969121,2019,1595cc,"12,220 miles",Petrol,Manual,Black,Estate,51.4 mpg,Front Wheel Drive,5,5,187 bhp,130 mph,7.7 seconds,113 g/km,578 miles
+Toyota,Yaris,30046239,2017,1560cc,"12,221 miles",Diesel,Manual,Grey,Hatchback,80.7 mpg,Rear Wheel Drive,5,5,154 bhp,138 mph,8.5 seconds,148 g/km,613 miles
+Ford,Kuga,30188159,2019,898cc,"12,257 miles",Petrol,Automatic,Black,Hatchback,46.3 mpg,Front Wheel Drive,5,5,163 bhp,125 mph,10.3 seconds,145 g/km,471 miles
+BMW,5 Series,30046169,2021,998cc,"12,290 miles",Petrol,Manual,White,Hatchback,54.3 mpg,Front Wheel Drive,5,5,130 bhp,124 mph,10.2 seconds,128 g/km,424 miles
+Suzuki,Vitara,30354569,2020,999cc,"12,328 miles",Petrol,Manual,Grey,Hatchback,49.6 mpg,Front Wheel Drive,5,5,94 bhp,115 mph,10.4 seconds,125 g/km,499 miles
+Ford,Ka+,30148669,2019,998cc,"12,329 miles",Petrol,Manual,Black,Hatchback,56.5 mpg,Front Wheel Drive,5,5,123 bhp,111 mph,11.1 seconds,159 g/km,379 miles
+Kia,Sportage,30148615,2017,2143cc,"22,310 miles",Diesel,Automatic,Blue,Convertible,58.9 mpg,Front Wheel Drive,5,5,148 bhp,117 mph,10.3 seconds,151 g/km,501 miles
+Toyota,Aygo,30392876,2017,898cc,"22,322 miles",Petrol,Manual,Black,Hatchback,60.1 mpg,Four Wheel Drive,5,5,148 bhp,127 mph,9.2 seconds,124 g/km,674 miles
+Kia,Sportage,30103598,2019,999cc,"22,361 miles",Petrol,Manual,Orange,Hatchback,55.4 mpg,Front Wheel Drive,4,5,120 bhp,130 mph,9.0 seconds,152 g/km,565 miles
+Renault,Clio,30168001,2019,1998cc,"22,390 miles",Petrol,Manual,Silver,Hatchback,42.8 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,14.2 seconds,93 g/km,435 miles
+Seat,Leon,30103567,2018,1229cc,"22,577 miles",Petrol,Manual,Orange,Hatchback,53.3 mpg,Front Wheel Drive,5,4,89 bhp,106 mph,11.8 seconds,104 g/km,432 miles
+Vauxhall,Corsa,30354581,2020,999cc,"22,586 miles",Petrol,Manual,White,Hatchback,58.9 mpg,Front Wheel Drive,3,5,82 bhp,109 mph,12.2 seconds,104 g/km,691 miles
+Renault,Kadjar,30233525,2019,1332cc,"22,617 miles",Petrol,Manual,Black,Hatchback,28.5 mpg,Front Wheel Drive,3,5,74 bhp,101 mph,15.5 seconds,128 g/km,431 miles
+Nissan,Juke,30273226,2018,1995cc,"22,641 miles",Diesel,Manual,Grey,SUV,49.6 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,14.0 seconds,110 g/km,453 miles
+Audi,A3,30389389,2020,1995cc,"22,642 miles",Diesel,Semi Automatic,Red,Hatchback,53.3 mpg,Front Wheel Drive,5,5,84 bhp,105 mph,13.5 seconds,129 g/km,402 miles
+Nissan,X Trail,30392946,2018,1991cc,"22,660 miles",Petrol,Semi Automatic,White,SUV,37.2 mpg,Front Wheel Drive,5,5,134 bhp,112 mph,10.8 seconds,120 g/km,631 miles
+Audi,A3,30354550,2019,1598cc,"22,793 miles",Diesel,Manual,Blue,Hatchback,49.6 mpg,Front Wheel Drive,5,5,74 bhp,110 mph,12.3 seconds,114 g/km,458 miles
+BMW,1 Series,30233550,2018,1598cc,"22,908 miles",Diesel,Manual,Grey,Estate,67.3 mpg,Front Wheel Drive,5,5,163 bhp,119 mph,9.8 seconds,150 g/km,452 miles
+Ford,Ka+,29905924,2019,1984cc,"22,927 miles",Petrol,Manual,Black,Saloon,42.2 mpg,Front Wheel Drive,5,5,89 bhp,110 mph,12.1 seconds,113 g/km,466 miles
+Mercedes-Benz,A Class,30392873,2019,999cc,"22,974 miles",Petrol,Manual,White,Hatchback,47.9 mpg,Rear Wheel Drive,5,5,116 bhp,124 mph,10.5 seconds,114 g/km,808 miles
+Ford,Fiesta,30392988,2021,1498cc,"23,070 miles",Petrol,Manual,Grey,Hatchback,51.4 mpg,Front Wheel Drive,5,5,150 bhp,125 mph,9.9 seconds,143 g/km,660 miles
+Peugeot,108,29968991,2020,1498cc,"23,119 miles",Petrol,Semi Automatic,Blue,Hatchback,41.5 mpg,Front Wheel Drive,5,5,109 bhp,121 mph,10.0 seconds,114 g/km,460 miles
+Mazda,CX-3,30392878,2017,1197cc,"23,174 miles",Petrol,Manual,Silver,SUV,47.1 mpg,Front Wheel Drive,3,4,70 bhp,104 mph,13.8 seconds,115 g/km,435 miles
+Nissan,Micra,30103731,2019,1084cc,"23,189 miles",Petrol,Manual,Silver,Hatchback,48.7 mpg,Front Wheel Drive,5,5,110 bhp,119 mph,9.9 seconds,103 g/km,661 miles
+Volkswagen,Golf,30103672,2019,1968cc,"23,275 miles",Diesel,Manual,Grey,SUV,49.6 mpg,Front Wheel Drive,5,5,150 bhp,125 mph,9.9 seconds,143 g/km,532 miles
+Volkswagen,Golf,30384329,2018,999cc,"23,302 miles",Petrol,Manual,Red,Hatchback,67.3 mpg,Front Wheel Drive,5,5,130 bhp,113 mph,11.1 seconds,153 g/km,476 miles
+Kia,Ceed,30354459,2020,1199cc,"23,490 miles",Petrol,Manual,Black,Hatchback,52.3 mpg,Front Wheel Drive,5,5,66 bhp,100 mph,13.8 seconds,117 g/km,427 miles
+Ford,Kuga,30188287,2019,1984cc,"23,605 miles",Petrol,Semi Automatic,Red,Hatchback,39.8 mpg,Front Wheel Drive,5,5,189 bhp,140 mph,7.5 seconds,130 g/km,453 miles
+Nissan,Juke,30188185,2019,1991cc,"23,639 miles",Petrol,Semi Automatic,White,SUV,37.2 mpg,Front Wheel Drive,5,5,110 bhp,119 mph,9.8 seconds,111 g/km,565 miles
+Fiat,500,30354501,2018,998cc,"23,711 miles",Petrol,Manual,White,Hatchback,68.9 mpg,Front Wheel Drive,5,5,148 bhp,131 mph,9.6 seconds,140 g/km,540 miles
+Volkswagen,T-Roc,30290022,2017,998cc,"23,761 miles",Petrol,Manual,Grey,Hatchback,69 mpg,Front Wheel Drive,5,5,113 bhp,123 mph,10.5 seconds,104 g/km,597 miles
+Renault,Captur,30289978,2019,1999cc,"23,834 miles",Diesel,Automatic,White,SUV,42.2 mpg,Rear Wheel Drive,2,2,71 bhp,94 mph,14.9 seconds,99 g/km,506 miles
+Vauxhall,Mokka X,30308298,2019,1798cc,"23,870 miles",Hybrid,Automatic,White,SUV,72.4 mpg,Front Wheel Drive,5,5,168 bhp,137 mph,8.3 seconds,115 g/km,706 miles
+Seat,Ibiza,30188201,2019,999cc,"23,942 miles",Petrol,Manual,Blue,SUV,53.3 mpg,Front Wheel Drive,5,5,187 bhp,149 mph,6.9 seconds,141 g/km,270 miles
+Vauxhall,Corsa,30168053,2019,1999cc,"13,123 miles",Diesel,Automatic,White,SUV,44.1 mpg,Front Wheel Drive,5,5,75 bhp,106 mph,13.3 seconds,90 g/km,799 miles
+Ford,Fiesta,30290018,2020,999cc,"13,155 miles",Petrol,Manual,Blue,Hatchback,51.4 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,13.8 seconds,114 g/km,444 miles
+Vauxhall,Corsa,30188254,2019,1364cc,"13,178 miles",Petrol,Semi Automatic,Black,SUV,37.2 mpg,Front Wheel Drive,4,5,161 bhp,142 mph,8.2 seconds,106 g/km,443 miles
+Vauxhall,Corsa,30354592,2021,999cc,"13,178 miles",Petrol,Manual,Grey,Hatchback,53.3 mpg,Front Wheel Drive,5,5,74 bhp,110 mph,12.3 seconds,113 g/km,458 miles
+Smart,Forfour,30354532,2021,998cc,"13,233 miles",Petrol,Manual,Red,Hatchback,57.7 mpg,Front Wheel Drive,5,5,83 bhp,100 mph,13.2 seconds,137 g/km,369 miles
+Renault,Clio,30354575,2020,999cc,"13,242 miles",Petrol,Manual,Grey,Hatchback,50.4 mpg,Front Wheel Drive,5,5,134 bhp,134 mph,8.8 seconds,122 g/km,270 miles
+Ford,Puma,30354493,2019,1248cc,"13,243 miles",Petrol,Manual,Brown,Hatchback,46.3 mpg,Front Wheel Drive,5,5,82 bhp,106 mph,13.6 seconds,106 g/km,466 miles
+BMW,1 Series,30103560,2018,999cc,"13,290 miles",Petrol,Manual,Red,Hatchback,68.9 mpg,Four Wheel Drive,2,5,187 bhp,150 mph,6.9 seconds,141 g/km,552 miles
+BMW,1 Series,30290058,2020,998cc,"13,298 miles",Petrol,Manual,Grey,Hatchback,57.7 mpg,Front Wheel Drive,5,5,138 bhp,120 mph,10.5 seconds,121 g/km,502 miles
+Ford,Fiesta,30233448,2019,1461cc,"13,316 miles",Diesel,Semi Automatic,Grey,Hatchback,68.9 mpg,Front Wheel Drive,5,5,138 bhp,122 mph,9.6 seconds,147 g/km,457 miles
+Mazda,CX-3,30103558,2017,1968cc,"13,327 miles",Diesel,Manual,Red,Hatchback,65.7 mpg,Front Wheel Drive,5,5,138 bhp,120 mph,10.5 seconds,130 g/km,489 miles
+Vauxhall,Insignia,30308306,2019,1595cc,"13,330 miles",Petrol,Semi Automatic,Silver,Estate,42.2 mpg,Front Wheel Drive,5,5,74 bhp,99 mph,13.6 seconds,136 g/km,509 miles
+Kia,Sportage,30389395,2018,1998cc,"13,384 miles",Petrol,Manual,Blue,SUV,38.2 mpg,Front Wheel Drive,5,5,89 bhp,111 mph,11.9 seconds,108 g/km,418 miles
+Peugeot,208,29969006,2019,1333cc,"13,385 miles",Petrol,Manual,Blue,Hatchback,42.8 mpg,Front Wheel Drive,5,5,100 bhp,116 mph,11.8 seconds,117 g/km,458 miles
+BMW,1 Series,30354489,2021,1499cc,"13,395 miles",Diesel,Manual,Silver,Hatchback,70.6 mpg,Front Wheel Drive,5,5,100 bhp,116 mph,11.8 seconds,117 g/km,458 miles
+Seat,Ibiza,30392979,2017,1242cc,"13,418 miles",Petrol,Manual,Red,Hatchback,60.1 mpg,Rear Wheel Drive,2,2,129 bhp,127 mph,8.3 seconds,139 g/km,466 miles
+Nissan,Qashqai,30392888,2018,1591cc,"13,591 miles",Petrol,Automatic,Red,Hatchback,34.5 mpg,Four Wheel Drive,5,5,178 bhp,127 mph,8.5 seconds,128 g/km,427 miles
+Toyota,Aygo,30392880,2019,1999cc,"13,592 miles",Diesel,Automatic,Black,SUV,41.5 mpg,Front Wheel Drive,5,5,110 bhp,117 mph,10.3 seconds,110 g/km,648 miles
+Peugeot,108,29986715,2021,1598cc,"13,604 miles",Petrol,Manual,Grey,SUV,42.2 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,13.8 seconds,85 g/km,453 miles
+Renault,Clio,29986718,2018,1995cc,"13,616 miles",Diesel,Manual,Orange,SUV,60.1 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,13.2 seconds,120 g/km,537 miles
+Ford,Kuga,30354494,2019,1595cc,"25,499 miles",Petrol,Manual,Black,Coupe,51.4 mpg,Front Wheel Drive,3,5,89 bhp,109 mph,13.2 seconds,130 g/km,431 miles
+BMW,1 Series,30354616,2018,998cc,"25,505 miles",Petrol,Manual,Purple,Hatchback,56.5 mpg,Front Wheel Drive,5,5,113 bhp,124 mph,9.5 seconds,111 g/km,436 miles
+Renault,Captur,30354473,2018,1242cc,"25,506 miles",Petrol,Manual,Red,Hatchback,61.4 mpg,Rear Wheel Drive,4,5,197 bhp,143 mph,7.2 seconds,165 g/km,471 miles
+Mazda,Mazda3,30148623,2019,1398cc,"25,705 miles",Petrol,Manual,Silver,Hatchback,43.5 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,13.2 seconds,120 g/km,537 miles
+Fiat,Tipo,30148645,2021,998cc,"25,883 miles",Petrol,Manual,Blue,Hatchback,58.9 mpg,Front Wheel Drive,5,5,114 bhp,127 mph,10.4 seconds,114 g/km,597 miles
+Vauxhall,Corsa,30188212,2019,1194cc,"25,916 miles",Petrol,Manual,Black,Hatchback,43.5 mpg,Front Wheel Drive,3,5,123 bhp,121 mph,9.9 seconds,98 g/km,607 miles
+MINI,Clubman,30042350,2019,1598cc,"25,934 miles",Diesel,Manual,White,SUV,46.3 mpg,Front Wheel Drive,5,5,108 bhp,115 mph,10.8 seconds,136 g/km,518 miles
+Seat,Arona,30384440,2018,999cc,"25,954 miles",Petrol,Manual,White,Hatchback,58.9 mpg,Front Wheel Drive,5,5,122 bhp,118 mph,9.2 seconds,127 g/km,701 miles
+Vauxhall,Mokka X,30079751,2017,998cc,"26,009 miles",Petrol,Manual,Silver,Hatchback,65.7 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,12.1 seconds,104 g/km,579 miles
+Fiat,500,30384707,2018,2191cc,"26,096 miles",Diesel,Manual,White,Estate,64.2 mpg,Four Wheel Drive,5,5,180 bhp,124 mph,10.1 seconds,171 g/km,504 miles
+BMW,1 Series,30161978,2019,1998cc,"26,099 miles",Petrol,Automatic,Red,SUV,36.7 mpg,Front Wheel Drive,5,5,100 bhp,116 mph,11.8 seconds,121 g/km,458 miles
+BMW,1 Series,30155455,2018,898cc,"26,216 miles",Petrol,Manual,Black,Hatchback,47.1 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,12.1 seconds,99 g/km,579 miles
+Mercedes-Benz,E Class,30407469,2019,1399cc,"26,284 miles",Petrol,Manual,Grey,Hatchback,51.4 mpg,Front Wheel Drive,5,5,174 bhp,127 mph,8.9 seconds,168 g/km,476 miles
+Renault,Kadjar,30042540,2019,1496cc,"26,292 miles",Diesel,Manual,Blue,Hatchback,70.6 mpg,Front Wheel Drive,5,5,120 bhp,116 mph,10.6 seconds,134 g/km,537 miles
+Ford,Fiesta,30417044,2018,998cc,"26,343 miles",Petrol,Automatic,Grey,Hatchback,56.5 mpg,Front Wheel Drive,5,5,158 bhp,123 mph,9.9 seconds,123 g/km,495 miles
+Mercedes-Benz,CLA Class,30181251,2021,999cc,"14,298 miles",Petrol,Manual,White,Hatchback,56.5 mpg,Front Wheel Drive,5,4,66 bhp,100 mph,14.1 seconds,115 g/km,427 miles
+Honda,Civic,30289959,2019,1999cc,"14,354 miles",Diesel,Manual,White,SUV,44.8 mpg,Front Wheel Drive,5,5,99 bhp,112 mph,9.8 seconds,117 g/km,427 miles
+Fiat,500,30354480,2018,998cc,"14,356 miles",Petrol,Manual,Red,Hatchback,57.7 mpg,Front Wheel Drive,5,5,138 bhp,127 mph,9.3 seconds,132 g/km,480 miles
+Vauxhall,Corsa,30354593,2020,1591cc,"14,371 miles",Petrol,Manual,Red,SUV,34.9 mpg,Front Wheel Drive,5,5,69 bhp,96 mph,15.3 seconds,107 g/km,450 miles
+Vauxhall,Viva,30389392,2019,1229cc,"14,383 miles",Petrol,Manual,White,Hatchback,44.8 mpg,Rear Wheel Drive,2,2,129 bhp,126 mph,8.6 seconds,142 g/km,458 miles
+Nissan,Qashqai,30392930,2020,1199cc,"14,418 miles",Petrol,Manual,Black,Hatchback,52.3 mpg,Front Wheel Drive,5,5,120 bhp,116 mph,10.6 seconds,134 g/km,537 miles
+Mazda,CX-30,30394259,2020,998cc,"14,447 miles",Petrol,Manual,Red,Hatchback,55.4 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,13.2 seconds,128 g/km,431 miles
+Mercedes-Benz,CLA Class,30354562,2019,1199cc,"26,848 miles",Petrol,Manual,Black,MPV,51.4 mpg,Front Wheel Drive,5,5,189 bhp,141 mph,7.7 seconds,134 g/km,440 miles
+Seat,Leon,30148575,2019,1498cc,"26,899 miles",Petrol,Manual,Black,SUV,40.9 mpg,Front Wheel Drive,3,5,74 bhp,101 mph,15.5 seconds,118 g/km,548 miles
+Kia,Sportage,30103609,2019,1199cc,"26,913 miles",Petrol,Manual,Grey,MPV,56.5 mpg,Front Wheel Drive,5,5,108 bhp,124 mph,10.2 seconds,88 g/km,904 miles
+MINI,Hatch,30354530,2019,1598cc,"27,068 miles",Diesel,Semi Automatic,Grey,Hatchback,54.3 mpg,Front Wheel Drive,5,5,70 bhp,98 mph,16.4 seconds,121 g/km,464 miles
+Jaguar,E-PACE,30308366,2017,999cc,"27,096 miles",Petrol,Manual,Black,Convertible,65.7 mpg,Front Wheel Drive,5,5,134 bhp,134 mph,9.2 seconds,126 g/km,270 miles
+Fiat,Panda,30289980,2017,2143cc,"27,166 miles",Diesel,Semi Automatic,Grey,Hatchback,64.2 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,13.8 seconds,114 g/km,435 miles
+Peugeot,208,30188200,2019,1991cc,"27,223 miles",Petrol,Semi Automatic,White,Hatchback,28.5 mpg,Front Wheel Drive,5,5,89 bhp,104 mph,12.8 seconds,130 g/km,554 miles
+Skoda,Kamiq,30354605,2017,1560cc,"14,648 miles",Diesel,Manual,Grey,Hatchback,80.7 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,12.1 seconds,99 g/km,579 miles
+Seat,Arona,30392928,2021,998cc,"14,669 miles",Petrol,Manual,White,Hatchback,57.7 mpg,Front Wheel Drive,5,5,109 bhp,108 mph,11.0 seconds,112 g/km,522 miles
+Renault,Clio,30103625,2020,1199cc,"14,696 miles",Petrol,Manual,Orange,Hatchback,52.3 mpg,Front Wheel Drive,5,5,114 bhp,109 mph,11.4 seconds,108 g/km,727 miles
+Ford,Focus,30290027,2020,1968cc,"14,706 miles",Diesel,Semi Automatic,Grey,Saloon,50.4 mpg,Front Wheel Drive,5,5,138 bhp,120 mph,10.5 seconds,130 g/km,474 miles
+Land Rover,Range Rover Evoque,30308363,2019,898cc,"14,711 miles",Petrol,Manual,White,Hatchback,46.3 mpg,Front Wheel Drive,5,5,113 bhp,124 mph,9.8 seconds,111 g/km,536 miles
+Jaguar,E-PACE,30233520,2019,1248cc,"14,722 miles",Petrol,Automatic,White,Hatchback,47.9 mpg,Front Wheel Drive,5,5,163 bhp,119 mph,9.8 seconds,150 g/km,452 miles
+Audi,Q2,30392893,2019,1332cc,"14,776 miles",Petrol,Semi Automatic,Black,Hatchback,28.5 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,13.2 seconds,130 g/km,431 miles
+Citroen,C3,30281474,2019,1199cc,"14,789 miles",Petrol,Manual,Black,SUV,47.1 mpg,Front Wheel Drive,5,5,128 bhp,126 mph,9.4 seconds,113 g/km,546 miles
+Fiat,500,30281319,2019,1332cc,"14,802 miles",Petrol,Semi Automatic,Black,Hatchback,28.5 mpg,Front Wheel Drive,5,5,114 bhp,112 mph,10.7 seconds,122 g/km,502 miles
+Renault,Captur,30384519,2018,1984cc,"27,829 miles",Petrol,Semi Automatic,Black,Convertible,45.6 mpg,Front Wheel Drive,5,5,138 bhp,120 mph,10.5 seconds,130 g/km,482 miles
+Vauxhall,Adam,30042389,2019,1332cc,"28,024 miles",Petrol,Manual,Blue,SUV,41.5 mpg,Front Wheel Drive,5,5,80 bhp,105 mph,13.2 seconds,110 g/km,583 miles
+Ford,Kuga,29950238,2019,1364cc,"28,195 miles",Petrol,Manual,Orange,SUV,39.2 mpg,Front Wheel Drive,5,5,148 bhp,126 mph,9.2 seconds,127 g/km,724 miles
+Kia,Sportage,29974661,2018,1332cc,"28,197 miles",Petrol,Manual,Black,SUV,40.4 mpg,Front Wheel Drive,5,5,113 bhp,112 mph,11.9 seconds,100 g/km,657 miles
+Mazda,Mazda2,30196705,2020,1248cc,"28,208 miles",Petrol,Manual,White,Hatchback,46.3 mpg,Front Wheel Drive,5,5,148 bhp,139 mph,8.8 seconds,117 g/km,661 miles
+Vauxhall,Corsa,30107834,2019,1490cc,"28,210 miles",Petrol,Manual,White,SUV,37.2 mpg,Four Wheel Drive,5,5,187 bhp,135 mph,7.9 seconds,144 g/km,560 miles
+Ford,Puma,30317334,2018,1194cc,"14,969 miles",Petrol,Manual,White,Hatchback,47.9 mpg,Front Wheel Drive,5,5,114 bhp,126 mph,10.5 seconds,111 g/km,711 miles
+Fiat,500,30317316,2017,1968cc,"14,981 miles",Diesel,Semi Automatic,Grey,Saloon,62.8 mpg,Front Wheel Drive,5,5,130 bhp,119 mph,10.1 seconds,130 g/km,589 miles
+Mazda,Mazda2,30255953,2019,998cc,"15,012 miles",Petrol,Manual,White,Estate,45.6 mpg,Front Wheel Drive,5,5,148 bhp,134 mph,7.8 seconds,128 g/km,497 miles
+Vauxhall,Viva,29915904,2020,999cc,"15,042 miles",Petrol,Manual,Black,Hatchback,49.6 mpg,Front Wheel Drive,5,5,84 bhp,105 mph,13.3 seconds,114 g/km,533 miles
+Fiat,Tipo,30208401,2020,999cc,"15,073 miles",Petrol,Manual,Black,Hatchback,49.6 mpg,Front Wheel Drive,5,5,114 bhp,126 mph,9.4 seconds,108 g/km,428 miles
+Citroen,C1,30208476,2017,1496cc,"15,081 miles",Petrol,Manual,Blue,Convertible,47.1 mpg,Front Wheel Drive,5,5,148 bhp,131 mph,8.5 seconds,147 g/km,478 miles
+MINI,Hatch,30312197,2017,1199cc,"15,091 miles",Petrol,Manual,White,Hatchback,60.1 mpg,Front Wheel Drive,5,7,148 bhp,124 mph,9.6 seconds,167 g/km,481 miles
+Smart,Fortwo,30325205,2020,1998cc,"15,113 miles",Petrol,Automatic,Blue,Hatchback,40.4 mpg,Front Wheel Drive,3,4,69 bhp,99 mph,12.9 seconds,120 g/km,356 miles
+Ford,Kuga,30360662,2018,1199cc,"29,030 miles",Petrol,Semi Automatic,Red,MPV,58.9 mpg,Front Wheel Drive,3,5,74 bhp,101 mph,15.5 seconds,131 g/km,431 miles
+Renault,Zoe,30284849,2020,998cc,"29,064 miles",Petrol,Manual,Black,Hatchback,58.9 mpg,Front Wheel Drive,5,5,138 bhp,120 mph,10.5 seconds,121 g/km,502 miles
+Hyundai,i10,30010066,2018,1398cc,"29,088 miles",Petrol,Manual,Grey,Hatchback,54.3 mpg,Front Wheel Drive,5,5,120 bhp,124 mph,8.7 seconds,144 g/km,493 miles
+Mazda,CX-30,30255955,2018,1999cc,"29,094 miles",Diesel,Manual,White,Hatchback,60.1 mpg,Front Wheel Drive,5,5,94 bhp,116 mph,10.8 seconds,120 g/km,443 miles
+Vauxhall,Insignia,30008802,2019,999cc,"29,244 miles",Petrol,Manual,Red,Hatchback,49.6 mpg,Front Wheel Drive,5,5,130 bhp,129 mph,9.7 seconds,129 g/km,727 miles
+Mercedes-Benz,CLA Class,30337900,2018,1997cc,"29,246 miles",Petrol,Automatic,White,Saloon,34 mpg,Front Wheel Drive,5,4,113 bhp,122 mph,8.5 seconds,110 g/km,388 miles
+Peugeot,208,30417293,2017,1242cc,"29,303 miles",Petrol,Manual,Pink,Hatchback,60.1 mpg,Front Wheel Drive,5,5,104 bhp,112 mph,12.1 seconds,149 g/km,407 miles
+Mazda,MX-5,30225433,2018,1398cc,"29,494 miles",Petrol,Manual,Black,Hatchback,54.3 mpg,Front Wheel Drive,5,5,128 bhp,133 mph,9.2 seconds,122 g/km,546 miles
+Smart,Forfour,30284879,2020,1598cc,"29,554 miles",Diesel,Manual,Black,Hatchback,54.3 mpg,Front Wheel Drive,5,5,72 bhp,106 mph,13.1 seconds,117 g/km,326 miles
+Ford,Fiesta,30240336,2018,998cc,"29,600 miles",Petrol,Manual,Black,Hatchback,65.7 mpg,Front Wheel Drive,5,5,138 bhp,124 mph,9.5 seconds,148 g/km,442 miles
+MINI,Cooper,30161966,2021,999cc,"29,672 miles",Petrol,Manual,White,SUV,47.1 mpg,Front Wheel Drive,5,5,105 bhp,108 mph,10.4 seconds,140 g/km,497 miles
+Mazda,MX-5,30417314,2018,1969cc,"29,687 miles",Petrol,Manual,Red,Hatchback,51.4 mpg,Front Wheel Drive,3,4,69 bhp,99 mph,12.9 seconds,110 g/km,463 miles
+Ford,Puma,30261017,2020,999cc,"29,775 miles",Petrol,Manual,Black,Hatchback,60.1 mpg,Front Wheel Drive,3,4,70 bhp,104 mph,13.8 seconds,119 g/km,410 miles
+Toyota,Aygo,30417363,2017,1498cc,"29,813 miles",Petrol,Automatic,Black,SUV,38.2 mpg,Front Wheel Drive,3,4,70 bhp,104 mph,13.8 seconds,120 g/km,410 miles
+Vauxhall,Mokka X,30103607,2020,999cc,"29,857 miles",Petrol,Manual,White,Hatchback,49.6 mpg,Front Wheel Drive,3,5,81 bhp,104 mph,13.3 seconds,122 g/km,502 miles
+BMW,i3,30354549,2020,1199cc,"29,903 miles",Petrol,Manual,Grey,SUV,47.1 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,13.2 seconds,128 g/km,431 miles
+Mercedes-Benz,C Class,30103580,2017,898cc,"15,619 miles",Petrol,Manual,Blue,Hatchback,64.2 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,13.2 seconds,130 g/km,431 miles
+Renault,Clio,30290036,2019,1591cc,"15,622 miles",Petrol,Manual,Red,SUV,34.9 mpg,Front Wheel Drive,5,5,128 bhp,119 mph,10.2 seconds,113 g/km,568 miles
+Seat,Ibiza,30233435,2021,1199cc,"15,642 miles",Petrol,Manual,Grey,Hatchback,54.3 mpg,Front Wheel Drive,5,5,113 bhp,120 mph,10.2 seconds,115 g/km,421 miles
+Mazda,CX-3,30032882,2022,998cc,"15,651 miles",Petrol,Manual,White,Hatchback,55.4 mpg,Front Wheel Drive,5,5,79 bhp,106 mph,15.4 seconds,124 g/km,452 miles
+Vauxhall,Adam,29888460,2020,1199cc,"15,664 miles",Petrol,Manual,Blue,Hatchback,53.3 mpg,Front Wheel Drive,5,5,118 bhp,121 mph,8.9 seconds,119 g/km,622 miles
+Ford,Focus,30167912,2019,998cc,"15,672 miles",Petrol,Manual,Black,Hatchback,55.4 mpg,Four Wheel Drive,5,5,207 bhp,134 mph,6.6 seconds,127 g/km,751 miles
+Mercedes-Benz,A Class,30289981,2019,1499cc,"15,684 miles",Petrol,Manual,Grey,Hatchback,42.8 mpg,Front Wheel Drive,5,5,130 bhp,125 mph,10.3 seconds,107 g/km,716 miles
+BMW,X2,29888256,2018,998cc,"15,700 miles",Petrol,Manual,Grey,Hatchback,48.7 mpg,Front Wheel Drive,5,5,94 bhp,98 mph,15.1 seconds,98 g/km,686 miles
+BMW,1 Series,30046053,2017,1496cc,"15,741 miles",Petrol,Manual,Blue,Convertible,46.3 mpg,Front Wheel Drive,5,5,113 bhp,109 mph,11.8 seconds,130 g/km,664 miles
+Mercedes-Benz,GLC Class,30308253,2021,1998cc,"15,760 miles",Petrol,Manual,White,Hatchback,47.9 mpg,Front Wheel Drive,5,5,89 bhp,111 mph,11.9 seconds,108 g/km,418 miles
+Jaguar,E-PACE,30103804,2019,1398cc,"15,765 miles",Petrol,Manual,Silver,Hatchback,43.5 mpg,Front Wheel Drive,3,4,69 bhp,101 mph,12.9 seconds,122 g/km,375 miles
+Renault,Captur,30103750,2020,1498cc,"15,828 miles",Petrol,Manual,Blue,Hatchback,40.3 mpg,Front Wheel Drive,5,5,148 bhp,126 mph,9.6 seconds,117 g/km,884 miles
+Audi,Q2,30233503,2018,1084cc,"15,841 miles",Petrol,Manual,Silver,Hatchback,64.2 mpg,Front Wheel Drive,5,5,99 bhp,111 mph,12.2 seconds,118 g/km,502 miles
+Renault,Clio,30167954,2018,1998cc,"15,868 miles",Petrol,Semi Automatic,Grey,Hatchback,39.2 mpg,Front Wheel Drive,5,5,109 bhp,109 mph,11.0 seconds,141 g/km,443 miles
+Skoda,Octavia,30289938,2018,1398cc,"15,902 miles",Petrol,Manual,Red,Hatchback,55.4 mpg,Front Wheel Drive,3,5,74 bhp,101 mph,15.5 seconds,131 g/km,431 miles
+MINI,Hatch,30308307,2018,1598cc,"15,931 miles",Diesel,Manual,Red,Hatchback,85.6 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,13.2 seconds,130 g/km,431 miles
+Audi,A4,30392959,2019,1496cc,"15,950 miles",Petrol,Manual,Red,Hatchback,48.7 mpg,Front Wheel Drive,5,5,99 bhp,117 mph,9.9 seconds,97 g/km,516 miles
+Volkswagen,Polo,30308270,2018,998cc,"15,963 miles",Petrol,Manual,Red,Hatchback,51.4 mpg,Front Wheel Drive,5,5,154 bhp,134 mph,8.1 seconds,148 g/km,394 miles
+Volkswagen,T-Cross,30148582,2020,1332cc,"16,019 miles",Petrol,Manual,Red,Hatchback,28.5 mpg,Front Wheel Drive,5,5,108 bhp,127 mph,11.1 seconds,116 g/km,876 miles
+Volkswagen,Golf,30308248,2020,998cc,"16,023 miles",Petrol,Manual,Red,Hatchback,56.5 mpg,Four Wheel Drive,5,5,188 bhp,136 mph,7.8 seconds,126 g/km,674 miles
+Volkswagen,T-Roc,30308261,2017,1396cc,"16,027 miles",Petrol,Manual,Blue,MPV,50.4 mpg,Four Wheel Drive,5,5,237 bhp,127 mph,7.1 seconds,169 g/km,524 miles
+Hyundai,i10,30308320,2018,898cc,"16,051 miles",Petrol,Manual,Blue,Hatchback,64.2 mpg,Front Wheel Drive,5,7,148 bhp,121 mph,10.9 seconds,135 g/km,670 miles
+Toyota,C-HR,30188282,2017,1496cc,"31,716 miles",Petrol,Manual,Blue,Hatchback,56.5 mpg,Front Wheel Drive,5,5,122 bhp,118 mph,9.2 seconds,127 g/km,701 miles
+Ford,Fiesta,30354496,2020,1598cc,"31,737 miles",Diesel,Manual,Black,SUV,53.3 mpg,Front Wheel Drive,5,5,150 bhp,125 mph,9.9 seconds,143 g/km,532 miles
+Seat,Tarraco,30308352,2019,1332cc,"31,777 miles",Petrol,Manual,Grey,SUV,39.2 mpg,Front Wheel Drive,5,5,123 bhp,121 mph,9.9 seconds,98 g/km,607 miles
+Audi,A4,30103628,2019,999cc,"31,794 miles",Petrol,Manual,Red,Estate,48.7 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,13.2 seconds,130 g/km,431 miles
+Skoda,Citigo,30188267,2019,1998cc,"31,860 miles",Petrol,Automatic,Blue,SUV,36.7 mpg,Front Wheel Drive,5,5,113 bhp,116 mph,8.6 seconds,115 g/km,554 miles
+Vauxhall,Mokka X,30103648,2018,1398cc,"31,930 miles",Petrol,Manual,Silver,Hatchback,43.5 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,13.2 seconds,120 g/km,537 miles
+Nissan,Juke,30103704,2018,1498cc,"31,942 miles",Petrol,Manual,White,Hatchback,49.6 mpg,Front Wheel Drive,5,5,130 bhp,119 mph,11.5 seconds,108 g/km,803 miles
+Vauxhall,Corsa,30354586,2018,999cc,"31,942 miles",Petrol,Manual,White,SUV,45.6 mpg,Front Wheel Drive,5,5,138 bhp,122 mph,9.6 seconds,147 g/km,457 miles
+Volkswagen,Polo,29986754,2019,999cc,"31,959 miles",Petrol,Manual,Grey,Hatchback,51.4 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,13.2 seconds,128 g/km,431 miles
+Mercedes-Benz,GLC Class,30233541,2019,1199cc,"32,123 miles",Petrol,Manual,Orange,Hatchback,58.9 mpg,Front Wheel Drive,5,5,109 bhp,111 mph,11.5 seconds,121 g/km,456 miles
+Citroen,C1,30103828,2018,1084cc,"32,161 miles",Petrol,Manual,Silver,Hatchback,55.4 mpg,Front Wheel Drive,5,5,113 bhp,116 mph,10.9 seconds,115 g/km,554 miles
+BMW,1 Series,30354621,2017,1395cc,"32,182 miles",Petrol,Manual,White,SUV,51.4 mpg,Front Wheel Drive,5,5,148 bhp,124 mph,9.5 seconds,143 g/km,653 miles
+Toyota,Aygo,29905949,2018,1461cc,"32,185 miles",Diesel,Manual,Blue,SUV,54.3 mpg,Front Wheel Drive,3,4,69 bhp,101 mph,12.9 seconds,108 g/km,396 miles
+Land Rover,Range Rover Evoque,30389387,2020,1968cc,"32,205 miles",Diesel,Semi Automatic,Black,Hatchback,60.1 mpg,Front Wheel Drive,5,5,84 bhp,105 mph,14.0 seconds,101 g/km,593 miles
+Toyota,C-HR,30354631,2019,1968cc,"32,217 miles",Diesel,Semi Automatic,White,SUV,39.2 mpg,Four Wheel Drive,5,5,180 bhp,127 mph,8.8 seconds,145 g/km,493 miles
+Ford,EcoSport,30354462,2017,1364cc,"32,297 miles",Petrol,Manual,Blue,SUV,47.1 mpg,Front Wheel Drive,5,5,80 bhp,105 mph,13.2 seconds,109 g/km,595 miles
+Land Rover,Discovery Sport,30407525,2018,1461cc,"32,342 miles",Diesel,Semi Automatic,Black,Hatchback,67.3 mpg,Front Wheel Drive,5,5,82 bhp,105 mph,13.6 seconds,114 g/km,621 miles
+Ford,Puma,30132231,2017,1197cc,"16,380 miles",Petrol,Manual,Blue,Hatchback,48.7 mpg,Front Wheel Drive,5,5,152 bhp,130 mph,8.4 seconds,139 g/km,642 miles
+Nissan,Qashqai,30003782,2019,1399cc,"16,382 miles",Petrol,Manual,Red,Hatchback,47.1 mpg,Front Wheel Drive,5,5,128 bhp,122 mph,9.8 seconds,121 g/km,507 miles
+Vauxhall,Mokka X,30161786,2018,1998cc,"16,404 miles",Petrol,Automatic,Silver,Hatchback,36.7 mpg,Rear Wheel Drive,4,5,190 bhp,143 mph,7.2 seconds,116 g/km,805 miles
+Volkswagen,Polo,30267283,2018,1198cc,"16,415 miles",Petrol,Manual,Grey,Hatchback,57.7 mpg,Front Wheel Drive,5,5,148 bhp,126 mph,8.9 seconds,138 g/km,674 miles
+Toyota,Aygo,30401239,2019,999cc,"16,417 miles",Petrol,Semi Automatic,Blue,Hatchback,48.7 mpg,Front Wheel Drive,5,5,104 bhp,121 mph,10.9 seconds,107 g/km,514 miles
+Volkswagen,Polo,30178501,2020,1498cc,"16,420 miles",Petrol,Semi Automatic,White,Hatchback,43.5 mpg,Rear Wheel Drive,5,5,188 bhp,143 mph,7.4 seconds,120 g/km,591 miles
+Kia,Rio,30250914,2019,1242cc,"16,434 miles",Petrol,Semi Automatic,Grey,Hatchback,46.3 mpg,Front Wheel Drive,5,5,99 bhp,113 mph,10.5 seconds,97 g/km,607 miles
+Skoda,Fabia,30267272,2018,1398cc,"16,457 miles",Petrol,Manual,White,Hatchback,43.5 mpg,Four Wheel Drive,5,5,180 bhp,128 mph,8.8 seconds,150 g/km,493 miles
+Volkswagen,Up,30003827,2019,1332cc,"16,459 miles",Petrol,Manual,Blue,SUV,41.5 mpg,Front Wheel Drive,5,5,134 bhp,112 mph,10.8 seconds,114 g/km,611 miles
+Toyota,Aygo,30360642,2019,999cc,"16,512 miles",Petrol,Manual,Black,Hatchback,46.3 mpg,Front Wheel Drive,5,5,108 bhp,127 mph,11.1 seconds,116 g/km,876 miles
+Suzuki,Swift,30417090,2020,998cc,"16,526 miles",Petrol,Manual,Red,Hatchback,55.4 mpg,Rear Wheel Drive,5,5,150 bhp,132 mph,8.2 seconds,118 g/km,576 miles
+Mercedes-Benz,A Class,29924967,2020,1499cc,"16,541 miles",Diesel,Manual,Grey,Hatchback,60.1 mpg,Front Wheel Drive,5,5,138 bhp,122 mph,9.3 seconds,140 g/km,549 miles
+Audi,A5,29916043,2018,999cc,"16,549 miles",Petrol,Manual,Red,Hatchback,50.4 mpg,Front Wheel Drive,5,5,113 bhp,124 mph,9.5 seconds,111 g/km,436 miles
+Mercedes-Benz,C Class,30384324,2017,1597cc,"16,558 miles",Petrol,Semi Automatic,Silver,MPV,44.1 mpg,Front Wheel Drive,5,5,148 bhp,127 mph,8.4 seconds,124 g/km,565 miles
+Dacia,Sandero Stepway,30090239,2020,1498cc,"16,577 miles",Petrol,Manual,Grey,Hatchback,49.6 mpg,Front Wheel Drive,5,5,99 bhp,113 mph,10.6 seconds,98 g/km,699 miles
+Citroen,C1,30208728,2018,999cc,"16,584 miles",Petrol,Manual,White,Hatchback,46.3 mpg,Front Wheel Drive,5,5,89 bhp,112 mph,11.8 seconds,106 g/km,559 miles
+Vauxhall,Corsa,30225520,2020,1373cc,"16,587 miles",Petrol,Manual,White,Hatchback,42.8 mpg,Front Wheel Drive,5,5,80 bhp,105 mph,13.2 seconds,99 g/km,509 miles
+Seat,Arona,30260978,2019,1498cc,"16,590 miles",Petrol,Manual,Yellow,Hatchback,47.1 mpg,Front Wheel Drive,5,5,123 bhp,127 mph,8.8 seconds,120 g/km,597 miles
+Ford,EcoSport,30417039,2018,1242cc,"16,601 miles",Petrol,Manual,White,Hatchback,60.1 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,12.1 seconds,99 g/km,579 miles
+Mazda,CX-5,30161878,2019,1194cc,"16,627 miles",Petrol,Manual,Grey,Hatchback,48.7 mpg,Front Wheel Drive,5,5,134 bhp,121 mph,10.1 seconds,102 g/km,844 miles
+Renault,Captur,30360607,2020,999cc,"16,664 miles",Petrol,Manual,White,Hatchback,53.3 mpg,Front Wheel Drive,5,5,91 bhp,111 mph,11.8 seconds,129 g/km,447 miles
+Vauxhall,Corsa,30407449,2020,999cc,"16,698 miles",Petrol,Manual,White,Hatchback,53.3 mpg,Front Wheel Drive,5,5,113 bhp,118 mph,9.8 seconds,114 g/km,436 miles
+Fiat,500,30284876,2017,1241cc,"16,706 miles",Petrol,Manual,White,Hatchback,54.3 mpg,Front Wheel Drive,5,5,138 bhp,120 mph,10.5 seconds,122 g/km,502 miles
+Skoda,Fabia,30392968,2019,1398cc,"16,722 miles",Petrol,Manual,Silver,Hatchback,43.5 mpg,Front Wheel Drive,5,5,148 bhp,139 mph,8.4 seconds,122 g/km,675 miles
+Kia,Venga,30233554,2020,1496cc,"16,749 miles",Petrol,Manual,Blue,Hatchback,53.3 mpg,Front Wheel Drive,5,5,140 bhp,126 mph,10.4 seconds,153 g/km,510 miles
+Land Rover,Range Rover Evoque,30367111,2020,1199cc,"16,760 miles",Petrol,Manual,Grey,Hatchback,52.3 mpg,Front Wheel Drive,5,5,130 bhp,124 mph,9.0 seconds,115 g/km,518 miles
+Hyundai,Tucson,30042529,2018,1398cc,"16,815 miles",Petrol,Manual,White,Hatchback,43.5 mpg,Front Wheel Drive,4,5,148 bhp,139 mph,8.2 seconds,124 g/km,471 miles
+BMW,X1,30240300,2019,999cc,"16,859 miles",Petrol,Manual,White,Hatchback,47.9 mpg,Four Wheel Drive,4,5,302 bhp,155 mph,4.9 seconds,153 g/km,398 miles
+Seat,Leon,30281448,2018,998cc,"16,861 miles",Petrol,Manual,Black,Hatchback,58.9 mpg,Front Wheel Drive,5,5,94 bhp,116 mph,10.8 seconds,129 g/km,460 miles
+Mercedes-Benz,CLA Class,30168029,2020,999cc,"16,864 miles",Petrol,Manual,White,Hatchback,51.4 mpg,Front Wheel Drive,5,5,80 bhp,105 mph,13.2 seconds,109 g/km,595 miles
+Toyota,Aygo,30233434,2017,1998cc,"34,727 miles",Petrol,Manual,Grey,Hatchback,55.4 mpg,Front Wheel Drive,5,5,138 bhp,130 mph,8.6 seconds,132 g/km,502 miles
+Suzuki,Ignis,30103693,2018,2143cc,"34,744 miles",Diesel,Semi Automatic,Silver,SUV,58.9 mpg,Front Wheel Drive,5,5,84 bhp,105 mph,13.5 seconds,114 g/km,443 miles
+Peugeot,208,30167928,2017,1199cc,"34,805 miles",Petrol,Manual,Red,Hatchback,61.4 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,13.8 seconds,93 g/km,444 miles
+Vauxhall,Corsa,30046099,2017,1498cc,"34,848 miles",Diesel,Manual,White,MPV,74.3 mpg,Front Wheel Drive,3,4,69 bhp,99 mph,12.9 seconds,110 g/km,463 miles
+Citroen,C1,30299664,2018,1598cc,"34,877 miles",Diesel,Manual,Silver,SUV,48.7 mpg,Front Wheel Drive,5,5,114 bhp,127 mph,10.4 seconds,104 g/km,575 miles
+Ford,Ka+,30148571,2019,1242cc,"35,009 miles",Petrol,Manual,Red,Hatchback,51.4 mpg,Front Wheel Drive,5,5,128 bhp,126 mph,9.4 seconds,115 g/km,493 miles
+Kia,Sportage,29986779,2018,1242cc,"35,038 miles",Petrol,Manual,Grey,Hatchback,48.7 mpg,Front Wheel Drive,5,5,105 bhp,108 mph,10.4 seconds,152 g/km,497 miles
+Ford,Focus,30188170,2018,1497cc,"35,127 miles",Petrol,Semi Automatic,Black,Estate,45.6 mpg,Front Wheel Drive,5,4,74 bhp,106 mph,13.2 seconds,101 g/km,494 miles
+Ford,Fiesta,30389397,2018,1968cc,"35,154 miles",Diesel,Manual,White,SUV,62.8 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,13.8 seconds,93 g/km,444 miles
+Renault,Clio,30272430,2018,998cc,"35,176 miles",Petrol,Semi Automatic,White,Hatchback,54.3 mpg,Front Wheel Drive,5,5,120 bhp,124 mph,8.7 seconds,144 g/km,493 miles
+Mazda,Mazda6,30392976,2020,1496cc,"16,996 miles",Petrol,Manual,Red,Hatchback,47.9 mpg,Rear Wheel Drive,2,4,191 bhp,150 mph,7.4 seconds,132 g/km,776 miles
+Mazda,CX-5,30308351,2018,1398cc,"17,016 miles",Petrol,Manual,Blue,Hatchback,43.5 mpg,Front Wheel Drive,5,5,197 bhp,147 mph,6.7 seconds,138 g/km,350 miles
+Nissan,Qashqai,29888314,2017,1598cc,"17,018 miles",Diesel,Automatic,Silver,SUV,53.3 mpg,Rear Wheel Drive,2,4,248 bhp,155 mph,5.6 seconds,134 g/km,548 miles
+BMW,2 Series,30233501,2019,1398cc,"17,024 miles",Petrol,Manual,Silver,Hatchback,43.5 mpg,Rear Wheel Drive,4,5,136 bhp,130 mph,8.9 seconds,124 g/km,690 miles
+Renault,Clio,30168027,2020,1199cc,"17,062 miles",Petrol,Manual,Blue,Hatchback,53.3 mpg,Front Wheel Drive,5,5,69 bhp,96 mph,14.8 seconds,131 g/km,340 miles
+Vauxhall,Astra,30354599,2019,1598cc,"36,024 miles",Diesel,Manual,Black,Hatchback,64.2 mpg,Front Wheel Drive,5,5,150 bhp,125 mph,9.9 seconds,168 g/km,660 miles
+BMW,1 Series,30308349,2018,1995cc,"36,042 miles",Diesel,Semi Automatic,Black,SUV,60.1 mpg,Front Wheel Drive,5,5,114 bhp,126 mph,9.5 seconds,111 g/km,452 miles
+Land Rover,Range Rover Evoque,30290055,2018,1999cc,"36,070 miles",Diesel,Automatic,Black,SUV,44.1 mpg,Front Wheel Drive,5,5,89 bhp,106 mph,13.9 seconds,137 g/km,474 miles
+Suzuki,Swift,30308337,2017,1969cc,"36,764 miles",Petrol,Manual,Silver,Hatchback,51.4 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,14.2 seconds,93 g/km,435 miles
+Hyundai,IONIQ,30417132,2019,1999cc,"36,769 miles",Diesel,Manual,Black,SUV,44.8 mpg,Four Wheel Drive,5,5,148 bhp,120 mph,9.9 seconds,158 g/km,577 miles
+Fiat,500,30312199,2018,1398cc,"36,860 miles",Petrol,Manual,Grey,Hatchback,43.5 mpg,Four Wheel Drive,5,5,237 bhp,127 mph,7.1 seconds,169 g/km,524 miles
+Peugeot,2008,30123841,2019,1598cc,"36,919 miles",Diesel,Manual,White,SUV,50.4 mpg,Front Wheel Drive,5,5,150 bhp,127 mph,9.6 seconds,120 g/km,743 miles
+Land Rover,Range Rover Evoque,30050254,2018,1398cc,"36,920 miles",Petrol,Manual,Grey,Hatchback,54.3 mpg,Front Wheel Drive,3,4,94 bhp,116 mph,10.9 seconds,97 g/km,666 miles
+Ford,Fiesta,30079626,2019,1499cc,"36,955 miles",Diesel,Semi Automatic,Bronze,Hatchback,68.9 mpg,Front Wheel Drive,5,4,74 bhp,106 mph,13.2 seconds,101 g/km,494 miles
+Kia,Sportage,30178768,2019,1364cc,"37,097 miles",Petrol,Manual,Silver,SUV,39.2 mpg,Four Wheel Drive,5,5,181 bhp,136 mph,7.9 seconds,139 g/km,750 miles
+Vauxhall,Adam,30417280,2019,1398cc,"37,140 miles",Petrol,Manual,Grey,Hatchback,43.5 mpg,Four Wheel Drive,5,5,237 bhp,135 mph,6.7 seconds,153 g/km,643 miles
+Vauxhall,Corsa,30132555,2019,1996cc,"37,221 miles",Diesel,Manual,Black,Hatchback,53.3 mpg,Front Wheel Drive,5,5,148 bhp,121 mph,10.1 seconds,122 g/km,793 miles
+Kia,Picanto,30113667,2018,1498cc,"37,393 miles",Petrol,Manual,Grey,SUV,39.2 mpg,Front Wheel Drive,5,5,148 bhp,121 mph,10.1 seconds,122 g/km,793 miles
+MINI,Countryman,30015363,2019,988cc,"37,464 miles",Petrol,Manual,Silver,SUV,44.1 mpg,Front Wheel Drive,5,4,89 bhp,106 mph,11.8 seconds,104 g/km,432 miles
+Skoda,Octavia,29986778,2019,1598cc,"37,475 miles",Diesel,Manual,Grey,Hatchback,50.4 mpg,Front Wheel Drive,5,5,82 bhp,105 mph,13.3 seconds,130 g/km,509 miles
+Peugeot,2008,30167916,2019,1999cc,"37,488 miles",Diesel,Manual,White,SUV,53.3 mpg,Front Wheel Drive,5,5,80 bhp,105 mph,13.2 seconds,110 g/km,583 miles
+Suzuki,SX4,30233533,2019,1242cc,"38,036 miles",Petrol,Manual,Green,Hatchback,51.4 mpg,Four Wheel Drive,5,5,152 bhp,115 mph,10.7 seconds,152 g/km,574 miles
+Audi,Q3,30392966,2018,1084cc,"38,043 miles",Petrol,Manual,Blue,Hatchback,64.2 mpg,Front Wheel Drive,5,5,113 bhp,106 mph,11.8 seconds,155 g/km,492 miles
+Peugeot,2008,30290004,2019,1999cc,"38,121 miles",Diesel,Automatic,White,SUV,41.5 mpg,Front Wheel Drive,5,5,152 bhp,130 mph,8.0 seconds,138 g/km,642 miles
+Ford,Focus,30188172,2019,1199cc,"38,203 miles",Petrol,Manual,Grey,Hatchback,60.1 mpg,Front Wheel Drive,5,5,197 bhp,147 mph,6.7 seconds,138 g/km,350 miles
+Volkswagen,Golf,30188252,2019,1199cc,"38,265 miles",Petrol,Manual,White,MPV,56.5 mpg,Four Wheel Drive,5,5,187 bhp,136 mph,7.4 seconds,171 g/km,414 miles
+Smart,Fortwo,30046109,2019,1199cc,"38,554 miles",Petrol,Automatic,Black,Hatchback,43.5 mpg,Front Wheel Drive,5,5,120 bhp,126 mph,8.9 seconds,131 g/km,554 miles
+Infiniti,Q30,29986768,2017,1995cc,"38,776 miles",Diesel,Semi Automatic,Grey,Saloon,64.2 mpg,Front Wheel Drive,5,5,94 bhp,115 mph,10.4 seconds,103 g/km,509 miles
+Mercedes-Benz,A Class,30103816,2017,1395cc,"38,993 miles",Petrol,Semi Automatic,Silver,SUV,47.9 mpg,Front Wheel Drive,5,4,59 bhp,100 mph,14.4 seconds,101 g/km,494 miles
+Peugeot,208,30421752,2019,999cc,"39,023 miles",Petrol,Manual,White,Hatchback,48.7 mpg,Front Wheel Drive,5,5,94 bhp,113 mph,10.3 seconds,104 g/km,487 miles
+Toyota,Aygo,30042618,2019,1995cc,"39,026 miles",Diesel,Semi Automatic,White,Coupe,47.1 mpg,Front Wheel Drive,5,5,80 bhp,105 mph,13.2 seconds,109 g/km,595 miles
+Vauxhall,Corsa,30407475,2017,998cc,"39,486 miles",Petrol,Manual,Grey,Hatchback,65.7 mpg,Front Wheel Drive,5,5,109 bhp,111 mph,11.5 seconds,121 g/km,456 miles
+Audi,A4,30161794,2018,998cc,"39,554 miles",Petrol,Manual,Blue,Hatchback,65.7 mpg,Front Wheel Drive,5,5,138 bhp,120 mph,10.5 seconds,130 g/km,489 miles
+Renault,Clio,30401253,2019,1999cc,"39,584 miles",Diesel,Automatic,Black,SUV,41.5 mpg,Front Wheel Drive,5,5,138 bhp,122 mph,9.3 seconds,150 g/km,457 miles
+Kia,Picanto,30178784,2019,1598cc,"39,710 miles",Diesel,Manual,Red,SUV,47.9 mpg,Front Wheel Drive,2,4,227 bhp,155 mph,6.0 seconds,141 g/km,509 miles
+BMW,1 Series,30208411,2018,999cc,"39,738 miles",Petrol,Manual,Black,SUV,54.3 mpg,Front Wheel Drive,5,5,163 bhp,138 mph,8.4 seconds,136 g/km,642 miles
+Mercedes-Benz,A Class,30407505,2018,1084cc,"39,739 miles",Petrol,Manual,Blue,Hatchback,55.4 mpg,Four Wheel Drive,4,5,241 bhp,144 mph,6.5 seconds,159 g/km,594 miles
+Vauxhall,Crossland X,30348635,2019,1598cc,"39,841 miles",Diesel,Manual,Grey,Hatchback,64.2 mpg,Four Wheel Drive,5,5,180 bhp,121 mph,8.5 seconds,134 g/km,658 miles
+Mercedes-Benz,A Class,30417224,2018,1995cc,"39,889 miles",Diesel,Semi Automatic,Orange,Hatchback,50.4 mpg,Front Wheel Drive,5,5,113 bhp,112 mph,11.9 seconds,110 g/km,633 miles
+MINI,Hatch,30272421,2019,999cc,"40,315 miles",Petrol,Manual,Blue,Hatchback,49.6 mpg,Front Wheel Drive,5,5,74 bhp,104 mph,14.4 seconds,111 g/km,571 miles
+Audi,A3,30290025,2018,1498cc,"40,435 miles",Petrol,Semi Automatic,White,Hatchback,51.4 mpg,Front Wheel Drive,5,5,150 bhp,130 mph,7.9 seconds,108 g/km,940 miles
+Volkswagen,Passat,30417027,2018,1499cc,"40,464 miles",Diesel,Manual,Green,MPV,70.6 mpg,Front Wheel Drive,5,5,114 bhp,127 mph,10.4 seconds,114 g/km,546 miles
+Nissan,Qashqai,30188280,2019,1461cc,"40,475 miles",Diesel,Manual,White,Hatchback,56.5 mpg,Front Wheel Drive,5,5,130 bhp,130 mph,9.1 seconds,120 g/km,659 miles
+Skoda,Fabia,29969116,2019,1199cc,"40,651 miles",Petrol,Manual,Grey,Hatchback,51.4 mpg,Front Wheel Drive,5,5,148 bhp,137 mph,8.5 seconds,112 g/km,954 miles
+Vauxhall,Mokka X,30354491,2017,1395cc,"40,712 miles",Petrol,Manual,White,Hatchback,54.3 mpg,Front Wheel Drive,5,5,114 bhp,127 mph,10.4 seconds,104 g/km,575 miles
+Nissan,Qashqai,30308257,2017,898cc,"40,903 miles",Petrol,Manual,Black,Hatchback,64.2 mpg,Front Wheel Drive,5,5,118 bhp,112 mph,11.5 seconds,123 g/km,551 miles
+Hyundai,i20,30233451,2018,1582cc,"17,697 miles",Diesel,Manual,Silver,Estate,72.4 mpg,Front Wheel Drive,5,5,148 bhp,124 mph,9.5 seconds,143 g/km,653 miles
+MG,HS,30354479,2020,998cc,"17,712 miles",Petrol,Manual,Black,Hatchback,55.4 mpg,Front Wheel Drive,5,5,128 bhp,129 mph,9.5 seconds,112 g/km,546 miles
+BMW,1 Series,30188216,2021,999cc,"17,730 miles",Petrol,Manual,Grey,Hatchback,49.6 mpg,Front Wheel Drive,5,5,100 bhp,112 mph,11.3 seconds,97 g/km,755 miles
+Ford,Ka+,30095388,2019,1398cc,"17,734 miles",Petrol,Manual,Grey,Hatchback,43.5 mpg,Rear Wheel Drive,4,5,247 bhp,155 mph,6.2 seconds,183 g/km,502 miles
+Volkswagen,Passat,30348779,2019,999cc,"17,736 miles",Petrol,Manual,Blue,SUV,49.6 mpg,Front Wheel Drive,5,5,128 bhp,126 mph,9.4 seconds,128 g/km,493 miles
+Dacia,Logan MCV,30360641,2020,1332cc,"17,737 miles",Petrol,Manual,Black,SUV,41.5 mpg,Front Wheel Drive,5,5,89 bhp,110 mph,12.1 seconds,114 g/km,466 miles
+Kia,Ceed,30384585,2021,1968cc,"17,737 miles",Diesel,Semi Automatic,Black,Hatchback,61.4 mpg,Front Wheel Drive,5,7,148 bhp,130 mph,8.9 seconds,133 g/km,633 miles
+Suzuki,Swift,30178423,2020,1333cc,"17,751 miles",Petrol,Manual,Grey,SUV,42.16 mpg,Front Wheel Drive,5,5,148 bhp,121 mph,9.7 seconds,164 g/km,454 miles
+Renault,Clio,30384397,2019,1199cc,"17,758 miles",Petrol,Semi Automatic,Black,MPV,47.1 mpg,Front Wheel Drive,5,5,99 bhp,113 mph,10.5 seconds,97 g/km,607 miles
+Renault,Clio,30367126,2019,1498cc,"17,787 miles",Petrol,Manual,White,Saloon,42.8 mpg,Front Wheel Drive,5,5,82 bhp,109 mph,13.5 seconds,110 g/km,565 miles
+Mazda,MX-5,30384646,2021,998cc,"17,790 miles",Petrol,Manual,Blue,Hatchback,55.4 mpg,Front Wheel Drive,5,5,94 bhp,113 mph,10.9 seconds,106 g/km,529 miles
+Citroen,C3,30337918,2020,1199cc,"17,795 miles",Petrol,Manual,Blue,Hatchback,52.3 mpg,Front Wheel Drive,5,5,79 bhp,106 mph,15.4 seconds,124 g/km,452 miles
+Mazda,CX-30,30132357,2020,1998cc,"17,800 miles",Petrol,Semi Automatic,Blue,Coupe,36.2 mpg,Front Wheel Drive,5,5,89 bhp,101 mph,15.5 seconds,120 g/km,538 miles
+Peugeot,2008,30392954,2019,1199cc,"17,814 miles",Petrol,Manual,Grey,Hatchback,60.1 mpg,Front Wheel Drive,5,5,138 bhp,124 mph,9.5 seconds,148 g/km,442 miles
+Peugeot,108,30233468,2018,1353cc,"17,819 miles",Petrol,Manual,Blue,Hatchback,45.6 mpg,Front Wheel Drive,3,4,70 bhp,104 mph,13.8 seconds,119 g/km,410 miles
+Vauxhall,Corsa,30354587,2019,1194cc,"17,838 miles",Petrol,Manual,White,Hatchback,47.9 mpg,Front Wheel Drive,5,4,70 bhp,96 mph,14.7 seconds,123 g/km,382 miles
+Jaguar,E-PACE,30354451,2020,998cc,"17,845 miles",Petrol,Manual,Grey,Hatchback,57.7 mpg,Front Wheel Drive,5,5,148 bhp,123 mph,9.3 seconds,149 g/km,471 miles
+MINI,Hatch,30392872,2018,1242cc,"17,858 miles",Petrol,Manual,Black,Hatchback,60.1 mpg,Front Wheel Drive,5,5,101 bhp,118 mph,11.3 seconds,117 g/km,428 miles
+Vauxhall,Corsa,30233473,2019,1598cc,"17,881 miles",Diesel,Semi Automatic,Black,Hatchback,52.3 mpg,Front Wheel Drive,5,5,114 bhp,126 mph,10.5 seconds,111 g/km,694 miles
+Volkswagen,Polo,30298494,2020,1498cc,"17,884 miles",Petrol,Manual,White,Hatchback,44.8 mpg,Front Wheel Drive,4,5,114 bhp,127 mph,10.4 seconds,106 g/km,776 miles
+Jaguar,XE,30384328,2020,1498cc,"17,909 miles",Petrol,Manual,Black,Hatchback,47.1 mpg,Front Wheel Drive,5,5,148 bhp,126 mph,9.2 seconds,165 g/km,494 miles
+Fiat,500,30354606,2017,999cc,"17,932 miles",Petrol,Manual,Silver,Hatchback,64.2 mpg,Front Wheel Drive,5,5,163 bhp,138 mph,8.4 seconds,126 g/km,687 miles
+Vauxhall,Corsa,30354481,2019,998cc,"17,935 miles",Petrol,Manual,White,Hatchback,57.7 mpg,Front Wheel Drive,5,5,197 bhp,146 mph,7.4 seconds,147 g/km,481 miles
+Audi,A3,30148661,2019,1595cc,"17,939 miles",Petrol,Semi Automatic,Grey,SUV,44.8 mpg,Four Wheel Drive,5,5,181 bhp,136 mph,7.9 seconds,146 g/km,710 miles
+Ford,Fiesta,30354464,2020,1950cc,"17,942 miles",Diesel,Semi Automatic,Blue,Coupe,70.6 mpg,Front Wheel Drive,5,5,113 bhp,106 mph,11.8 seconds,155 g/km,492 miles
+Volkswagen,T-Roc,30389381,2020,1199cc,"17,943 miles",Petrol,Manual,Black,Hatchback,53.3 mpg,Front Wheel Drive,3,4,71 bhp,99 mph,12.6 seconds,93 g/km,530 miles
+Volvo,V40,30272438,2019,1984cc,"42,123 miles",Petrol,Semi Automatic,White,Hatchback,39.8 mpg,Front Wheel Drive,5,5,113 bhp,106 mph,11.8 seconds,155 g/km,492 miles
+Nissan,Micra,30308252,2018,1998cc,"42,136 miles",Petrol,Semi Automatic,Blue,Coupe,47.9 mpg,Front Wheel Drive,5,5,148 bhp,123 mph,9.3 seconds,149 g/km,471 miles
+BMW,2 Series,30289976,2018,1499cc,"42,156 miles",Petrol,Manual,White,Saloon,52.3 mpg,Front Wheel Drive,5,5,79 bhp,105 mph,14.7 seconds,112 g/km,414 miles
+Ford,Focus,30188288,2019,1242cc,"42,271 miles",Petrol,Manual,Grey,Hatchback,44.1 mpg,Front Wheel Drive,5,5,118 bhp,119 mph,10.5 seconds,108 g/km,758 miles
+Ford,Kuga,29986711,2018,999cc,"42,385 miles",Petrol,Manual,Red,Hatchback,64.2 mpg,Front Wheel Drive,5,5,134 bhp,112 mph,11.4 seconds,122 g/km,642 miles
+Renault,Clio,30308262,2018,1999cc,"42,427 miles",Diesel,Manual,Blue,Hatchback,60.1 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,13.2 seconds,118 g/km,548 miles
+Peugeot,5008,30308280,2020,1999cc,"18,163 miles",Diesel,Manual,Silver,SUV,44.8 mpg,Front Wheel Drive,5,5,175 bhp,125 mph,8.9 seconds,160 g/km,488 miles
+Seat,Arona,30132436,2019,999cc,"18,173 miles",Petrol,Manual,White,Hatchback,51.4 mpg,Front Wheel Drive,5,5,89 bhp,117 mph,9.7 seconds,111 g/km,480 miles
+Peugeot,108,30281080,2017,1398cc,"18,215 miles",Petrol,Automatic,Grey,Hatchback,47.9 mpg,Front Wheel Drive,5,5,84 bhp,107 mph,11.6 seconds,106 g/km,473 miles
+Nissan,Micra,30123824,2020,998cc,"18,232 miles",Petrol,Manual,Grey,Hatchback,54.3 mpg,Front Wheel Drive,5,5,123 bhp,126 mph,9.1 seconds,120 g/km,597 miles
+Kia,Sportage,30178470,2019,998cc,"18,234 miles",Petrol,Manual,Red,Hatchback,56.5 mpg,Four Wheel Drive,5,5,188 bhp,136 mph,7.8 seconds,123 g/km,674 miles
+Mazda,CX-30,30407597,2019,1999cc,"18,245 miles",Diesel,Automatic,White,SUV,47.1 mpg,Front Wheel Drive,5,5,156 bhp,124 mph,9.0 seconds,144 g/km,542 miles
+Citroen,C3,30360606,2020,1498cc,"18,257 miles",Petrol,Manual,Blue,Hatchback,51.4 mpg,Four Wheel Drive,5,5,178 bhp,129 mph,8.2 seconds,139 g/km,703 miles
+Nissan,Qashqai,30417053,2018,2191cc,"43,301 miles",Diesel,Manual,Grey,SUV,42.8 mpg,Front Wheel Drive,5,5,130 bhp,130 mph,9.1 seconds,120 g/km,659 miles
+Kia,Picanto,30417241,2018,1999cc,"43,348 miles",Diesel,Automatic,Grey,SUV,44.1 mpg,Front Wheel Drive,5,5,83 bhp,106 mph,12.8 seconds,112 g/km,648 miles
+Vauxhall,Corsa,30348845,2019,1969cc,"43,441 miles",Diesel,Semi Automatic,Black,Estate,61.4 mpg,Four Wheel Drive,5,5,237 bhp,135 mph,6.8 seconds,191 g/km,484 miles
+Kia,Picanto,30042377,2017,999cc,"43,676 miles",Petrol,Manual,Black,Hatchback,67.3 mpg,Front Wheel Drive,5,5,176 bhp,111 mph,8.4 seconds,126 g/km,684 miles
+BMW,2 Series,30079798,2017,999cc,"43,746 miles",Petrol,Manual,White,Hatchback,64.2 mpg,Four Wheel Drive,5,5,178 bhp,129 mph,8.4 seconds,151 g/km,557 miles
+Toyota,Yaris,30407478,2017,1968cc,"43,801 miles",Diesel,Semi Automatic,Red,SUV,53.3 mpg,Front Wheel Drive,5,5,130 bhp,119 mph,10.8 seconds,106 g/km,785 miles
+Mercedes-Benz,CLA Class,30208726,2018,1997cc,"43,828 miles",Diesel,Manual,White,SUV,60.1 mpg,Four Wheel Drive,5,5,178 bhp,129 mph,8.2 seconds,134 g/km,717 miles
+Mazda,MX-5,30042336,2018,1997cc,"44,075 miles",Diesel,Manual,Silver,SUV,60.1 mpg,Four Wheel Drive,5,5,237 bhp,135 mph,6.9 seconds,153 g/km,578 miles
+Mazda,CX-30,30417066,2017,1242cc,"18,349 miles",Petrol,Manual,Orange,Hatchback,61.4 mpg,Four Wheel Drive,5,5,211 bhp,138 mph,7.3 seconds,174 g/km,632 miles
+Vauxhall,Corsa,30003779,2019,1199cc,"18,386 miles",Petrol,Manual,Blue,Hatchback,58.9 mpg,Front Wheel Drive,5,5,128 bhp,117 mph,9.5 seconds,121 g/km,514 miles
+Ford,Fiesta,30240334,2017,1987cc,"18,393 miles",Petrol,Automatic,Black,SUV,43.5 mpg,Front Wheel Drive,4,5,148 bhp,135 mph,8.7 seconds,118 g/km,912 miles
+Ford,Fiesta,30348885,2017,1598cc,"18,438 miles",Petrol,Manual,White,SUV,42.2 mpg,Front Wheel Drive,5,5,114 bhp,124 mph,10.3 seconds,100 g/km,533 miles
+Ford,Fiesta,30042262,2019,1498cc,"18,442 miles",Petrol,Semi Automatic,Gold,Hatchback,47.1 mpg,Front Wheel Drive,5,5,94 bhp,116 mph,10.8 seconds,105 g/km,460 miles
+BMW,X2,30317285,2019,1984cc,"18,445 miles",Petrol,Semi Automatic,Black,Hatchback,39.8 mpg,Front Wheel Drive,5,5,154 bhp,134 mph,8.4 seconds,138 g/km,518 miles
+Vauxhall,Corsa,30225522,2020,998cc,"18,469 miles",Petrol,Manual,Blue,Hatchback,54.3 mpg,Rear Wheel Drive,2,4,190 bhp,143 mph,7.0 seconds,113 g/km,752 miles
+Vauxhall,Corsa,30178645,2019,1984cc,"18,488 miles",Petrol,Semi Automatic,White,SUV,31.4 mpg,Rear Wheel Drive,5,5,136 bhp,130 mph,8.5 seconds,137 g/km,431 miles
+Nissan,Qashqai,30325189,2020,999cc,"18,516 miles",Petrol,Manual,Grey,Hatchback,48.7 mpg,Front Wheel Drive,5,5,113 bhp,112 mph,11.9 seconds,110 g/km,633 miles
+Vauxhall,Astra,30384392,2017,1498cc,"18,532 miles",Petrol,Automatic,Red,Hatchback,46.3 mpg,Front Wheel Drive,5,5,119 bhp,119 mph,9.0 seconds,141 g/km,452 miles
+Mazda,Mazda2,30284845,2017,1595cc,"18,548 miles",Petrol,Manual,Blue,Hatchback,50.4 mpg,Front Wheel Drive,5,5,118 bhp,115 mph,10.9 seconds,146 g/km,485 miles
+Nissan,Micra,30075254,2017,1199cc,"18,555 miles",Petrol,Manual,Black,Hatchback,60.1 mpg,Front Wheel Drive,5,5,148 bhp,121 mph,9.7 seconds,164 g/km,517 miles
+Mercedes-Benz,A Class,30132568,2019,999cc,"18,585 miles",Petrol,Manual,Red,Hatchback,51.4 mpg,Front Wheel Drive,5,5,114 bhp,122 mph,10.3 seconds,122 g/km,546 miles
+Toyota,Aygo,30025561,2018,999cc,"18,586 miles",Petrol,Manual,Blue,Hatchback,64.2 mpg,Front Wheel Drive,3,4,69 bhp,99 mph,12.9 seconds,105 g/km,483 miles
+Hyundai,IX20,30155526,2020,999cc,"18,591 miles",Petrol,Manual,Red,Hatchback,55.4 mpg,Front Wheel Drive,4,5,113 bhp,119 mph,12.4 seconds,110 g/km,"1,036 miles"
+Nissan,Micra,29866323,2019,1199cc,"18,596 miles",Petrol,Manual,Grey,Hatchback,60.1 mpg,Four Wheel Drive,2,4,215 bhp,155 mph,6.0 seconds,119 g/km,767 miles
+Toyota,Yaris,30308343,2018,988cc,"18,605 miles",Petrol,Manual,Silver,Hatchback,44.1 mpg,Front Wheel Drive,5,5,148 bhp,127 mph,8.4 seconds,123 g/km,464 miles
+Kia,Sportage,30308370,2019,1332cc,"18,660 miles",Petrol,Manual,Grey,SUV,40.4 mpg,Four Wheel Drive,5,5,178 bhp,125 mph,8.4 seconds,142 g/km,690 miles
+Nissan,Qashqai,30389388,2018,1364cc,"45,715 miles",Petrol,Manual,Blue,SUV,39.2 mpg,Front Wheel Drive,5,5,114 bhp,126 mph,10.5 seconds,108 g/km,727 miles
+Volkswagen,Golf,30025474,2017,1984cc,"45,962 miles",Petrol,Manual,White,Coupe,46.3 mpg,Front Wheel Drive,5,5,114 bhp,122 mph,10.1 seconds,115 g/km,518 miles
+BMW,3 Series,30190721,2018,1490cc,"46,049 miles",Petrol,Manual,White,Hatchback,47.1 mpg,Front Wheel Drive,5,5,99 bhp,110 mph,13.0 seconds,105 g/km,455 miles
+Mazda,CX-5,30233495,2019,1950cc,"46,089 miles",Diesel,Semi Automatic,Black,Coupe,40.9 mpg,Front Wheel Drive,5,5,114 bhp,126 mph,10.5 seconds,111 g/km,694 miles
+Vauxhall,Corsa,30103767,2017,1999cc,"46,277 miles",Diesel,Automatic,Red,SUV,55.4 mpg,Front Wheel Drive,3,5,82 bhp,109 mph,12.2 seconds,104 g/km,691 miles
+Seat,Leon,30308347,2019,1461cc,"46,623 miles",Diesel,Manual,Red,SUV,52.3 mpg,Front Wheel Drive,5,5,138 bhp,119 mph,10.1 seconds,157 g/km,434 miles
+Seat,Ateca,30392886,2018,1499cc,"46,778 miles",Petrol,Automatic,Blue,Hatchback,38.2 mpg,Front Wheel Drive,5,4,82 bhp,106 mph,10.9 seconds,99 g/km,506 miles
+Seat,Ibiza,30392937,2019,999cc,"46,895 miles",Petrol,Manual,Green,Hatchback,57.7 mpg,Front Wheel Drive,5,5,66 bhp,97 mph,14.7 seconds,108 g/km,529 miles
+Nissan,Qashqai,30392915,2018,1969cc,"47,012 miles",Diesel,Semi Automatic,Silver,Hatchback,68.9 mpg,Front Wheel Drive,5,5,109 bhp,111 mph,11.5 seconds,121 g/km,456 miles
+Vauxhall,Corsa,30046244,2018,1598cc,"47,162 miles",Diesel,Manual,Blue,Hatchback,49.6 mpg,Front Wheel Drive,5,5,148 bhp,134 mph,8.2 seconds,114 g/km,518 miles
+Citroen,C3,30233441,2018,1199cc,"47,288 miles",Petrol,Manual,Red,Hatchback,56.5 mpg,Front Wheel Drive,5,5,134 bhp,121 mph,10.1 seconds,102 g/km,844 miles
+Ford,Fiesta,30354561,2019,1597cc,"47,348 miles",Diesel,Manual,Black,Saloon,65.7 mpg,Front Wheel Drive,5,5,108 bhp,122 mph,9.6 seconds,109 g/km,648 miles
+Audi,Q3,30148666,2018,1968cc,"47,438 miles",Diesel,Manual,Grey,Hatchback,65.7 mpg,Four Wheel Drive,5,5,175 bhp,140 mph,7.8 seconds,126 g/km,726 miles
+Nissan,Qashqai,30289940,2019,1598cc,"47,518 miles",Diesel,Automatic,Black,Hatchback,52.3 mpg,Front Wheel Drive,5,5,114 bhp,124 mph,10.3 seconds,121 g/km,544 miles
+Volkswagen,Golf,30289936,2017,1586cc,"47,623 miles",Petrol,Manual,Blue,Hatchback,53.3 mpg,Front Wheel Drive,3,5,148 bhp,135 mph,8.2 seconds,113 g/km,706 miles
+Audi,Q5,30354534,2019,1999cc,"47,644 miles",Diesel,Manual,White,SUV,53.3 mpg,Front Wheel Drive,5,5,89 bhp,112 mph,11.8 seconds,104 g/km,559 miles
+Vauxhall,Mokka X,30103633,2019,1498cc,"47,754 miles",Petrol,Manual,Blue,Estate,49.6 mpg,Front Wheel Drive,5,5,123 bhp,112 mph,11.5 seconds,150 g/km,478 miles
+Mercedes-Benz,A Class,30354579,2017,1560cc,"18,943 miles",Diesel,Manual,Grey,MPV,76.3 mpg,Front Wheel Drive,5,5,109 bhp,122 mph,11.2 seconds,132 g/km,536 miles
+Renault,Kadjar,30240288,2020,1998cc,"18,964 miles",Petrol,Automatic,Grey,Saloon,36.2 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,14.2 seconds,93 g/km,435 miles
+Vauxhall,Astra,30025568,2017,1395cc,"18,984 miles",Petrol,Manual,Silver,MPV,49.6 mpg,Front Wheel Drive,5,5,120 bhp,124 mph,9.0 seconds,158 g/km,450 miles
+Renault,Captur,30079601,2019,1498cc,"18,986 miles",Petrol,Manual,Grey,SUV,34.4 mpg,Front Wheel Drive,3,4,69 bhp,99 mph,12.9 seconds,116 g/km,427 miles
+Jaguar,E-PACE,30042469,2018,998cc,"19,010 miles",Petrol,Manual,Black,Hatchback,65.7 mpg,Front Wheel Drive,5,5,148 bhp,132 mph,8.0 seconds,132 g/km,562 miles
+Ford,Ka+,30401242,2019,1199cc,"19,071 miles",Petrol,Manual,Grey,Hatchback,51.4 mpg,Front Wheel Drive,5,5,158 bhp,123 mph,9.9 seconds,122 g/km,495 miles
+Audi,A1,30367103,2017,999cc,"19,106 miles",Petrol,Manual,Gold,Hatchback,60.1 mpg,Front Wheel Drive,5,5,101 bhp,109 mph,12.9 seconds,155 g/km,554 miles
+Audi,Q2,30312162,2017,1398cc,"19,127 miles",Petrol,Manual,Black,Hatchback,54.4 mpg,Front Wheel Drive,3,4,69 bhp,103 mph,14.9 seconds,128 g/km,374 miles
+Skoda,Kodiaq,30337902,2019,1199cc,"19,132 miles",Petrol,Semi Automatic,Grey,Hatchback,47.1 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,14.0 seconds,85 g/km,453 miles
+Fiat,500,30417304,2020,1373cc,"19,138 miles",Petrol,Manual,White,Hatchback,42.8 mpg,Front Wheel Drive,5,5,72 bhp,106 mph,13.1 seconds,117 g/km,326 miles
+Vauxhall,Corsa,30348849,2020,999cc,"19,141 miles",Petrol,Manual,Blue,Hatchback,53.3 mpg,Rear Wheel Drive,5,4,90 bhp,103 mph,10.8 seconds,112 g/km,375 miles
+Nissan,Qashqai,30161785,2021,999cc,"19,161 miles",Petrol,Manual,Grey,Hatchback,49.6 mpg,Front Wheel Drive,5,5,113 bhp,112 mph,10.2 seconds,147 g/km,383 miles
+Mazda,MX-5,30208421,2019,1318cc,"49,752 miles",Petrol,Manual,Red,Hatchback,48.7 mpg,Front Wheel Drive,3,4,94 bhp,116 mph,10.9 seconds,97 g/km,666 miles
+Mercedes-Benz,GLA Class,30281120,2019,1461cc,"49,964 miles",Diesel,Semi Automatic,White,Hatchback,65.7 mpg,Front Wheel Drive,5,5,89 bhp,112 mph,12.2 seconds,119 g/km,502 miles
+Volkswagen,Polo,30281311,2018,1598cc,"49,980 miles",Diesel,Semi Automatic,Black,Saloon,70.6 mpg,Front Wheel Drive,5,5,89 bhp,109 mph,13.2 seconds,123 g/km,443 miles
+Vauxhall,Viva,30417322,2020,1498cc,"50,419 miles",Petrol,Semi Automatic,Grey,Estate,38.7 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,13.8 seconds,93 g/km,435 miles
+Ford,Fiesta,30417389,2019,1490cc,"50,718 miles",Petrol,Manual,Red,Hatchback,50.4 mpg,Front Wheel Drive,3,4,69 bhp,101 mph,12.9 seconds,108 g/km,396 miles
+Peugeot,508,30401247,2018,1598cc,"50,745 miles",Petrol,Manual,Black,Hatchback,45.6 mpg,Front Wheel Drive,5,5,134 bhp,112 mph,11.4 seconds,151 g/km,621 miles
+Volkswagen,Up,30161852,2017,1968cc,"50,793 miles",Diesel,Manual,Grey,SUV,50.4 mpg,Front Wheel Drive,5,5,89 bhp,114 mph,9.7 seconds,120 g/km,516 miles
+Ford,B-MAX,30417239,2017,1598cc,"19,282 miles",Petrol,Manual,Black,SUV,42.2 mpg,Front Wheel Drive,5,5,153 bhp,124 mph,9.0 seconds,128 g/km,458 miles
+Volkswagen,Golf,30384557,2018,998cc,"19,284 miles",Petrol,Manual,Blue,Hatchback,68.9 mpg,Front Wheel Drive,5,5,95 bhp,113 mph,12.4 seconds,135 g/km,444 miles
+Vauxhall,Viva,30178890,2017,1598cc,"19,288 miles",Petrol,Manual,White,SUV,42.2 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,13.8 seconds,93 g/km,444 miles
+Suzuki,Vitara,30384415,2020,998cc,"19,290 miles",Petrol,Manual,Blue,Hatchback,53.3 mpg,Front Wheel Drive,5,5,89 bhp,110 mph,12.1 seconds,114 g/km,466 miles
+MG,MG3,30042425,2021,1498cc,"19,290 miles",Petrol,Manual,Silver,SUV,42.8 mpg,Front Wheel Drive,5,5,80 bhp,105 mph,13.2 seconds,109 g/km,595 miles
+Fiat,500,30417318,2019,1498cc,"19,353 miles",Petrol,Manual,Black,SUV,34.4 mpg,Front Wheel Drive,5,5,138 bhp,120 mph,10.5 seconds,121 g/km,502 miles
+Ford,Ka+,30384690,2019,999cc,"19,359 miles",Petrol,Manual,Red,Hatchback,54.3 mpg,Front Wheel Drive,5,5,148 bhp,132 mph,8.3 seconds,114 g/km,740 miles
+Land Rover,Range Rover Evoque,30407446,2017,1597cc,"19,364 miles",Diesel,Manual,White,Hatchback,68.9 mpg,Front Wheel Drive,5,5,114 bhp,126 mph,10.5 seconds,111 g/km,694 miles
+Fiat,500,30384322,2019,1598cc,"19,388 miles",Diesel,Automatic,White,SUV,47.1 mpg,Front Wheel Drive,5,5,128 bhp,117 mph,9.5 seconds,121 g/km,514 miles
+Vauxhall,Corsa,30384395,2018,1398cc,"19,397 miles",Petrol,Manual,Red,Hatchback,55.4 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,13.8 seconds,93 g/km,444 miles
+Fiat,500,30384694,2018,1242cc,"19,405 miles",Petrol,Manual,Black,Hatchback,61.4 mpg,Front Wheel Drive,5,5,113 bhp,112 mph,11.9 seconds,110 g/km,633 miles
+Ford,Fiesta,30063474,2018,1398cc,"19,410 miles",Petrol,Manual,Black,Hatchback,54.3 mpg,Front Wheel Drive,5,5,82 bhp,109 mph,13.5 seconds,110 g/km,648 miles
+Vauxhall,Corsa,30417342,2019,1591cc,"19,410 miles",Petrol,Semi Automatic,Grey,SUV,35.8 mpg,Front Wheel Drive,5,5,130 bhp,117 mph,9.5 seconds,115 g/km,471 miles
+Mazda,Mazda2,30417258,2018,1496cc,"19,427 miles",Petrol,Manual,Grey,Hatchback,49.6 mpg,Front Wheel Drive,3,5,74 bhp,101 mph,15.5 seconds,128 g/km,431 miles
+Vauxhall,Corsa,30155471,2017,1248cc,"19,436 miles",Petrol,Manual,Black,Hatchback,61.4 mpg,Front Wheel Drive,5,5,138 bhp,120 mph,10.5 seconds,130 g/km,482 miles
+MINI,Hatch,30090269,2019,1333cc,"19,476 miles",Petrol,Manual,Blue,SUV,42.16 mpg,Front Wheel Drive,5,4,71 bhp,100 mph,13.8 seconds,93 g/km,530 miles
+Vauxhall,Corsa,30384668,2018,1395cc,"52,966 miles",Petrol,Manual,Blue,Hatchback,54.3 mpg,Front Wheel Drive,5,5,100 bhp,116 mph,11.8 seconds,99 g/km,458 miles
+Vauxhall,Grandland X,30417127,2018,1995cc,"53,372 miles",Diesel,Semi Automatic,Blue,SUV,60.1 mpg,Front Wheel Drive,5,5,94 bhp,112 mph,10.7 seconds,129 g/km,573 miles
+Nissan,Juke,30281259,2018,1582cc,"53,606 miles",Diesel,Manual,Silver,Hatchback,72.4 mpg,Front Wheel Drive,5,5,130 bhp,119 mph,10.8 seconds,109 g/km,785 miles
+Volkswagen,T-Cross,30075207,2018,1477cc,"53,818 miles",Petrol,Manual,White,SUV,45.6 mpg,Front Wheel Drive,3,4,123 bhp,127 mph,8.8 seconds,117 g/km,548 miles
+Ford,Fiesta,30261003,2018,1999cc,"53,919 miles",Diesel,Automatic,Grey,SUV,53.3 mpg,Front Wheel Drive,5,5,129 bhp,117 mph,10.5 seconds,119 g/km,514 miles
+Volkswagen,Polo,30025518,2018,1199cc,"54,166 miles",Petrol,Manual,Grey,Hatchback,56.5 mpg,Front Wheel Drive,5,4,59 bhp,100 mph,13.9 seconds,96 g/km,518 miles
+Mazda,Mazda3,30354511,2017,1248cc,"54,224 miles",Petrol,Manual,White,Hatchback,58.9 mpg,Front Wheel Drive,5,5,130 bhp,117 mph,10.8 seconds,117 g/km,646 miles
+Alfa Romeo,Stelvio,30308342,2018,1998cc,"54,420 miles",Petrol,Automatic,Blue,SUV,32.1 mpg,Front Wheel Drive,2,4,187 bhp,130 mph,7.4 seconds,105 g/km,621 miles
+Peugeot,308,30233490,2017,2993cc,"54,520 miles",Diesel,Automatic,Blue,Saloon,51.4 mpg,Front Wheel Drive,5,5,80 bhp,105 mph,13.2 seconds,109 g/km,595 miles
+Ford,B-MAX,30299659,2020,2487cc,"54,549 miles",Hybrid,Automatic,Green,SUV,56.5 mpg,Front Wheel Drive,5,5,134 bhp,112 mph,11.4 seconds,128 g/km,622 miles
+Hyundai,Tucson,29969202,2019,1999cc,"55,118 miles",Diesel,Automatic,Grey,SUV,42.2 mpg,Front Wheel Drive,5,5,140 bhp,126 mph,10.4 seconds,153 g/km,510 miles
+Suzuki,Swift,30289986,2019,1499cc,"55,276 miles",Diesel,Manual,Black,Hatchback,67.3 mpg,Front Wheel Drive,5,5,130 bhp,124 mph,9.0 seconds,115 g/km,518 miles
+Fiat,500,30167918,2018,999cc,"55,540 miles",Petrol,Manual,Black,SUV,54.3 mpg,Front Wheel Drive,5,5,101 bhp,118 mph,11.3 seconds,117 g/km,428 miles
+Mercedes-Benz,C Class,30233517,2018,1999cc,"55,573 miles",Diesel,Manual,Red,SUV,54.3 mpg,Front Wheel Drive,3,5,89 bhp,109 mph,13.2 seconds,124 g/km,443 miles
+Audi,Q3,30290031,2018,1999cc,"55,655 miles",Diesel,Automatic,Grey,SUV,48.7 mpg,Front Wheel Drive,5,5,138 bhp,130 mph,9.3 seconds,133 g/km,653 miles
+Ford,Fiesta,30392908,2019,1991cc,"55,710 miles",Petrol,Semi Automatic,Grey,SUV,43.5 mpg,Front Wheel Drive,3,4,59 bhp,100 mph,14.4 seconds,101 g/km,494 miles
+Toyota,Yaris,30079769,2020,1499cc,"56,426 miles",Diesel,Manual,Blue,Hatchback,80.7 mpg,Front Wheel Drive,5,5,148 bhp,133 mph,8.6 seconds,118 g/km,575 miles
+Ford,Focus,30325170,2019,1199cc,"56,504 miles",Petrol,Manual,Red,Hatchback,44.1 mpg,Rear Wheel Drive,4,5,190 bhp,149 mph,6.8 seconds,124 g/km,733 miles
+Vauxhall,Corsa,30050263,2017,1968cc,"56,514 miles",Diesel,Semi Automatic,Silver,Saloon,62.8 mpg,Front Wheel Drive,5,4,89 bhp,115 mph,9.9 seconds,108 g/km,463 miles
+Ford,EcoSport,30050233,2019,999cc,"57,124 miles",Petrol,Manual,Orange,Hatchback,52.3 mpg,Front Wheel Drive,5,5,94 bhp,116 mph,10.8 seconds,101 g/km,565 miles
+Nissan,X Trail,30320431,2017,1595cc,"57,185 miles",Petrol,Manual,White,SUV,47.1 mpg,Front Wheel Drive,5,4,59 bhp,100 mph,14.4 seconds,101 g/km,494 miles
+Vauxhall,Corsa,30075090,2017,1995cc,"57,870 miles",Diesel,Semi Automatic,Black,Coupe,65.7 mpg,Front Wheel Drive,5,5,80 bhp,105 mph,13.2 seconds,109 g/km,595 miles
+Peugeot,208,30384410,2018,1499cc,"58,309 miles",Petrol,Manual,White,Hatchback,37.7 mpg,Front Wheel Drive,5,5,130 bhp,124 mph,9.0 seconds,130 g/km,421 miles
+Hyundai,i30,30042521,2018,1461cc,"19,771 miles",Diesel,Manual,Blue,SUV,52.3 mpg,Front Wheel Drive,5,5,79 bhp,106 mph,15.4 seconds,124 g/km,452 miles
+Volkswagen,T-Cross,30208719,2019,1998cc,"19,782 miles",Petrol,Manual,Black,Hatchback,42.8 mpg,Front Wheel Drive,5,5,118 bhp,112 mph,12.0 seconds,126 g/km,485 miles
+Mercedes-Benz,GLA Class,30281206,2020,998cc,"19,783 miles",Petrol,Manual,Red,Hatchback,44.1 mpg,Front Wheel Drive,5,5,148 bhp,121 mph,9.7 seconds,164 g/km,454 miles
+Vauxhall,Insignia,30354598,2019,1598cc,"19,811 miles",Diesel,Manual,Red,Hatchback,49.6 mpg,Front Wheel Drive,5,5,150 bhp,125 mph,9.9 seconds,143 g/km,660 miles
+BMW,X1,30354629,2017,1242cc,"19,815 miles",Petrol,Semi Automatic,Blue,Hatchback,62.8 mpg,Front Wheel Drive,5,5,79 bhp,105 mph,14.7 seconds,126 g/km,421 miles
+Land Rover,Discovery Sport,30167983,2017,1685cc,"60,457 miles",Diesel,Manual,Black,Saloon,67.3 mpg,Front Wheel Drive,5,5,138 bhp,120 mph,10.5 seconds,121 g/km,502 miles
+Volkswagen,Sharan,30046251,2017,2967cc,"60,473 miles",Diesel,Semi Automatic,Red,Coupe,60.1 mpg,Front Wheel Drive,5,5,94 bhp,116 mph,10.8 seconds,101 g/km,565 miles
+Volvo,V40,30148647,2018,1999cc,"60,507 miles",Diesel,Automatic,Black,SUV,52.3 mpg,Front Wheel Drive,5,5,113 bhp,121 mph,9.8 seconds,110 g/km,586 miles
+Land Rover,Range Rover Evoque,30290021,2019,1461cc,"60,698 miles",Diesel,Semi Automatic,White,Hatchback,68.9 mpg,Front Wheel Drive,5,4,59 bhp,100 mph,14.4 seconds,101 g/km,494 miles
+Ford,Fiesta,30289952,2017,1968cc,"61,025 miles",Diesel,Semi Automatic,Grey,Hatchback,57.7 mpg,Front Wheel Drive,3,4,70 bhp,104 mph,13.8 seconds,119 g/km,410 miles
+Seat,Leon,30167911,2019,999cc,"61,264 miles",Petrol,Manual,White,Hatchback,47.1 mpg,Front Wheel Drive,5,5,82 bhp,105 mph,13.5 seconds,114 g/km,634 miles
+Vauxhall,Corsa,30233471,2018,1461cc,"19,948 miles",Diesel,Semi Automatic,Silver,Hatchback,65.7 mpg,Front Wheel Drive,5,5,113 bhp,124 mph,9.5 seconds,129 g/km,436 miles
+Volkswagen,T-Roc,30392882,2017,1199cc,"19,949 miles",Petrol,Manual,White,Hatchback,62.8 mpg,Four Wheel Drive,5,5,237 bhp,143 mph,6.2 seconds,162 g/km,466 miles
+Vauxhall,Corsa,30354580,2019,1364cc,"19,970 miles",Petrol,Semi Automatic,Orange,SUV,37.2 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,13.8 seconds,93 g/km,444 miles
+Peugeot,3008,30103715,2018,1199cc,"19,977 miles",Petrol,Manual,Red,Hatchback,65.7 mpg,Front Wheel Drive,5,5,130 bhp,117 mph,9.5 seconds,115 g/km,471 miles
+Vauxhall,Mokka X,30167975,2017,998cc,"19,986 miles",Petrol,Manual,Red,Hatchback,60.1 mpg,Front Wheel Drive,5,5,94 bhp,112 mph,10.7 seconds,129 g/km,573 miles
+Vauxhall,Corsa,30167935,2019,1495cc,"20,010 miles",Petrol,Semi Automatic,Black,Hatchback,45.6 mpg,Front Wheel Drive,3,4,123 bhp,127 mph,8.8 seconds,117 g/km,548 miles
