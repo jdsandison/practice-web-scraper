@@ -144,7 +144,7 @@ def advert_info():
     accumulated_data = []
     types_of_data = ['Accepted id value', 'Year', 'Engine size', 'Mileage', 'Fuel type', 'Transmission', 'Colour', 'Body type', 'Mpg']
     for i in range(0, len(id_values)):
-        current_advert_link = create_url("https://www.exchangeandmart.co.uk", id_values[i])
+        current_advert_link = create_url("https://www.exchangeandmart.co.uk", id_values2[i])
         soup = get_soup(current_advert_link)
         specs = {}
         specification_tab = soup.find_all("div", class_="adSpecItem")
@@ -159,7 +159,7 @@ def advert_info():
             specs_list.append(specs)
         else:
             #print('no given specification tab', id_values[i])
-            rejected_ids_for_spec.append(id_values[i])
+            rejected_ids_for_spec.append(id_values2[i])
 
         list_of_table_data = []
         for info in table_of_info:
@@ -167,11 +167,11 @@ def advert_info():
             list_of_table_data.append(data)
 
         if len(list_of_table_data) == 8:
-            accepted_ids.append(id_values[i])
+            accepted_ids.append(id_values2[i])
             accumulated_data.append(list_of_table_data)
             full_table_data.append(accumulated_data[-1])
         else:
-            print('not all data present', list_of_table_data, 'rejected id value', id_values[i])
+            print('not all data present', list_of_table_data, 'rejected id value', id_values2[i])
 
     specification_tab_dataframe = pd.DataFrame(specs_list)
     table_data_dataframe = pd.DataFrame(full_table_data)
@@ -188,7 +188,7 @@ def advert_info():
         table_data_and_id_dataframe.reset_index(drop=True, inplace=True)
         specification_tab_and_id.drop(rows_to_drop_specification, inplace=True)
         specification_tab_and_id.reset_index(drop=True, inplace=True)
-        #print('Dropping rows with', advert_id)
+        print('Dropping rows with', advert_id)
 
     rows_with_nan_values = []
     for index, row in specification_tab_and_id.iterrows():
@@ -227,28 +227,25 @@ def main():
 
         get_car_models(base_url)
         for make in available_makes_filtered:
-            output_ids = get_ids_of_each_make(make, page_number)
-            print(output_ids)
-            ids_of_makes.append(output_ids)
+            print(make)
+            full_first_dataframe = get_ids_of_each_make(make, page_number)
 
+        print('next page')
         page_number += 1
 
-    print(ids_of_makes)
-    print('didnt work')
+    second_dataframe = advert_info()
 
-    # second_dataframe = advert_info()
-    #
-    # final_dataframe = pd.concat([first_dataframe, second_dataframe], axis=1)
-    #
-    # rows_with_nan_values = []
-    # for index, row in final_dataframe.iterrows():
-    #     if row.isna().any():
-    #         rows_with_nan_values.append(index)
-    #
-    # final_dataframe.drop(rows_with_nan_values, inplace=True)
-    # final_dataframe.reset_index(drop=True, inplace=True)
-    #
-    # final_dataframe.to_csv('data.csv', index=False, encoding='utf-8')
+    final_dataframe = pd.concat([full_first_dataframe, second_dataframe], axis=1)
+
+    rows_with_nan_values = []
+    for index, row in final_dataframe.iterrows():
+        if row.isna().any():
+            rows_with_nan_values.append(index)
+
+    final_dataframe.drop(rows_with_nan_values, inplace=True)
+    final_dataframe.reset_index(drop=True, inplace=True)
+
+    final_dataframe.to_csv('data.csv', index=False, encoding='utf-8')
 
 if __name__ == "__main__":
     main()
