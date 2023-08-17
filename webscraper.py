@@ -101,6 +101,7 @@ def removing_nan_values(dataframe):
 
 def get_ids_of_each_make(make, page_number):
     global ids_of_makes, makes2, models2, id_values2
+    temp_id_values = []
     make_url = 'https://www.exchangeandmart.co.uk/used-cars-for-sale/any-distance-from-b30-3aa/' + str(make) + '/page' + str(page_number)
     soup = get_soup(make_url)
     elements = soup.find_all("div", class_="result-item")
@@ -112,8 +113,10 @@ def get_ids_of_each_make(make, page_number):
         if make != "Unknown make" and model != "Unknown model" and ad_id != "unknown id":
             makes2.append(make)
             models2.append(model)
-            id_values2.append(ad_id)
+            temp_id_values.append(ad_id)
 
+        id_values2.append(temp_id_values[-1])
+        
     search_data = {
         'Makes': makes2,
         'Models': models2,
