@@ -115,18 +115,18 @@ def get_ids_of_each_make(make, page_number):
             models2.append(model)
             temp_id_values.append(ad_id)
 
-        id_values2.append(temp_id_values[-1])
-        
+    unique_id_values = set(temp_id_values)
+    id_values2.extend(unique_id_values)
+
     search_data = {
         'Makes': makes2,
         'Models': models2,
         'ID values': id_values2
     }
 
-    #search_dataframe = pd.DataFrame(search_data)
+    search_data_dataframe = pd.DataFrame(search_data)
 
-    #return search_dataframe
-    return search_data['ID values']
+    return search_data_dataframe
 
 
 def advert_info():
@@ -230,7 +230,6 @@ def main():
             output_ids = get_ids_of_each_make(make, page_number)
             print(output_ids)
             ids_of_makes.append(output_ids)
-            print('working!' + make)
 
         page_number += 1
 
