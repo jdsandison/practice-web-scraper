@@ -1,4 +1,2 @@
 Make and model,ID value,Year,Engine size (litres),Mileage (miles),Fuel type,Transmission,Colour,Body type,Mpg,Wheel drive,Doors,Seats,Engine power (bhp),Top speed (mph),Acceleration (0-62 mph) (seconds),CO2 rating (g/km),Tank range (miles)
 BMW 3 Series,29888831,2019,2,"31,900",Petrol,Semiauto,Blue,Saloon,42.2,Rear Wheel Drive,4,5,184,146,7.1,127,548
-Seat Ibiza,29888858,2022,1,"4,365 ",Petrol,Manual,White,Hatchback,50.4,Front Wheel Drive,5,5,94,116,10.9,126,443
-Volvo XC60,29888914,2017,2,"32,795 ",Diesel,Semiauto,Red,SUV,54.3,Four Wheel Drive,5,5,190,127,7.9,136,717
