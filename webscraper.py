@@ -125,19 +125,26 @@ def advert_info(url, current_id):
 
 
 def main():
+    still_searching = True
+    starting_number = 29000000
+    max_consecutive_inactive_ids = 1000
+    current_consecutive_inactive_ids = 0
     base_url = 'https://www.exchangeandmart.co.uk/ad/'
     data_file_column_length = len(data_file['ID values']) - 1
     current_id_number = data_file.iat[data_file_column_length, data_file.get_loc('ID values')]
 
-    while True:
-        soup = get_soup(base_url + str(current_id_number))
-
-        if not soup.find("div", id="vehicle-desc"):
-            break
-
-        data_file.append(advert_info(base_url + str(current_id_number), current_id_number))
-
-        current_id_number += 1
+    while still_searching:
+        if current_consecutive_inactive_ids > max_consecutive_inactive_ids:
+            still_searching = False
+        else:
+            soup = get_soup(base_url + str(current_id_number))
+            if soup.find("div", id="vehicle-desc"):
+                current_consecutive_inactive_ids = 0
+                data_file.append(advert_info(base_url + str(current_id_number), current_id_number))
+                current_id_number += 1
+            else:
+                current_consecutive_inactive_ids += 1
+                current_id_number += 1
 
     data_file.to_csv("data.csv", index=False, encoding="utf-8")
 
