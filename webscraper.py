@@ -94,7 +94,7 @@ def advert_info(url, current_id):
     specification_tab_dataframe = pd.DataFrame(specs_list)
     table_data_dataframe = pd.DataFrame(full_table_data)
     table_data_dataframe.columns = types_of_data
-    wanted_columns = ['Makes', 'Models', 'ID values', 'Year', 'Engine size', 'Mileage',
+    wanted_columns = ['Year', 'Engine size', 'Mileage',
                   'Fuel type', 'Transmission', 'Colour', 'Body type', 'Mpg',
                   'Wheel drive', 'Doors', 'Seats', 'Engine power', 'Top speed',
                   'acceleration', 'CO2 rating', 'Tank range']
@@ -106,8 +106,11 @@ def advert_info(url, current_id):
             print('full spec data is not present')
             return
 
-    combined_dataframe = pd.concat([make_and_model_and_id_df, table_data_dataframe, specification_tab_dataframe], ignore_index=True)
-    return combined_dataframe
+    combined_dataframe = pd.concat([make_and_model_and_id_df, table_data_dataframe, specification_tab_dataframe],
+                                   axis=1, ignore_index=True)
+
+    if combined_dataframe.shape[1] == 17:
+        return combined_dataframe
 
 
 def main():
@@ -120,13 +123,15 @@ def main():
 
     while still_searching:
         if current_consecutive_inactive_ids > max_consecutive_inactive_ids:
-            updated_data.to_csv('data.csv', index=False, encoding='utf-8')
+            updated_data.to_csv('data-test.csv', index=False, encoding='utf-8')
             still_searching = False
         else:
             soup = get_soup(base_url + str(current_id_number))
             if soup.find("div", id="vehicle-desc"):
                 current_consecutive_inactive_ids = 0
-                updated_data = pd.concat([data_file, (advert_info(base_url + str(current_id_number), current_id_number))], ignore_index=True)
+                print(advert_info(base_url+str(current_id_number), current_id_number), current_id_number)
+                updated_data = pd.concat([data_file, advert_info(base_url + str(current_id_number),
+                                                                 current_id_number)], axis=0, ignore_index=True)
                 current_id_number += 1
             else:
                 current_consecutive_inactive_ids += 1
