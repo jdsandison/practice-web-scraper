@@ -1,21 +1,4 @@
-Makes,Models,ID values,Year,Engine size,Mileage,Fuel type,Transmission,Colour,Body type,Mpg,Wheel drive,Doors,Seats,Engine power,Top speed,Acceleration (0-62 mph),CO2 rating,Tank range
-Abarth,595,30253797,2017,1368cc,"39,170 miles",Petrol,Manual,Scorpion Black,Hatchback,47.1 mpg,Front Wheel Drive,3,2,163 bhp,136 mph,7.3 seconds,139 g/km,363 miles
-Abarth,595,30279152,2023,1.4L,10 miles,Petrol,Manual,Other,Hatchback,40.9 mpg,Front Wheel Drive,3,4,177 bhp,140 mph,6.7 seconds,165 g/km,315 miles
-Abarth,595,30354472,2018,1368cc,"20,756 miles",Petrol,Manual,Red,Hatchback,39.2 mpg,Front Wheel Drive,3,2,143 bhp,130 mph,7.8 seconds,151 g/km,302 miles
-Abarth,595,30337821,2017,1368cc,"42,453 miles",Petrol,Manual,Red,Hatchback,47.1 mpg,Front Wheel Drive,3,2,163 bhp,136 mph,7.3 seconds,139 g/km,363 miles
-Abarth,595,30384357,2018,1368cc,"40,053 miles",Petrol,Manual,Red,Hatchback,39.2 mpg,Front Wheel Drive,3,2,143 bhp,130 mph,7.8 seconds,151 g/km,302 miles
-Abarth,595,30417270,2017,1368cc,"40,112 miles",Petrol,Manual,White,Hatchback,47.1 mpg,Front Wheel Drive,3,2,158 bhp,134 mph,7.3 seconds,139 g/km,363 miles
-Abarth,695,30390155,2023,1.4L,10 miles,Petrol,Manual,Red,Hatchback,40.9 mpg,Front Wheel Drive,3,4,177 bhp,140 mph,6.7 seconds,162 g/km,315 miles
-Abarth,695,30422271,2017,1368cc,"42,171 miles",Petrol,Manual,Grey,Hatchback,47.1 mpg,Front Wheel Drive,3,2,178 bhp,140 mph,6.7 seconds,139 g/km,363 miles
-Abarth,695,30063603,2017,1368cc,"33,670 miles",Petrol,Manual,Black,Convertible,47.1 mpg,Front Wheel Drive,5,5,240 bhp,152 mph,6.0 seconds,157 g/km,548 miles
-Abarth,595C,30282673,2017,1742cc,"34,032 miles",Petrol,Semi Automatic,Grey,Hatchback,41.5 mpg,Rear Wheel Drive,4,5,276 bhp,149 mph,5.7 seconds,168 g/km,500 miles
-Alfa Romeo,Giulietta,30161865,2022,2L,"6,536 miles",Petrol,Semiauto,Red,Saloon,39.2 mpg,Rear Wheel Drive,4,5,276 bhp,149 mph,5.7 seconds,159 g/km,591 miles
-Alfa Romeo,Mito,30104417,2019,1995cc,"30,371 miles",Petrol,Semi Automatic,Red,Saloon,46.3 mpg,Rear Wheel Drive,4,5,276 bhp,149 mph,5.7 seconds,160 g/km,591 miles
-Alfa Romeo,Giulia,30360629,2018,1995cc,"22,861 miles",Petrol,Semi Automatic,Blue,Saloon,46.3 mpg,Front Wheel Drive,5,5,120 bhp,121 mph,9.4 seconds,168 g/km,498 miles
-Alfa Romeo,Giulia,30384467,2020,1368cc,"18,314 miles",Petrol,Manual,Blue,Hatchback,37.7 mpg,Front Wheel Drive,5,5,175 bhp,136 mph,7.8 seconds,113 g/km,867 miles
-Alfa Romeo,Giulietta,30281491,2017,1956cc,"36,410 miles",Diesel,Automatic,Red,Hatchback,65.7 mpg,Rear Wheel Drive,4,5,177 bhp,137 mph,8.2 seconds,109 g/km,770 miles
-Alfa Romeo,Giulietta,30202279,2017,2143cc,"60,731 miles",Diesel,Semi Automatic,Silver,Saloon,67.3 mpg,Four Wheel Drive,5,5,207 bhp,134 mph,6.6 seconds,127 g/km,751 miles
-Alfa Romeo,Giulia,30267301,2018,2143cc,"34,744 miles",Diesel,Semi Automatic,Silver,SUV,58.9 mpg,Front Wheel Drive,3,4,105 bhp,114 mph,11.4 seconds,99 g/km,666 miles
-Alfa Romeo,Stelvio,30308342,2018,875cc,"21,762 miles",Petrol,Manual,White,Hatchback,67.3 mpg,Front Wheel Drive,5,5,120 bhp,121 mph,9.4 seconds,159 g/km,472 miles
-Alfa Romeo,Giulia,30384449,2019,1368cc,"35,076 miles",Petrol,Manual,Red,Hatchback,35.8 mpg,Rear Wheel Drive,2,2,503 bhp,190 mph,3.7 seconds,263 g/km,392 miles
-Alfa Romeo,Giulietta,30384702,2023,4L,"1,800 miles",Petrol,Automatic,Buckinghamshire Green,Roadster,24.4 mpg,Rear Wheel Drive,2,4,503 bhp,195 mph,3.5 seconds,236 g/km,440 miles
+Make and model,ID value,Year,Engine size (litres),Mileage (miles),Fuel type,Transmission,Colour,Body type,Mpg,Wheel drive,Doors,Seats,Engine power (bhp),Top speed (mph),Acceleration (0-62 mph) (seconds),CO2 rating (g/km),Tank range (miles)
+BMW 3 Series,29888831,2019,2,"31,900",Petrol,Semiauto,Blue,Saloon,42.2,Rear Wheel Drive,4,5,184,146,7.1,127,548
+Seat Ibiza,29888858,2022,1,"4,365 ",Petrol,Manual,White,Hatchback,50.4,Front Wheel Drive,5,5,94,116,10.9,126,443
+Volvo XC60,29888914,2017,2,"32,795 ",Diesel,Semiauto,Red,SUV,54.3,Four Wheel Drive,5,5,190,127,7.9,136,717

@@ -81,10 +81,19 @@ def advert_info(url, current_id):
                                    axis=1, ignore_index=True)
 
     if combined_dataframe.shape[1] == 18:
-        combined_dataframe.columns = ['Make and model', 'ID values', 'Year', 'Engine size', 'Mileage',
+        combined_dataframe.columns = ['Make and model', 'ID value', 'Year', 'Engine size (litres)', 'Mileage (miles)',
                                       'Fuel type', 'Transmission', 'Colour', 'Body type', 'Mpg',
-                                      'Wheel drive', 'Doors', 'Seats', 'Engine power', 'Top speed',
-                                      'Acceleration (0-62 mph)', 'CO2 rating', 'Tank range']
+                                      'Wheel drive', 'Doors', 'Seats', 'Engine power (bhp)', 'Top speed (mph)',
+                                      'Acceleration (0-62 mph) (seconds)', 'CO2 rating (g/km)', 'Tank range (miles)']
+
+        combined_dataframe['Engine size (litres)'] = combined_dataframe['Engine size (litres)'].str.slice(stop=-1)
+        combined_dataframe['Mileage (miles)'] = combined_dataframe['Mileage (miles)'].str.slice(stop=-5)
+        combined_dataframe['Mpg'] = combined_dataframe['Mpg'].str.slice(stop=-3)
+        combined_dataframe['Engine power (bhp)'] = combined_dataframe['Engine power (bhp)'].str.slice(stop=-3)
+        combined_dataframe['Top speed (mph)'] = combined_dataframe['Top speed (mph)'].str.slice(stop=-3)
+        combined_dataframe['Acceleration (0-62 mph) (seconds)'] = combined_dataframe['Acceleration (0-62 mph) (seconds)'].str.slice(stop=-7)
+        combined_dataframe['CO2 rating (g/km)'] = combined_dataframe['CO2 rating (g/km)'].str.slice(stop=-4)
+        combined_dataframe['Tank range (miles)'] = combined_dataframe['Tank range (miles)'].str.slice(stop=-5)
 
         return combined_dataframe
 
@@ -94,13 +103,13 @@ def main():
     max_consecutive_inactive_ids = 50
     current_consecutive_inactive_ids = 0
     base_url = 'https://www.exchangeandmart.co.uk/ad/'
-    data_file_column_length = len(data_file['ID values']) - 1
-    current_id_number = data_file.iat[data_file_column_length, data_file.columns.get_loc('ID values')] + 1
+    data_file_column_length = len(data_file['ID value']) - 1
+    current_id_number = data_file.iat[data_file_column_length, data_file.columns.get_loc('ID value')] + 1
     updated_data = data_file
 
     while still_searching:
         if current_consecutive_inactive_ids > max_consecutive_inactive_ids:
-            updated_data.to_csv('data-test.csv', index=False, encoding='utf-8')
+            updated_data.to_csv('data.csv', index=False, encoding='utf-8')
             still_searching = False
         else:
             soup = get_soup(base_url + str(current_id_number))
