@@ -1,9 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
-import numpy as np
 import pandas as pd
 
-headers = {"User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"}
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 "
+                  "Safari/537.36"}
 
 makes = []
 models = []
@@ -18,38 +19,11 @@ def get_soup(url):
     return soup
 
 
-# def get_page_info(search_url):
-#     global makes, models, id_values
-#     soup = get_soup(search_url)
-#     div_elements = soup.find_all("div", class_="result-item")
-#
-#     for div in div_elements:
-#         make = (div.get("make", "Unknown make"))
-#         model = (div.get("model", "Unknown model"))
-#         ad_id = (div.get("adid", "Unknown id"))
-#
-#         if make != "Unknown make" and model != "Unknown model" and ad_id != "unknown id":
-#             makes.append(make)
-#             models.append(model)
-#             id_values.append(ad_id)
-#
-#     search_data = {
-#         'Makes': makes,
-#         'Models': models,
-#         'ID values': id_values
-#     }
-#
-#     search_dataframe = pd.DataFrame(search_data)
-#
-#     return search_dataframe
-
-
 def create_url(advert_base_url, id):
     return advert_base_url + "/ad/" + str(id)
 
 
 def advert_info(url, current_id):
-
     first_data = {'makes and models': None,
                   'Id value': current_id}
 
@@ -95,9 +69,9 @@ def advert_info(url, current_id):
     table_data_dataframe = pd.DataFrame(full_table_data)
     table_data_dataframe.columns = types_of_data
     wanted_columns = ['Year', 'Engine size', 'Mileage',
-                  'Fuel type', 'Transmission', 'Colour', 'Body type', 'Mpg',
-                  'Wheel drive', 'Doors', 'Seats', 'Engine power', 'Top speed',
-                  'acceleration', 'CO2 rating', 'Tank range']
+                      'Fuel type', 'Transmission', 'Colour', 'Body type', 'Mpg',
+                      'Wheel drive', 'Doors', 'Seats', 'Engine power', 'Top speed',
+                      'Acceleration (0-62 mph)', 'CO2 rating', 'Tank range']
     specification_tab_dataframe = specification_tab_dataframe.filter(items=wanted_columns)
     make_and_model_and_id_df = pd.DataFrame(first_data, index=[0])
 
@@ -109,7 +83,12 @@ def advert_info(url, current_id):
     combined_dataframe = pd.concat([make_and_model_and_id_df, table_data_dataframe, specification_tab_dataframe],
                                    axis=1, ignore_index=True)
 
-    if combined_dataframe.shape[1] == 17:
+    if combined_dataframe.shape[1] == 18:
+        combined_dataframe.columns = ['Make and model', 'ID values', 'Year', 'Engine size', 'Mileage',
+                                      'Fuel type', 'Transmission', 'Colour', 'Body type', 'Mpg',
+                                      'Wheel drive', 'Doors', 'Seats', 'Engine power', 'Top speed',
+                                      'Acceleration (0-62 mph)', 'CO2 rating', 'Tank range']
+
         return combined_dataframe
 
 
@@ -119,7 +98,8 @@ def main():
     current_consecutive_inactive_ids = 0
     base_url = 'https://www.exchangeandmart.co.uk/ad/'
     data_file_column_length = len(data_file['ID values']) - 1
-    current_id_number = data_file.iat[data_file_column_length, data_file.columns.get_loc('ID values')]
+    current_id_number = data_file.iat[data_file_column_length, data_file.columns.get_loc('ID values')] + 1
+    updated_data = data_file
 
     while still_searching:
         if current_consecutive_inactive_ids > max_consecutive_inactive_ids:
@@ -129,15 +109,13 @@ def main():
             soup = get_soup(base_url + str(current_id_number))
             if soup.find("div", id="vehicle-desc"):
                 current_consecutive_inactive_ids = 0
-                print(advert_info(base_url+str(current_id_number), current_id_number), current_id_number)
-                updated_data = pd.concat([data_file, advert_info(base_url + str(current_id_number),
-                                                                 current_id_number)], axis=0, ignore_index=True)
+                print(advert_info(base_url + str(current_id_number), current_id_number), current_id_number)
+                updated_data = pd.concat([updated_data, advert_info(base_url + str(current_id_number),
+                                                                    current_id_number)], axis=0, ignore_index=True)
                 current_id_number += 1
             else:
                 current_consecutive_inactive_ids += 1
                 current_id_number += 1
-
-    data_file.to_csv("data.csv", index=False, encoding="utf-8")
 
 
 if __name__ == "__main__":
