@@ -1,25 +1,2 @@
 Makes,Models,ID values,Year,Engine size,Mileage,Fuel type,Transmission,Colour,Body type,Mpg,Wheel drive,Doors,Seats,Engine power,Top speed,Acceleration (0-62 mph),CO2 rating,Tank range
-Vauxhall,Corsa,30186438,2023,1.2L,1 miles,Petrol,Manual,Grey,Hatchback,54.3 mpg,Front Wheel Drive,5,5,99 bhp,121 mph,9.3 seconds,116 g/km,526 miles
-Vauxhall,Mokka,30086781,2023,1.2L,1 miles,Petrol,Manual,Red,SUV,51.4 mpg,Front Wheel Drive,5,5,128 bhp,125 mph,9.1 seconds,126 g/km,497 miles
-Vauxhall,Corsa,30086788,2022,1.2L,"3,623 miles",Petrol,Automatic,Green,SUV,47.9 mpg,Front Wheel Drive,5,5,128 bhp,125 mph,9.1 seconds,126 g/km,497 miles
-Vauxhall,Mokka,30086785,2023,1.2L,"4,791 miles",Petrol,Manual,Grey,SUV,51.4 mpg,Front Wheel Drive,5,5,128 bhp,124 mph,9.2 seconds,132 g/km,464 miles
-Vauxhall,Mokka,30086782,2020,1.5L,"15,420 miles",Diesel,Manual,Grey,MPV,1.9 mpg,Front Wheel Drive,5,5,128 bhp,125 mph,9.1 seconds,126 g/km,497 miles
-Vauxhall,Mokka,30086779,2020,2L,"19,851 miles",Petrol,Manual,Grey,SUV,38.2 mpg,Front Wheel Drive,5,5,128 bhp,115 mph,10.6 seconds,144 g/km,21 miles
-Vauxhall,Astra,30032361,2019,2L,"20,607 miles",Diesel,Manual,Blue,SUV,39.2 mpg,Front Wheel Drive,5,5,163 bhp,125 mph,10.3 seconds,168 g/km,471 miles
-Vauxhall,Combo Life,30368135,2018,2L,"24,371 miles",Diesel,Automatic,White,SUV,42.2 mpg,Four Wheel Drive,5,5,178 bhp,120 mph,8.5 seconds,157 g/km,557 miles
-Mazda,CX-5,30355499,2019,1.3L,"50,270 miles",Petrol,Semiauto,Black,Coupe,44.8 mpg,Front Wheel Drive,4,5,161 bhp,142 mph,8.2 seconds,126 g/km,424 miles
-Ford,Kuga,30339050,2018,1.6L,"59,886 miles",Diesel,Manual,Black,SUV,70.6 mpg,Front Wheel Drive,5,5,118 bhp,116 mph,9.9 seconds,105 g/km,699 miles
-Volkswagen,Tiguan,29306648,2019,1.2L,"4,838 miles",Petrol,Manual,Grey,MPV,42.2 mpg,Front Wheel Drive,5,7,108 bhp,109 mph,11.8 seconds,124 g/km,566 miles
-Land Rover,Range Rover Velar,30285615,2018,1.5L,"9,645 miles",Petrol,Automatic,Grey,Hatchback,58.9 mpg,Front Wheel Drive,5,5,109 bhp,108 mph,11.2 seconds,108 g/km,544 miles
-Mercedes-Benz,CLA Class,30401714,2020,1.5L,"13,868 miles",Diesel,Manual,Grey,MPV,50.4 mpg,Front Wheel Drive,5,5,99 bhp,107 mph,12.9 seconds,111 g/km,554 miles
-Vauxhall,Crossland X,30385389,2019,1.4L,"15,891 miles",Petrol,Manual,Silver,SUV,39.2 mpg,Front Wheel Drive,5,5,138 bhp,122 mph,9.6 seconds,147 g/km,457 miles
-Vauxhall,Corsa,30009858,2018,1.2L,"16,943 miles",Petrol,Semiauto,Red,Hatchback,57.6 mpg,Front Wheel Drive,5,5,130 bhp,124 mph,9.8 seconds,112 g/km,672 miles
-Vauxhall,Combo Life,30401713,2017,1.5L,"18,224 miles",Petrol,Automatic,Green,SUV,38.2 mpg,Four Wheel Drive,5,5,180 bhp,124 mph,10.1 seconds,173 g/km,504 miles
-Toyota,Yaris,30079016,2019,1.6L,"18,807 miles",Diesel,Semiauto,Blue,SUV,46.3 mpg,Front Wheel Drive,5,5,114 bhp,122 mph,10.5 seconds,122 g/km,509 miles
-Vauxhall,Corsa,30408015,2017,1.7L,"24,620 miles",Diesel,Semiauto,Grey,SUV,57.6 mpg,Front Wheel Drive,5,5,139 bhp,115 mph,11.5 seconds,129 g/km,786 miles
-Vauxhall,Combo Life,30368136,2020,1L,"28,994 miles",Petrol,Manual,Red,Hatchback,52.3 mpg,Front Wheel Drive,5,4,71 bhp,99 mph,13.8 seconds,111 g/km,403 miles
-Vauxhall,Mokka X,30058752,2019,1.3L,"38,481 miles",Petrol,Semiauto,White,SUV,40.9 mpg,Front Wheel Drive,5,5,158 bhp,123 mph,9.9 seconds,122 g/km,495 miles
-Peugeot,308,30364336,2022,1.2L,"3,341 miles",Petrol,Automatic,White,SUV,46.3 mpg,Front Wheel Drive,5,5,128 bhp,124 mph,9.2 seconds,135 g/km,448 miles
-Ford,Kuga,30403876,2021,1.2L,"4,890 miles",Petrol,Manual,Black,Hatchback,54.3 mpg,Front Wheel Drive,5,5,74 bhp,108 mph,12.4 seconds,118 g/km,478 miles
-Audi,Q2,30339053,2020,1.3L,"5,727 miles",Petrol,Manual,Grey,SUV,41.5 mpg,Front Wheel Drive,5,5,158 bhp,124 mph,8.6 seconds,153 g/km,502 miles
-Hyundai,Tucson,29868088,2019,1.5L,"8,186 miles",Petrol,Manual,Red,SUV,43.5 mpg,Front Wheel Drive,5,5,148 bhp,123 mph,8.5 seconds,126 g/km,478 miles
+BMW,3 Series,29888831,2019,2L,"31,900 miles",Petrol,Semiauto,Blue,Saloon,42.2 mpg,Rear Wheel Drive,4,5,184 bhp,146 mph,7.1 seconds,127 g/km,548 miles
