@@ -22,6 +22,26 @@ def get_soup(url):
     return soup
 
 
+def convert_to_liters(engine_size):
+    """
+    Some listings have the engine size in cc. This function removes the units and converts cc into litres.
+
+    :param engine_size: size of the engine in the dataframe
+    :return: value: engine size with converted units
+    """
+    # Check if the value contains 'cc' and convert
+    if 'cc' in engine_size:
+        value = float(engine_size.replace('cc', '')) / 1000
+    else:
+        # Check if the value contains 'L'
+        if 'L' in engine_size:
+            value = float(engine_size.replace('L', ''))
+        else:
+            # If the unit is not specified, assume it's in liters
+            value = float(engine_size)
+    return value
+
+
 def advert_info(url, current_id):
     """
     Scrapes data from 3 locations on a single page. From the title, the 'table' of data and the 'specifications tab'
@@ -48,7 +68,12 @@ def advert_info(url, current_id):
     soup = get_soup(url)
 
     # locating and scraping the data for the make and model of the car
-    make_and_model = soup.find('h2', class_='col-xs-9').find('span', class_='ttl')
+    make_and_model_container = soup.find('h2', class_='col-xs-9')
+    if make_and_model_container is None:
+        return
+    else:
+        make_and_model = make_and_model_container.find('span', class_='ttl')
+
     first_data['makes and models'] = make_and_model.get_text(strip=True)
 
     # locating the data from the 'specification tab'
@@ -77,7 +102,7 @@ def advert_info(url, current_id):
         data = info.text.strip()
         list_of_table_data.append(data)
 
-    # for electric and hybrid cars the 'table' of data doesn't have a length of 8
+    # for electric and hybrid cars the 'table' of data doesn't have a length of 8. And also vans.
     if len(list_of_table_data) == 8:
         accepted_ids.append(current_id)
         accumulated_data.append(list_of_table_data)
@@ -118,7 +143,6 @@ def advert_info(url, current_id):
                                       'Acceleration (0-62 mph) (seconds)', 'CO2 rating (g/km)', 'Tank range (miles)']
 
         # the scraped data sometimes has units. This removes all the units where necessary
-        combined_dataframe['Engine size (litres)'] = combined_dataframe['Engine size (litres)'].str.slice(stop=-1)
         combined_dataframe['Mileage (miles)'] = combined_dataframe['Mileage (miles)'].str.slice(stop=-5)
         combined_dataframe['Mpg'] = combined_dataframe['Mpg'].str.slice(stop=-3)
         combined_dataframe['Engine power (bhp)'] = combined_dataframe['Engine power (bhp)'].str.slice(stop=-3)
@@ -126,6 +150,7 @@ def advert_info(url, current_id):
         combined_dataframe['Acceleration (0-62 mph) (seconds)'] = combined_dataframe['Acceleration (0-62 mph) (seconds)'].str.slice(stop=-7)
         combined_dataframe['CO2 rating (g/km)'] = combined_dataframe['CO2 rating (g/km)'].str.slice(stop=-4)
         combined_dataframe['Tank range (miles)'] = combined_dataframe['Tank range (miles)'].str.slice(stop=-5)
+        combined_dataframe['Engine size (litres)'] = combined_dataframe['Engine size (litres)'].apply(convert_to_liters)
 
         return combined_dataframe
 
@@ -153,7 +178,7 @@ def main():
             soup = get_soup(base_url + str(current_id_number))
             if soup.find("div", id="vehicle-desc"):
                 current_consecutive_inactive_ids = 0
-                print(advert_info(base_url + str(current_id_number), current_id_number), current_id_number)
+                #print(advert_info(base_url + str(current_id_number), current_id_number), current_id_number)
                 updated_data = pd.concat([updated_data, advert_info(base_url + str(current_id_number),
                                                                     current_id_number)], axis=0, ignore_index=True)
                 # move on to next id number
