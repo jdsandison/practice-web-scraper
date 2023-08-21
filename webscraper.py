@@ -205,13 +205,15 @@ def advert_info(url, current_id):
                                       'Acceleration (0-62 mph) (seconds)', 'CO2 rating (g/km)', 'Tank range (miles)']
 
         # the scraped data sometimes has units. This removes all the units where necessary
-        combined_dataframe['Mileage (miles)'] = combined_dataframe['Mileage (miles)'].str.slice(stop=-5)
-        combined_dataframe['Mpg'] = combined_dataframe['Mpg'].str.slice(stop=-3)
-        combined_dataframe['Engine power (bhp)'] = combined_dataframe['Engine power (bhp)'].str.slice(stop=-3)
-        combined_dataframe['Top speed (mph)'] = combined_dataframe['Top speed (mph)'].str.slice(stop=-3)
-        combined_dataframe['Acceleration (0-62 mph) (seconds)'] = combined_dataframe['Acceleration (0-62 mph) (seconds)'].str.slice(stop=-7)
-        combined_dataframe['CO2 rating (g/km)'] = combined_dataframe['CO2 rating (g/km)'].str.slice(stop=-4)
-        combined_dataframe['Tank range (miles)'] = combined_dataframe['Tank range (miles)'].str.slice(stop=-5)
+        combined_dataframe['Mileage (miles)'] = combined_dataframe['Mileage (miles)'].str.replace(' miles', '')
+        combined_dataframe['Mpg'] = combined_dataframe['Mpg'].str.replace(' mpg', '')
+        combined_dataframe['Engine power (bhp)'] = combined_dataframe['Engine power (bhp)'].str.replace(' bhp', '')
+        combined_dataframe['Top speed (mph)'] = combined_dataframe['Top speed (mph)'].str.replace(' mph', '')
+        combined_dataframe['Acceleration (0-62 mph) (seconds)'] = combined_dataframe[
+            'Acceleration (0-62 mph) (seconds)'].str.replace(' seconds', '')
+        combined_dataframe['CO2 rating (g/km)'] = combined_dataframe['CO2 rating (g/km)'].str.replace(' g/km', '')
+        combined_dataframe['CO2 rating (g/km)'] = combined_dataframe['CO2 rating (g/km)'].str.replace(' g/km', '')
+        combined_dataframe['Tank range (miles)'] = combined_dataframe['Tank range (miles)'].str.replace(' miles', '')
         combined_dataframe['Engine size (litres)'] = combined_dataframe['Engine size (litres)'].apply(convert_to_liters)
 
         renaming_and_removing_units = time.perf_counter_ns() - start_time - request_time - parsing_time - scraping_and_manipulating_table_data - scraping_and_manipulating_specification_data
@@ -232,7 +234,7 @@ def main():
     still_searching = True  # boolean: when false the task is complete and the scraper will stop
 
     # the consecutive amount of blank results we can get before considering all future adverts are blank/not created yet
-    max_consecutive_inactive_ids = 50  # this number can be changed depending on how strict we are
+    max_consecutive_inactive_ids = 100  # this number can be changed depending on how strict we are
     current_consecutive_inactive_ids = 0
 
     # finding what id number the scraper got up to last time and then adding 1 and continuing from there

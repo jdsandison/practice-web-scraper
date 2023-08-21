@@ -1,0 +1,2682 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en-US"><![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en-US"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html id="top" lang="en-GB">
+ <!--<![endif]-->
+ <head>
+  <link href="//connect.facebook.net" rel="preconnect"/>
+  <link href="//www.google-analytics.com" rel="preconnect"/>
+  <link href="//www.google.com" rel="preconnect"/>
+  <link href="//ixm.co.uk" rel="preconnect"/>
+  <link href="//newsquestdigitalmedia.d2.sc.omtrdc.net" rel="preconnect"/>
+  <link href="//newsquestdigitalmedia.d2.sc.omtrdc.net" rel="dns-prefetch"/>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"fd15ff24ac","applicationID":"183712394","transactionName":"MlFbY0cFXxcFARdRVwsbXFlYS1AAEgcRTGcTXVxA","queueTime":0,"applicationTime":71,"agent":"","atts":""}
+  </script>
+  <script type="text/javascript">
+   (window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"fd15ff24ac",applicationID:"183712394"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);
+  </script>
+  <meta content="noindex, follow" id="ctl00_metaRobotsNoIndexFollow" name="robots"/>
+  <meta content="Citroen C3 Aircross 1.2 PureTech Shine Euro 6 (s/s) 5dr NEW SHAPE LOW MILEAGE  SUV 2021, 17000 miles, £16490 - Penton Motor Group,  - Tel: 01202238542 - Used Cars - ExchangeandMart.co.uk" id="ctl00_metaDescription" name="description"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="4E45C596C11F0A3ACC5D4F09D8EDA793" name="msvalidate.01"/>
+  <script type="text/javascript">
+   var loadStart=(new Date()).getTime();var loadEnd=0;var pagelifespan="start"
+  </script>
+  <script src="//ixm.co.uk/js/jquery-1.11.1.min.js" type="text/javascript">
+  </script>
+  <script src="//ixm.co.uk/js/jquery.mobile.custom.min.js" type="text/javascript">
+  </script>
+  <script src="//ixm.co.uk/js/bootstrap.min.js" type="text/javascript">
+  </script>
+  <script src="/js/e.min.js?v=2023.0821" type="text/javascript">
+  </script>
+  <link href="//i.exchangeandmart.co.uk" rel="preconnect"/>
+  <script type="text/javascript">
+   var bLogStats = true;
+        var bIsAFS = '';
+        
+        var dataLayer = dataLayer || []; 
+        Enm.Criteo.InitAdView('29889360', '16490.0000', '', '2308212102185154', dataLayer, 'Citroen', 'C3');
+        
+        $(document).ready(function () {
+            
+                Enm.Modals.BrandName = 'Exchange and Mart'; Enm.Modals.PushCriteo = true;
+            Enm.Modals.OrgID = '2147386223';
+            Enm.Modals.AdID='29889360';
+            
+        });
+        var cmbistrade = true;
+  </script>
+  <script src="//ixm.co.uk/js/clamp.min.js" type="text/javascript">
+  </script>
+  <script src="/js/AdView.min.js?v=2023.0821" type="text/javascript">
+  </script>
+  <link href="/css/av.min.css?v=2023.0821" rel="stylesheet"/>
+  <meta content="summary" name="twitter:card"/>
+  <meta content="Citroen C3 Aircross 1.2 PureTech Shine Euro 6 (s/s) 5dr NEW SHAPE LOW MILEAGE  SUV 2021, 17000 miles, £16490" id="ctl00_head_twitTitle" name="twitter:title"/>
+  <meta content="LOW MILEAGE, NEW SHAPE, ADDITIONAL FACTORY OPTION of ORANGE ANODIZED COLOUR PACK, GREAT SHINE SPEC with the AWARD WINNING 1.2 PureTech 110 hp PETROL ENGINE, SAT" id="ctl00_head_twitDescription" name="twitter:description"/>
+  <meta content="https://i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image1_3404621_w1024h768_400.jpg" id="ctl00_head_twitImage" name="twitter:image"/>
+  <title>
+   Citroen C3 Aircross 1.2 Puretech Shine Euro 6 (S/S) 5Dr New Shape Low Mileage  Suv 2021, 17000 Miles, £16490 - 29889360 - ExchangeandMart.co.uk
+  </title>
+  <link href="//ixm.co.uk/favicons/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+  <link href="//ixm.co.uk/favicons/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114"/>
+  <link href="//ixm.co.uk/favicons/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+  <link href="//ixm.co.uk/favicons/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+  <link href="//ixm.co.uk/favicons/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+  <link href="//ixm.co.uk/favicons/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+  <link href="//ixm.co.uk/favicons/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+  <link href="//ixm.co.uk/favicons/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+  <link href="//ixm.co.uk/favicons/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+  <link href="//ixm.co.uk/favicons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+  <link href="//ixm.co.uk/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="//ixm.co.uk/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="//ixm.co.uk/favicons/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+  <meta content="Exchange and Mart" name="application-name"/>
+  <meta content="#FFFFFF" name="msapplication-TileColor"/>
+  <meta content="//ixm.co.uk/favicons/mstile-144x144.png" name="msapplication-TileImage"/>
+  <meta content="//ixm.co.uk/favicons/mstile-70x70.png" name="msapplication-square70x70logo"/>
+  <meta content="//ixm.co.uk/favicons/mstile-150x150.png" name="msapplication-square150x150logo"/>
+  <meta content="//ixm.co.uk/favicons/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+  <meta content="//ixm.co.uk/favicons/mstile-310x310.png" name="msapplication-square310x310logo"/>
+  <link href="//ixm.co.uk/css/WebSite/enm-bootstrap.min.css?v=1.2" rel="stylesheet"/>
+  <link href="/css/e.css?v=2023.0821" rel="stylesheet"/>
+  <link href="//ixm.co.uk/css/enm_awesome.min.css?v=3.3" rel="stylesheet"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="#fff" name="theme-color"/>
+  <link href="https://www.exchangeandmart.co.uk/ad/29889360" id="canonical" rel="canonical"/>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript">
+   $.fn.isInViewport = function () {
+            if ($(this).is(":visible")) {
+                var etop = $(this).offset().top;
+                var vpT = $(window).scrollTop() - 200;
+                return (etop + $(this).outerHeight()) > vpT && etop < (vpT + $(window).height() + 300);
+            }
+            else {
+                return false;
+            }
+        };
+        function EnmLzL() { 
+            $('.imgbox').each(function () {
+                if ($(this).isInViewport()) {
+                    $(this).attr('src', $(this).data('mainimage')).attr('srcset', $(this).data('srcset')).removeClass('imgbox');
+                    if ($(this).parent().css('background').indexOf('lazy_waiting.png') > -1) { $(this).parent().css('background', 'none'); }
+                }
+            });
+            $('.imgboxbg').each(function () {
+                if ($(this).isInViewport()) {
+                    $(this).css('background-image', 'url("'+$(this).data('bgimage')+'") ').removeClass('imgboxbg')
+                }
+            });            
+        }
+        
+        $(window).on('resize scroll', function () {
+            EnmLzL();
+            $('.ifrmbox').each(function () {
+                $(this).attr('src', $(this).data('framesrc')).removeClass('ifrmbox');
+            });
+        });
+  
+        function logEvent(event, adid, orgid) { Enm.Core.LogEvt(event, adid, orgid) }
+
+        function prepMPS() {
+            $(document).ready(function () {
+                Enm.Core.PrepModal();
+            })
+        }
+        function login() { Enm.Core.Login() }
+  </script>
+  <script type="text/javascript">
+   var crtg_nid = '2740'; var crtg_cookiename = 'crtg_rta'; var crtg_varname = 'crtg_content';
+        function crtg_getCookie(c_name){ 
+            var i,x,y,ARRCookies=document.cookie.split(";");
+            for (i = 0; i < ARRCookies.length; i++) {
+                x = ARRCookies[i].substr(0, ARRCookies[i].indexOf("=")); y = ARRCookies[i].substr(ARRCookies[i].indexOf("=") + 1);
+                x = x.replace(/^\s+|\s+$/g, ""); if (x == c_name) { return unescape(y) }
+            } return '';
+        }
+        var crtg_content = crtg_getCookie(crtg_cookiename);
+        var crtg_rnd=Math.floor(Math.random()*99999999999);
+        (function(){
+        var crtg_url=location.protocol+'//rtax.criteo.com/delivery/rta/rta.js?netId='+escape(crtg_nid);
+        crtg_url +='&cookieName='+escape(crtg_cookiename);
+        crtg_url +='&rnd='+crtg_rnd;
+        crtg_url +='&varName=' + escape(crtg_varname);
+        var crtg_script=document.createElement('script');crtg_script.type='text/javascript';crtg_script.src=crtg_url;crtg_script.async=true;
+        if(document.getElementsByTagName("head").length>0)document.getElementsByTagName("head")[0].appendChild(crtg_script);
+        else if(document.getElementsByTagName("body").length>0)document.getElementsByTagName("body")[0].appendChild(crtg_script)
+        })();
+  </script>
+  <script type="text/javascript">
+   var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+    var preconnectNode = document.getElementsByTagName('link')[0];
+    var gadsPreconnect = document.createElement('link');
+    gadsPreconnect.rel = 'preconnect';
+    gadsPreconnect.href = '//securepubads.g.doubleclick.net';
+    preconnectNode.parentNode.insertBefore(gadsPreconnect, preconnectNode);
+    var gads = document.createElement('script');
+    var scriptNode = document.getElementsByTagName('script')[0];
+    gads.async = true;
+    gads.type = 'text/javascript';
+    gads.src = 'https://securepubads.g.doubleclick.net/tag/js/gpt.js';    
+    scriptNode.parentNode.insertBefore(gads, scriptNode);
+  </script>
+  <script type="text/javascript">
+   var adUnitCode = '/154725070,22694024870/www.exchangeandmart.co.uk/usedcars/advert';
+    var dfpTargeting = {
+        'make': 'citroen',
+	'model': 'c3',
+	'bodystyle': 'suv',
+	'trans': 'manual',
+	'fuel': 'petrol',
+	'price': '16000',
+	'vehicle_age': 'Up to 2 years old',
+	'geoloc': 'BH233PY',
+	'partnerid': '22009',
+	'site': 'www',
+	'isLanding': 'no'
+    }
+    
+    var _debounce = function (func, wait, immediate) {
+        var timeout;
+        return function () {
+            var context = this, args = arguments;
+            var later = function () {
+                timeout = null;
+                if (!immediate) func.apply(context, args)
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    };
+
+    var dfpArray = [];
+    function refreshAds() {
+        $(dfpArray).each(function () {
+            googletag.pubads().refresh(this)
+        })
+    }
+    $(document).ready(function () {
+        
+        googletag.cmd.push(function() {
+            if(readCookie('_sp_enable_dfp_personalized_ads') === 'true') {
+                console.log('GDPR: Cookie found and is set to true - setting setRequestNonPersonalizedAds to 0');
+                googletag.pubads().setRequestNonPersonalizedAds(0);
+            } else {
+                console.log('GDPR: Cookie not found or is set to false - setting setRequestNonPersonalizedAds to 1');
+                googletag.pubads().setRequestNonPersonalizedAds(1);
+            }
+        });
+        
+        googletag.cmd.push(function () {
+            $.each(dfpTargeting, function (key, value) { googletag.pubads().setTargeting(key, value) })
+        });
+        var width = $(window).width();
+
+
+        
+        $('[id^="DFP_PH_"]').filter(function () {
+            return $(this).parents().filter(function () {
+                return $(this).css('display') == 'none'
+            }).length == 0
+        })
+        .each(function () {
+            var id = $(this).attr('id');
+            var pos = id.replace('DFP_PH_','');
+            var size = eval($(this).attr('dfp_sizes'));
+            var resPos = $(this).attr('res_pos');
+
+            var r_mob=[320,300];var r_stab=[750,380];var r_dsk_ltab=[980,300];
+
+            googletag.cmd.push(function () {
+                var dfp = googletag.defineSlot(adUnitCode, size, id)
+                if (resPos != undefined)
+                    switch (resPos) {
+                        case 'Top':
+                            if ($(window).width()!= 320 || true) {
+                                var mp = googletag.sizeMapping().addSize([0,0],[3,6]).addSize(r_mob, [[300,50], [320, 50], [320,100]]).
+                                  addSize(r_stab,[728,90]).
+                                  addSize(r_dsk_ltab, [[970,250],[728,90]]).build();
+                                dfp.defineSizeMapping(mp)
+                                .setTargeting('enmPBSizes', escape('window.top.innerWidth > 1200 ? [[728,90],[970,250]] : (window.top.innerWidth > 728 ? [728,90] : [[300,50],[320,50],[320,100]])'));
+                                
+                                googletag.pubads().addEventListener('slotRenderEnded', function (event) {
+                                    $('#footer').css('bottom', "-" + $('#header').outerHeight() + "px")
+                                });
+                            } else { $('#DFP_PH_xnm_flexi_top').css('height', '0') }
+                            break;
+                        case 'Flexi':
+                            var mp = googletag.sizeMapping().
+                               addSize([0,0],[3,6]).
+                              
+                              addSize([1180,300],[[300,250],[300,600],[300,1050],[120,600],[160,600]]).
+                              build();
+                            dfp.defineSizeMapping(mp).setTargeting('enmPBSizes', escape('[[300,250],[300,600],[300,1050],[120,600],[160,600]]'));
+                            break;
+                         case 'Flexi2':
+                            var mp = googletag.sizeMapping().
+                               addSize([0,0],[3,6]).addSize(r_mob,[[300,250]]).
+                              addSize(r_stab,[[300,250]]).
+                              addSize(r_dsk_ltab,[[120,160],[120,600],[300,250]]).
+                              build();
+                            dfp.defineSizeMapping(mp)
+                             .setTargeting('enmPBSizes', escape('window.top.innerWidth > 1000 ? [[120,600],[160,600]] :[[300,250]])'));
+                            break;
+                        case 'FlexiAdView':
+                            var mp = googletag.sizeMapping().
+                            
+                            addSize([0,0],[3,6]).
+                            addSize(r_dsk_ltab,[[300,600]]).
+                            build();
+                            dfp.defineSizeMapping(mp)
+                            .setTargeting('enmPBSizes', escape('window.top.innerWidth > 1023 ? [300,600] : [1,1]'));
+                            break;
+                        case 'Mid':
+                            var mp = googletag.sizeMapping().
+                              addSize([0,0],[3,6]).addSize(r_mob,[[300,250],[320,100]]).
+                              addSize([1180,300],[468,60]).
+                              build();
+                            dfp.defineSizeMapping(mp)
+                            .setTargeting('enmPBSizes', escape('window.top.innerWidth > 1179 ? [[468,60]] :  (window.top.innerWidth > 320?  [300,250] : [[300,250],[320,100]])'));
+                            break;
+
+                        case 'Bottom':
+                            var mp = googletag.sizeMapping().
+                              addSize([0,0],[3,6]).addSize(r_mob, [[300,50], [320,50],[320,100]]).
+                              addSize(r_stab,[728,90]).
+                              addSize(r_dsk_ltab,[[728,90]]).
+                              build();
+                            dfp.defineSizeMapping(mp)
+                           .setTargeting('enmPBSizes', escape('window.top.innerWidth > 728 ? [[728,90]] : [[300,50],[320,50],[320,100]]'));
+                            break;
+                        case 'Bottom_Billboard':
+                            var mp = googletag.sizeMapping().
+                                addSize([0, 0], [3, 6]).addSize(r_mob, [[300, 50], [320, 50], [320, 100]]).
+                                addSize(r_stab, [728, 90]).
+                                addSize(r_dsk_ltab, [[728, 90],[970,250]]).
+                                build();
+                            dfp.defineSizeMapping(mp)
+                                .setTargeting('enmPBSizes', escape('window.top.innerWidth > 1200 ? [[728,90],[970,250]] : window.top.innerWidth > 728 ? [[728,90]] : [[300,50],[320,50],[320,100]]'));
+                            break;
+
+                        case 'Gallery':
+                            var mp = googletag.sizeMapping().
+                              addSize([0,0],[3,6]).
+                              addSize(r_stab,[300,250]).
+                              addSize(r_dsk_ltab,[[300,250]]).
+                               build();
+                            dfp.defineSizeMapping(mp).setTargeting('enmPBSizes', escape('[]'));
+                            break;
+                        case 'MPUOnly':
+                            var mp = googletag.sizeMapping().
+                              addSize([0,0],[[300,250]]).
+                               build();
+                            dfp.defineSizeMapping(mp)
+                            .setTargeting('enmPBSizes',escape('[300,250]'));
+                            break;
+                        case 'MPU_MPUDouble':
+                            var mp = googletag.sizeMapping().
+                                addSize([0, 0], [[300, 250], [300, 600]]).
+                                addSize(r_dsk_ltab, [300,250]).
+                                build();
+                            dfp.defineSizeMapping(mp)
+                                .setTargeting('enmPBSizes', escape('[300,250],[300,600]'));
+                            break;
+                        case 'MPU_MPUDouble_Billboard':
+                            var mp = googletag.sizeMapping().
+                                addSize([0, 0], [[300, 250], [300, 600]]).
+                                addSize(r_dsk_ltab, [[728, 90], [970, 250]]).
+                                build();
+                            dfp.defineSizeMapping(mp)
+                                .setTargeting('enmPBSizes', escape('window.top.innerWidth > 1200 ? [[728,90],[970,250]] : window.top.innerWidth > 728 ? [[728,90]] : [[300,250],[300,600]]'));
+                            break;
+                    }
+                dfp.addService(googletag.pubads());
+
+                dfp.setTargeting('position',pos).setCollapseEmptyDiv(true);
+
+                
+                if (resPos==undefined || resPos != 'MPUOnly'){
+                    dfpArray.push([dfp])
+                }
+            })
+        });
+        $(window).resize(
+                   _debounce(function () {
+                       if ($(window).width() != width) {
+                           refreshAds();
+                           width = $(window).width();
+                           $('#footer').css('bottom', "-" + $('#header').outerHeight() + "px");
+                       }
+                       if ($('.window:visible').length > 0) {
+                           var id = '#' + $('.window:visible').attr('id')
+                           var hdrH = ($('.modal-header', $(id)).length == 1 ? $('.modal-header', $(id)).outerHeight() : 0);
+                           var ftrH = ($('.modal-footer', $(id)).length == 1 ? $('.modal-footer', $(id)).outerHeight() : 0);
+                           $('.modal-body:not(.cinch-body)').css('max-height', $(window).height() - (hdrH + ftrH) - 80);
+                           $('#goomap').height($('.modal-body:visible').outerHeight()-60);
+                       }
+                   }, 100)
+               );
+
+        googletag.cmd.push(function () { googletag.pubads().collapseEmptyDivs(true) });
+
+        googletag.cmd.push(function () {
+            if (width > 1200) {googletag.defineOutOfPageSlot(adUnitCode, 'DFP_OOP').addService(googletag.pubads())}
+            googletag.pubads().enableSingleRequest();
+            if (typeof crtg_content == 'undefined') crtg_content = '';
+            var s = crtg_content.split(',');s.pop();
+            if (s.length > 0) googletag.pubads().setTargeting('crtRTA', s);
+            googletag.enableServices()
+        });
+
+        $('[id^="DFP_PH_"]:visible').each(function () {
+            var id = $(this).attr('id');
+            googletag.cmd.push(function () { googletag.display(id) })
+        })
+        Enm.DFP.CheckAdBlock()
+    })
+  </script>
+  <meta content="https://www.exchangeandmart.co.uk/ad/29889360?cmpid=6" property="og:url"/>
+  <meta content="Citroen C3 Aircross 1.2 Puretech Shine Euro 6 (S/S) 5Dr New Shape Low Mileage  Suv 2021, 17000 Miles, £16490 - ExchangeandMart.co.uk" property="og:title"/>
+  <meta content="£16,490 - Citroen C3 SUV 2021 17000 miles - LOW MILEAGE, NEW SHAPE, ADDITIONAL FACTORY OPTION of ORANGE ANODIZED COLOUR PACK, GREAT SHINE SPEC with the AWARD WI" property="og:description"/>
+  <meta content="//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image1_3404621_w1024h768_300.jpg" property="og:image"/>
+ </head>
+ <body dir="ltr">
+  <div id="DFP_OOP">
+  </div>
+  <!-- Google Tag Manager -->
+  <noscript>
+   <iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-K8HGPF" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K8HGPF');
+  </script>
+  <!-- End Google Tag Manager -->
+  <div id="flexiAd">
+   <div dfp_sizes="[0,0]" id="DFP_PH_xnm_flexi_top" res_pos="Top" style="max-width:100%;text-align:center">
+   </div>
+  </div>
+  <header class="HeaderWrap">
+   <div id="DCHeader">
+    <div class="dcInner">
+     <a class="Logo" href="/">
+      <img alt="Logo" height="41" src="/i/logo.png" width="301"/>
+     </a>
+     <ul class="UserControls">
+      <li class="Shortlist">
+       <a aria-label="My Shortlist" class="noSl" href="#" name="modal" pop="mdlShortlistInfo">
+        <span class="Icon">
+         <i class="fo fo-heart">
+         </i>
+         <span class="Count">
+         </span>
+        </span>
+        <span class="Txt">
+         Shortlist
+        </span>
+       </a>
+      </li>
+      <li class="Account">
+       <a class="AccountExpand">
+        <span class="Icon">
+         <i class="fo fo-user">
+         </i>
+         <i class="fo fo-cancel">
+         </i>
+        </span>
+        <span class="Txt">
+         Account
+        </span>
+       </a>
+       <ul class="subControls">
+        <li>
+         <a href="javascript:login()">
+          Sign in
+         </a>
+        </li>
+        <li>
+         <a href="/register">
+          Register
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="Hamburger">
+       <div class="hamburger hamburger--spring">
+        <div class="hamburger-box">
+         <div class="hamburger-inner">
+         </div>
+        </div>
+       </div>
+      </li>
+     </ul>
+    </div>
+    <nav>
+     <ul class="dcInner dcMenu">
+      <li>
+       <a href="/used-cars-for-sale">
+        Used cars
+        <span class="TapExpand">
+         <i class="fo fo-down-open">
+         </i>
+        </span>
+       </a>
+       <div class="subMenu">
+        <ul class="subNav">
+         <li>
+          <a href="/used-cars-for-sale">
+           Buy a used car
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale">
+           Search for a used car
+          </a>
+         </li>
+         <li>
+          <a href="/local-used-cars">
+           Search local cars
+          </a>
+         </li>
+         <li>
+          <a href="/dealers">
+           Find a car dealer
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav twoColumn">
+         <li>
+          <a>
+           Popular makes
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/audi">
+           Audi
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/bmw">
+           BMW
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/ford">
+           Ford
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/kia">
+           Kia
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/land-rover">
+           Land Rover
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/mercedes-benz">
+           Mercedes-Benz
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/nissan">
+           Nissan
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/toyota">
+           Toyota
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/vauxhall">
+           Vauxhall
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/volkswagen">
+           Volkswagen
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/motoring-services">
+           Motoring services
+          </a>
+         </li>
+         <li>
+          <a href="/car-finance">
+           Car finance
+          </a>
+         </li>
+         <li>
+          <a href="/car-insurance">
+           Car insurance
+          </a>
+         </li>
+         <li>
+          <a href="/personal-plates">
+           Personal plates
+          </a>
+         </li>
+         <li>
+          <a href="/used-parts-for-sale">
+           Car parts
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/classic-cars-for-sale">
+           Classic cars
+          </a>
+         </li>
+         <li>
+          <a href="/classic-cars">
+           Search for a classic car
+          </a>
+         </li>
+        </ul>
+       </div>
+      </li>
+      <li>
+       <a href="/new-cars">
+        New cars
+        <span class="TapExpand">
+         <i class="fo fo-down-open">
+         </i>
+        </span>
+       </a>
+       <div class="subMenu">
+        <ul class="subNav">
+         <li>
+          <a href="/car-leasing">
+           Buy a new car
+          </a>
+         </li>
+         <li>
+          <a href="/car-leasing">
+           Lease a new car
+          </a>
+         </li>
+         <li>
+          <a href="/new-cars">
+           Search for a new car
+          </a>
+         </li>
+         <li>
+          <a href="/reviews">
+           New car reviews
+          </a>
+         </li>
+         <li>
+          <a href="/new-car-dealers">
+           Find a car dealer
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/motoring-services">
+           Motoring services
+          </a>
+         </li>
+         <li>
+          <a href="/car-finance">
+           Car finance
+          </a>
+         </li>
+         <li>
+          <a href="/car-insurance">
+           Car insurance
+          </a>
+         </li>
+         <li>
+          <a href="/personal-plates">
+           Personal plates
+          </a>
+         </li>
+        </ul>
+       </div>
+      </li>
+      <li>
+       <a href="/electric-cars">
+        Electric cars
+       </a>
+      </li>
+      <li>
+       <a href="/used-motorbikes-for-sale">
+        Bikes
+        <span class="TapExpand">
+         <i class="fo fo-down-open">
+         </i>
+        </span>
+       </a>
+       <div class="subMenu">
+        <ul class="subNav">
+         <li>
+          <a href="/used-motorbikes-for-sale">
+           Buy a bike
+          </a>
+         </li>
+         <li>
+          <a href="/used-motorbikes-for-sale">
+           Search for a used motorcycle
+          </a>
+         </li>
+         <li>
+          <a href="/used-motorbikes-for-sale/buying-advice">
+           Buying advice
+          </a>
+         </li>
+         <li>
+          <a href="/local-used-bikes">
+           Search local bikes
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/sell-a-motorbike/place-an-ad">
+           Sell a bike
+          </a>
+         </li>
+         <li>
+          <a href="/sell-a-motorbike/place-an-ad">
+           Sell a bike
+          </a>
+         </li>
+         <li>
+          <a href="/sell-a-motorbike/selling-guide">
+           Selling guide
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/motoring-services">
+           Motoring services
+          </a>
+         </li>
+         <li>
+          <a href="/car-finance">
+           Bike finance
+          </a>
+         </li>
+         <li>
+          <a href="/bike-insurance">
+           Bike insurance
+          </a>
+         </li>
+         <li>
+          <a href="/personal-plates">
+           Personal plates
+          </a>
+         </li>
+        </ul>
+       </div>
+      </li>
+      <li>
+       <a href="/used-vans-for-sale">
+        Vans
+        <span class="TapExpand">
+         <i class="fo fo-down-open">
+         </i>
+        </span>
+       </a>
+       <div class="subMenu">
+        <ul class="subNav">
+         <li>
+          <a href="/used-vans-for-sale">
+           Buy a van
+          </a>
+         </li>
+         <li>
+          <a href="/car-leasing">
+           Lease a new van
+          </a>
+         </li>
+         <li>
+          <a href="/used-vans-for-sale">
+           Search for a van
+          </a>
+         </li>
+         <li>
+          <a href="/used-vans-for-sale/buying-advice">
+           Buying advice
+          </a>
+         </li>
+         <li>
+          <a href="/local-used-vans">
+           Search local vans
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/sell-a-van/place-an-ad">
+           Sell a van
+          </a>
+         </li>
+         <li>
+          <a href="/sell-a-van/place-an-ad">
+           Sell a van
+          </a>
+         </li>
+         <li>
+          <a href="/sell-a-van/selling-guide">
+           Selling guide
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/motoring-services">
+           Motoring services
+          </a>
+         </li>
+         <li>
+          <a href="/car-finance">
+           Van finance
+          </a>
+         </li>
+         <li>
+          <a href="/van-insurance">
+           Van insurance
+          </a>
+         </li>
+         <li>
+          <a href="/personal-plates">
+           Personal plates
+          </a>
+         </li>
+        </ul>
+       </div>
+      </li>
+      <li>
+       <a href="/used-caravans-for-sale">
+        Caravans
+        <span class="TapExpand">
+         <i class="fo fo-down-open">
+         </i>
+        </span>
+       </a>
+       <div class="subMenu">
+        <ul class="subNav">
+         <li>
+          <a href="/used-caravans-for-sale">
+           Buy a caravan or motorhome
+          </a>
+         </li>
+         <li>
+          <a href="/used-caravans-for-sale">
+           Search for a caravan or motorhome
+          </a>
+         </li>
+         <li>
+          <a href="/used-caravans-for-sale/buying-advice">
+           Buying advice
+          </a>
+         </li>
+         <li>
+          <a href="/local-used-caravans">
+           Search local caravans or motorhomes
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/sell-a-caravan/place-an-ad">
+           Sell a caravan
+          </a>
+         </li>
+         <li>
+          <a href="/sell-a-caravan/place-an-ad">
+           Sell a caravan or motorhome
+          </a>
+         </li>
+         <li>
+          <a href="/sell-a-caravan/selling-guide">
+           Selling guide
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/motoring-services">
+           Motoring services
+          </a>
+         </li>
+         <li>
+          <a href="/car-finance">
+           Caravan and motorhome finance
+          </a>
+         </li>
+         <li>
+          <a href="/car-insurance">
+           Caravan and motorhome insurance
+          </a>
+         </li>
+         <li>
+          <a href="/personal-plates">
+           Personal plates
+          </a>
+         </li>
+        </ul>
+       </div>
+      </li>
+      <li>
+       <a href="/items-for-sale/buy-an-item">
+        Items for Sale
+        <span class="TapExpand">
+         <i class="fo fo-down-open">
+         </i>
+        </span>
+       </a>
+       <div class="subMenu">
+        <ul class="subNav">
+         <li>
+          <a href="/items-for-sale/buy-an-item">
+           Buy an item
+          </a>
+         </li>
+         <li>
+          <a href="/items-for-sale/buy-an-item">
+           Search for an item
+          </a>
+         </li>
+         <li>
+          <a href="/items-for-sale/buying-advice">
+           Buying advice
+          </a>
+         </li>
+         <li>
+          <a href="/items-for-sale">
+           Browse all categories
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/sell-an-item/select-package">
+           Sell an item
+          </a>
+         </li>
+         <li>
+          <a href="/sell-an-item/select-package">
+           Sell an item
+          </a>
+         </li>
+         <li>
+          <a href="/sell-an-item/selling-guide">
+           Selling advice
+          </a>
+         </li>
+        </ul>
+       </div>
+      </li>
+      <li>
+       <a href="/reviews">
+        Reviews
+       </a>
+      </li>
+      <li>
+       <a href="/blog">
+        Blog
+       </a>
+      </li>
+      <li class="SellYourCar">
+       <a href="/place-an-ad">
+        Advertise
+        <span class="TapExpand">
+         <i class="fo fo-down-open">
+         </i>
+        </span>
+       </a>
+       <div class="subMenu">
+        <ul class="subNav">
+         <li>
+          <a href="https://localiq.co.uk/motors" target="_blank">
+           Dealer advertising
+          </a>
+         </li>
+         <li>
+          <a href="/place-an-ad">
+           Sell Your Car
+          </a>
+         </li>
+        </ul>
+       </div>
+      </li>
+      <li class="ValueAndFinance">
+       <a href="/car-finance">
+        Finance
+       </a>
+      </li>
+      <li class="ValueAndFinance">
+       <a href="/motorway">
+        Sell Your Car
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <script>
+     $('.Hamburger > .hamburger').on('click', function () {
+        var $hamburger = $(this);
+        $hamburger.toggleClass('is-active');
+        if ($hamburger.hasClass('is-active')) {
+            $('#DCHeader').addClass('isOpen');
+            $('.UserControls .Account').removeClass('isOpen');
+            $('html').css('overflow', 'hidden');
+        } else {
+            $('#DCHeader').removeClass('isOpen');
+            $('html').css('overflow', '');
+        }
+    });
+    $('.AccountExpand').on('click', function () {
+        var $menu = $('.UserControls .Account');
+        if ($(window).width() < 768) {
+            $menu.toggleClass('isOpen');
+            if ($menu.hasClass('isOpen')) {
+                $('#DCHeader, .dcHamburger').removeClass('isOpen');
+                $('html').css('overflow', 'hidden');
+            } else {
+                $('html').css('overflow', '');
+            }
+        }
+    });
+    $('.TapExpand').on('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        var $tap = $(this);
+        var $icon = $tap.find('.fo');
+        var $link = $tap.parents('li');
+        $icon.toggleClass('fo-down-open fo-up-open');
+        $link.toggleClass('isExpanded');
+    });
+    </script>
+   </div>
+  </header>
+  <div id="floatingPageContainer">
+   <div class="clearfix aside-right">
+    <div class="leftSection">
+     <form action="/ad/29889360" id="aspnetForm" method="post">
+      <div class="aspNetHidden">
+       <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="/wEPDwULLTE4Njk3MTQ2NTJkZFFtZN9VeOckRaCtt4Gz/TYu+yJm"/>
+      </div>
+      <div class="aspNetHidden">
+       <input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="1F0627AE"/>
+       <input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="/wEdAAN14GiGxhSh67zNHTVFOXkT37tn9Oxg//P+wV5AIqix3qDzs00cXgBsDXJBJIueRlwg8FGZDF2BBJXwIZf68KGLoJMTHQ=="/>
+      </div>
+      <div class="page clearfix">
+       <script type="text/javascript">
+        var sAdID='29889360',AdViewID=3,sOrgID='2147386223';
+    var iAdTyp=20,NewCar = false,shown=false,curDetails=0,loaded=false;
+    function ppcTrack(type,cat) { $('<ifr' + 'ame src="https://fls.doubleclick.net/activityi;src=3724848;type=' + type + ';cat=' + cat + ';qty=1;ord=' + Math.floor((Math.random()*1000000000)+1) + '?" width="1" height="1" frameborder="0" style="display:none"></ifr' + 'ame>').appendTo('body'); }
+    $(document).ready(function(){ 
+        $('.d').attr('href', window.location.pathname);
+            Enm.AdView.Init();
+            
+                Enm.FinanceCalc.Init();
+                Enm.FinanceCalc.Price = 16490.0000;
+                Enm.FinanceCalc.AdId = 29889360;
+                Enm.FinanceCalc.UtmCode = '';
+                Enm.FinanceCalc.RefreshResults();
+            
+    });
+       </script>
+       <div class="clearfix adverts-wrapper" itemscope="" itemtype="https://schema.org/Product">
+        <div class="page-inner">
+         <div class="container-fluid">
+          <div adid="29889360" class="clearfix adverts-desc row" id="hdGWO">
+           <a class="d">
+           </a>
+           <div class="breadcrumbs clearfix col-sm-9" id="adDefault">
+            <a class="more-in-loc" href="/local-used-cars/christchurch">
+             More cars in Christchurch
+            </a>
+           </div>
+           <div adid="29889360" class="adDetails col-sm-9">
+            <script src="/js/gallery.min.js?v=2023.0821" type="text/javascript">
+            </script>
+            <link as="image" href="//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image1_3404621_w1024h768_400.jpg" rel="preload"/>
+            <div id="galleryWrap">
+             <div class="gal" id="mainImgWrap">
+              <div id="scroller">
+               <div id="prev">
+                <div class="portraitBg">
+                </div>
+               </div>
+               <div id="current">
+                <div class="portraitBg">
+                </div>
+                <img alt="Citroen C3 Aircross 1.2 PureTech Shine Euro 6 - Image 1" class="thumbImg" height="768" itemprop="image" src="//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image1_3404621_w1024h768_400.jpg" width="1024"/>
+               </div>
+               <div id="next">
+                <div class="portraitBg">
+                </div>
+               </div>
+              </div>
+              <span class="fo fo-heart-empty" onclick="if(!Enm.Criteo.productPushed){Enm.Criteo.PushProductAdView();}Enm.Shortlist.AddShortlist(29889360,this,true);return false;">
+              </span>
+              <span class="fo fo-left-open" style="left:0;top:50%;transform:translateY(-50%);display:none;">
+              </span>
+              <span class="fo fo-right-open" style="right:0;top:50%;transform:translateY(-50%)">
+              </span>
+              <span class="fo fo-share" id="shareButton" style="right:50px">
+              </span>
+              <div id="imgCount">
+               <span class="fo fo-camera">
+               </span>
+               <span>
+                1 / 20
+               </span>
+              </div>
+             </div>
+             <div id="thumbsWrap">
+              <div class="adThumb">
+               <img alt="Citroen C3 Aircross 1.2 PureTech Shine Euro 6 - Image 2" class="thumbImg imgbox" data-mainimage="//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image2_3404621_w1024h768_120.jpg" height="768" width="1024"/>
+              </div>
+              <div class="adThumb">
+               <img alt="Citroen C3 Aircross 1.2 PureTech Shine Euro 6 - Image 3" class="thumbImg imgbox" data-mainimage="//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image3_3404621_w1024h768_120.jpg" height="768" width="1024"/>
+              </div>
+              <div class="adThumb">
+               <img alt="Citroen C3 Aircross 1.2 PureTech Shine Euro 6 - Image 4" class="thumbImg imgbox" data-mainimage="//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image4_3404621_w1024h768_120.jpg" height="768" width="1024"/>
+              </div>
+              <div class="adThumb">
+               <img alt="Citroen C3 Aircross 1.2 PureTech Shine Euro 6 - Image 5" class="thumbImg imgbox" data-mainimage="//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image5_3404621_w1024h768_120.jpg" height="768" width="1024"/>
+              </div>
+              <div class="adThumb">
+               <img alt="Citroen C3 Aircross 1.2 PureTech Shine Euro 6 - Image 6" class="thumbImg imgbox" data-mainimage="//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image6_w1024h768_120.jpg" height="768" width="1024"/>
+              </div>
+              <div class="adThumb">
+               <img alt="Citroen C3 Aircross 1.2 PureTech Shine Euro 6 - Image 7" class="thumbImg imgbox" data-mainimage="//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image7_w1024h768_120.jpg" height="768" width="1024"/>
+              </div>
+              <div class="adThumb">
+               <img alt="Citroen C3 Aircross 1.2 PureTech Shine Euro 6 - Image 8" class="thumbImg imgbox" data-mainimage="//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image8_w1024h768_120.jpg" height="768" width="1024"/>
+              </div>
+              <div class="adThumb">
+               <img alt="Citroen C3 Aircross 1.2 PureTech Shine Euro 6 - Image 9" class="thumbImg imgbox" data-mainimage="//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image9_w1024h768_120.jpg" height="768" width="1024"/>
+              </div>
+             </div>
+            </div>
+            <style>
+             .pswpDisplay{
+            display:none;
+        }
+        @media (min-width:1200px) {
+            #mainImgWrap, #scroller #current {
+                
+            }
+        }
+            </style>
+            <script>
+             Enm.Gallery.IsAdView = true;
+        var imgWidth = '1024';
+        var imgHeight = '768';
+        var widthAndHeight = [imgWidth, imgHeight];
+        //after 575.98px the gallery has side gutters and padding
+        if ($(window).width() >= 576) {
+            Enm.AdView.ImgWidth = parseInt($('#galleryWrap').width() * 0.65);
+        }
+        else {
+            Enm.AdView.ImgWidth = $(window).width();
+        }
+        //check for portrait image since these will need to be displayed differently
+        if (parseInt(imgWidth) > parseInt(imgHeight)) {
+            var newHeight = Enm.AdView.CalculateHeightFromOriginalDimensions(widthAndHeight);
+            $('#mainImgWrap, #scroller #current').css({ width: Enm.AdView.ImgWidth, height: newHeight });
+        }
+        else {
+            //portrait - set max-height to the window width, and calculate the image width using aspect ratio
+            var newWidth = Enm.AdView.CalculateWidthFromOriginalDimensions(widthAndHeight);
+            $('#mainImgWrap, #scroller #current').css({ width: Enm.AdView.ImgWidth, height: Enm.AdView.ImgWidth });
+            $('#scroller #current img').attr('width', newWidth).attr('height', Enm.AdView.ImgWidth).css({ width: newWidth + 'px', height: Enm.AdView.ImgWidth + 'px', left: '50%', position: 'absolute', transform: 'translateX(-50%)' });
+            Enm.AdView.SetPortraitStyles('#scroller #current', $('#scroller #current img').attr('src'));
+        }
+        var items = [{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image1_3404621_w1024h768_400.jpg',w:1024,h:768},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image2_3404621_w1024h768_400.jpg',w:1024,h:768},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image3_3404621_w1024h768_400.jpg',w:1024,h:768},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image4_3404621_w1024h768_400.jpg',w:1024,h:768},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image5_3404621_w1024h768_400.jpg',w:1024,h:768},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image6_w1024h768_400.jpg',w:1024,h:768},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image7_w1024h768_400.jpg',w:1024,h:768},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image8_w1024h768_400.jpg',w:1024,h:768},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image9_w1024h768_400.jpg',w:1024,h:768},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image10_w1024h768_400.jpg',w:1024,h:768},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image11_w1024h768_400.jpg',w:1024,h:768},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image12_w1024h764_400.jpg',w:1024,h:764},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image13_w1024h768_400.jpg',w:1024,h:768},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image14_w1024h768_400.jpg',w:1024,h:768},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image15_w1024h768_400.jpg',w:1024,h:768},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image16_w1024h768_400.jpg',w:1024,h:768},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image17_w1024h768_400.jpg',w:1024,h:768},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image18_w1024h768_400.jpg',w:1024,h:768},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image19_w1024h768_400.jpg',w:1024,h:768},{src:'//i.exchangeandmart.co.uk/images/mmo/trade/n/ATR/22009/ATR8a42e27686eb7e8a0186f26154064d0b/citroen-c3-aircross-1.2-puretech-shine-euro-6-ss_image20_w1024h768_400.jpg',w:1024,h:768}];
+            function openSwipe(bFromThumb) {
+                if (!bFromThumb) { Enm.Gallery.index = 0 }
+                var pswpElement = document.querySelectorAll('.pswp')[0];
+                var options = { index: Enm.Gallery.index, shareEl: false };
+                logEvent('IMG', sAdID, sOrgID);
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+                gallery.init();
+                return false;
+            }
+            </script>
+            <div aria-hidden="true" class="pswp pswpDisplay" role="dialog" tabindex="-1">
+             <div class="pswp__bg">
+             </div>
+             <div class="pswp__scroll-wrap">
+              <div class="pswp__container">
+               <div class="pswp__item">
+               </div>
+               <div class="pswp__item">
+               </div>
+               <div class="pswp__item">
+               </div>
+              </div>
+              <div class="pswp__ui pswp__ui--hidden">
+               <div class="pswp__top-bar">
+                <div class="pswp__counter">
+                </div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)" type="button">
+                </button>
+                <button class="pswp__button pswp__button--share" title="Share" type="button">
+                </button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out" type="button">
+                </button>
+                <div class="pswp__preloader">
+                 <div class="pswp__preloader__icn">
+                  <div class="pswp__preloader__cut">
+                   <div class="pswp__preloader__donut">
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+               <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip">
+                </div>
+               </div>
+               <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)" type="button">
+               </button>
+               <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)" type="button">
+               </button>
+               <div class="pswp__caption">
+                <div class="pswp__caption__center">
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="car-name clearfix">
+             <div class="flex" id="mthlyTitlePriceWrap" itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
+              <div class="flex" id="adTitle">
+               <h2 itemprop="name">
+                <span class="ttl">
+                 Citroen C3
+                </span>
+                <span class="ttlSup">
+                 Aircross 1.2 PureTech Shine Euro 6 (s/s) 5dr NEW SHAPE LOW MILEAGE  SUV
+                </span>
+               </h2>
+              </div>
+              <div class="flex" id="adFinance">
+               <div id="mthlyPrice">
+                From
+                <a href="#financeCalc">
+                 <span class="price">
+                  £382
+                 </span>
+                </a>
+                per month or
+                <span class="price">
+                 <span content="GBP" itemprop="priceCurrency">
+                  £
+                 </span>
+                 <span itemprop="price">
+                  16,490
+                 </span>
+                </span>
+               </div>
+               <span class="financeSummary">
+                £382 p/m based on a £1000 deposit and 48 month term.
+                <a data-click_category="Partner: Finance" data-click_name="CP Apply Now Link (Below Price)" href="/carmoney/29889360?tracktype=text" rel="nofollow" target="_blank">
+                 Apply now
+                </a>
+               </span>
+              </div>
+             </div>
+             <span class="subprice" id="mthlySubPrice">
+             </span>
+            </div>
+            <div id="vehicle-desc">
+             <div id="adDetails">
+              <div class="adDetsItem">
+               <span>
+                2021
+               </span>
+              </div>
+              <div class="adDetsItem">
+               <span>
+                1199cc
+               </span>
+              </div>
+              <div class="adDetsItem">
+               <span id="mlg">
+                17,000 miles
+               </span>
+              </div>
+              <div class="adDetsItem">
+               <span>
+                Petrol
+               </span>
+              </div>
+              <div class="adDetsItem">
+               <span>
+                Manual
+               </span>
+              </div>
+              <div class="adDetsItem">
+               <span>
+                Grey
+               </span>
+              </div>
+              <div class="adDetsItem">
+               <span>
+                SUV
+               </span>
+              </div>
+              <div class="adDetsItem">
+               <span>
+                51.4 mpg
+               </span>
+              </div>
+             </div>
+             <div class="visible-xs-pad mob-adview">
+              <img alt="Dealer Logo" class="imgbox" data-mainimage="//i.exchangeandmart.co.uk/images/mmo_incoming/logo/2147386223/Brand466_PentonMotorGroup_Citroen.png" height="72" width="466"/>
+              <div class="c-panel">
+               <div class="row">
+                <div class="con">
+                 <div class="btn-flex dealer-link">
+                  <a href="/handle/stats/logevent.ashx?event=MOR&amp;adid=29889360&amp;orgid=22009&amp;url=/dealers/christchurch/penton-motor-group-22009" onclick="dataLayer.push({'event': 'ClickedStockList'})">
+                   <span class="i-text">
+                    Penton Motor Group
+                   </span>
+                  </a>
+                 </div>
+                </div>
+                <div class="con">
+                 <div class="btn-flex">
+                  <a data-click_category="Response Click" data-click_name="Contact Seller" id="dealerInfoEmail">
+                   <span class="i-icon">
+                    <span class="fo fo-mail">
+                    </span>
+                   </span>
+                   <span class="i-text">
+                    Email
+                   </span>
+                  </a>
+                 </div>
+                 <div class="btn-flex">
+                  <a href="/handle/stats/logevent.ashx?event=MOR&amp;adid=29889360&amp;orgid=22009&amp;url=/dealers/christchurch/penton-motor-group-22009" onclick="dataLayer.push({'event': 'ClickedStockList'})">
+                   <span class="i-icon">
+                    <i class="fo fo-car-stocklist">
+                    </i>
+                   </span>
+                   <span class="i-text">
+                    Stocklist
+                   </span>
+                  </a>
+                 </div>
+                 <div class="btn-flex">
+                  <a data-click_category="Response Click" data-click_name="Dealer Weblink" href="/handle/stats/logevent.ashx?event=WLK&amp;adid=29889360&amp;orgid=2147386223" onclick="ppcTrack('emcon022','webli043');" rel="nofollow" target="_blank">
+                   <span class="i-icon">
+                    <i class="fo fo-globe">
+                    </i>
+                   </span>
+                   <span class="i-text">
+                    Website
+                   </span>
+                  </a>
+                 </div>
+                 <div class="btn-flex map-link">
+                  <a data-click_category="Response Click" data-click_name="Map View" id="avMapMobile" name="modal" onclick="dataLayer.push({'event': 'ClickedLocation'});Enm.Google.BuildMapByAdId('https://www.exchangeandmart.co.uk',29889360); return false;" pop="mdlMaps">
+                   <span class="i-icon">
+                    <i class="fo fo-location">
+                    </i>
+                   </span>
+                   <span class="i-text">
+                    Christchurch
+                   </span>
+                  </a>
+                 </div>
+                </div>
+               </div>
+               <div class="mob-adview-warn">
+                *Calls may be recorded for training and monitoring.
+               </div>
+              </div>
+             </div>
+             <div class="" id="descriptionTxt" itemprop="description">
+              <div id="descriptionWrap">
+               LOW MILEAGE, NEW SHAPE, ADDITIONAL FACTORY OPTION of ORANGE ANODIZED COLOUR PACK, GREAT SHINE SPEC with the AWARD WINNING 1.2 PureTech 110 hp PETROL ENGINE, SATELLITE NAVIGATION, TOUCHSCREEN with APPLE CARPLAY and ANDROID AUTO, CRUISE CONTROL, CLIMATE CONTROL, NEW STYLE 16in X-CROSS DIAMOND CUT ALLOYS, FULL CITROEN SERVICE HISTORY, ONE OWNER from NEW, CITROEN WARRANTY to SEPT 2024, LOOKS STUNNING in KHAKI GREEN PASTEL with FACTORY OPTION ANODIZED ORANGE COLOUR PACK, CITROEN MAIN DEALER, ASK ABOUT OUR 3 YEAR PENTON SERVICE PLAN NOW ONLY £599, We have a team of buyers who work very hard to make sure we have the most desirable vehicles in great condition and at the best prices as a result we sell cars to people all over the country, We're a Main Dealer Group in business for over 30 years who are serious about used cars with over 250 physical all make used cars on each site so you can trust all cars are prepared to MAIN DEALER STANDARDS, This vehicle is HPI CLEAR and a FULLY CHECKED Penton Motor Group Approved Used Car. All of our cars are Finance Clear and we never sell write offs, Most cars will be ready to DRIVE AWAY TODAY with 7 Days Free Driveaway Insurance. Finance Available. ALL PART EXCHANGES WELCOME. Warranty Included. Penton Citroen THE BIG Citroen Dealer. Citroen C3 Aircross in stock incl Feel, Flair. Rip Curl. C-Series. Origins. Shine. Shine Plus. Auto. ETG. Manual &amp; some Leather. Sat Nav. Sunroof. Grip Control. 82. 110. 130. THE PENTON WHOLESALE PRICE:
+              </div>
+             </div>
+             <span class="showMore" id="descriptionShowMore">
+              + Show more
+             </span>
+             <div class="adViewSection adExpander" expand="adEquip" id="adEquip">
+              <div class="expanderWrap">
+               <span class="fo fo-right-open rotate">
+               </span>
+               Equipment
+              </div>
+              <div class="expanderContent">
+               <div class="adDetsWrap">
+                <div class="adDetsColumn">
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   16in Alloy Wheels - X Cross - Diamond Cut
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   3D Effect Rear Lights
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Active Safety Brake - Forward Collision Alert
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Automatic Air Conditioning
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Automatic Door and Boot Locking when in Motion
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Automatic Lights and Windscreen Wipers
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Automatic Locking of the Vehicle
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Black Roof Bars
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Body Colour Painted Door Handles
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Boot Light
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Bumpers - Body Coloured Front and Rear
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Citroen Connected Nav with 3D Navigation
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Coffee Break Alert
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Courtesy Reading Lights - Front and Rear
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Cruise Control with Speed Limiter
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Dark Tinted Rear Windows
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Door Mirrors - Electrically Adjustable-Heated-Folding
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Driver Instrument Cluster - White Text LCD Display and White Needles and Chrome Decor
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Drivers - Passengers and Rear Seats Unfastened Seat Belt Warning
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Drivers and Passengers Sunvisor with Courtesy Mirror
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Electronic Stability Control - ESC
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Fog Lights Integrated into the Front Bumper
+                  </span>
+                 </div>
+                </div>
+                <div class="adDetsColumn">
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Height Adjustable 3-Point Pre-Tensioner Front Seat Belts
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Integrated Rear Passenger Window Shades
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Integrated Roof Spoiler
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   LED Headlights - ECO
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Lane Departure Warning System
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Manual Handbrake with Chrome Insert
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Monotone Horn
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Passenger Compartment Headlight Adjustment
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Perimetric - Volumetric and Anti-Tilt Alarm
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Perla Nera Black Colour Pack
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Rear Parking Sensors
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Rear Seats - 3 Individually Adjustable Head Rests
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Rear Three Point Seatbelt x3
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Satin Chrome Air Vent Surrounds
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Satin Chrome Interior Door Handles
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Seats - 60-40 Split Folding Rear
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Speed Limit Recognition and Recommendation
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Three 3-Point Rear Seatbelts
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Tyre Pressure Monitor
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Anodised Orange Colour Pack
+                  </span>
+                 </div>
+                 <div class="adEquipItem">
+                  <span aria-hidden="true" class="fo fo-ok">
+                  </span>
+                  <span>
+                   Cloth with Standard Ambience - Mica Grey
+                  </span>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="adViewSection adExpander" expand="adFinance" id="adFinance">
+              <script>
+               var loadedModal = false;
+        $(document).ready(function () {            
+            //carmoney finance info modal
+            $('#financeInfoCTA').on('click', function () {
+                //get original scroll position of body
+                Enm.SearchPanel.OldScrollPos = $(window).scrollTop();
+                var $body = $(document.body);
+                Enm.SearchPanel.OldWidth = $body.innerWidth();
+                //set body styles to prevent scrolling
+                $body.css('overflow', 'hidden').css('position', 'fixed');
+                $body.width(Enm.SearchPanel.OldWidth);
+                if (loadedModal == false) {
+                    //load the content into #mdlCarmoneyInfo
+                    $.ajax({
+                        url: '/search/modals/carmoneyinfo.html',
+                        dataType: 'html',
+                        data: {},
+                        type: 'get',
+                        success: function (e) {
+                            loadedModal = true;
+                            e = e.replace('%img1%', '//ixm.co.uk/i/carmoney/apply-online.jpg').replace('%img2%', '//ixm.co.uk/i/carmoney/best-deal.jpg').replace('%img3%', '//ixm.co.uk/i/carmoney/drive-happy.jpg')
+                            $('#mdlCarmoneyInfo').html(e);
+                            Enm.Core.DoModal(null, '#mdlCarmoneyInfo');
+                        }
+                    });
+                }
+                else {
+                    Enm.Core.DoModal(null, '#mdlCarmoneyInfo');
+                }
+            });            
+        });
+              </script>
+              <style>
+               #financeInfoCTA {
+            clear:both;float:right;color:#000;padding:12px 24px;font-size:15px;font-weight:bold;cursor:pointer;color:#467dc7;
+        }
+
+        #financeInfoCTA:hover {
+            text-decoration:underline;
+        }
+
+        @media (max-width:1024px){
+            #financeInfoCTA {
+                padding: 12px 0;
+            }
+        }
+              </style>
+              <div class="expanderWrap">
+               Finance This Car
+              </div>
+              <div class="financeWrap">
+               <div id="financeCalc">
+                <div id="financeBody">
+                 <div id="financeControls">
+                  <div class="control-Deposit">
+                   <label for="ddDeposit">
+                    Deposit
+                   </label>
+                   <div class="c-custom-dropdown">
+                    <select class="financeDropdown" id="ddDeposit">
+                     <option value="0">
+                      £0
+                     </option>
+                     <option value="250">
+                      £250
+                     </option>
+                     <option value="500">
+                      £500
+                     </option>
+                     <option value="750">
+                      £750
+                     </option>
+                     <option selected="selected" value="1000">
+                      £1000
+                     </option>
+                     <option value="1500">
+                      £1500
+                     </option>
+                     <option value="2000">
+                      £2000
+                     </option>
+                     <option value="2500">
+                      £2500
+                     </option>
+                     <option value="3000">
+                      £3000
+                     </option>
+                     <option value="3500">
+                      £3500
+                     </option>
+                     <option value="4000">
+                      £4000
+                     </option>
+                     <option value="4500">
+                      £4500
+                     </option>
+                     <option value="5000">
+                      £5000
+                     </option>
+                     <option value="5500">
+                      £5500
+                     </option>
+                     <option value="6000">
+                      £6000
+                     </option>
+                     <option value="6500">
+                      £6500
+                     </option>
+                     <option value="7000">
+                      £7000
+                     </option>
+                     <option value="7500">
+                      £7500
+                     </option>
+                     <option value="8000">
+                      £8000
+                     </option>
+                     <option value="8500">
+                      £8500
+                     </option>
+                     <option value="9000">
+                      £9000
+                     </option>
+                     <option value="9500">
+                      £9500
+                     </option>
+                     <option value="10000">
+                      £10000
+                     </option>
+                     <option value="10500">
+                      £10500
+                     </option>
+                     <option value="11000">
+                      £11000
+                     </option>
+                     <option value="11500">
+                      £11500
+                     </option>
+                     <option value="12000">
+                      £12000
+                     </option>
+                     <option value="12500">
+                      £12500
+                     </option>
+                     <option value="13000">
+                      £13000
+                     </option>
+                     <option value="13500">
+                      £13500
+                     </option>
+                     <option value="14000">
+                      £14000
+                     </option>
+                     <option value="14500">
+                      £14500
+                     </option>
+                     <option value="15000">
+                      £15000
+                     </option>
+                    </select>
+                   </div>
+                  </div>
+                  <div class="control-Term">
+                   <label for="ddTerm">
+                    Term
+                   </label>
+                   <div class="c-custom-dropdown">
+                    <select class="financeDropdown" id="ddTerm">
+                     <option value="12">
+                      12 Months
+                     </option>
+                     <option value="18">
+                      18 Months
+                     </option>
+                     <option value="24">
+                      24 Months
+                     </option>
+                     <option value="30">
+                      30 Months
+                     </option>
+                     <option value="36">
+                      36 Months
+                     </option>
+                     <option value="42">
+                      42 Months
+                     </option>
+                     <option selected="selected" value="48">
+                      48 Months
+                     </option>
+                     <option value="54">
+                      54 Months
+                     </option>
+                     <option value="60">
+                      60 Months
+                     </option>
+                    </select>
+                   </div>
+                  </div>
+                  <div class="control-Credit">
+                   <label for="ddCredit">
+                    Credit Rating
+                   </label>
+                   <div class="c-custom-dropdown">
+                    <select class="financeDropdown" id="ddCreditRating">
+                     <option value="1">
+                      Excellent
+                     </option>
+                     <option selected="selected" value="2">
+                      Good
+                     </option>
+                     <option value="3">
+                      Fair
+                     </option>
+                     <option value="4">
+                      Poor
+                     </option>
+                    </select>
+                   </div>
+                  </div>
+                 </div>
+                 <div id="financeResults">
+                  <div class="quoteWrap highlight">
+                   <span class="quoteDetail">
+                    Monthly Payments Of:
+                   </span>
+                   <span class="quoteFigure" id="financeMonthly">
+                   </span>
+                  </div>
+                  <div class="quoteWrap">
+                   <span class="quoteDetail">
+                    Best Available Rate:
+                   </span>
+                   <span class="quoteFigure" id="financeBestRate">
+                   </span>
+                  </div>
+                  <div class="quoteWrap">
+                   <span class="quoteDetail">
+                    Total Cost of Credit:
+                   </span>
+                   <span class="quoteFigure" id="financeTotalCost">
+                   </span>
+                  </div>
+                  <div class="quoteWrap">
+                   <span class="quoteDetail">
+                    Total Payable:
+                   </span>
+                   <span class="quoteFigure" id="financeTotalPayable">
+                   </span>
+                  </div>
+                 </div>
+                 <div id="financeCTA">
+                  <a class="c-button c-button--padded c-button--blue-plain" data-click_category="Partner: Finance" data-click_name="CP AV Calc HP" href="" id="financeApplyNow" target="_blank">
+                   Apply Now
+                  </a>
+                  <div id="financeInfoCTA" title="Click here for more information about finance from Carmoney">
+                   How does this work?
+                  </div>
+                  <div style="clear:both">
+                  </div>
+                  <div id="financeRepTitle">
+                   HP Representative Example
+                  </div>
+                  <div id="financeRepText">
+                   If your borrow amount is £7,000 with a deposit of £1,000, a selected term of 48 months, at a representative APR of 17.9% (fixed) and an annual fixed interest rate of 17.9%, you would pay £171.83 per month. Total charge for credit would be £2,247.84 and total amount repayable is £8,247.84.
+                  </div>
+                  <div style="padding-top:10px">
+                   <img src="/img/features/carmoney_powered_transparent.png"/>
+                  </div>
+                  <a class="financeLink" href="https://www.carmoney.co.uk/terms-and-conditions/?utm_source=eandm&amp;utm_medium=display&amp;utm_content=tandcs" target="_blank">
+                   Terms &amp; Conditions
+                  </a>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div id="avAdIDMob">
+              Advert ID = 29889360 | TRADE SELLER
+             </div>
+            </div>
+            <div id="AdvSimVeh">
+             <span>
+              More cars from this dealer...
+             </span>
+             <div id="AdvSimVehRep">
+              <div class="AdvSimItm">
+               <a href="https://www.exchangeandmart.co.uk/ad/29872128">
+                <div class="img">
+                 <img "="" alt="Citroen C3 1.2 PureTech C-Series Edition Euro 6" class="imgbox" data-mainimage="//i.exchangeandmart.co.uk/images/mmo//trade/n/ATR/22009/ATR8a42e45a87b806b80187b915e1125ef5/citroen-c3-1.2-puretech-c-series-edition-euro-6-s_image1_w1024h768_300.jpg" src=""/>
+                </div>
+                <div class="price-text">
+                 £16,490
+                </div>
+                <div class="makemodel-text">
+                 Citroen C3
+                </div>
+                <div class="variant-text">
+                 1.2 PureTech C-Series ...
+                </div>
+                <div class="dtl-text">
+                 2023 | 10 miles
+                </div>
+                <div class="dtl-text">
+                 Petrol | 53.3 MPG
+                </div>
+               </a>
+              </div>
+              <div class="AdvSimItm">
+               <a href="https://www.exchangeandmart.co.uk/ad/29963642">
+                <div class="img">
+                 <img "="" alt="Citroen C4 X 50kWh Shine Plus Auto 4dr (7.4kW" class="imgbox" data-mainimage="//i.exchangeandmart.co.uk/images/mmo//trade/n/ATR/22009/ATR8a428d9f8800fe0101880b3438c1617e/citroen-c4-x-50kwh-shine-plus-auto-4dr-7.4kw-char_image1_w1024h768_300.jpg" src=""/>
+                </div>
+                <div class="price-text">
+                 £31,490
+                </div>
+                <div class="makemodel-text">
+                 Citroen C4
+                </div>
+                <div class="variant-text">
+                 X 50kWh Shine Plus Aut...
+                </div>
+                <div class="dtl-text">
+                 2023 | 10 miles
+                </div>
+                <div class="dtl-text">
+                 Electric
+                </div>
+               </a>
+              </div>
+              <div class="AdvSimItm">
+               <a href="https://www.exchangeandmart.co.uk/ad/28794067">
+                <div class="img">
+                 <img "="" alt="Citroen Berlingo 1.5 BlueHDi Flair XTR XL MPV" class="imgbox" data-mainimage="//i.exchangeandmart.co.uk/images/mmo//trade/n/ATR/22009/ATR8a42bfb782d51fb30182f4f29a0d5fcd/citroen-berlingo-1.5-bluehdi-flair-xtr-xl-mpv-euro_image1_3270936_w1024h768_300.jpg" src=""/>
+                </div>
+                <div class="price-text">
+                 £32,990
+                </div>
+                <div class="makemodel-text">
+                 Citroen Berlingo
+                </div>
+                <div class="variant-text">
+                 1.5 BlueHDi Flair XTR ...
+                </div>
+                <div class="dtl-text">
+                 2022 | 500 miles
+                </div>
+                <div class="dtl-text">
+                 Diesel | 56.5 MPG
+                </div>
+               </a>
+              </div>
+              <div class="AdvSimItm">
+               <a href="https://www.exchangeandmart.co.uk/ad/30394975">
+                <div class="img">
+                 <img "="" alt="Citroen C3 Aircross 1.2 PureTech Shine Plus EAT6" class="imgbox" data-mainimage="//i.exchangeandmart.co.uk/images/mmo//trade/n/ATR/22009/ATR8a42aa9b89b2409d0189b6f8919d557e/citroen-c3-aircross-1.2-puretech-shine-plus-eat6-e_image1_w1024h768_300.jpg" src=""/>
+                </div>
+                <div class="price-text">
+                 £22,990
+                </div>
+                <div class="makemodel-text">
+                 Citroen C3
+                </div>
+                <div class="variant-text">
+                 Aircross 1.2 PureTech ...
+                </div>
+                <div class="dtl-text">
+                 2022 | 950 miles
+                </div>
+                <div class="dtl-text">
+                 Petrol | 47.1 MPG
+                </div>
+               </a>
+              </div>
+              <div class="AdvSimItm">
+               <a href="/handle/stats/logevent.ashx?event=MOR&amp;adid=29889360&amp;orgid=&amp;url=/dealers/christchurch/penton-motor-group-22009" onclick="dataLayer.push({'event': 'ClickedStockList'});)">
+                <div class="SimCarStocklistLink">
+                 <img alt="Dealer Logo" class="imgbox" data-mainimage="//i.exchangeandmart.co.uk/images/mmo_incoming/logo/2147386223/Brand466_PentonMotorGroup_Citroen.png"/>
+                 <div class="seestocklist-text">
+                  View all cars from this dealer
+                 </div>
+                </div>
+               </a>
+              </div>
+             </div>
+            </div>
+            <div id="bottomCTAs" style="justify-content:center;display:flex;flex-wrap:wrap;">
+             <a class="u-margin-top bottom-finance" href="/carmoney/29889360?tracktype=bottom_button" id="ctl00_PageContent_ctl00_bottomFinanceButton">
+              <div class="need-finance">
+               Need finance?
+              </div>
+             </a>
+             <a class="u-margin-top bottom-finance" href="/car-insurance" id="insuranceButton">
+              <div class="need-finance">
+               Need insurance?
+              </div>
+             </a>
+             <a class="u-margin-top bottom-finance" data-click_category="Partner: Motorway" data-click_name="Motorway FAV CTA" href="/motorway" id="motorwayButton">
+              <div class="need-finance">
+               Sell your car
+              </div>
+             </a>
+            </div>
+           </div>
+           <div class="common-sidebar adview col-sm-3" id="adViewSide">
+            <script>
+             $(document).ready(function () {
+        Enm.AdView.ContactAvailabilityText = 'I would like to check the availability of your 2021 Citroen C3 listed for £16,490'; Enm.AdView.ContactTestDriveText = 'I would like to arrange a test drive for your 2021 Citroen C3 listed for £16,490'; Enm.AdView.ContactMorePhotosText = 'I would like to request more photos for your 2021 Citroen C3 listed for £16,490';
+        Enm.AdView.ContactCallbackText = 'Please can you call me back about your 2021 Citroen C3 listed for £16,490';
+    });
+            </script>
+            <div class="hidden-xs-pad" id="advertiser-details">
+             <div id="avAdID">
+              Advert ID = 29889360 | TRADE SELLER
+             </div>
+             <div id="paneWrap">
+              <div id="detsLogo">
+               <img alt="Dealer Logo" class="imgbox" data-mainimage="//i.exchangeandmart.co.uk/images/mmo_incoming/logo/2147386223/Brand466_PentonMotorGroup_Citroen.png" height="72" width="466"/>
+              </div>
+              <a href="/handle/stats/logevent.ashx?event=MOR&amp;adid=29889360&amp;orgid=2147386223&amp;url=/dealers/christchurch/penton-motor-group-22009" onclick="dataLayer.push({'event': 'ClickedStockList'});)">
+               <span id="dlrName">
+                Penton Motor Group
+               </span>
+              </a>
+              <div id="contact-ctas">
+               <a class="contact-cta o-flex__item / c-button c-button--padded c-button--blue-plain lge-btn two-buttons" href="javascript:void(0)" id="heycar-phone-wrap">
+                <span class="fo fo-phone">
+                </span>
+                Call seller
+               </a>
+               <div class="flex-col blue-3" id="heycar-phone">
+                <a class="avPhone" data-click_category="Response Click" data-click_name="Click To Call" href="" onclick="if(!Enm.Criteo.productPushed){Enm.Criteo.PushProductAdView();}ppcTrack('emcon022','mobil894');logEvent('CTC',sAdID,sOrgID);dataLayer.push({'event': 'ClickedToCall_Trade'})" title="Main phone number">
+                </a>
+               </div>
+               <div id="trainMonitorWarn">
+                *Calls may be recorded for training and monitoring.
+               </div>
+               <script>
+                Enm.Heycar.InitEnm(14434831380,0);
+                        Enm.Heycar.AsteriskOne = '*';
+                        Enm.Heycar.AsteriskTwo = '';
+               </script>
+               <a aria-expanded="false" class="contact-cta o-flex__item / c-button c-button--padded c-button--blue-plain lge-btn two-buttons" data-click_category="Response Click" data-click_name="Contact Seller" data-toggle="collapse" href="#mess-sell" id="ContactSeller">
+                <span class="fo fo-mail">
+                </span>
+                Message seller
+               </a>
+              </div>
+              <div class="collapse" id="mess-sell">
+               <div class="u-margin-bottom" style="min-height: 4px;">
+                <script type="text/javascript">
+                 $(document).ready(function () {
+                          Enm.AdView.AdID = 29889360;
+                          Enm.AdView.OrgID = 2147386223;
+                          Enm.AdView.IsTrade = true;
+                          Enm.AdView.PushCriteo = true;
+                      });
+                </script>
+               </div>
+               <div data-toggle="collapse" id="cmbEmailPane">
+                <div class="modal-header enm-modal-head">
+                 <span id="dlr-name">
+                  Message Seller
+                 </span>
+                 <a class="modal-close modal-close--grey fo fo-cancel" style="cursor:pointer">
+                 </a>
+                </div>
+                <div class="tab active" id="esHeader" tab="#esContent">
+                 Message Seller
+                </div>
+                <div class="tabContent" id="esContent">
+                 <div id="spa_d_form">
+                  <div class="form-group">
+                   <input autocomplete="name" class="form-control" id="edFromName" maxlength="40" name="ctl00$PageContent$ctl00$usrAdvertContact_Trade$edFromName" placeholder="Name*" type="text"/>
+                   <span class="dn alert alert-danger" id="spa_d_fromname">
+                   </span>
+                  </div>
+                  <div class="form-group">
+                   <input autocomplete="email" autofocus="autofocus" class="form-control" id="edFromEmail" maxlength="80" name="ctl00$PageContent$ctl00$usrAdvertContact_Trade$edFromEmail" placeholder="Email address*" size="25" type="email"/>
+                   <span class="dn alert alert-danger" id="spa_d_fromemail">
+                   </span>
+                  </div>
+                  <div class="form-group heycar_extra_fields">
+                   <input autocomplete="tel" class="form-control" id="edPhone" maxlength="12" name="ctl00$PageContent$ctl00$usrAdvertContact_Trade$edPhone" placeholder="Telephone" style="margin-bottom:8px" type="tel"/>
+                   <span class="dn alert alert-danger" id="spa_d_phone">
+                   </span>
+                  </div>
+                  <div class="form-group">
+                   <input autocomplete="postal-code" class="form-control" id="edPostcode" maxlength="10" name="ctl00$PageContent$ctl00$usrAdvertContact_Trade$edPostcode" placeholder="Postcode*" type="text"/>
+                   <span class="dn alert alert-danger" id="spa_d_postcode">
+                   </span>
+                  </div>
+                  <div class="form-group">
+                   <div class="seller-dropdown c-custom-dropdown pcReq">
+                    <select id="ddQuestions">
+                     <option value="avail">
+                      Check availability
+                     </option>
+                     <option value="callback">
+                      Request callback
+                     </option>
+                     <option value="drive">
+                      Book a test drive
+                     </option>
+                     <option value="photo">
+                      Request more photos
+                     </option>
+                     <option value="other">
+                      Ask another question
+                     </option>
+                    </select>
+                   </div>
+                  </div>
+                  <div class="form-group">
+                   <textarea class="form-control" id="edComment" name="c" onkeyup="charClip(this,300,'countd')" placeholder="Type your question here" rows="5" style="width: 100%; height: 110px"></textarea>
+                   <p class="small">
+                    <span id="countd" style="margin-left: 5px">
+                     300
+                    </span>
+                    remaining
+                   </p>
+                   <span class="dn alert alert-danger" id="spa_d_c">
+                   </span>
+                  </div>
+                 </div>
+                 <div class="cmbEmailBtn" id="spa_d_button">
+                  Send my question
+                 </div>
+                 <span class="dn alert" id="spa_d_success">
+                 </span>
+                 <p>
+                  The contact details you enter will be sent to the advertiser, and by providing this you consent to Exchange and Mart passing it to the advertiser who will contact you by these means. Messages which contain inappropriate content will be stopped.
+                 </p>
+                </div>
+               </div>
+              </div>
+              <div class="dlrButtons">
+               <a class="dlrLinkButton" href="/handle/stats/logevent.ashx?event=MOR&amp;adid=29889360&amp;orgid=2147386223&amp;url=/dealers/christchurch/penton-motor-group-22009" onclick="dataLayer.push({'event': 'ClickedStockList'});)">
+                <i class="fo fo-car-stocklist">
+                </i>
+                <div>
+                 Stock list
+                </div>
+               </a>
+               <a class="dlrLinkButton" data-click_category="Response Click" data-click_name="Dealer Weblink" href="/handle/stats/logevent.ashx?event=WLK&amp;adid=29889360&amp;orgid=2147386223" onclick="ppcTrack('emcon022','webli043');" rel="nofollow" target="_blank">
+                <i class="fo fo-globe">
+                </i>
+                <div>
+                 Website
+                </div>
+               </a>
+               <a data-click_category="Response Click" data-click_name="Map View" id="avMap" name="modal" onclick="dataLayer.push({'event': 'ClickedLocation'});Enm.Google.BuildMapByAdId('https://www.exchangeandmart.co.uk',29889360);;return false;" pop="mdlMaps">
+                <i class="fo fo-location">
+                </i>
+                Christchurch
+               </a>
+              </div>
+             </div>
+            </div>
+            <div id="sideBarExtras">
+             <a href="/carmoney/29889360?tracktype=banner" onclick="_satellite.track('credit_plus_click',{link_name:'CP AV Apply Today', link_category:'Partner: Finance'})" target="_blank">
+              <img class="imgbox" data-mainimage="//ixm.co.uk/i/carmoney/CarMoney_MPU.png" height="250" id="carmoneyExtras" width="300"/>
+             </a>
+             <div style="padding-bottom:10px;margin-top:15px">
+              <div dfp_sizes="[0,0]" id="DFP_PH_xnm_flexi_side" res_pos="FlexiAdView" style="max-width:100%;text-align:center">
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="fl" id="printContainer">
+        </div>
+        <div style="width:100%;max-width:860px;margin-top:20px">
+         <div dfp_sizes="[0,0]" id="DFP_PH_MPU_MPUDouble_Billboard" res_pos="MPU_MPUDouble_Billboard" style="max-width:100%;text-align:center">
+         </div>
+        </div>
+       </div>
+       <iframe id="ifrmPrint">
+       </iframe>
+       <div style="clear:both">
+        <div style="float:left">
+        </div>
+       </div>
+      </div>
+      <script type="text/javascript">
+       var data_layer = {
+            'ad_AdvertID':'29889360',
+'BodyType':'SUV',
+'ad_IsNationalDelivery':'False',
+'Colour':'Grey',
+'ad_County':'Dorset',
+'Fuel':'Petrol',
+'LeftHandDrive':'False',
+'Make':'Citroen',
+'ad_Mileage':'17000',
+'Model':'C3',
+'ad_Postcode':'BH23 3PY',
+'ad_PostcodeOuter':'BH23',
+'ad_PriceMonthly':'382',
+'ad_PriceRetail':'16,490',
+'PrivateOrTrade':'Trade',
+'Transmission':'Manual',
+'VehicleType':'Cars',
+'ad_Year':'2021',
+'ad_FinanceOptionsPresented':'APPLY_CALC_MPU',
+'client_Name':'Penton Motor Group',
+'client_OrgID':'2147386223',
+'client_PartnerID':'22009',
+'content_PageType':'Advert',
+'environment_HTTPResponse':'200',
+'navigation_Section':'Cars',
+'navigation_SubSection':'Cars/Adview',
+'navigation_SubSection2':'Cars/Adview',
+'navigation_SubSection3':'Cars/Adview',
+'navigation_UrlPath':'/ad/29889360',
+'navigation_Website':'www.exchangeandmart.co.uk',
+'user_LoggedIn':'No'
+    };
+    data_layer['content_PageName'] = 'Citroen C3 Aircross 1.2 Puretech Shine Euro 6 (S/S) 5Dr New Shape Low Mileage  Suv 2021, 17000 Miles, £16490 - 29889360 - ExchangeandMart.co.uk';
+
+    
+
+    var data_layer_helper = {
+        loadScript(url, async) {
+            var e = document.createElement('script');
+            var n = document.getElementsByTagName('body')[0];
+            e.type = 'text/javascript';
+            e.async = async;
+            e.src = url;
+            n.parentNode.insertBefore(e, n);
+        }
+    };
+      </script>
+      <script async="" src="//assets.adobedtm.com/499440d21de9/da228dea3287/launch-04283e6c606d.min.js">
+      </script>
+      <script>
+       document.cookie='js=1; domain=' + window.location.host + '; path=/';
+      </script>
+      <div id="mdlPop">
+       <a id="shwAlrt" name="modal" pop="mdlAlert" style="display:none">
+       </a>
+       <a id="shwCnf" name="modal" pop="mdlConfirm" style="display:none">
+       </a>
+       <div class="window" id="mdlAlert">
+        <div role="dialog">
+         <div class="modal-dialog">
+          <div class="modal-content enm-modal-content style-section">
+           <div class="modal-header enm-modal-header">
+            <a class="close" data-dismiss="modal">
+             ×
+            </a>
+            <h4 class="modal-title">
+             Alert
+            </h4>
+           </div>
+           <div class="modal-body enm-modal-body text-center">
+            <p class="cb" id="alrtMsg">
+            </p>
+           </div>
+           <div class="modal-footer enm-modal-footer">
+            <button class="btn btn-default closePop" data-dismiss="modal">
+             OK
+            </button>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="window" id="mdlConfirm">
+        <div role="dialog">
+         <div class="modal-dialog">
+          <div class="modal-content enm-modal-content style-section">
+           <div class="modal-header enm-modal-header">
+            <a class="close" data-dismiss="modal">
+             ×
+            </a>
+            <h4 class="modal-title">
+             Please Confirm
+            </h4>
+           </div>
+           <div class="modal-body enm-modal-body text-center">
+            <p class="cb" id="cnfMsg">
+            </p>
+           </div>
+           <div class="modal-footer enm-modal-footer">
+            <div style="width:50%;float:left;padding-right:10px">
+             <button class="btn btn-default" id="btnCnfOK">
+              OK
+             </button>
+            </div>
+            <div style="width:50%;float:right;padding-left:10px">
+             <button class="btn btn-default closePop" data-dismiss="modal" style="background-color:grey">
+              Cancel
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="window slModal" id="mdlShortlistInfo">
+       </div>
+       <div class="window" id="mdlTax">
+       </div>
+       <div class="window" id="mdlMaps">
+        <style>
+         #map-dialog {
+            width:440px;
+        }
+    #map-modal-content {
+            border-radius:0;
+        }
+
+        #mapif {
+          height: 555px;
+        }
+    @media (max-width: 575.98px) {
+        #map-modal-content {
+            height: 100%;
+        }
+
+        #map-dialog {
+            width: 100%;
+        }
+
+          #mapif {
+            height: 449px;
+          }
+    }
+        </style>
+        <div id="map-dialog" role="dialog">
+         <div class="modal-dialog" id="maps" style="height:100%">
+          <div class="modal-content enm-modal-content style-section" id="map-modal-content">
+           <div class="modal-header enm-modal-head">
+            <span id="dlr-name">
+             Vehicle Location
+            </span>
+            <a class="modal-close modal-close--grey fo fo-cancel" data-dismiss="modal" href="javascript:void(0)">
+            </a>
+           </div>
+           <div class="modal-body enm-modal-body">
+            <div id="goomap">
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="window" id="mdlFinanceEnquiry">
+       </div>
+       <div class="window slModal" id="mdlShortlistFull">
+       </div>
+       <div class="window" id="mdlCinchLocation">
+       </div>
+       <div class="window" id="MessageSentSimilarCarsModal">
+        <div id="paneWrap-pop" role="dialog" style="margin:auto">
+         <div class="modal-dialog" style="height:100%;">
+          <div class="enm-modal-content enm-modal">
+           <div class="modal-header enm-modal-head">
+            <a class="modal-close modal-close--grey fo fo-cancel" data-dismiss="modal">
+            </a>
+           </div>
+           <div class="modal-body enm-modal-body" style="width:100%;">
+            <div class="emblemWrap">
+             <span class="fo emf-emblem emf-msscSimCars">
+              <span class="fo-path1">
+              </span>
+              <span class="fo-path2">
+              </span>
+              <span class="fo-path3">
+              </span>
+              <span class="fo-path4">
+              </span>
+             </span>
+            </div>
+            <div "="" class="msscDlrName-mge u-margin-bottom">
+             <p>
+              Success! Your message has been sent
+              <span id="msscDlrName">
+              </span>
+             </p>
+            </div>
+            <div class="msscRTS-link u-margin-bottom">
+             <a href="/used-cars-for-sale" id="msscRTS">
+              Return to your search
+             </a>
+            </div>
+            <div class="c-panel">
+             <div id="msscSimCars-title">
+             </div>
+             <div class="flex-grid flex-grid--gutters flex-grid--flex-cells flex-grid--mobile-overflow / c-card-list--small" id="msscSimCars">
+             </div>
+             <div class="o-flex_item" id="msscSim-btn">
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="window" id="mdlCarmoneyInfo">
+       </div>
+       <div id="msk">
+       </div>
+       <script>
+        Enm.Core.PrepModal()
+       </script>
+      </div>
+      <script type="text/javascript">
+       prepMPS()
+      </script>
+     </form>
+     <form action="/login" id="gologin" method="post" name="gologin">
+      <input id="netPG" name="netPG" type="hidden" value="test"/>
+     </form>
+    </div>
+   </div>
+   <br style="clear:both"/>
+  </div>
+  <div id="footer">
+   <div class="emf_emblem">
+    <div class="emf_emblem-ball emf_emblem-ball_1">
+    </div>
+    <div class="emf_emblem-ball emf_emblem-ball_2">
+    </div>
+    <div class="emf_emblem-ball emf_emblem-ball_3">
+    </div>
+   </div>
+   <div id="footerSocialWrap">
+    <ul class="clearfix">
+     <li>
+      <a href="https://www.facebook.com/exchangeandmart" target="_blank" title="Facebook">
+       <i class="fo fo-facebook-disk">
+       </i>
+      </a>
+     </li>
+     <li>
+      <a href="https://twitter.com/ExchangeMart" target="_blank" title="Twitter">
+       <i class="fo fo-twitter-disk">
+       </i>
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div id="footerLinksWrap">
+    <div class="footerLinkItem">
+     <span>
+      Terms and policies
+     </span>
+     <a href="https://www.newsquest.co.uk/terms-conditions" rel="noopener noreferrer" target="_blank">
+      Terms and Conditions
+     </a>
+     <a href="https://www.newsquest.co.uk/privacy-policy" rel="noopener noreferrer" target="_blank">
+      Privacy Policy
+     </a>
+     <a href="https://www.newsquest.co.uk/cookie-policy" rel="noopener noreferrer" target="_blank">
+      Cookie Policy
+     </a>
+     <a class="gdpr-option-v2" data-v2-id="407192" href="/gdpr/">
+      Manage Consent
+     </a>
+     <a href="https://www.youronlinechoices.com/uk/" rel="nofollow" target="_blank">
+      AdChoices
+      <span class="fo fo-adchoices" title="AdChoices">
+      </span>
+     </a>
+    </div>
+    <div class="footerLinkItem">
+     <span>
+      About us
+     </span>
+     <a href="/contact-us">
+      Contact Us
+     </a>
+     <a href="/work-for-us">
+      Work for Us
+     </a>
+    </div>
+    <div class="footerLinkItem">
+     <span>
+      For Dealers
+     </span>
+     <a href="https://localiq.co.uk/motors" target="_blank">
+      Advertise with Us
+     </a>
+     <a href="https://portal.exchangeandmart.co.uk">
+      Log in to Trade Portal
+     </a>
+     <a href="/trade-terms-and-conditions">
+      Terms &amp; Conditions
+     </a>
+    </div>
+    <div class="footerLinkItem">
+     <span>
+      Useful links
+     </span>
+     <a href="/local-used-cars">
+      Cars in the UK
+     </a>
+     <a href="/used-cars-for-sale">
+      All Used Cars
+     </a>
+    </div>
+   </div>
+   <div id="footerTandCs">
+    <p>
+     Your use of this site is subject to our
+     <a href="https://www.newsquest.co.uk/terms-conditions" rel="nofollow" target="_blank">
+      terms &amp; conditions of use
+     </a>
+     and our
+     <a href="http://www.newsquest.co.uk/privacy-policy" rel="nofollow" target="_blank">
+      privacy policy
+     </a>
+     .
+    </p>
+    <p>
+     © 2023 Exchange Enterprises, Newsquest Media Group. All rights reserved.
+    </p>
+    <p>
+     Exchange and Mart is a trading name of Newsquest Media Group who is an Appointed Representative of CARMONEY Limited. FCA Firm Reference number 674094.
+    </p>
+   </div>
+  </div>
+  <!-- <script>Enm.Consent.Init()</script>-->
+  <script type="text/javascript">
+   !function () { var e = function () { var e, t = "__tcfapiLocator", a = [], n = window; for (; n;) { try { if (n.frames[t]) { e = n; break } } catch (e) { } if (n === window.top) break; n = n.parent } e || (!function e() { var a = n.document, r = !!n.frames[t]; if (!r) if (a.body) { var i = a.createElement("iframe"); i.style.cssText = "display:none", i.name = t, a.body.appendChild(i) } else setTimeout(e, 5); return !r }(), n.__tcfapi = function () { for (var e, t = arguments.length, n = new Array(t), r = 0; r < t; r++)n[r] = arguments[r]; if (!n.length) return a; if ("setGdprApplies" === n[0]) n.length > 3 && 2 === parseInt(n[1], 10) && "boolean" == typeof n[3] && (e = n[3], "function" == typeof n[2] && n[2]("set", !0)); else if ("ping" === n[0]) { var i = { gdprApplies: e, cmpLoaded: !1, cmpStatus: "stub" }; "function" == typeof n[2] && n[2](i) } else a.push(n) }, n.addEventListener("message", (function (e) { var t = "string" == typeof e.data, a = {}; try { a = t ? JSON.parse(e.data) : e.data } catch (e) { } var n = a.__tcfapiCall; n && window.__tcfapi(n.command, n.version, (function (a, r) { var i = { __tcfapiReturn: { returnValue: a, success: r, callId: n.callId } }; t && (i = JSON.stringify(i)), e.source.postMessage(i, "*") }), n.parameter) }), !1)) }; "undefined" != typeof module ? module.exports = e : e() }();
+  </script>
+  <script type="text/javascript">
+   (function () {
+           window._sp_ = {
+            config: {
+                baseEndpoint: 'https://a02342.exchangeandmart.co.uk',
+                accountId: 52,
+                events: {
+                    onMessageReady: function (choice_id, choice_type) {
+                // saved for later
+            },
+                    onMessageChoiceSelect: function (choice_id, choice_type_id) {
+                // saved for later
+            },
+                    onPrivacyManagerActionStatus: function (pmData) {
+                // saved for later
+            }
+        }
+    }
+        };
+
+    __tcfapi('addEventListener', 2, function (tcData, success) {
+        if (success && tcData.eventStatus === 'useractioncomplete') {
+            var csnt = 'none';
+            if (readCookie('_sp_enable_dfp_personalized_ads') === 'true') {
+                csnt = 'yes';
+            } else if (readCookie('_sp_enable_dfp_personalized_ads') === 'false') {
+                csnt = 'no';
+            }
+            googletag.cmd.push(function () {
+                googletag.pubads().setTargeting('dfpcsnt', csnt);
+            });
+            // ready to start DFP
+        } else if (success && tcData.eventStatus === 'tcloaded') {
+            // saved for later
+        }
+    });
+
+        $(document).on('click', '.gdpr-option-v2', function (e) {
+        e.preventDefault();
+        var id = $(this).data('v2-id');
+        _sp_.loadPrivacyManagerModal(id);
+    });
+    })();
+  </script>
+  <script id="gdpr-wmwd" src="https://a02342.exchangeandmart.co.uk/wrapperMessagingWithoutDetection.js">
+  </script>
+  <div class="sp-modal" id="sp-modal">
+   <!-- Modal content -->
+   <div class="sp-modal-content">
+    <iframe id="sp-modal-iframe" src="">
+    </iframe>
+   </div>
+  </div>
+  <!--DMH-ENM-WEB1-->
+  <script type="text/javascript">
+   EnmLzL(); prepMPS(); pagelifespan = "finish";var pfPn = '';
+  </script>
+  <script src="/js/pf.min.js?v=2023.0821">
+  </script>
+  <div id="pg_prn">
+  </div>
+  <script>
+   pfPn = 'FullAdView';
+  </script>
+  <script>
+   (function(){e=document.createElement("script");e.type="text/javascript",e.async=1,e.src="//exchangeandmart.calltracks.com/wnd/v2/loader.js?class_names='adviewPhoneNumber'";document.getElementsByTagName("head")[0].appendChild(e)})()
+  </script>
+ </body>
+</html>

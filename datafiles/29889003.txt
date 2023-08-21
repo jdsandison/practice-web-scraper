@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en-US"><![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en-US"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html id="top" lang="en-GB">
+ <!--<![endif]-->
+ <head>
+  <link href="//connect.facebook.net" rel="preconnect"/>
+  <link href="//www.google-analytics.com" rel="preconnect"/>
+  <link href="//www.google.com" rel="preconnect"/>
+  <link href="//ixm.co.uk" rel="preconnect"/>
+  <link href="//newsquestdigitalmedia.d2.sc.omtrdc.net" rel="preconnect"/>
+  <link href="//newsquestdigitalmedia.d2.sc.omtrdc.net" rel="dns-prefetch"/>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+  <meta id="ctl00_metaDescription" name="description"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="4E45C596C11F0A3ACC5D4F09D8EDA793" name="msvalidate.01"/>
+  <script type="text/javascript">
+   var loadStart=(new Date()).getTime();var loadEnd=0;var pagelifespan="start"
+  </script>
+  <script src="//ixm.co.uk/js/jquery-1.11.1.min.js" type="text/javascript">
+  </script>
+  <script src="//ixm.co.uk/js/jquery.mobile.custom.min.js" type="text/javascript">
+  </script>
+  <script src="//ixm.co.uk/js/bootstrap.min.js" type="text/javascript">
+  </script>
+  <script src="/js/e.min.js?v=2023.0821" type="text/javascript">
+  </script>
+  <link href="//i1.exchangeandmart.co.uk" rel="preconnect"/>
+  <link href="//i.exchangeandmart.co.uk" rel="preconnect"/>
+  <link href="//i2.exchangeandmart.co.uk" rel="preconnect"/>
+  <meta content="Page Cannot Be Displayed" name="description"/>
+  <title>
+   Page Cannot Be Found
+  </title>
+  <link href="//ixm.co.uk/favicons/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+  <link href="//ixm.co.uk/favicons/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114"/>
+  <link href="//ixm.co.uk/favicons/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+  <link href="//ixm.co.uk/favicons/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+  <link href="//ixm.co.uk/favicons/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+  <link href="//ixm.co.uk/favicons/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+  <link href="//ixm.co.uk/favicons/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+  <link href="//ixm.co.uk/favicons/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+  <link href="//ixm.co.uk/favicons/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+  <link href="//ixm.co.uk/favicons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+  <link href="//ixm.co.uk/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="//ixm.co.uk/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="//ixm.co.uk/favicons/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+  <meta content="Exchange and Mart" name="application-name"/>
+  <meta content="#FFFFFF" name="msapplication-TileColor"/>
+  <meta content="//ixm.co.uk/favicons/mstile-144x144.png" name="msapplication-TileImage"/>
+  <meta content="//ixm.co.uk/favicons/mstile-70x70.png" name="msapplication-square70x70logo"/>
+  <meta content="//ixm.co.uk/favicons/mstile-150x150.png" name="msapplication-square150x150logo"/>
+  <meta content="//ixm.co.uk/favicons/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+  <meta content="//ixm.co.uk/favicons/mstile-310x310.png" name="msapplication-square310x310logo"/>
+  <link href="//ixm.co.uk/css/WebSite/enm-bootstrap.min.css?v=1.2" rel="stylesheet"/>
+  <link href="/css/e.css?v=2023.0821" rel="stylesheet"/>
+  <link href="//ixm.co.uk/css/enm_awesome.min.css?v=3.3" rel="stylesheet"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="#fff" name="theme-color"/>
+  <link href="https://www.exchangeandmart.co.uk/ad/29889003" id="canonical" rel="canonical"/>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript">
+   $.fn.isInViewport = function () {
+            if ($(this).is(":visible")) {
+                var etop = $(this).offset().top;
+                var vpT = $(window).scrollTop() - 200;
+                return (etop + $(this).outerHeight()) > vpT && etop < (vpT + $(window).height() + 300);
+            }
+            else {
+                return false;
+            }
+        };
+        function EnmLzL() { 
+            $('.imgbox').each(function () {
+                if ($(this).isInViewport()) {
+                    $(this).attr('src', $(this).data('mainimage')).attr('srcset', $(this).data('srcset')).removeClass('imgbox');
+                    if ($(this).parent().css('background').indexOf('lazy_waiting.png') > -1) { $(this).parent().css('background', 'none'); }
+                }
+            });
+            $('.imgboxbg').each(function () {
+                if ($(this).isInViewport()) {
+                    $(this).css('background-image', 'url("'+$(this).data('bgimage')+'") ').removeClass('imgboxbg')
+                }
+            });            
+        }
+        
+        $(window).on('resize scroll', function () {
+            EnmLzL();
+            $('.ifrmbox').each(function () {
+                $(this).attr('src', $(this).data('framesrc')).removeClass('ifrmbox');
+            });
+        });
+  
+        function logEvent(event, adid, orgid) { Enm.Core.LogEvt(event, adid, orgid) }
+
+        function prepMPS() {
+            $(document).ready(function () {
+                Enm.Core.PrepModal();
+            })
+        }
+        function login() { Enm.Core.Login() }
+  </script>
+  <script type="text/javascript">
+   var crtg_nid = '2740'; var crtg_cookiename = 'crtg_rta'; var crtg_varname = 'crtg_content';
+        function crtg_getCookie(c_name){ 
+            var i,x,y,ARRCookies=document.cookie.split(";");
+            for (i = 0; i < ARRCookies.length; i++) {
+                x = ARRCookies[i].substr(0, ARRCookies[i].indexOf("=")); y = ARRCookies[i].substr(ARRCookies[i].indexOf("=") + 1);
+                x = x.replace(/^\s+|\s+$/g, ""); if (x == c_name) { return unescape(y) }
+            } return '';
+        }
+        var crtg_content = crtg_getCookie(crtg_cookiename);
+        var crtg_rnd=Math.floor(Math.random()*99999999999);
+        (function(){
+        var crtg_url=location.protocol+'//rtax.criteo.com/delivery/rta/rta.js?netId='+escape(crtg_nid);
+        crtg_url +='&cookieName='+escape(crtg_cookiename);
+        crtg_url +='&rnd='+crtg_rnd;
+        crtg_url +='&varName=' + escape(crtg_varname);
+        var crtg_script=document.createElement('script');crtg_script.type='text/javascript';crtg_script.src=crtg_url;crtg_script.async=true;
+        if(document.getElementsByTagName("head").length>0)document.getElementsByTagName("head")[0].appendChild(crtg_script);
+        else if(document.getElementsByTagName("body").length>0)document.getElementsByTagName("body")[0].appendChild(crtg_script)
+        })();
+  </script>
+  <script type="text/javascript">
+   var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+    var preconnectNode = document.getElementsByTagName('link')[0];
+    var gadsPreconnect = document.createElement('link');
+    gadsPreconnect.rel = 'preconnect';
+    gadsPreconnect.href = '//securepubads.g.doubleclick.net';
+    preconnectNode.parentNode.insertBefore(gadsPreconnect, preconnectNode);
+    var gads = document.createElement('script');
+    var scriptNode = document.getElementsByTagName('script')[0];
+    gads.async = true;
+    gads.type = 'text/javascript';
+    gads.src = 'https://securepubads.g.doubleclick.net/tag/js/gpt.js';    
+    scriptNode.parentNode.insertBefore(gads, scriptNode);
+  </script>
+  <script type="text/javascript">
+   var adUnitCode = '/154725070,22694024870/www.exchangeandmart.co.uk/usedcars';
+    var dfpTargeting = {
+        'site': 'www',
+	'isLanding': 'no'
+    }
+    
+    var _debounce = function (func, wait, immediate) {
+        var timeout;
+        return function () {
+            var context = this, args = arguments;
+            var later = function () {
+                timeout = null;
+                if (!immediate) func.apply(context, args)
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    };
+
+    var dfpArray = [];
+    function refreshAds() {
+        $(dfpArray).each(function () {
+            googletag.pubads().refresh(this)
+        })
+    }
+    $(document).ready(function () {
+        
+        googletag.cmd.push(function() {
+            if(readCookie('_sp_enable_dfp_personalized_ads') === 'true') {
+                console.log('GDPR: Cookie found and is set to true - setting setRequestNonPersonalizedAds to 0');
+                googletag.pubads().setRequestNonPersonalizedAds(0);
+            } else {
+                console.log('GDPR: Cookie not found or is set to false - setting setRequestNonPersonalizedAds to 1');
+                googletag.pubads().setRequestNonPersonalizedAds(1);
+            }
+        });
+        
+        googletag.cmd.push(function () {
+            $.each(dfpTargeting, function (key, value) { googletag.pubads().setTargeting(key, value) })
+        });
+        var width = $(window).width();
+
+
+        
+        $('[id^="DFP_PH_"]').filter(function () {
+            return $(this).parents().filter(function () {
+                return $(this).css('display') == 'none'
+            }).length == 0
+        })
+        .each(function () {
+            var id = $(this).attr('id');
+            var pos = id.replace('DFP_PH_','');
+            var size = eval($(this).attr('dfp_sizes'));
+            var resPos = $(this).attr('res_pos');
+
+            var r_mob=[320,300];var r_stab=[750,380];var r_dsk_ltab=[980,300];
+
+            googletag.cmd.push(function () {
+                var dfp = googletag.defineSlot(adUnitCode, size, id)
+                if (resPos != undefined)
+                    switch (resPos) {
+                        case 'Top':
+                            if ($(window).width()!= 320 || true) {
+                                var mp = googletag.sizeMapping().addSize([0,0],[3,6]).addSize(r_mob, [[300,50], [320, 50], [320,100]]).
+                                  addSize(r_stab,[728,90]).
+                                  addSize(r_dsk_ltab, [[970,250],[728,90]]).build();
+                                dfp.defineSizeMapping(mp)
+                                .setTargeting('enmPBSizes', escape('window.top.innerWidth > 1200 ? [[728,90],[970,250]] : (window.top.innerWidth > 728 ? [728,90] : [[300,50],[320,50],[320,100]])'));
+                                
+                                googletag.pubads().addEventListener('slotRenderEnded', function (event) {
+                                    $('#footer').css('bottom', "-" + $('#header').outerHeight() + "px")
+                                });
+                            } else { $('#DFP_PH_xnm_flexi_top').css('height', '0') }
+                            break;
+                        case 'Flexi':
+                            var mp = googletag.sizeMapping().
+                               addSize([0,0],[3,6]).
+                              
+                              addSize([1180,300],[[300,250],[300,600],[300,1050],[120,600],[160,600]]).
+                              build();
+                            dfp.defineSizeMapping(mp).setTargeting('enmPBSizes', escape('[[300,250],[300,600],[300,1050],[120,600],[160,600]]'));
+                            break;
+                         case 'Flexi2':
+                            var mp = googletag.sizeMapping().
+                               addSize([0,0],[3,6]).addSize(r_mob,[[300,250]]).
+                              addSize(r_stab,[[300,250]]).
+                              addSize(r_dsk_ltab,[[120,160],[120,600],[300,250]]).
+                              build();
+                            dfp.defineSizeMapping(mp)
+                             .setTargeting('enmPBSizes', escape('window.top.innerWidth > 1000 ? [[120,600],[160,600]] :[[300,250]])'));
+                            break;
+                        case 'FlexiAdView':
+                            var mp = googletag.sizeMapping().
+                            
+                            addSize([0,0],[3,6]).
+                            addSize(r_dsk_ltab,[[300,600]]).
+                            build();
+                            dfp.defineSizeMapping(mp)
+                            .setTargeting('enmPBSizes', escape('window.top.innerWidth > 1023 ? [300,600] : [1,1]'));
+                            break;
+                        case 'Mid':
+                            var mp = googletag.sizeMapping().
+                              addSize([0,0],[3,6]).addSize(r_mob,[[300,250],[320,100]]).
+                              addSize([1180,300],[468,60]).
+                              build();
+                            dfp.defineSizeMapping(mp)
+                            .setTargeting('enmPBSizes', escape('window.top.innerWidth > 1179 ? [[468,60]] :  (window.top.innerWidth > 320?  [300,250] : [[300,250],[320,100]])'));
+                            break;
+
+                        case 'Bottom':
+                            var mp = googletag.sizeMapping().
+                              addSize([0,0],[3,6]).addSize(r_mob, [[300,50], [320,50],[320,100]]).
+                              addSize(r_stab,[728,90]).
+                              addSize(r_dsk_ltab,[[728,90]]).
+                              build();
+                            dfp.defineSizeMapping(mp)
+                           .setTargeting('enmPBSizes', escape('window.top.innerWidth > 728 ? [[728,90]] : [[300,50],[320,50],[320,100]]'));
+                            break;
+                        case 'Bottom_Billboard':
+                            var mp = googletag.sizeMapping().
+                                addSize([0, 0], [3, 6]).addSize(r_mob, [[300, 50], [320, 50], [320, 100]]).
+                                addSize(r_stab, [728, 90]).
+                                addSize(r_dsk_ltab, [[728, 90],[970,250]]).
+                                build();
+                            dfp.defineSizeMapping(mp)
+                                .setTargeting('enmPBSizes', escape('window.top.innerWidth > 1200 ? [[728,90],[970,250]] : window.top.innerWidth > 728 ? [[728,90]] : [[300,50],[320,50],[320,100]]'));
+                            break;
+
+                        case 'Gallery':
+                            var mp = googletag.sizeMapping().
+                              addSize([0,0],[3,6]).
+                              addSize(r_stab,[300,250]).
+                              addSize(r_dsk_ltab,[[300,250]]).
+                               build();
+                            dfp.defineSizeMapping(mp).setTargeting('enmPBSizes', escape('[]'));
+                            break;
+                        case 'MPUOnly':
+                            var mp = googletag.sizeMapping().
+                              addSize([0,0],[[300,250]]).
+                               build();
+                            dfp.defineSizeMapping(mp)
+                            .setTargeting('enmPBSizes',escape('[300,250]'));
+                            break;
+                        case 'MPU_MPUDouble':
+                            var mp = googletag.sizeMapping().
+                                addSize([0, 0], [[300, 250], [300, 600]]).
+                                addSize(r_dsk_ltab, [300,250]).
+                                build();
+                            dfp.defineSizeMapping(mp)
+                                .setTargeting('enmPBSizes', escape('[300,250],[300,600]'));
+                            break;
+                        case 'MPU_MPUDouble_Billboard':
+                            var mp = googletag.sizeMapping().
+                                addSize([0, 0], [[300, 250], [300, 600]]).
+                                addSize(r_dsk_ltab, [[728, 90], [970, 250]]).
+                                build();
+                            dfp.defineSizeMapping(mp)
+                                .setTargeting('enmPBSizes', escape('window.top.innerWidth > 1200 ? [[728,90],[970,250]] : window.top.innerWidth > 728 ? [[728,90]] : [[300,250],[300,600]]'));
+                            break;
+                    }
+                dfp.addService(googletag.pubads());
+
+                dfp.setTargeting('position',pos).setCollapseEmptyDiv(true);
+
+                
+                if (resPos==undefined || resPos != 'MPUOnly'){
+                    dfpArray.push([dfp])
+                }
+            })
+        });
+        $(window).resize(
+                   _debounce(function () {
+                       if ($(window).width() != width) {
+                           refreshAds();
+                           width = $(window).width();
+                           $('#footer').css('bottom', "-" + $('#header').outerHeight() + "px");
+                       }
+                       if ($('.window:visible').length > 0) {
+                           var id = '#' + $('.window:visible').attr('id')
+                           var hdrH = ($('.modal-header', $(id)).length == 1 ? $('.modal-header', $(id)).outerHeight() : 0);
+                           var ftrH = ($('.modal-footer', $(id)).length == 1 ? $('.modal-footer', $(id)).outerHeight() : 0);
+                           $('.modal-body:not(.cinch-body)').css('max-height', $(window).height() - (hdrH + ftrH) - 80);
+                           $('#goomap').height($('.modal-body:visible').outerHeight()-60);
+                       }
+                   }, 100)
+               );
+
+        googletag.cmd.push(function () { googletag.pubads().collapseEmptyDivs(true) });
+
+        googletag.cmd.push(function () {
+            if (width > 1200) {googletag.defineOutOfPageSlot(adUnitCode, 'DFP_OOP').addService(googletag.pubads())}
+            googletag.pubads().enableSingleRequest();
+            if (typeof crtg_content == 'undefined') crtg_content = '';
+            var s = crtg_content.split(',');s.pop();
+            if (s.length > 0) googletag.pubads().setTargeting('crtRTA', s);
+            googletag.enableServices()
+        });
+
+        $('[id^="DFP_PH_"]:visible').each(function () {
+            var id = $(this).attr('id');
+            googletag.cmd.push(function () { googletag.display(id) })
+        })
+        Enm.DFP.CheckAdBlock()
+    })
+  </script>
+ </head>
+ <body dir="ltr">
+  <div id="DFP_OOP">
+  </div>
+  <!-- Google Tag Manager -->
+  <noscript>
+   <iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-K8HGPF" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K8HGPF');
+  </script>
+  <!-- End Google Tag Manager -->
+  <div id="flexiAd">
+   <div dfp_sizes="[0,0]" id="DFP_PH_xnm_flexi_top" res_pos="Top" style="max-width:100%;text-align:center">
+   </div>
+  </div>
+  <header class="HeaderWrap">
+   <div id="DCHeader">
+    <div class="dcInner">
+     <a class="Logo" href="/">
+      <img alt="Logo" height="41" src="/i/logo.png" width="301"/>
+     </a>
+     <ul class="UserControls">
+      <li class="Shortlist">
+       <a aria-label="My Shortlist" class="noSl" href="#" name="modal" pop="mdlShortlistInfo">
+        <span class="Icon">
+         <i class="fo fo-heart">
+         </i>
+         <span class="Count">
+         </span>
+        </span>
+        <span class="Txt">
+         Shortlist
+        </span>
+       </a>
+      </li>
+      <li class="Account">
+       <a class="AccountExpand">
+        <span class="Icon">
+         <i class="fo fo-user">
+         </i>
+         <i class="fo fo-cancel">
+         </i>
+        </span>
+        <span class="Txt">
+         Account
+        </span>
+       </a>
+       <ul class="subControls">
+        <li>
+         <a href="javascript:login()">
+          Sign in
+         </a>
+        </li>
+        <li>
+         <a href="/register">
+          Register
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="Hamburger">
+       <div class="hamburger hamburger--spring">
+        <div class="hamburger-box">
+         <div class="hamburger-inner">
+         </div>
+        </div>
+       </div>
+      </li>
+     </ul>
+    </div>
+    <nav>
+     <ul class="dcInner dcMenu">
+      <li>
+       <a href="/used-cars-for-sale">
+        Used cars
+        <span class="TapExpand">
+         <i class="fo fo-down-open">
+         </i>
+        </span>
+       </a>
+       <div class="subMenu">
+        <ul class="subNav">
+         <li>
+          <a href="/used-cars-for-sale">
+           Buy a used car
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale">
+           Search for a used car
+          </a>
+         </li>
+         <li>
+          <a href="/local-used-cars">
+           Search local cars
+          </a>
+         </li>
+         <li>
+          <a href="/dealers">
+           Find a car dealer
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav twoColumn">
+         <li>
+          <a>
+           Popular makes
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/audi">
+           Audi
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/bmw">
+           BMW
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/ford">
+           Ford
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/kia">
+           Kia
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/land-rover">
+           Land Rover
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/mercedes-benz">
+           Mercedes-Benz
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/nissan">
+           Nissan
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/toyota">
+           Toyota
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/vauxhall">
+           Vauxhall
+          </a>
+         </li>
+         <li>
+          <a href="/used-cars-for-sale/volkswagen">
+           Volkswagen
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/motoring-services">
+           Motoring services
+          </a>
+         </li>
+         <li>
+          <a href="/car-finance">
+           Car finance
+          </a>
+         </li>
+         <li>
+          <a href="/car-insurance">
+           Car insurance
+          </a>
+         </li>
+         <li>
+          <a href="/personal-plates">
+           Personal plates
+          </a>
+         </li>
+         <li>
+          <a href="/used-parts-for-sale">
+           Car parts
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/classic-cars-for-sale">
+           Classic cars
+          </a>
+         </li>
+         <li>
+          <a href="/classic-cars">
+           Search for a classic car
+          </a>
+         </li>
+        </ul>
+       </div>
+      </li>
+      <li>
+       <a href="/new-cars">
+        New cars
+        <span class="TapExpand">
+         <i class="fo fo-down-open">
+         </i>
+        </span>
+       </a>
+       <div class="subMenu">
+        <ul class="subNav">
+         <li>
+          <a href="/car-leasing">
+           Buy a new car
+          </a>
+         </li>
+         <li>
+          <a href="/car-leasing">
+           Lease a new car
+          </a>
+         </li>
+         <li>
+          <a href="/new-cars">
+           Search for a new car
+          </a>
+         </li>
+         <li>
+          <a href="/reviews">
+           New car reviews
+          </a>
+         </li>
+         <li>
+          <a href="/new-car-dealers">
+           Find a car dealer
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/motoring-services">
+           Motoring services
+          </a>
+         </li>
+         <li>
+          <a href="/car-finance">
+           Car finance
+          </a>
+         </li>
+         <li>
+          <a href="/car-insurance">
+           Car insurance
+          </a>
+         </li>
+         <li>
+          <a href="/personal-plates">
+           Personal plates
+          </a>
+         </li>
+        </ul>
+       </div>
+      </li>
+      <li>
+       <a href="/electric-cars">
+        Electric cars
+       </a>
+      </li>
+      <li>
+       <a href="/used-motorbikes-for-sale">
+        Bikes
+        <span class="TapExpand">
+         <i class="fo fo-down-open">
+         </i>
+        </span>
+       </a>
+       <div class="subMenu">
+        <ul class="subNav">
+         <li>
+          <a href="/used-motorbikes-for-sale">
+           Buy a bike
+          </a>
+         </li>
+         <li>
+          <a href="/used-motorbikes-for-sale">
+           Search for a used motorcycle
+          </a>
+         </li>
+         <li>
+          <a href="/used-motorbikes-for-sale/buying-advice">
+           Buying advice
+          </a>
+         </li>
+         <li>
+          <a href="/local-used-bikes">
+           Search local bikes
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/sell-a-motorbike/place-an-ad">
+           Sell a bike
+          </a>
+         </li>
+         <li>
+          <a href="/sell-a-motorbike/place-an-ad">
+           Sell a bike
+          </a>
+         </li>
+         <li>
+          <a href="/sell-a-motorbike/selling-guide">
+           Selling guide
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/motoring-services">
+           Motoring services
+          </a>
+         </li>
+         <li>
+          <a href="/car-finance">
+           Bike finance
+          </a>
+         </li>
+         <li>
+          <a href="/bike-insurance">
+           Bike insurance
+          </a>
+         </li>
+         <li>
+          <a href="/personal-plates">
+           Personal plates
+          </a>
+         </li>
+        </ul>
+       </div>
+      </li>
+      <li>
+       <a href="/used-vans-for-sale">
+        Vans
+        <span class="TapExpand">
+         <i class="fo fo-down-open">
+         </i>
+        </span>
+       </a>
+       <div class="subMenu">
+        <ul class="subNav">
+         <li>
+          <a href="/used-vans-for-sale">
+           Buy a van
+          </a>
+         </li>
+         <li>
+          <a href="/car-leasing">
+           Lease a new van
+          </a>
+         </li>
+         <li>
+          <a href="/used-vans-for-sale">
+           Search for a van
+          </a>
+         </li>
+         <li>
+          <a href="/used-vans-for-sale/buying-advice">
+           Buying advice
+          </a>
+         </li>
+         <li>
+          <a href="/local-used-vans">
+           Search local vans
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/sell-a-van/place-an-ad">
+           Sell a van
+          </a>
+         </li>
+         <li>
+          <a href="/sell-a-van/place-an-ad">
+           Sell a van
+          </a>
+         </li>
+         <li>
+          <a href="/sell-a-van/selling-guide">
+           Selling guide
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/motoring-services">
+           Motoring services
+          </a>
+         </li>
+         <li>
+          <a href="/car-finance">
+           Van finance
+          </a>
+         </li>
+         <li>
+          <a href="/van-insurance">
+           Van insurance
+          </a>
+         </li>
+         <li>
+          <a href="/personal-plates">
+           Personal plates
+          </a>
+         </li>
+        </ul>
+       </div>
+      </li>
+      <li>
+       <a href="/used-caravans-for-sale">
+        Caravans
+        <span class="TapExpand">
+         <i class="fo fo-down-open">
+         </i>
+        </span>
+       </a>
+       <div class="subMenu">
+        <ul class="subNav">
+         <li>
+          <a href="/used-caravans-for-sale">
+           Buy a caravan or motorhome
+          </a>
+         </li>
+         <li>
+          <a href="/used-caravans-for-sale">
+           Search for a caravan or motorhome
+          </a>
+         </li>
+         <li>
+          <a href="/used-caravans-for-sale/buying-advice">
+           Buying advice
+          </a>
+         </li>
+         <li>
+          <a href="/local-used-caravans">
+           Search local caravans or motorhomes
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/sell-a-caravan/place-an-ad">
+           Sell a caravan
+          </a>
+         </li>
+         <li>
+          <a href="/sell-a-caravan/place-an-ad">
+           Sell a caravan or motorhome
+          </a>
+         </li>
+         <li>
+          <a href="/sell-a-caravan/selling-guide">
+           Selling guide
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/motoring-services">
+           Motoring services
+          </a>
+         </li>
+         <li>
+          <a href="/car-finance">
+           Caravan and motorhome finance
+          </a>
+         </li>
+         <li>
+          <a href="/car-insurance">
+           Caravan and motorhome insurance
+          </a>
+         </li>
+         <li>
+          <a href="/personal-plates">
+           Personal plates
+          </a>
+         </li>
+        </ul>
+       </div>
+      </li>
+      <li>
+       <a href="/items-for-sale/buy-an-item">
+        Items for Sale
+        <span class="TapExpand">
+         <i class="fo fo-down-open">
+         </i>
+        </span>
+       </a>
+       <div class="subMenu">
+        <ul class="subNav">
+         <li>
+          <a href="/items-for-sale/buy-an-item">
+           Buy an item
+          </a>
+         </li>
+         <li>
+          <a href="/items-for-sale/buy-an-item">
+           Search for an item
+          </a>
+         </li>
+         <li>
+          <a href="/items-for-sale/buying-advice">
+           Buying advice
+          </a>
+         </li>
+         <li>
+          <a href="/items-for-sale">
+           Browse all categories
+          </a>
+         </li>
+        </ul>
+        <ul class="subNav">
+         <li>
+          <a href="/sell-an-item/select-package">
+           Sell an item
+          </a>
+         </li>
+         <li>
+          <a href="/sell-an-item/select-package">
+           Sell an item
+          </a>
+         </li>
+         <li>
+          <a href="/sell-an-item/selling-guide">
+           Selling advice
+          </a>
+         </li>
+        </ul>
+       </div>
+      </li>
+      <li>
+       <a href="/reviews">
+        Reviews
+       </a>
+      </li>
+      <li>
+       <a href="/blog">
+        Blog
+       </a>
+      </li>
+      <li class="SellYourCar">
+       <a href="/place-an-ad">
+        Advertise
+        <span class="TapExpand">
+         <i class="fo fo-down-open">
+         </i>
+        </span>
+       </a>
+       <div class="subMenu">
+        <ul class="subNav">
+         <li>
+          <a href="https://localiq.co.uk/motors" target="_blank">
+           Dealer advertising
+          </a>
+         </li>
+         <li>
+          <a href="/place-an-ad">
+           Sell Your Car
+          </a>
+         </li>
+        </ul>
+       </div>
+      </li>
+      <li class="ValueAndFinance">
+       <a href="/car-finance">
+        Finance
+       </a>
+      </li>
+      <li class="ValueAndFinance">
+       <a href="/motorway">
+        Sell Your Car
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <script>
+     $('.Hamburger > .hamburger').on('click', function () {
+        var $hamburger = $(this);
+        $hamburger.toggleClass('is-active');
+        if ($hamburger.hasClass('is-active')) {
+            $('#DCHeader').addClass('isOpen');
+            $('.UserControls .Account').removeClass('isOpen');
+            $('html').css('overflow', 'hidden');
+        } else {
+            $('#DCHeader').removeClass('isOpen');
+            $('html').css('overflow', '');
+        }
+    });
+    $('.AccountExpand').on('click', function () {
+        var $menu = $('.UserControls .Account');
+        if ($(window).width() < 768) {
+            $menu.toggleClass('isOpen');
+            if ($menu.hasClass('isOpen')) {
+                $('#DCHeader, .dcHamburger').removeClass('isOpen');
+                $('html').css('overflow', 'hidden');
+            } else {
+                $('html').css('overflow', '');
+            }
+        }
+    });
+    $('.TapExpand').on('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        var $tap = $(this);
+        var $icon = $tap.find('.fo');
+        var $link = $tap.parents('li');
+        $icon.toggleClass('fo-down-open fo-up-open');
+        $link.toggleClass('isExpanded');
+    });
+    </script>
+   </div>
+  </header>
+  <div id="floatingPageContainer">
+   <div class="clearfix aside-right">
+    <div class="leftSection">
+     <form action="/ad/29889003" id="aspnetForm" method="post">
+      <div class="aspNetHidden">
+       <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="/wEPDwUKMTg3MTI2ODAyMA9kFgJmD2QWBmYPZBYCAhoPFgIeBGhyZWYFLWh0dHBzOi8vd3d3LmV4Y2hhbmdlYW5kbWFydC5jby51ay9hZC8yOTg4OTAwM2QCBRBkZBYCAgcPZBYEAgEPFgIeB1Zpc2libGVnZAIDD2QWAmYPZBYCAgEPZBYCZg8QZGQWAGQCDg8WAh8BaGRkry//OqHQdFUV3uOiNmwk1W59kDw="/>
+      </div>
+      <div class="aspNetHidden">
+       <input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="899B89B6"/>
+      </div>
+      <div class="page clearfix">
+       <div class="page clearfix">
+        <link href="/css/AdNotFound.css?v=2023.0821" media="all" rel="stylesheet"/>
+        <div class="clearfix adverts-wrapper" itemscope="" itemtype="https://schema.org/Product">
+         <div class="page-inner">
+          <div class="ad404">
+           <div class="clearfix form-group">
+            <div class="col-sm-9 col-xs-9" id="title">
+             Ford Focus 1.5 EcoBlue 120 Titanium 5dr Estate 2019
+            </div>
+            <div class="col-sm-3 col-xs-3" id="price">
+             Price:
+             <br/>
+             £14,490
+            </div>
+           </div>
+           <div class="col-sm-8 clearfix" id="leftCol">
+            <div id="leftTop">
+             <div class="col-sm-6 col-xs-6" id="leftTopLeft">
+              <img alt="Ford Focus 1.5 EcoBlue 120 Titanium 5dr Estate" itemprop="image" src="/img/404/na_car.png"/>
+             </div>
+             <div class="col-sm-6 col-xs-6" id="leftTopRight">
+              <div id="sad">
+               <i class="fo fo-frown-o">
+               </i>
+              </div>
+              <p id="soz">
+               Sorry, this vehicle is no longer available
+              </p>
+             </div>
+            </div>
+            <div class="col-sm-6" id="leftbottom">
+             <p>
+              With over 7.1 million visitors per month, cars do not stay on the site for long.
+             </p>
+             <a class="btn-default btn-lg" href="/used-cars-for-sale/ford">
+              Search for others like this
+             </a>
+            </div>
+           </div>
+           <div class="col-sm-4" id="rightCol">
+            <div>
+             <h3>
+              Sell your vehicle
+             </h3>
+             <p>
+              This car is now sold. Please remember us when you sell yours.
+             </p>
+             <a class="sellFloatBtn form-group" href="/sell-a-car/place-an-ad" style="color:#fff !important;text-align:center;width:100%;cursor:pointer;font-weight:700;text-transform:none;font-size:17px !important;border-radius:8px;border:2px solid #fff;padding:8px 16px !important;">
+              Place Ad
+             </a>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <script type="text/javascript">
+       var data_layer = {
+            'environment_HTTPResponse':'404',
+'navigation_UrlPath':'/ad/29889003',
+'navigation_Website':'www.exchangeandmart.co.uk',
+'user_LoggedIn':'No'
+    };
+    data_layer['content_PageName'] = 'Page Cannot Be Found';
+
+    
+
+    var data_layer_helper = {
+        loadScript(url, async) {
+            var e = document.createElement('script');
+            var n = document.getElementsByTagName('body')[0];
+            e.type = 'text/javascript';
+            e.async = async;
+            e.src = url;
+            n.parentNode.insertBefore(e, n);
+        }
+    };
+      </script>
+      <script async="" src="//assets.adobedtm.com/499440d21de9/da228dea3287/launch-04283e6c606d.min.js">
+      </script>
+      <script>
+       document.cookie='js=1; domain=' + window.location.host + '; path=/';
+      </script>
+      <div id="mdlPop">
+       <a id="shwAlrt" name="modal" pop="mdlAlert" style="display:none">
+       </a>
+       <a id="shwCnf" name="modal" pop="mdlConfirm" style="display:none">
+       </a>
+       <div class="window" id="mdlAlert">
+        <div role="dialog">
+         <div class="modal-dialog">
+          <div class="modal-content enm-modal-content style-section">
+           <div class="modal-header enm-modal-header">
+            <a class="close" data-dismiss="modal">
+             ×
+            </a>
+            <h4 class="modal-title">
+             Alert
+            </h4>
+           </div>
+           <div class="modal-body enm-modal-body text-center">
+            <p class="cb" id="alrtMsg">
+            </p>
+           </div>
+           <div class="modal-footer enm-modal-footer">
+            <button class="btn btn-default closePop" data-dismiss="modal">
+             OK
+            </button>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="window" id="mdlConfirm">
+        <div role="dialog">
+         <div class="modal-dialog">
+          <div class="modal-content enm-modal-content style-section">
+           <div class="modal-header enm-modal-header">
+            <a class="close" data-dismiss="modal">
+             ×
+            </a>
+            <h4 class="modal-title">
+             Please Confirm
+            </h4>
+           </div>
+           <div class="modal-body enm-modal-body text-center">
+            <p class="cb" id="cnfMsg">
+            </p>
+           </div>
+           <div class="modal-footer enm-modal-footer">
+            <div style="width:50%;float:left;padding-right:10px">
+             <button class="btn btn-default" id="btnCnfOK">
+              OK
+             </button>
+            </div>
+            <div style="width:50%;float:right;padding-left:10px">
+             <button class="btn btn-default closePop" data-dismiss="modal" style="background-color:grey">
+              Cancel
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="window slModal" id="mdlShortlistInfo">
+       </div>
+       <div class="window" id="mdlTax">
+       </div>
+       <div id="msk">
+       </div>
+       <script>
+        Enm.Core.PrepModal()
+       </script>
+      </div>
+     </form>
+     <form action="/login" id="gologin" method="post" name="gologin">
+      <input id="netPG" name="netPG" type="hidden" value="test"/>
+     </form>
+    </div>
+   </div>
+   <div align="center" id="bottomContainer">
+    <div dfp_sizes="[0,0]" id="DFP_PH_Bottom_Billboard" res_pos="Bottom_Billboard" style="max-width:100%;text-align:center">
+    </div>
+   </div>
+   <br style="clear:both"/>
+  </div>
+  <div id="footer">
+   <div class="emf_emblem">
+    <div class="emf_emblem-ball emf_emblem-ball_1">
+    </div>
+    <div class="emf_emblem-ball emf_emblem-ball_2">
+    </div>
+    <div class="emf_emblem-ball emf_emblem-ball_3">
+    </div>
+   </div>
+   <div id="footerSocialWrap">
+    <ul class="clearfix">
+     <li>
+      <a href="https://www.facebook.com/exchangeandmart" target="_blank" title="Facebook">
+       <i class="fo fo-facebook-disk">
+       </i>
+      </a>
+     </li>
+     <li>
+      <a href="https://twitter.com/ExchangeMart" target="_blank" title="Twitter">
+       <i class="fo fo-twitter-disk">
+       </i>
+      </a>
+     </li>
+    </ul>
+   </div>
+   <div id="footerLinksWrap">
+    <div class="footerLinkItem">
+     <span>
+      Terms and policies
+     </span>
+     <a href="https://www.newsquest.co.uk/terms-conditions" rel="noopener noreferrer" target="_blank">
+      Terms and Conditions
+     </a>
+     <a href="https://www.newsquest.co.uk/privacy-policy" rel="noopener noreferrer" target="_blank">
+      Privacy Policy
+     </a>
+     <a href="https://www.newsquest.co.uk/cookie-policy" rel="noopener noreferrer" target="_blank">
+      Cookie Policy
+     </a>
+     <a class="gdpr-option-v2" data-v2-id="407192" href="/gdpr/">
+      Manage Consent
+     </a>
+     <a href="https://www.youronlinechoices.com/uk/" rel="nofollow" target="_blank">
+      AdChoices
+      <span class="fo fo-adchoices" title="AdChoices">
+      </span>
+     </a>
+    </div>
+    <div class="footerLinkItem">
+     <span>
+      About us
+     </span>
+     <a href="/contact-us">
+      Contact Us
+     </a>
+     <a href="/work-for-us">
+      Work for Us
+     </a>
+    </div>
+    <div class="footerLinkItem">
+     <span>
+      For Dealers
+     </span>
+     <a href="https://localiq.co.uk/motors" target="_blank">
+      Advertise with Us
+     </a>
+     <a href="https://portal.exchangeandmart.co.uk">
+      Log in to Trade Portal
+     </a>
+     <a href="/trade-terms-and-conditions">
+      Terms &amp; Conditions
+     </a>
+    </div>
+    <div class="footerLinkItem">
+     <span>
+      Useful links
+     </span>
+     <a href="/local-used-cars">
+      Cars in the UK
+     </a>
+     <a href="/used-cars-for-sale">
+      All Used Cars
+     </a>
+    </div>
+   </div>
+   <div id="footerTandCs">
+    <p>
+     Your use of this site is subject to our
+     <a href="https://www.newsquest.co.uk/terms-conditions" rel="nofollow" target="_blank">
+      terms &amp; conditions of use
+     </a>
+     and our
+     <a href="http://www.newsquest.co.uk/privacy-policy" rel="nofollow" target="_blank">
+      privacy policy
+     </a>
+     .
+    </p>
+    <p>
+     © 2023 Exchange Enterprises, Newsquest Media Group. All rights reserved.
+    </p>
+    <p>
+     Exchange and Mart is a trading name of Newsquest Media Group who is an Appointed Representative of CARMONEY Limited. FCA Firm Reference number 674094.
+    </p>
+   </div>
+  </div>
+  <!-- <script>Enm.Consent.Init()</script>-->
+  <script type="text/javascript">
+   !function () { var e = function () { var e, t = "__tcfapiLocator", a = [], n = window; for (; n;) { try { if (n.frames[t]) { e = n; break } } catch (e) { } if (n === window.top) break; n = n.parent } e || (!function e() { var a = n.document, r = !!n.frames[t]; if (!r) if (a.body) { var i = a.createElement("iframe"); i.style.cssText = "display:none", i.name = t, a.body.appendChild(i) } else setTimeout(e, 5); return !r }(), n.__tcfapi = function () { for (var e, t = arguments.length, n = new Array(t), r = 0; r < t; r++)n[r] = arguments[r]; if (!n.length) return a; if ("setGdprApplies" === n[0]) n.length > 3 && 2 === parseInt(n[1], 10) && "boolean" == typeof n[3] && (e = n[3], "function" == typeof n[2] && n[2]("set", !0)); else if ("ping" === n[0]) { var i = { gdprApplies: e, cmpLoaded: !1, cmpStatus: "stub" }; "function" == typeof n[2] && n[2](i) } else a.push(n) }, n.addEventListener("message", (function (e) { var t = "string" == typeof e.data, a = {}; try { a = t ? JSON.parse(e.data) : e.data } catch (e) { } var n = a.__tcfapiCall; n && window.__tcfapi(n.command, n.version, (function (a, r) { var i = { __tcfapiReturn: { returnValue: a, success: r, callId: n.callId } }; t && (i = JSON.stringify(i)), e.source.postMessage(i, "*") }), n.parameter) }), !1)) }; "undefined" != typeof module ? module.exports = e : e() }();
+  </script>
+  <script type="text/javascript">
+   (function () {
+           window._sp_ = {
+            config: {
+                baseEndpoint: 'https://a02342.exchangeandmart.co.uk',
+                accountId: 52,
+                events: {
+                    onMessageReady: function (choice_id, choice_type) {
+                // saved for later
+            },
+                    onMessageChoiceSelect: function (choice_id, choice_type_id) {
+                // saved for later
+            },
+                    onPrivacyManagerActionStatus: function (pmData) {
+                // saved for later
+            }
+        }
+    }
+        };
+
+    __tcfapi('addEventListener', 2, function (tcData, success) {
+        if (success && tcData.eventStatus === 'useractioncomplete') {
+            var csnt = 'none';
+            if (readCookie('_sp_enable_dfp_personalized_ads') === 'true') {
+                csnt = 'yes';
+            } else if (readCookie('_sp_enable_dfp_personalized_ads') === 'false') {
+                csnt = 'no';
+            }
+            googletag.cmd.push(function () {
+                googletag.pubads().setTargeting('dfpcsnt', csnt);
+            });
+            // ready to start DFP
+        } else if (success && tcData.eventStatus === 'tcloaded') {
+            // saved for later
+        }
+    });
+
+        $(document).on('click', '.gdpr-option-v2', function (e) {
+        e.preventDefault();
+        var id = $(this).data('v2-id');
+        _sp_.loadPrivacyManagerModal(id);
+    });
+    })();
+  </script>
+  <script id="gdpr-wmwd" src="https://a02342.exchangeandmart.co.uk/wrapperMessagingWithoutDetection.js">
+  </script>
+  <div class="sp-modal" id="sp-modal">
+   <!-- Modal content -->
+   <div class="sp-modal-content">
+    <iframe id="sp-modal-iframe" src="">
+    </iframe>
+   </div>
+  </div>
+  <!--DMH-ENM-WEB1-->
+  <script type="text/javascript">
+   EnmLzL(); prepMPS(); pagelifespan = "finish";var pfPn = '';
+  </script>
+  <script>
+   (function(){e=document.createElement("script");e.type="text/javascript",e.async=1,e.src="//exchangeandmart.calltracks.com/wnd/v2/loader.js?class_names='adviewPhoneNumber'";document.getElementsByTagName("head")[0].appendChild(e)})()
+  </script>
+ </body>
+</html>
