@@ -2,6 +2,13 @@ import requests
 from bs4 import BeautifulSoup
 import time
 import pandas as pd
+import os
+
+base_url = 'https://www.exchangeandmart.co.uk/ad/'
+
+request_type_web = 0
+request_type_local = 1
+request_type_web_with_save = 2
 
 # TEMPORARY GLOBAL VARIABLES:
 request_time = 0
@@ -35,6 +42,37 @@ def get_soup(url):
     return soup
 
 
+def get_advert_html(current_id, mode):
+    global base_url, request_type_web, request_type_local, request_type_web_with_save
+
+    retval = "no file"
+    filename = "datafiles/" + str(current_id) + ".txt"
+
+    if mode == request_type_web:
+        retval = get_soup(base_url + str(current_id))
+
+    elif mode == request_type_local:
+        # read local file
+        if os.path.isfile(filename):
+            retval = BeautifulSoup(open(filename).read(), "html.parser")
+            print('found file ' + filename)
+        else :
+            print('cannot find file ' + filename)
+
+    elif mode == request_type_web_with_save:
+        # read web and save locally
+        soup = get_soup(base_url + str(current_id))
+        retval = soup
+
+        # now save the file
+        f = open(filename, "w+")
+        f.write(soup.prettify())
+        f.close
+        pass
+
+    return retval
+
+
 def convert_to_liters(engine_size):
     """
     Some listings have the engine size in cc. This function removes the units and converts cc into litres.
@@ -64,7 +102,7 @@ def advert_info(url, current_id):
     :return: combined_dataframe: pandas dataframe which contains data from the title of the ad, the 'table' and the
              'specifications tab'
     """
-    global request_time, parsing_time, scraping_and_manipulating_specification_data, scraping_and_manipulating_table_data, renaming_and_removing_units, cumulative_request_time, cumulative_parsing_time, cumulative_scraping_and_manipulating_specification_data, cumulative_scraping_and_manipulating_table_data, cumulative_renaming_and_removing_units
+    global request_time, parsing_time, scraping_and_manipulating_specification_data, scraping_and_manipulating_table_data, renaming_and_removing_units, cumulative_request_time, cumulative_parsing_time, cumulative_scraping_and_manipulating_specification_data, cumulative_scraping_and_manipulating_table_data, cumulative_renaming_and_removing_units, request_type_local, request_type_web_with_save
     start_time = time.perf_counter_ns()
 
     # dictionary of data scraped from the website and inputted as a parameter
@@ -81,7 +119,8 @@ def advert_info(url, current_id):
     # the types of data available in the 'table' of data (for internal combustion engines only, currently...)
     types_of_data = ['Year', 'Engine size', 'Mileage', 'Fuel type', 'Transmission', 'Colour', 'Body type', 'Mpg']
 
-    soup = get_soup(url)
+    soup = get_advert_html(current_id, request_type_local)
+
     request_time = time.perf_counter_ns() - start_time
 
     # locating and scraping the data for the make and model of the car
@@ -183,20 +222,11 @@ def advert_info(url, current_id):
         cumulative_scraping_and_manipulating_table_data = cumulative_scraping_and_manipulating_table_data + scraping_and_manipulating_table_data
         cumulative_renaming_and_removing_units = cumulative_renaming_and_removing_units + renaming_and_removing_units
 
-
         return combined_dataframe
-
-    # def get_ad_by_id(id, mode):
-    # if mode == 0:
-    #     # read web
-    # elif mode == 1:
-    #     # read local file
-    # elif mode == 2:
-    #     # read web and save locally
-    #
 
 
 def main():
+    global base_url
     counter_to_use_with_timer = 0
 
     still_searching = True  # boolean: when false the task is complete and the scraper will stop
@@ -204,7 +234,6 @@ def main():
     # the consecutive amount of blank results we can get before considering all future adverts are blank/not created yet
     max_consecutive_inactive_ids = 50  # this number can be changed depending on how strict we are
     current_consecutive_inactive_ids = 0
-    base_url = 'https://www.exchangeandmart.co.uk/ad/'
 
     # finding what id number the scraper got up to last time and then adding 1 and continuing from there
     current_id_number = data_file.iat[len(data_file['ID value']) - 1, data_file.columns.get_loc('ID value')] + 1
@@ -220,18 +249,23 @@ def main():
         else:
             # if we are not at the limit of inactive ids we search if the page exists. If it exists we run the scraper.
             # And then append the data to the 'master' dataframe
-            soup = get_soup(base_url + str(current_id_number))
-            if soup.find("div", id="vehicle-desc"):
+            soup = get_advert_html(current_id_number, request_type_local)
+            if soup == 'no file':
+                # this isnt a soup object. The file request failed
+                current_consecutive_inactive_ids += 1
+
+            elif soup.find("div", id="vehicle-desc"):
                 current_consecutive_inactive_ids = 0
                 #print(advert_info(base_url + str(current_id_number), current_id_number), current_id_number)
                 updated_data = pd.concat([updated_data, advert_info(base_url + str(current_id_number),
                                                                     current_id_number)], axis=0, ignore_index=True)
                 # move on to next id number
-                current_id_number += 1
+
             else:
                 # if the page doesn't exist. Increment the inactive id count and move onto next id number
                 current_consecutive_inactive_ids += 1
-                current_id_number += 1
+
+            current_id_number += 1
 
 
 if __name__ == "__main__":
