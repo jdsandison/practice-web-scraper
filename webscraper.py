@@ -1,6 +1,19 @@
 import requests
 from bs4 import BeautifulSoup
+import time
 import pandas as pd
+
+# TEMPORARY GLOBAL VARIABLES:
+request_time = 0
+parsing_time = 0
+scraping_and_manipulating_specification_data = 0
+scraping_and_manipulating_table_data = 0
+renaming_and_removing_units = 0
+cumulative_request_time = 0
+cumulative_parsing_time = 0
+cumulative_scraping_and_manipulating_specification_data = 0
+cumulative_scraping_and_manipulating_table_data = 0
+cumulative_renaming_and_removing_units = 0
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 "
@@ -51,6 +64,8 @@ def advert_info(url, current_id):
     :return: combined_dataframe: pandas dataframe which contains data from the title of the ad, the 'table' and the
              'specifications tab'
     """
+    global request_time, parsing_time, scraping_and_manipulating_specification_data, scraping_and_manipulating_table_data, renaming_and_removing_units, cumulative_request_time, cumulative_parsing_time, cumulative_scraping_and_manipulating_specification_data, cumulative_scraping_and_manipulating_table_data, cumulative_renaming_and_removing_units
+    start_time = time.perf_counter_ns()
 
     # dictionary of data scraped from the website and inputted as a parameter
     first_data = {'makes and models': None,
@@ -65,7 +80,9 @@ def advert_info(url, current_id):
 
     # the types of data available in the 'table' of data (for internal combustion engines only, currently...)
     types_of_data = ['Year', 'Engine size', 'Mileage', 'Fuel type', 'Transmission', 'Colour', 'Body type', 'Mpg']
+
     soup = get_soup(url)
+    request_time = time.perf_counter_ns() - start_time
 
     # locating and scraping the data for the make and model of the car
     make_and_model_container = soup.find('h2', class_='col-xs-9')
@@ -82,6 +99,8 @@ def advert_info(url, current_id):
     # locating the data from the 'table' of data
     table_of_info = soup.find_all("div", class_="adDetsItem")
 
+    parsing_time = time.perf_counter_ns() - start_time - request_time
+
     # scraping the data from the 'specification tab' into a dictionary with respective keys and values
     for item in specification_tab:
         data = list(item.stripped_strings)
@@ -95,6 +114,8 @@ def advert_info(url, current_id):
         # sometimes the 'specification tab' is not always present. In this case we ignore the advert
         print('no given specification tab', current_id)
         rejected_ids_for_spec.append(current_id)
+
+    scraping_and_manipulating_specification_data = time.perf_counter_ns() - start_time - request_time - parsing_time
 
     # scraping the data from the 'table' into a list
     list_of_table_data = []
@@ -111,6 +132,8 @@ def advert_info(url, current_id):
         # in this case we ignore the advert and record the id for future use
         print('not all data present', list_of_table_data, 'rejected id value', current_id)
         return
+
+    scraping_and_manipulating_table_data = time.perf_counter_ns() - start_time - request_time - parsing_time - scraping_and_manipulating_specification_data
 
     # turning the dictionaries and lists into dataframes for future manipulation
     specification_tab_dataframe = pd.DataFrame(specs_list)
@@ -152,10 +175,30 @@ def advert_info(url, current_id):
         combined_dataframe['Tank range (miles)'] = combined_dataframe['Tank range (miles)'].str.slice(stop=-5)
         combined_dataframe['Engine size (litres)'] = combined_dataframe['Engine size (litres)'].apply(convert_to_liters)
 
+        renaming_and_removing_units = time.perf_counter_ns() - start_time - request_time - parsing_time - scraping_and_manipulating_table_data - scraping_and_manipulating_specification_data
+
+        cumulative_request_time = cumulative_request_time + request_time
+        cumulative_parsing_time = cumulative_parsing_time + parsing_time
+        cumulative_scraping_and_manipulating_specification_data = cumulative_scraping_and_manipulating_specification_data + scraping_and_manipulating_specification_data
+        cumulative_scraping_and_manipulating_table_data = cumulative_scraping_and_manipulating_table_data + scraping_and_manipulating_table_data
+        cumulative_renaming_and_removing_units = cumulative_renaming_and_removing_units + renaming_and_removing_units
+
+
         return combined_dataframe
+
+    # def get_ad_by_id(id, mode):
+    # if mode == 0:
+    #     # read web
+    # elif mode == 1:
+    #     # read local file
+    # elif mode == 2:
+    #     # read web and save locally
+    #
 
 
 def main():
+    counter_to_use_with_timer = 0
+
     still_searching = True  # boolean: when false the task is complete and the scraper will stop
 
     # the consecutive amount of blank results we can get before considering all future adverts are blank/not created yet
@@ -168,9 +211,11 @@ def main():
     updated_data = data_file
 
     while still_searching:
+        counter_to_use_with_timer += 1
         if current_consecutive_inactive_ids > max_consecutive_inactive_ids:
             # terminate the scraping and output a csv file when we get to the limit of inactive ids
             updated_data.to_csv('data.csv', index=False, encoding='utf-8')
+            print('average request time: ', cumulative_request_time/counter_to_use_with_timer, ' | ', 'average parsing time: ', cumulative_parsing_time/counter_to_use_with_timer, ' | ', 'average time for spec tab: ', cumulative_scraping_and_manipulating_specification_data/counter_to_use_with_timer, ' | ', 'average time for table data: ', cumulative_scraping_and_manipulating_table_data/counter_to_use_with_timer, ' | ', 'average time to change units in dataframe: ', cumulative_renaming_and_removing_units/counter_to_use_with_timer)
             still_searching = False
         else:
             # if we are not at the limit of inactive ids we search if the page exists. If it exists we run the scraper.
