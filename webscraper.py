@@ -10,17 +10,8 @@ request_type_web = 0
 request_type_local = 1
 request_type_web_with_save = 2
 
-# TEMPORARY GLOBAL VARIABLES:
-request_time = 0
-parsing_time = 0
-scraping_and_manipulating_specification_data = 0
-scraping_and_manipulating_table_data = 0
-renaming_and_removing_units = 0
-cumulative_request_time = 0
-cumulative_parsing_time = 0
-cumulative_scraping_and_manipulating_specification_data = 0
-cumulative_scraping_and_manipulating_table_data = 0
-cumulative_renaming_and_removing_units = 0
+ids_with_incomplete_table_data = []
+ids_with_missing_specs_tab = []
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 "
@@ -102,16 +93,14 @@ def advert_info(url, current_id):
     :return: combined_dataframe: pandas dataframe which contains data from the title of the ad, the 'table' and the
              'specifications tab'
     """
-    global request_time, parsing_time, scraping_and_manipulating_specification_data, scraping_and_manipulating_table_data, renaming_and_removing_units, cumulative_request_time, cumulative_parsing_time, cumulative_scraping_and_manipulating_specification_data, cumulative_scraping_and_manipulating_table_data, cumulative_renaming_and_removing_units, request_type_local, request_type_web_with_save
-    start_time = time.perf_counter_ns()
+    global request_type_web, request_type_local, request_type_web_with_save, ids_with_missing_specs_tab, ids_with_incomplete_table_data
 
     # dictionary of data scraped from the website and inputted as a parameter
-    first_data = {'makes and models': None,
+    initial_data = {'makes and models': None,
                   'Id value': current_id}
 
     full_table_data = []
     accepted_ids = []
-    rejected_ids_for_spec = []
     specs_list = []
     accumulated_data = []
     specs = {}
@@ -121,8 +110,6 @@ def advert_info(url, current_id):
 
     soup = get_advert_html(current_id, request_type_local)
 
-    request_time = time.perf_counter_ns() - start_time
-
     # locating and scraping the data for the make and model of the car
     make_and_model_container = soup.find('h2', class_='col-xs-9')
     if make_and_model_container is None:
@@ -130,15 +117,13 @@ def advert_info(url, current_id):
     else:
         make_and_model = make_and_model_container.find('span', class_='ttl')
 
-    first_data['makes and models'] = make_and_model.get_text(strip=True)
+    initial_data['makes and models'] = make_and_model.get_text(strip=True)
 
     # locating the data from the 'specification tab'
     specification_tab = soup.find_all("div", class_="adSpecItem")
 
     # locating the data from the 'table' of data
     table_of_info = soup.find_all("div", class_="adDetsItem")
-
-    parsing_time = time.perf_counter_ns() - start_time - request_time
 
     # scraping the data from the 'specification tab' into a dictionary with respective keys and values
     for item in specification_tab:
@@ -152,9 +137,7 @@ def advert_info(url, current_id):
     else:
         # sometimes the 'specification tab' is not always present. In this case we ignore the advert
         print('no given specification tab', current_id)
-        rejected_ids_for_spec.append(current_id)
-
-    scraping_and_manipulating_specification_data = time.perf_counter_ns() - start_time - request_time - parsing_time
+        ids_with_missing_specs_tab.append(current_id)
 
     # scraping the data from the 'table' into a list
     list_of_table_data = []
@@ -170,9 +153,8 @@ def advert_info(url, current_id):
     else:
         # in this case we ignore the advert and record the id for future use
         print('not all data present', list_of_table_data, 'rejected id value', current_id)
+        ids_with_incomplete_table_data.append(current_id)
         return
-
-    scraping_and_manipulating_table_data = time.perf_counter_ns() - start_time - request_time - parsing_time - scraping_and_manipulating_specification_data
 
     # turning the dictionaries and lists into dataframes for future manipulation
     specification_tab_dataframe = pd.DataFrame(specs_list)
@@ -185,7 +167,7 @@ def advert_info(url, current_id):
                       'Wheel drive', 'Doors', 'Seats', 'Engine power', 'Top speed',
                       'Acceleration (0-62 mph)', 'CO2 rating', 'Tank range']
     specification_tab_dataframe = specification_tab_dataframe.filter(items=wanted_columns)
-    make_and_model_and_id_df = pd.DataFrame(first_data, index=[0])
+    make_and_model_and_id_df = pd.DataFrame(initial_data, index=[0])
 
     # if any not applicable entries are present we ignore the advert
     for index, row in specification_tab_dataframe.iterrows():
@@ -212,24 +194,67 @@ def advert_info(url, current_id):
         combined_dataframe['Acceleration (0-62 mph) (seconds)'] = combined_dataframe[
             'Acceleration (0-62 mph) (seconds)'].str.replace(' seconds', '')
         combined_dataframe['CO2 rating (g/km)'] = combined_dataframe['CO2 rating (g/km)'].str.replace(' g/km', '')
-        combined_dataframe['CO2 rating (g/km)'] = combined_dataframe['CO2 rating (g/km)'].str.replace(' g/km', '')
         combined_dataframe['Tank range (miles)'] = combined_dataframe['Tank range (miles)'].str.replace(' miles', '')
         combined_dataframe['Engine size (litres)'] = combined_dataframe['Engine size (litres)'].apply(convert_to_liters)
-
-        renaming_and_removing_units = time.perf_counter_ns() - start_time - request_time - parsing_time - scraping_and_manipulating_table_data - scraping_and_manipulating_specification_data
-
-        cumulative_request_time = cumulative_request_time + request_time
-        cumulative_parsing_time = cumulative_parsing_time + parsing_time
-        cumulative_scraping_and_manipulating_specification_data = cumulative_scraping_and_manipulating_specification_data + scraping_and_manipulating_specification_data
-        cumulative_scraping_and_manipulating_table_data = cumulative_scraping_and_manipulating_table_data + scraping_and_manipulating_table_data
-        cumulative_renaming_and_removing_units = cumulative_renaming_and_removing_units + renaming_and_removing_units
 
         return combined_dataframe
 
 
+def incomplete_table_data(current_id):
+    print(current_id)
+    soup = get_advert_html(current_id, request_type_local)
+    if soup.find_all("div", class_="adSpecItem"):
+        initial_data ={'makes and models': None, 'Id value': current_id}
+        make_and_model_container = soup.find('h2', class_='col-xs-9')
+        if make_and_model_container is None:
+            return
+        else:
+            make_and_model = make_and_model_container.find('span', class_='ttl')
+
+        initial_data['makes and models'] = make_and_model.get_text(strip=True)
+        make_and_model_and_id_df = pd.DataFrame(initial_data, index=[0])
+        table_of_info = soup.find_all("div", class_="adDetsItem")
+        list_of_table_data = []
+        #column_names = ['Year', 'Engine size', 'Mileage', 'Fuel type', 'Transmission', 'Colour', 'Body type']
+
+        for info in table_of_info:
+            data = info.text.strip()
+            list_of_table_data.append(data)
+        print(list_of_table_data)
+        if list_of_table_data[2] == 'Electric' or 'Hybrid':
+            table_data_dataframe = pd.DataFrame(list_of_table_data, index=[0])
+            specification_tab_dataframe = specification_tab_scraper(current_id)
+            electric_or_hybrid_dataframe = pd.concat([make_and_model_and_id_df, table_data_dataframe, specification_tab_dataframe], ignore_index=True, axis=1)
+            if electric_or_hybrid_dataframe.shape[1] == 13:
+                electric_or_hybrid_dataframe.columns = ['Make and model', 'ID value', 'Year','Mileage (miles)',
+                                                        'Fuel type', 'Transmission', 'Colour', 'Body type',
+                                                        'Wheel drive', 'Doors', 'Seats', 'Top speed (mph)',
+                                                        'Acceleration (0-62 mph) (seconds)']
+                electric_or_hybrid_dataframe['Mileage (miles)'] = electric_or_hybrid_dataframe['Mileage (miles)'].str.replace(' miles', '')
+                electric_or_hybrid_dataframe['Top speed (mph)'] = electric_or_hybrid_dataframe['Top speed (mph)'].str.replace(' mph', '')
+                electric_or_hybrid_dataframe['Acceleration (0-62 mph) (seconds)'] = electric_or_hybrid_dataframe[
+                    'Acceleration (0-62 mph) (seconds)'].str.replace(' seconds', '')
+
+                return electric_or_hybrid_dataframe
+
+
+def specification_tab_scraper(current_id):
+    soup = get_advert_html(current_id, request_type_local)
+    specification_tab = soup.find_all("div", class_="adSpecItem")
+    wanted_columns = ['Wheel drive', 'Doors', 'Seats', 'Engine power', 'Top speed', 'Acceleration (0-62 mph)']
+    specs = {}
+    for item in specification_tab:
+        data = list(item.stripped_strings)
+        key = data[0].strip(':')
+        value = data[1]
+        specs[key] = value
+    specification_tab_dataframe = pd.DataFrame(specs)
+    specification_tab_dataframe.filter(wanted_columns)
+    return specification_tab_dataframe
+
+
 def main():
     global base_url
-    counter_to_use_with_timer = 0
 
     still_searching = True  # boolean: when false the task is complete and the scraper will stop
 
@@ -241,12 +266,18 @@ def main():
     current_id_number = data_file.iat[len(data_file['ID value']) - 1, data_file.columns.get_loc('ID value')] + 1
     updated_data = data_file
 
+    electric_or_hybrid = pd.DataFrame()
+
     while still_searching:
-        counter_to_use_with_timer += 1
         if current_consecutive_inactive_ids > max_consecutive_inactive_ids:
             # terminate the scraping and output a csv file when we get to the limit of inactive ids
             updated_data.to_csv('data.csv', index=False, encoding='utf-8')
-            print('average request time: ', cumulative_request_time/counter_to_use_with_timer, ' | ', 'average parsing time: ', cumulative_parsing_time/counter_to_use_with_timer, ' | ', 'average time for spec tab: ', cumulative_scraping_and_manipulating_specification_data/counter_to_use_with_timer, ' | ', 'average time for table data: ', cumulative_scraping_and_manipulating_table_data/counter_to_use_with_timer, ' | ', 'average time to change units in dataframe: ', cumulative_renaming_and_removing_units/counter_to_use_with_timer)
+
+            for ids in ids_with_incomplete_table_data:
+                electric_or_hybrid = pd.concat([electric_or_hybrid, incomplete_table_data(ids)])
+
+            electric_or_hybrid.to_csv('electric-or-hybrid.csv', index=False, encoding='utf-8')
+
             still_searching = False
         else:
             # if we are not at the limit of inactive ids we search if the page exists. If it exists we run the scraper.
