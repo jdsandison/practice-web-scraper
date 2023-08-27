@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import time
 import pandas as pd
 import os
 
@@ -16,6 +15,11 @@ ids_with_missing_specs_tab = []
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 "
                   "Safari/537.36"}
+
+proxies = [
+    '67.43.227.227:18549'
+]
+
 
 # reading in data file from previous scraping
 data_file = pd.read_csv(r'data.csv')
@@ -108,7 +112,7 @@ def advert_info(url, current_id):
     # the types of data available in the 'table' of data (for internal combustion engines only, currently...)
     types_of_data = ['Year', 'Engine size', 'Mileage', 'Fuel type', 'Transmission', 'Colour', 'Body type', 'Mpg']
 
-    soup = get_advert_html(current_id, request_type_local)
+    soup = get_advert_html(current_id, request_type_web)
 
     # locating and scraping the data for the make and model of the car
     make_and_model_container = soup.find('h2', class_='col-xs-9')
@@ -239,7 +243,7 @@ def incomplete_table_data(current_id):
 
 
 def specification_tab_scraper(current_id):
-    soup = get_advert_html(current_id, request_type_local)
+    soup = get_advert_html(current_id, request_type_web)
     specification_tab = soup.find_all("div", class_="adSpecItem")
     wanted_columns = ['Wheel drive', 'Doors', 'Seats', 'Engine power', 'Top speed', 'Acceleration (0-62 mph)']
     specs = {}
@@ -259,7 +263,7 @@ def main():
     still_searching = True  # boolean: when false the task is complete and the scraper will stop
 
     # the consecutive amount of blank results we can get before considering all future adverts are blank/not created yet
-    max_consecutive_inactive_ids = 100  # this number can be changed depending on how strict we are
+    max_consecutive_inactive_ids = 94  # this number can be changed depending on how strict we are
     current_consecutive_inactive_ids = 0
 
     # finding what id number the scraper got up to last time and then adding 1 and continuing from there
@@ -273,16 +277,16 @@ def main():
             # terminate the scraping and output a csv file when we get to the limit of inactive ids
             updated_data.to_csv('data.csv', index=False, encoding='utf-8')
 
-            for ids in ids_with_incomplete_table_data:
-                electric_or_hybrid = pd.concat([electric_or_hybrid, incomplete_table_data(ids)])
-
-            electric_or_hybrid.to_csv('electric-or-hybrid.csv', index=False, encoding='utf-8')
+            # for ids in ids_with_incomplete_table_data:
+            #     electric_or_hybrid = pd.concat([electric_or_hybrid, incomplete_table_data(ids)])
+            #
+            # electric_or_hybrid.to_csv('electric-or-hybrid.csv', index=False, encoding='utf-8')
 
             still_searching = False
         else:
             # if we are not at the limit of inactive ids we search if the page exists. If it exists we run the scraper.
             # And then append the data to the 'master' dataframe
-            soup = get_advert_html(current_id_number, request_type_local)
+            soup = get_advert_html(current_id_number, request_type_web)
             if soup == 'no file':
                 # this isnt a soup object. The file request failed
                 current_consecutive_inactive_ids += 1
