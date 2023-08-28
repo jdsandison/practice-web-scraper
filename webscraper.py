@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import os
+import time
 
 base_url = 'https://www.exchangeandmart.co.uk/ad/'
 
@@ -204,6 +205,7 @@ def advert_info(url, current_id):
         return combined_dataframe
 
 
+# below is in development
 def incomplete_table_data(current_id):
     print(current_id)
     soup = get_advert_html(current_id, request_type_local)
@@ -263,8 +265,9 @@ def main():
     still_searching = True  # boolean: when false the task is complete and the scraper will stop
 
     # the consecutive amount of blank results we can get before considering all future adverts are blank/not created yet
-    max_consecutive_inactive_ids = 94  # this number can be changed depending on how strict we are
+    max_consecutive_inactive_ids = 1000  # this number can be changed depending on how strict we are
     current_consecutive_inactive_ids = 0
+    consecutive_ids_for_checkpoint = 0 # adding a checkpoint so that all data isn't lost if there's an error
 
     # finding what id number the scraper got up to last time and then adding 1 and continuing from there
     current_id_number = data_file.iat[len(data_file['ID value']) - 1, data_file.columns.get_loc('ID value')] + 1
@@ -283,6 +286,12 @@ def main():
             # electric_or_hybrid.to_csv('electric-or-hybrid.csv', index=False, encoding='utf-8')
 
             still_searching = False
+
+        # temporary elif for partial scraping
+        elif current_id_number > 29900800:
+            updated_data.to_csv('data.csv', index=False, encoding='utf-8')
+            still_searching = False
+
         else:
             # if we are not at the limit of inactive ids we search if the page exists. If it exists we run the scraper.
             # And then append the data to the 'master' dataframe
@@ -293,7 +302,6 @@ def main():
 
             elif soup.find("div", id="vehicle-desc"):
                 current_consecutive_inactive_ids = 0
-                #print(advert_info(base_url + str(current_id_number), current_id_number), current_id_number)
                 updated_data = pd.concat([updated_data, advert_info(base_url + str(current_id_number),
                                                                     current_id_number)], axis=0, ignore_index=True)
                 # move on to next id number
@@ -302,7 +310,14 @@ def main():
                 # if the page doesn't exist. Increment the inactive id count and move onto next id number
                 current_consecutive_inactive_ids += 1
 
+            time.sleep(1.5)
+            consecutive_ids_for_checkpoint += 1
             current_id_number += 1
+
+        # adding a checkpoint for every 100 ids. So if there's an error not all the data is lost
+        if consecutive_ids_for_checkpoint == 100:
+            updated_data.to_csv('data.csv', index=False, encoding='utf-8')
+            consecutive_ids_for_checkpoint = 0
 
 
 if __name__ == "__main__":
