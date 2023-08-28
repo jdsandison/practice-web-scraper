@@ -3,8 +3,10 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import os
 import time
+import random
 
-base_url = 'https://www.exchangeandmart.co.uk/ad/'
+# changed the base url to the ip address:
+base_url = 'http://93.174.10.120/ad/'
 
 request_type_web = 0
 request_type_local = 1
@@ -13,9 +15,18 @@ request_type_web_with_save = 2
 ids_with_incomplete_table_data = []
 ids_with_missing_specs_tab = []
 
-headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 "
-                  "Safari/537.36"}
+# list of different user agents to pick randomly from
+user_agents = ['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 '
+               'Safari/537.36', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+               'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) '
+               'Safari/537.36', 'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; AS; rv:11.0) like Gecko',
+               'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 '
+               'Safari/537.36 Edge/18.18362', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) '
+                                              'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Mobile '
+                                              'Safari/537.36', 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS '
+                                                               'X) AppleWebKit/605.1.15 (KHTML, like Gecko) '
+                                                               'Version/14.0.2 Mobile/15E148 Safari/604.1']
+
 
 proxies = [
     '67.43.227.227:18549'
@@ -33,6 +44,9 @@ def get_soup(url):
     :param url: the URL of the page we want to scrape
     :return: a BeautifulSoup object representing the parsed HTML content
     """
+    user_agent = random.choice(user_agents)
+    headers = {
+        "User-Agent": user_agent}
     response = requests.get(url, headers=headers)
     soup = BeautifulSoup(response.content, "html.parser")
     return soup
@@ -265,9 +279,9 @@ def main():
     still_searching = True  # boolean: when false the task is complete and the scraper will stop
 
     # the consecutive amount of blank results we can get before considering all future adverts are blank/not created yet
-    max_consecutive_inactive_ids = 1000  # this number can be changed depending on how strict we are
+    max_consecutive_inactive_ids = 94  # this number can be changed depending on how strict we are
     current_consecutive_inactive_ids = 0
-    consecutive_ids_for_checkpoint = 0 # adding a checkpoint so that all data isn't lost if there's an error
+    consecutive_ids_for_checkpoint = 100 # adding a checkpoint so that all data isn't lost if there's an error
 
     # finding what id number the scraper got up to last time and then adding 1 and continuing from there
     current_id_number = data_file.iat[len(data_file['ID value']) - 1, data_file.columns.get_loc('ID value')] + 1
@@ -293,6 +307,11 @@ def main():
             still_searching = False
 
         else:
+            # adding a checkpoint for every 100 ids. So if there's an error not all the data is lost
+            if consecutive_ids_for_checkpoint > 100:
+                updated_data.to_csv('data.csv', index=False, encoding='utf-8')
+                consecutive_ids_for_checkpoint = 0
+
             # if we are not at the limit of inactive ids we search if the page exists. If it exists we run the scraper.
             # And then append the data to the 'master' dataframe
             soup = get_advert_html(current_id_number, request_type_web)
@@ -310,14 +329,9 @@ def main():
                 # if the page doesn't exist. Increment the inactive id count and move onto next id number
                 current_consecutive_inactive_ids += 1
 
-            time.sleep(1.5)
+            # time.sleep(1.5)
             consecutive_ids_for_checkpoint += 1
             current_id_number += 1
-
-        # adding a checkpoint for every 100 ids. So if there's an error not all the data is lost
-        if consecutive_ids_for_checkpoint == 100:
-            updated_data.to_csv('data.csv', index=False, encoding='utf-8')
-            consecutive_ids_for_checkpoint = 0
 
 
 if __name__ == "__main__":
