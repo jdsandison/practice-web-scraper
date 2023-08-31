@@ -279,7 +279,7 @@ def main():
     still_searching = True  # boolean: when false the task is complete and the scraper will stop
 
     # the consecutive amount of blank results we can get before considering all future adverts are blank/not created yet
-    max_consecutive_inactive_ids = 94  # this number can be changed depending on how strict we are
+    max_consecutive_inactive_ids = 1000  # this number can be changed depending on how strict we are
     current_consecutive_inactive_ids = 0
     consecutive_ids_for_checkpoint = 100 # adding a checkpoint so that all data isn't lost if there's an error
 
@@ -296,14 +296,8 @@ def main():
 
             # for ids in ids_with_incomplete_table_data:
             #     electric_or_hybrid = pd.concat([electric_or_hybrid, incomplete_table_data(ids)])
-            #
             # electric_or_hybrid.to_csv('electric-or-hybrid.csv', index=False, encoding='utf-8')
 
-            still_searching = False
-
-        # temporary elif for partial scraping
-        elif current_id_number > 29900800:
-            updated_data.to_csv('data.csv', index=False, encoding='utf-8')
             still_searching = False
 
         else:
@@ -329,7 +323,7 @@ def main():
                 # if the page doesn't exist. Increment the inactive id count and move onto next id number
                 current_consecutive_inactive_ids += 1
 
-            # time.sleep(1.5)
+            time.sleep(1)
             consecutive_ids_for_checkpoint += 1
             current_id_number += 1
 
