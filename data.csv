@@ -815,3 +815,188 @@ Audi A6,29910396,2010,1.968,"60,000",Diesel,Manual,GREY,Saloon,49.6,Front Wheel 
 Vauxhall Crossland X,29910507,2019,1.199,"14,672",Petrol,Automatic,Silver,Hatchback,42.2,Front Wheel Drive,5,5,108,116,11.1,128,418
 Vauxhall Mokka,29910513,2022,1.199,"12,500",Petrol,Automatic,Black,Hatchback,47.9,Front Wheel Drive,5,5,128,124,9.2,134,464
 Volkswagen Polo,29910517,2022,0.999,"18,836",Petrol,Manual,Purple,Hatchback,54.3,Front Wheel Drive,5,5,94,116,10.8,118,478
+Honda Jazz,29910656,2022,1.498,"13,088",Petrol Hybrid,Automatic,Blue,Hatchback,58.9,Front Wheel Drive,5,5,97,107,9.9,109,518
+BMW 1 Series,29910679,2023,1.998,"9,853",Petrol,Automatic,Grey,Hatchback,34.5,Four Wheel Drive,5,5,302,156,4.8,173,379
+Ford Fiesta,29910835,2016,0.999,"71,000",Petrol,Manual,White,Hatchback,65.7,Front Wheel Drive,3,5,123,122,9.4,99,607
+BMW 2 Series,29910852,2018,1.499,"77,543",Petrol,Manual,Black,Convertible,48.7,Rear Wheel Drive,2,4,136,129,9.4,139,557
+BMW 2 Series,29910865,2016,1.499,"25,000",Petrol,Automatic,Black Sapphire Metallic,Coupe,51.4,Rear Wheel Drive,2,4,136,130,8.9,129,588
+Ford Kuga,29910866,2017,1.997,"57,300",Diesel,Manual,Shadow Black,Hatchback,60.1,Front Wheel Drive,5,5,148,121,10.1,122,793
+Peugeot 308,29910867,2013,1.56,"87,000",Diesel,Manual,Metalic,Hatchback,64.2,Front Wheel Drive,5,5,92,113,14.0,110,847
+BMW 5 Series,29910872,2012,1.995,"49,449",Diesel,Automatic,Imperial Blue Xirallic,Saloon,57.6,Rear Wheel Drive,4,5,184,140,8.1,129,887
+Fiat Panda,29910873,2016,0.875,"30,416",Petrol,Automatic,Mediterranean Blue,Hatchback,68.9,Front Wheel Drive,5,4,85,110,11.5,95,561
+Volkswagen Tiguan,29910875,2017,1.968,"47,000",Diesel,Automatic,BLUE,Estate,49.6,Four Wheel Drive,5,5,148,124,9.3,149,655
+Ford Puma,29910878,2020,0.999,"29,075",Petrol,Manual,Red,SUV,51.4,Front Wheel Drive,5,5,123,119,9.8,125,475
+BMW X4,29910881,2019,2.993,"65,986",Diesel,Automatic,Phytonic,SUV,40.9,Four Wheel Drive,5,5,261,149,5.8,156,612
+Volkswagen Polo,29910978,2020,1.0,"18,891",Petrol,Manual,White,Hatchback,50.4,Front Wheel Drive,5,5,94,116,10.8,127,443
+Volkswagen Beetle,29911010,2016,2.0,"53,368",Petrol,Manual,Black,Hatchback,43.5,Front Wheel Drive,3,4,217,144,6.7,148,526
+Toyota C-HR,29911025,2022,1.8,"6,460",Hybrid,Automatic,Silver,SUV,56.5,Front Wheel Drive,5,5,97,105,11.0,112,534
+Toyota Yaris,29911033,2022,1.5,"9,025",Hybrid,Automatic,Blue,Hatchback,68.9,Front Wheel Drive,5,5,91,109,9.7,92,546
+Vauxhall Corsa,29911115,2015,1.364,"89,762",Petrol,Manual,Blue,Hatchback,55.4,Front Wheel Drive,3,5,99,115,11.0,119,548
+Fiat 500L,29911120,2014,1.248,"64,081",Diesel,Manual,Red,MPV,67.3,Front Wheel Drive,5,7,85,102,15.4,110,740
+Citroen C4 Picasso,29911131,2015,1.56,"111,705",Diesel,Manual,Red,MPV,70.6,Front Wheel Drive,5,5,118,117,11.3,105,854
+Vauxhall Astra,29911132,2019,1.399,"28,780",Petrol,Manual,White,Estate,46.3,Front Wheel Drive,5,5,148,134,8.2,139,489
+Vauxhall Mokka,29911133,2021,1.199,"21,225",Petrol,Manual,Blue,Hatchback,50.4,Front Wheel Drive,5,5,99,116,10.6,127,488
+BMW 3 Series,29911137,2010,1.995,"92,085",Diesel,Automatic,Blue,Convertible,50.4,Rear Wheel Drive,2,4,184,140,8.4,149,676
+Toyota Yaris,29911148,2008,1.299,"57,000",Petrol,Automatic,Red,Hatchback,48.7,Front Wheel Drive,3,5,85,106,13.1,136,450
+Kia Picanto,29911149,2019,0.998,"35,307",Petrol,Manual,White,Hatchback,56.5,Front Wheel Drive,5,5,66,100,13.8,113,435
+Volkswagen Polo,29911168,2016,1.197,"51,000",Petrol,Manual,Silver,Hatchback,60.1,Front Wheel Drive,3,5,89,114,10.8,107,595
+Kia Picanto,29911180,2019,1.248,"5,000",Petrol,Automatic,Silver,Hatchback,47.9,Front Wheel Drive,5,5,83,100,13.2,136,369
+Hyundai Tucson,29911182,2020,1.591,"19,000",Petrol,Automatic,Grey,Estate,36.2,Front Wheel Drive,5,5,175,125,8.9,152,494
+Honda Jazz,29911196,2009,1.198,"123,000",Petrol,Manual,Blue,Hatchback,53.3,Front Wheel Drive,5,5,89,110,12.5,125,492
+Honda Jazz,29911198,2010,1.339,"80,000",Petrol,Manual,Red,Hatchback,52.3,Front Wheel Drive,5,5,98,113,11.5,128,483
+Kia Sportage,29911200,2019,1.591,"18,101",Petrol,Manual,White,Estate,34.9,Front Wheel Drive,5,5,130,113,11.1,162,476
+Volkswagen Passat,29911209,2013,1.968,"58,300",Diesel,Automatic,Grey,Estate,53.3,Front Wheel Drive,5,5,168,137,8.8,136,821
+Skoda Fabia,29911220,2013,1.2,"60,075",Petrol,Manual,Blue,Other,49.6,Front Wheel Drive,5,5,70,102,15.0,128,491
+Toyota Yaris,29911232,2010,1.329,"92,000",Petrol,Manual,Silver,Hatchback,55.4,Front Wheel Drive,5,5,99,108,11.7,120,512
+Peugeot 2008,29911237,2019,1.498,"39,000",Diesel,Manual,Grey,SUV,67.3,Front Wheel Drive,5,5,99,113,10.6,93,666
+Volkswagen Tiguan,29911252,2018,1.968,"32,051",Diesel,Automatic,Grey,Estate,57.6,Front Wheel Drive,5,5,148,125,9.3,129,735
+Nissan Juke,29911255,2013,1.598,"84,743",Petrol,Manual,White,SUV,48.7,Front Wheel Drive,5,5,115,111,11.0,136,493
+Peugeot 208,29911262,2017,1.199,"25,000",Petrol,Manual,Black,Hatchback,62.8,Front Wheel Drive,3,5,82,109,12.2,104,691
+Citroen C3,29911263,2014,1.56,"104,864",Diesel,Manual,Red,Hatchback,78.5,Front Wheel Drive,5,5,91,113,11.3,95,794
+Mercedes-Benz SLK,29911267,2005,3.498,"85,000",Petrol,Manual,Silver,Convertible,26.7,Rear Wheel Drive,2,2,272,155,5.6,255,411
+BMW X3,29911300,2012,2.993,"93,000",Diesel,Automatic,White,SUV,46.3,Four Wheel Drive,5,5,313,149,5.8,162,682
+BMW 3 Series,29911343,2016,2.0,"46,754",Diesel,Automatic,Blue,Saloon,62.8,Four Wheel Drive,4,5,190,142,7.3,123,787
+Peugeot 308,29911349,2020,1.2,"28,919",Petrol,Manual,Red,Hatchback,52.3,Front Wheel Drive,5,5,130,124,9.7,132,610
+Audi SQ5,29911397,2016,2.967,"65,100",Diesel,Automatic,White,SUV,42.8,Four Wheel Drive,5,5,322,155,5.1,174,706
+Kia Picanto,29911402,2011,1.248,"81,451",Petrol,Manual,Silver,Hatchback,65.7,Front Wheel Drive,5,5,84,106,11.0,100,506
+Toyota Verso,29911403,2016,1.598,"78,000",Petrol,Manual,Grey,MPV,41.5,Front Wheel Drive,5,7,132,115,11.7,154,548
+Mercedes-Benz A Class,29911406,2005,1.498,"72,941",Petrol,Automatic,Silver,Hatchback,42.8,Front Wheel Drive,5,5,95,106,13.5,157,508
+Peugeot 206,29911407,2000,1.36,"28,261",Petrol,Manual,Silver,Hatchback,42.8,Front Wheel Drive,5,5,75,106,13.2,0,471
+BMW 5 Series,29911417,2016,2.993,"52,000",Diesel,Automatic,Grey,Saloon,53.3,Rear Wheel Drive,4,5,258,155,5.8,139,821
+Mercedes-Benz C Class,29911441,2013,2.987,"100,000",Diesel,Automatic,Blue,Estate,45.6,Rear Wheel Drive,5,5,261,155,6.3,162,662
+Vauxhall Meriva,29911449,2012,1.4,"75,413",Petrol,Manual,Brown,Other,47.9,Front Wheel Drive,5,5,118,117,11.5,139,738
+Volkswagen Golf,29911462,2010,1.39,"83,000",Petrol,Automatic,Blue,Hatchback,47.1,Front Wheel Drive,5,5,123,124,9.5,138,570
+Mazda CX-3,29911473,2017,2.0,"27,727",Petrol,Manual,Blue,Hatchback,47.9,Front Wheel Drive,5,5,118,119,9.0,137,506
+MINI Countryman,29911477,2012,2.0,"97,000",Diesel,Manual,Light White,Hatchback,57.6,Four Wheel Drive,5,5,143,121,9.4,130,596
+Mercedes-Benz C Class,29911480,2012,1.595,"85,600",Petrol,Automatic,Silver,Coupe,44.8,Rear Wheel Drive,2,4,154,139,8.5,147,581
+Audi Q2,29911497,2019,1.0,"13,154",Petrol,Manual,White,SUV,47.1,Front Wheel Drive,5,5,114,122,10.1,118,518
+Volkswagen T-Cross,29911502,2019,0.999,"31,252",Petrol,Manual,Pure White,SUV,47.9,Front Wheel Drive,5,5,113,120,10.2,115,421
+BMW X3,29911512,2019,1.998,"51,543",Petrol,Automatic,Grey,SUV,30.4,Four Wheel Drive,5,5,181,134,8.3,166,435
+Nissan Juke,29911525,2014,1.598,"59,125",Petrol,Automatic,Red,Hatchback,44.8,Front Wheel Drive,5,5,115,106,11.5,145,453
+Kia Picanto,29911527,2020,0.998,"11,532",Petrol,Manual,Green,Hatchback,54.3,Front Wheel Drive,5,4,66,100,13.8,119,418
+Volkswagen Polo,29911542,2009,1.422,"95,851",Diesel,Manual,Silver,Hatchback,62.8,Front Wheel Drive,5,5,69,99,15.9,119,622
+BMW 3 Series,29911553,2012,2.0,"33,688",Petrol,Manual,Black,Convertible,41.5,Rear Wheel Drive,2,4,170,142,9.1,159,575
+Volkswagen Polo,29911586,2017,1.798,"44,345",Petrol,Automatic,Red,Hatchback,50.4,Front Wheel Drive,5,5,189,146,6.7,129,499
+Volvo S60,29911594,2015,1.969,"118,000",Diesel,Manual,Red,Saloon,72.8,Front Wheel Drive,4,5,190,143,7.1,102,"1,081"
+Ford Fusion,29911607,2011,1.596,"116,000",Petrol,Manual,Black,Hatchback,42.8,Front Wheel Drive,5,5,99,111,11.1,157,424
+Volkswagen Polo,29911610,2012,1.197,"13,087",Petrol,Manual,Orange,Hatchback,53.3,Front Wheel Drive,3,5,104,118,9.7,124,528
+Ford Ka+,29911615,2017,1.2,"31,715",Petrol,Manual,White,Hatchback,57.7,Front Wheel Drive,5,5,84,105,13.3,114,533
+Kia Sportage,29911641,2019,1.6,"36,531",Petrol,Manual,White,SUV,34.9,Front Wheel Drive,5,5,130,113,11.1,162,476
+Land Rover Range Rover,29911650,2020,3.0,"38,775",Diesel,Automatic,Blue,SUV,32.8,Four Wheel Drive,5,5,296,130,7.1,240,620
+Volvo XC40,29911718,2018,2.0,"18,765",Petrol,Semiauto,White,SUV,40.4,Four Wheel Drive,5,5,190,130,8.2,163,480
+Seat Ibiza,29911787,2015,1.197,"37,460",Petrol,Manual,SILVER,Hatchback,57.6,Front Wheel Drive,3,5,89,114,10.7,116,570
+BMW 3 Series,29911798,2005,1.995,"94,000",Diesel,Automatic,Blue,Saloon,40.9,Rear Wheel Drive,4,5,150,132,9.1,185,567
+Peugeot 3008,29911801,2017,1.2,"41,000",Petrol,Manual,Red,SUV,55.4,Front Wheel Drive,5,5,130,117,10.8,117,646
+Ford Fiesta,29911807,2018,1.084,"27,660",Petrol,Manual,Race Red,Hatchback,64.2,Front Wheel Drive,5,5,84,105,14.0,101,593
+Audi Q3,29911814,2017,1.968,"38,000",Diesel,Automatic,GREY,Estate,53.3,Four Wheel Drive,5,5,148,126,9.3,140,750
+Audi Q3,29911871,2016,1.968,"65,604",Diesel,Manual,Grey,SUV,49.6,Four Wheel Drive,5,5,181,136,7.9,146,698
+Suzuki Vitara,29911874,2017,1.586,"33,688",Petrol,Manual,Grey,SUV,53.3,Front Wheel Drive,5,5,118,112,11.5,123,551
+Kia Sportage,29911880,2019,1.598,"27,946",Diesel,Manual,White,SUV,47.1,Front Wheel Drive,5,5,134,112,10.8,127,642
+Fiat 500,29911882,2020,1.242,"8,092",Petrol,Manual,PINK,Hatchback,51.4,Front Wheel Drive,3,4,69,101,12.9,108,396
+Volkswagen Golf,29911888,2019,0.999,"52,632",Petrol,Manual,Red,Hatchback,49.6,Front Wheel Drive,5,5,113,123,9.8,109,546
+Peugeot 208,29911895,2017,1.2,"44,000",Petrol,Manual,BLACK,Hatchback,62.8,Front Wheel Drive,5,5,82,109,12.2,104,691
+Ford Kuga,29912124,2019,2.0,"44,199",Diesel,Manual,Grey,SUV,47.9,Front Wheel Drive,5,5,148,121,10.1,152,632
+Mercedes-Benz A Class,29912170,2019,1.461,"45,000",Diesel,Automatic,Silver,Hatchback,67.3,Front Wheel Drive,5,5,114,126,10.5,111,711
+Honda Civic,29912173,2013,1.798,"89,000",Petrol,Manual,Alabaster,Hatchback,48.7,Front Wheel Drive,5,5,140,134,9.1,137,536
+Audi Q7,29912210,2020,3.0,"6,795",Hybrid,Semiauto,Black,SUV,85.6,Four Wheel Drive,5,5,376,240,5.9,74,"1,412"
+Volkswagen Golf,29912237,2023,1.5,"4,551",Petrol,Manual,White,Hatchback,51.4,Front Wheel Drive,5,5,128,133,9.2,124,509
+Kia Stonic,29912350,2022,0.998,"35,127",Petrol,Manual,Grey,SUV,51.4,Front Wheel Drive,5,5,99,115,10.7,123,509
+Kia Sportage,29912354,2020,1.591,"14,923",Petrol,Manual,Grey,Estate,34.9,Front Wheel Drive,5,5,130,113,11.1,153,476
+Kia Sportage,29912357,2019,1.591,"32,514",Petrol,Manual,Red,Estate,34.9,Front Wheel Drive,5,5,174,127,8.9,173,476
+Fiat 500X,29912363,2019,1.598,"18,369",Petrol,Manual,Grey,Hatchback,36.7,Front Wheel Drive,5,5,110,112,11.5,152,387
+Volkswagen Tiguan,29912367,2019,1.498,"41,257",Petrol,Automatic,White,Estate,37.7,Front Wheel Drive,5,5,148,123,9.5,138,481
+Suzuki Jimny,29912381,2017,1.328,"13,500",Petrol,Automatic,Green/Grey,Estate,38.7,Four Wheel Drive,3,4,84,84,17.2,167,341
+BMW 3 Series,29912385,2017,1.995,"73,939",Diesel,Manual,Black,Saloon,64.2,Rear Wheel Drive,4,5,190,146,7.3,116,805
+Peugeot 208,29912387,2017,1.2,"70,000",Petrol,Manual,Blue,Hatchback,65.7,Front Wheel Drive,3,5,110,118,9.6,99,723
+Renault Captur,29912442,2017,0.898,"14,981",Petrol,Manual,White,Hatchback,52.3,Front Wheel Drive,5,5,90,106,13.2,121,518
+Mercedes-Benz C Class,29912448,2019,1.95,"43,000",Diesel,Automatic,Black,Coupe,61.4,Rear Wheel Drive,2,4,191,149,7.0,121,891
+Suzuki Swift,29912455,2018,1.242,"23,828",Petrol,Manual,Silver,Hatchback,65.7,Front Wheel Drive,5,5,89,111,11.9,98,535
+Volkswagen Polo,29912463,2019,0.999,"19,748",Petrol,Manual,Black,Hatchback,52.3,Front Wheel Drive,5,5,94,116,10.8,104,460
+Seat Leon,29912488,2016,1.598,"73,000",Diesel,Manual,Black,Hatchback,74.3,Front Wheel Drive,5,5,108,124,10.5,103,817
+Volkswagen Golf,29912520,2014,1.598,"93,600",Diesel,Manual,Black,Hatchback,88.3,Front Wheel Drive,5,5,108,124,10.5,85,971
+Mercedes-Benz A Class,29912525,2020,1.332,"17,500",Petrol,Automatic,White,Saloon,47.9,Front Wheel Drive,4,5,161,143,8.1,123,453
+Audi A6,29912529,2018,1.968,"73,932",Diesel,Automatic,Black,Saloon,50.4,Front Wheel Drive,4,5,201,152,8.1,117,698
+Toyota Auris,29912545,2012,1.329,"36,000",Petrol,Manual,Blue,Hatchback,48.7,Front Wheel Drive,5,5,100,108,13.1,135,589
+Mercedes-Benz E Class,29912557,2015,2.143,"83,000",Diesel,Automatic,Black,Saloon,61.4,Rear Wheel Drive,4,5,175,141,8.2,121,797
+Volkswagen Polo,29912563,2009,1.4,"26,900",Petrol,Automatic,Grey,Other,40.9,Front Wheel Drive,5,5,79,106,14.3,165,405
+Audi Q3,29912568,2016,1.968,"79,080",Diesel,Manual,Blue,Estate,60.1,Front Wheel Drive,5,5,148,126,9.6,119,846
+Hyundai Tucson,29912569,2019,1.591,"50,374",Petrol,Manual,Grey,Estate,34.9,Front Wheel Drive,5,5,130,113,11.5,161,476
+Vauxhall Corsa,29912601,2021,1.199,"13,612",Petrol,Manual,White,Hatchback,53.3,Front Wheel Drive,5,5,99,121,9.3,119,516
+Ford B-MAX,29912604,2013,1.388,"74,000",Petrol,Manual,Blue,MPV,47.1,Front Wheel Drive,5,5,89,106,13.8,139,497
+Seat Arona,29912620,2021,1.0,"41,231",Petrol,Manual,Black,Hatchback,51.4,Front Wheel Drive,5,5,94,109,11.4,124,452
+Land Rover Range Rover Sport,29912634,2018,2.993,"71,000",Diesel,Automatic,Grey,Estate,32.1,Four Wheel Drive,5,5,302,130,6.8,198,607
+Peugeot 107,29912640,2014,0.998,"36,700",Petrol,Automatic,Grey,Hatchback,62.8,Front Wheel Drive,5,4,68,100,14.9,104,483
+Audi TT,29912642,2008,1.984,"40,000",Petrol,Manual,Silver,Convertible,36.2,Front Wheel Drive,2,2,197,147,6.7,186,438
+Kia Soul,29912648,2012,1.591,"73,000",Petrol,Manual,Silver,Hatchback,44.1,Front Wheel Drive,5,5,138,112,10.0,149,466
+Renault Kadjar,29912668,2020,1.332,"31,058",Petrol,Manual,Renault Id - Flame Red,Hatchback,42.16,Front Wheel Drive,5,5,140,126,10.4,133,510
+Renault Kadjar,29912669,2020,1.332,"32,411",Petrol,Manual,Renault Id - Flame Red,Hatchback,42.16,Front Wheel Drive,5,5,160,130,9.9,135,510
+Honda Jazz,29912678,2017,1.318,"42,807",Petrol,Manual,Black,Hatchback,55.4,Front Wheel Drive,5,5,101,118,11.5,120,487
+Mercedes-Benz C Class,29912687,2014,2.143,"83,600",Diesel,Automatic,Black,Saloon,64.2,Rear Wheel Drive,4,5,204,153,6.6,113,946
+Audi Q3,29912771,2022,2.0,"13,000",Diesel,Semiauto,White,SUV,49.6,Front Wheel Drive,5,5,148,128,9.3,149,633
+Fiat 500X,29912848,2021,1.0,"6,134",Petrol,Manual,Red,SUV,41.5,Front Wheel Drive,5,5,118,117,10.9,148,438
+Peugeot 208,29912907,2022,1.2,"10,669",Petrol,Semiauto,White,Hatchback,55.4,Front Wheel Drive,5,5,99,117,10.8,122,536
+Volkswagen Golf,29912929,2020,1.0,"14,609",Petrol,Manual,Red,Hatchback,51.4,Front Wheel Drive,5,5,113,123,9.8,108,565
+Volkswagen Golf,29912957,2020,1.498,"9,299",Petrol,Automatic,BLUE,Hatchback,44.8,Front Wheel Drive,5,5,148,139,8.5,134,493
+Fiat 500X,29912988,2021,0.999,"11,500",Petrol,Manual,GREY,Hatchback,43.5,Front Wheel Drive,5,5,118,119,10.7,142,459
+Volkswagen Golf,29913000,2013,1.598,"81,790",Diesel,Manual,White,Other,64.2,Front Wheel Drive,2,4,103,117,12.1,117,777
+Peugeot 208,29913007,2021,1.2,"12,953",Petrol,Manual,Red,Hatchback,56.5,Front Wheel Drive,5,5,99,117,9.9,119,547
+Peugeot 208,29913010,2013,1.0,"62,000",Petrol,Manual,Black,Hatchback,65.7,Front Wheel Drive,3,5,68,101,15.9,99,723
+Audi Q3,29913011,2016,1.968,"47,000",Diesel,Automatic,White,SUV,51.4,Four Wheel Drive,5,5,148,126,9.3,140,724
+Volkswagen Golf,29913012,2018,1.5,"43,264",Petrol,Manual,White,Hatchback,55.4,Front Wheel Drive,5,5,148,134,8.0,116,609
+Ford Kuga,29913015,2017,1.997,"64,242",Diesel,Manual,BLACK,Hatchback,60.1,Front Wheel Drive,5,5,148,121,10.1,122,793
+Mercedes-Benz E Class,29913202,2018,1.95,"49,290",Diesel,Automatic,Black,Coupe,70.6,Rear Wheel Drive,2,4,191,150,7.4,119,776
+Ford Fiesta,29913215,2014,0.999,"49,212",Petrol,Manual,Grey,Hatchback,65.7,Front Wheel Drive,5,5,99,112,11.2,99,607
+Dacia Sandero Stepway,29913291,2017,0.898,"25,000",Petrol,Manual,Red,Hatchback,55.4,Front Wheel Drive,5,5,90,104,11.1,115,609
+Honda HRV,29913294,2019,1.597,"76,000",Diesel,Manual,Red,Hatchback,54.3,Front Wheel Drive,5,5,118,119,10.2,108,597
+Mercedes-Benz E Class,29913475,2021,3.0,"18,000",Diesel,Semiauto,White,Saloon,39.2,Four Wheel Drive,4,5,326,155,5.1,188,569
+Mercedes-Benz E Class,29913478,2022,2.0,"6,000",Diesel,Semiauto,Black,Estate,51.4,Rear Wheel Drive,5,5,197,144,7.8,144,746
+Mercedes-Benz GLE Class,29913511,2018,2.1,"46,744",Diesel,Semiauto,Blue,SUV,47.9,Four Wheel Drive,5,5,201,130,8.6,156,980
+Isuzu D-Max,29913515,2021,1.9,"16,782",Diesel,Automatic,Orange,Pick Up,30.7,Four Wheel Drive,4,5,162,112,13.0,241,513
+Land Rover Range Rover Velar,29913541,2021,2.0,"23,560",Diesel,Automatic,Black,SUV,44.8,Four Wheel Drive,5,5,201,130,7.7,173,611
+Suzuki Swace,29913571,2021,1.8,"16,198",Hybrid,Automatic,White,Estate,62.8,Front Wheel Drive,5,5,102,112,11.1,103,594
+Suzuki Ignis,29913589,2017,1.2,"32,560",Petrol,Manual,Red,SUV,61.4,Front Wheel Drive,5,4,89,106,11.8,104,432
+Toyota Aygo,29913667,2020,1.0,"23,085",Petrol,Manual,Red,Hatchback,57.7,Front Wheel Drive,5,4,71,99,13.8,114,444
+Seat Ibiza,29913691,2020,1.0,"16,844",Petrol,Manual,Silver,Hatchback,53.3,Front Wheel Drive,5,5,94,113,10.3,126,469
+Seat Ibiza,29913692,2020,1.0,"16,507",Petrol,Manual,Silver,Hatchback,53.3,Front Wheel Drive,5,5,94,113,10.3,126,469
+Seat Ateca,29913693,2021,1.0,"10,793",Petrol,Manual,Black,SUV,44.1,Front Wheel Drive,5,5,109,112,11.4,146,485
+Skoda Karoq,29913709,2022,1.0,"6,058",Petrol,Manual,Grey,SUV,45.6,Front Wheel Drive,5,5,109,118,10.9,141,512
+Kia Xceed,29913849,2021,0.998,"23,800",Petrol,Manual,BLACK,Hatchback,47.1,Front Wheel Drive,5,5,118,115,11.1,136,518
+Audi A5,29913888,2019,1.968,"51,000",Diesel,Automatic,White,Hatchback,50.4,Front Wheel Drive,5,4,187,149,7.9,118,443
+BMW 7 Series,29913906,2018,2.993,"70,000",Diesel,Automatic,Silver,Saloon,54.3,Four Wheel Drive,4,5,315,155,5.3,142,932
+Nissan Qashqai,29913924,2020,1.461,"48,901",Diesel,Automatic,Blue,Hatchback,52.3,Front Wheel Drive,5,5,113,114,13.0,142,633
+Mercedes-Benz E Class,29913931,2019,1.95,"22,231",Diesel,Automatic,Black,Coupe,70.6,Rear Wheel Drive,2,4,191,150,7.4,132,776
+Audi A6,29913932,2020,1.968,"22,649",Diesel,Automatic,Tango Red Metallic,Saloon,47.1,Four Wheel Drive,4,5,201,153,7.6,121,653
+Audi Q5,29913933,2021,1.968,"21,047",Diesel,Automatic,White,Estate,44.8,Four Wheel Drive,5,5,201,137,7.6,165,641
+Volkswagen T-Roc,29913940,2018,1.5,"44,143",Petrol,Manual,Grey,Hatchback,53.3,Front Wheel Drive,5,5,148,127,8.3,121,586
+Audi A4,29913950,2014,1.968,"46,179",Diesel,Automatic,White,Saloon,58.9,Front Wheel Drive,4,5,175,138,7.9,127,816
+Audi Q3,29913957,2016,2.0,"126,650",Diesel,Manual,Black,Other,52.3,Four Wheel Drive,5,5,148,126,9.3,138,736
+Ford Ka,29914014,2014,1.242,"39,000",Petrol,Manual,Red,Hatchback,57.7,Front Wheel Drive,3,4,69,99,13.4,115,444
+Kia Picanto,29914021,2019,0.998,"45,861",Petrol,Manual,Breeze Blue,Hatchback,56.5,Front Wheel Drive,5,5,66,100,13.8,113,435
+Seat Tarraco,29914024,2020,1.968,"39,066",Diesel,Manual,Camouflage,Estate,49.6,Front Wheel Drive,5,7,148,126,9.8,129,633
+BMW 5 Series,29914027,2016,2.993,"66,161",Diesel,Automatic,Black,Estate,49.6,Rear Wheel Drive,5,5,313,155,5.4,149,764
+Volkswagen Up,29914036,2013,0.999,"52,000",Petrol,Manual,Black,Hatchback,62.8,Front Wheel Drive,5,4,59,99,14.4,105,483
+Audi A4,29914037,2014,1.968,"102,150",Diesel,Automatic,White,Saloon,58.9,Front Wheel Drive,4,5,175,138,7.9,127,816
+Mercedes-Benz E Class,29914045,2010,2.2,"53,000",Diesel,Automatic,Silver,Other,45.6,Rear Wheel Drive,2,4,201,153,7.4,155,662
+Seat Leon,29914075,2016,1.598,"114,000",Diesel,Manual,Grey,Hatchback,74.3,Front Wheel Drive,5,5,108,124,10.5,102,817
+Citroen DS3,29914077,2011,1.56,"128,000",Diesel,Manual,Black,Hatchback,70.6,Front Wheel Drive,3,4,91,112,11.3,107,745
+Kia Ceed,29914101,2014,1.582,"61,077",Diesel,Manual,Metallic Grey,Hatchback,74.3,Front Wheel Drive,5,5,126,122,11.5,100,866
+Honda Jazz,29914110,2013,1.339,"9,600",Petrol,Automatic,Grey,Hatchback,52.3,Front Wheel Drive,5,5,98,109,12.8,125,483
+Peugeot RCZ,29914126,2013,1.598,"57,000",Petrol,Manual,Black,Coupe,42.2,Front Wheel Drive,2,4,200,146,7.6,155,511
+Peugeot RCZ,29914137,2015,1.598,"86,000",Petrol,Manual,Grey,Coupe,44.1,Front Wheel Drive,2,4,156,133,8.3,149,534
+BMW 5 Series,29914146,2011,1.995,"111,900",Diesel,Manual,Grey,Saloon,57.6,Rear Wheel Drive,4,5,184,141,8.1,129,887
+Audi A6,29914149,2022,1.968,"7,754",Diesel,Automatic,Silver,Estate,47.1,Four Wheel Drive,5,5,201,149,7.6,158,653
+Dacia Sandero Stepway,29914150,2013,0.898,"61,000",Petrol,Manual,Blue,Hatchback,52.3,Front Wheel Drive,5,5,90,104,11.1,124,575
+Volkswagen Golf,29914233,2019,1.5,"21,250",Petrol,Semiauto,Blue,Hatchback,43.5,Front Wheel Drive,5,5,148,134,8.0,119,478
+Kia Sportage,29914237,2022,1.6,"24,163",Petrol,Manual,White,SUV,38.7,Front Wheel Drive,5,5,130,113,11.1,166,528
+Toyota Aygo,29914238,2019,1.0,"10,007",Petrol,Manual,Red,Hatchback,56.5,Front Wheel Drive,5,4,71,99,13.8,93,435
+Volkswagen Golf,29914241,2019,1.6,"45,145",Diesel,Manual,White,Hatchback,57.7,Front Wheel Drive,5,5,113,123,10.2,108,635
+Volkswagen Polo,29914244,2016,1.2,"30,774",Petrol,Manual,Black,Hatchback,60.1,Front Wheel Drive,5,5,89,114,10.8,107,595
+Suzuki Ignis,29914324,2019,1.2,"15,356",Petrol,Manual,Black,SUV,53.3,Front Wheel Drive,5,4,89,106,11.8,107,375
+Mazda Mazda3,29914354,2020,2.0,"11,531",Petrol,Manual,White,Saloon,50.4,Front Wheel Drive,4,5,178,134,8.2,102,565
+Mazda CX-5,29914355,2020,2.0,"17,975",Petrol,Manual,Grey,SUV,38.2,Front Wheel Drive,5,5,163,125,10.3,145,471
+Kia Sportage,29914396,2019,1.6,"38,535",Diesel,Manual,Red,SUV,46.3,Front Wheel Drive,5,5,134,112,10.8,120,631
+Vauxhall Viva,29914397,2015,1.0,"55,357",Petrol,Manual,Blue,Hatchback,62.8,Front Wheel Drive,5,5,74,106,13.1,104,442
+Nissan Juke,29914412,2021,1.0,"6,068",Petrol,Manual,Grey,SUV,45.6,Front Wheel Drive,5,5,112,112,10.7,137,461
+Citroen C4,29914628,2022,1.5,"5,000",Diesel,Semiauto,Blue,Hatchback,64.2,Front Wheel Drive,5,5,129,128,9.5,121,706
+Volkswagen Golf,29914652,2019,1.5,"27,001",Petrol,Manual,Silver,Hatchback,47.1,Front Wheel Drive,5,5,128,130,9.1,113,518
+Mercedes-Benz GLC Class,29914662,2022,2.0,"11,507",Diesel,Semiauto,Silver,SUV,40.4,Four Wheel Drive,5,5,241,144,6.5,174,587
