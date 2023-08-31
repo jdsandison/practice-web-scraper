@@ -4,6 +4,7 @@ import pandas as pd
 import os
 import time
 import random
+from datetime import date
 
 # changed the base url to the ip address:
 base_url = 'http://93.174.10.120/ad/'
@@ -28,13 +29,10 @@ user_agents = ['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KH
                                                                'Version/14.0.2 Mobile/15E148 Safari/604.1']
 
 
-proxies = [
-    '67.43.227.227:18549'
-]
-
 
 # reading in data file from previous scraping
 data_file = pd.read_csv(r'data.csv')
+status_file = pd.read_csv(r'status.csv')
 
 
 def get_soup(url):
@@ -273,9 +271,20 @@ def specification_tab_scraper(current_id):
     return specification_tab_dataframe
 
 
+def check_if_ad_is_still_active(ad_id):
+    soup = get_advert_html(ad_id, request_type_web)
+    if soup.find('div', id='vehicle-desc'):
+        status = 'still active'
+    else:
+        status = 'inactive on:', date.today().strftime('%d/%m/%Y')
+
+    return status
+
+
 def main():
     global base_url
 
+    check_if_still_active = False
     still_searching = True  # boolean: when false the task is complete and the scraper will stop
 
     # the consecutive amount of blank results we can get before considering all future adverts are blank/not created yet
@@ -326,6 +335,14 @@ def main():
             time.sleep(1)
             consecutive_ids_for_checkpoint += 1
             current_id_number += 1
+
+            if check_if_still_active:
+                status_list = []
+                for ad_id in updated_data['ID value']:
+                    status_list.append(check_if_ad_is_still_active(ad_id))
+
+                status_dataframe = pd.DataFrame(status_list)
+                dataframe_with_each_status = pd.concat([updated_data, status_dataframe], axis=1, ignore_index=True)
 
 
 if __name__ == "__main__":
