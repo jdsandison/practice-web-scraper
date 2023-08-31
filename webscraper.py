@@ -32,7 +32,6 @@ user_agents = ['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KH
 
 # reading in data file from previous scraping
 data_file = pd.read_csv(r'data.csv')
-status_file = pd.read_csv(r'status.csv')
 
 
 def get_soup(url):
@@ -276,7 +275,7 @@ def check_if_ad_is_still_active(ad_id):
     if soup.find('div', id='vehicle-desc'):
         status = 'still active'
     else:
-        status = 'inactive on:', date.today().strftime('%d/%m/%Y')
+        status = 'inactive on:' + date.today().strftime('%d/%m/%Y')
 
     return status
 
@@ -284,8 +283,8 @@ def check_if_ad_is_still_active(ad_id):
 def main():
     global base_url
 
-    check_if_still_active = False
-    still_searching = True  # boolean: when false the task is complete and the scraper will stop
+    check_if_still_active = True
+    still_searching = False  # boolean: when false the task is complete and the scraper will stop
 
     # the consecutive amount of blank results we can get before considering all future adverts are blank/not created yet
     max_consecutive_inactive_ids = 1000  # this number can be changed depending on how strict we are
@@ -336,13 +335,20 @@ def main():
             consecutive_ids_for_checkpoint += 1
             current_id_number += 1
 
-            if check_if_still_active:
-                status_list = []
-                for ad_id in updated_data['ID value']:
-                    status_list.append(check_if_ad_is_still_active(ad_id))
-
+    if check_if_still_active:
+        counter = 0
+        status_list = []
+        for ad_id in updated_data['ID value']:
+            status_list.append(check_if_ad_is_still_active(ad_id))
+            if counter == 100:
                 status_dataframe = pd.DataFrame(status_list)
-                dataframe_with_each_status = pd.concat([updated_data, status_dataframe], axis=1, ignore_index=True)
+                status_dataframe.to_csv('status.csv')
+                counter = 0
+            time.sleep(0.5)
+            counter += 1
+
+        status_dataframe = pd.DataFrame(status_list)
+        status_dataframe.to_csv('status.csv')
 
 
 if __name__ == "__main__":
