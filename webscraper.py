@@ -29,9 +29,9 @@ user_agents = ['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KH
                                                                'Version/14.0.2 Mobile/15E148 Safari/604.1']
 
 
-
 # reading in data file from previous scraping
 data_file = pd.read_csv(r'data.csv')
+status_file = pd.read_csv(r'status-file.csv')
 
 
 def get_soup(url):
@@ -271,11 +271,16 @@ def specification_tab_scraper(current_id):
 
 
 def check_if_ad_is_still_active(ad_id):
+    """
+    :param ad_id: ID of the advert
+    :return: status: whether the advert is active or not. If it's inactive then the date of when this is first found
+    is assigned to it
+    """
     soup = get_advert_html(ad_id, request_type_web)
     if soup.find('div', id='vehicle-desc'):
         status = 'still active'
     else:
-        status = 'inactive on:' + date.today().strftime('%d/%m/%Y')
+        status = 'inactive on: ' + date.today().strftime('%d/%m/%Y')
 
     return status
 
@@ -283,8 +288,8 @@ def check_if_ad_is_still_active(ad_id):
 def main():
     global base_url
 
-    check_if_still_active = True
     still_searching = False  # boolean: when false the task is complete and the scraper will stop
+    check_if_still_active = True  # separate scraper to find whether an ad is still active or not
 
     # the consecutive amount of blank results we can get before considering all future adverts are blank/not created yet
     max_consecutive_inactive_ids = 1000  # this number can be changed depending on how strict we are
@@ -294,6 +299,9 @@ def main():
     # finding what id number the scraper got up to last time and then adding 1 and continuing from there
     current_id_number = data_file.iat[len(data_file['ID value']) - 1, data_file.columns.get_loc('ID value')] + 1
     updated_data = data_file
+    status_data = status_file
+
+    date_dataframe =pd.DataFrame()
 
     electric_or_hybrid = pd.DataFrame()
 
@@ -335,20 +343,42 @@ def main():
             consecutive_ids_for_checkpoint += 1
             current_id_number += 1
 
+    # separate scraper that goes through each ID value and checks whether the listing is still active or not
+    # this could lead to some interesting data being produced to analyse and interpret
     if check_if_still_active:
+        # this first part is to append to the current scraped data
+        col_names = ['ID value', 'Status']
         counter = 0
         status_list = []
-        for ad_id in updated_data['ID value']:
-            status_list.append(check_if_ad_is_still_active(ad_id))
-            if counter == 100:
-                status_dataframe = pd.DataFrame(status_list)
-                status_dataframe.to_csv('status.csv')
-                counter = 0
-            time.sleep(0.5)
-            counter += 1
+        if len(status_file) != len(data_file):
+            for index in range(len(status_file), len(data_file)):
+                status_list.append([data_file.at[index, 'ID value'], check_if_ad_is_still_active(data_file.at[index, 'ID value'])])
+                print('passed test 1')
+                if counter == 100:
+                    status_dataframe = pd.DataFrame(status_list)
+                    status_dataframe.columns = col_names
+                    updated_status_data = pd.concat([status_data, status_dataframe], axis=0, ignore_index=True)
+                    updated_status_data.columns = col_names
+                    updated_status_data.to_csv('status-file.csv', index=False, encoding='utf-8')
+                    counter = 0
+                time.sleep(1)
+                counter += 1
 
-        status_dataframe = pd.DataFrame(status_list)
-        status_dataframe.to_csv('status.csv')
+            status_dataframe = pd.DataFrame(status_list)
+            status_dataframe.columns = col_names
+            updated_status_data = pd.concat([status_data, status_dataframe], axis=0, ignore_index=True)
+            updated_status_data.columns = col_names
+            updated_status_data.to_csv('status-file.csv', index=False, encoding='utf-8')
+
+        # this part is to go through the new dataframe and check if any of the still active adverts are no longer
+        status_dataframe = status_file
+        for index in range(len(status_data['ID value'])):
+            if status_dataframe.at[index, 'Status'] == 'still active':
+                print('passed test 2')
+                status_dataframe.at[index, 'Status'] = check_if_ad_is_still_active(status_dataframe.at[index, 'ID value'])
+                time.sleep(1)
+            else:
+                pass
 
 
 if __name__ == "__main__":
