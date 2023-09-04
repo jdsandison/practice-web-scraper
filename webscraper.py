@@ -279,10 +279,15 @@ def check_if_ad_is_still_active(ad_id):
     soup = get_advert_html(ad_id, request_type_web)
     if soup.find('div', id='vehicle-desc'):
         status = 'still active'
+        price = soup.find('span', itemprop='price')
+        price = price.get_text(strip=True)
     else:
         status = 'inactive on: ' + date.today().strftime('%d/%m/%Y')
+        price = soup.find('div', id='price', class_='col-sm-3 col-xs-3')
+        price = price.get_text(strip=True)
+        price = price[7:]
 
-    return status
+    return [status, price]
 
 
 def main():
@@ -300,8 +305,6 @@ def main():
     current_id_number = data_file.iat[len(data_file['ID value']) - 1, data_file.columns.get_loc('ID value')] + 1
     updated_data = data_file
     status_data = status_file
-
-    date_dataframe =pd.DataFrame()
 
     electric_or_hybrid = pd.DataFrame()
 
@@ -347,35 +350,43 @@ def main():
     # this could lead to some interesting data being produced to analyse and interpret
     if check_if_still_active:
         # this first part is to append to the current scraped data
-        col_names = ['ID value', 'Status']
+        col_names = ['ID value', 'Status', 'Price (£)']
         counter = 0
         status_list = []
+        price_list = []
         if len(status_file) != len(data_file):
             for index in range(len(status_file), len(data_file)):
-                status_list.append([data_file.at[index, 'ID value'], check_if_ad_is_still_active(data_file.at[index, 'ID value'])])
-                print('passed test 1')
+                status_list.append(
+                    [data_file.at[index, 'ID value'], check_if_ad_is_still_active(data_file.at[index, 'ID value'])[0]])
+                price_list.append(
+                    [check_if_ad_is_still_active(data_file.at[index, 'ID value'])[1]])
                 if counter == 100:
                     status_dataframe = pd.DataFrame(status_list)
-                    status_dataframe.columns = col_names
-                    updated_status_data = pd.concat([status_data, status_dataframe], axis=0, ignore_index=True)
+                    price_dataframe = pd.DataFrame(price_list)
+                    full_status_dataframe = pd.concat([status_dataframe, price_dataframe], axis=1, ignore_index=True)
+                    full_status_dataframe.columns = col_names
+                    updated_status_data = pd.concat([status_data, full_status_dataframe], axis=0, ignore_index=True)
                     updated_status_data.columns = col_names
                     updated_status_data.to_csv('status-file.csv', index=False, encoding='utf-8')
                     counter = 0
+                    print('file appended')
                 time.sleep(1)
                 counter += 1
 
             status_dataframe = pd.DataFrame(status_list)
-            status_dataframe.columns = col_names
-            updated_status_data = pd.concat([status_data, status_dataframe], axis=0, ignore_index=True)
+            price_dataframe = pd.DataFrame(price_list)
+            full_status_dataframe = pd.concat([status_dataframe, price_dataframe], axis=1, ignore_index=True)
+            full_status_dataframe.columns = col_names
+            updated_status_data = pd.concat([status_data, full_status_dataframe], axis=0, ignore_index=True)
             updated_status_data.columns = col_names
             updated_status_data.to_csv('status-file.csv', index=False, encoding='utf-8')
 
         # this part is to go through the new dataframe and check if any of the still active adverts are no longer
-        status_dataframe = status_file
+        full_status_dataframe = status_file
         for index in range(len(status_data['ID value'])):
-            if status_dataframe.at[index, 'Status'] == 'still active':
+            if full_status_dataframe.at[index, 'Status'] == 'still active':
                 print('passed test 2')
-                status_dataframe.at[index, 'Status'] = check_if_ad_is_still_active(status_dataframe.at[index, 'ID value'])
+                full_status_dataframe.at[index, 'Status'] = check_if_ad_is_still_active(full_status_dataframe.at[index, 'ID value'])[0]
                 time.sleep(1)
             else:
                 pass
