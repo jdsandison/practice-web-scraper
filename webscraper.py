@@ -28,7 +28,6 @@ user_agents = ['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KH
                                                                'X) AppleWebKit/605.1.15 (KHTML, like Gecko) '
                                                                'Version/14.0.2 Mobile/15E148 Safari/604.1']
 
-
 # reading in data file from previous scraping
 data_file = pd.read_csv(r'data.csv')
 status_file = pd.read_csv(r'status-file.csv')
@@ -63,7 +62,7 @@ def get_advert_html(current_id, mode):
         if os.path.isfile(filename):
             retval = BeautifulSoup(open(filename).read(), "html.parser")
             print('found file ' + filename)
-        else :
+        else:
             print('cannot find file ' + filename)
 
     elif mode == request_type_web_with_save:
@@ -113,7 +112,7 @@ def advert_info(url, current_id):
 
     # dictionary of data scraped from the website and inputted as a parameter
     initial_data = {'makes and models': None,
-                  'Id value': current_id}
+                    'Id value': current_id}
 
     full_table_data = []
     accepted_ids = []
@@ -216,12 +215,12 @@ def advert_info(url, current_id):
         return combined_dataframe
 
 
-# below is in development
+# TODO: below is in development 
 def incomplete_table_data(current_id):
     print(current_id)
     soup = get_advert_html(current_id, request_type_local)
     if soup.find_all("div", class_="adSpecItem"):
-        initial_data ={'makes and models': None, 'Id value': current_id}
+        initial_data = {'makes and models': None, 'Id value': current_id}
         make_and_model_container = soup.find('h2', class_='col-xs-9')
         if make_and_model_container is None:
             return
@@ -232,7 +231,7 @@ def incomplete_table_data(current_id):
         make_and_model_and_id_df = pd.DataFrame(initial_data, index=[0])
         table_of_info = soup.find_all("div", class_="adDetsItem")
         list_of_table_data = []
-        #column_names = ['Year', 'Engine size', 'Mileage', 'Fuel type', 'Transmission', 'Colour', 'Body type']
+        # column_names = ['Year', 'Engine size', 'Mileage', 'Fuel type', 'Transmission', 'Colour', 'Body type']
 
         for info in table_of_info:
             data = info.text.strip()
@@ -241,14 +240,18 @@ def incomplete_table_data(current_id):
         if list_of_table_data[2] == 'Electric' or 'Hybrid':
             table_data_dataframe = pd.DataFrame(list_of_table_data, index=[0])
             specification_tab_dataframe = specification_tab_scraper(current_id)
-            electric_or_hybrid_dataframe = pd.concat([make_and_model_and_id_df, table_data_dataframe, specification_tab_dataframe], ignore_index=True, axis=1)
+            electric_or_hybrid_dataframe = pd.concat(
+                [make_and_model_and_id_df, table_data_dataframe, specification_tab_dataframe], ignore_index=True,
+                axis=1)
             if electric_or_hybrid_dataframe.shape[1] == 13:
-                electric_or_hybrid_dataframe.columns = ['Make and model', 'ID value', 'Year','Mileage (miles)',
+                electric_or_hybrid_dataframe.columns = ['Make and model', 'ID value', 'Year', 'Mileage (miles)',
                                                         'Fuel type', 'Transmission', 'Colour', 'Body type',
                                                         'Wheel drive', 'Doors', 'Seats', 'Top speed (mph)',
                                                         'Acceleration (0-62 mph) (seconds)']
-                electric_or_hybrid_dataframe['Mileage (miles)'] = electric_or_hybrid_dataframe['Mileage (miles)'].str.replace(' miles', '')
-                electric_or_hybrid_dataframe['Top speed (mph)'] = electric_or_hybrid_dataframe['Top speed (mph)'].str.replace(' mph', '')
+                electric_or_hybrid_dataframe['Mileage (miles)'] = electric_or_hybrid_dataframe[
+                    'Mileage (miles)'].str.replace(' miles', '')
+                electric_or_hybrid_dataframe['Top speed (mph)'] = electric_or_hybrid_dataframe[
+                    'Top speed (mph)'].str.replace(' mph', '')
                 electric_or_hybrid_dataframe['Acceleration (0-62 mph) (seconds)'] = electric_or_hybrid_dataframe[
                     'Acceleration (0-62 mph) (seconds)'].str.replace(' seconds', '')
 
@@ -299,7 +302,7 @@ def main():
     # the consecutive amount of blank results we can get before considering all future adverts are blank/not created yet
     max_consecutive_inactive_ids = 1000  # this number can be changed depending on how strict we are
     current_consecutive_inactive_ids = 0
-    consecutive_ids_for_checkpoint = 100 # adding a checkpoint so that all data isn't lost if there's an error
+    consecutive_ids_for_checkpoint = 100  # adding a checkpoint so that all data isn't lost if there's an error
 
     # finding what id number the scraper got up to last time and then adding 1 and continuing from there
     current_id_number = data_file.iat[len(data_file['ID value']) - 1, data_file.columns.get_loc('ID value')] + 1
@@ -354,13 +357,18 @@ def main():
         counter = 0
         status_list = []
         price_list = []
+        # if the length of status_file is equal to data_file then we can say that there's no additional adverts from
+        # last time
         if len(status_file) != len(data_file):
             for index in range(len(status_file), len(data_file)):
+                # creating two separate lists to form a dataframe with
                 status_list.append(
                     [data_file.at[index, 'ID value'], check_if_ad_is_still_active(data_file.at[index, 'ID value'])[0]])
                 price_list.append(
                     [check_if_ad_is_still_active(data_file.at[index, 'ID value'])[1]])
+                # the following part forms a 'checkpoint' system incase there's an error not all progress is lost
                 if counter == 100:
+                    # forming dataframes, naming the columns and then concatenating with the previous file
                     status_dataframe = pd.DataFrame(status_list)
                     price_dataframe = pd.DataFrame(price_list)
                     full_status_dataframe = pd.concat([status_dataframe, price_dataframe], axis=1, ignore_index=True)
@@ -372,7 +380,7 @@ def main():
                     print('file appended')
                 time.sleep(1)
                 counter += 1
-
+            # when all the new adverts are analysed this part similarly forms dataframes and then finally concatenates
             status_dataframe = pd.DataFrame(status_list)
             price_dataframe = pd.DataFrame(price_list)
             full_status_dataframe = pd.concat([status_dataframe, price_dataframe], axis=1, ignore_index=True)
@@ -384,9 +392,12 @@ def main():
         # this part is to go through the new dataframe and check if any of the still active adverts are no longer
         full_status_dataframe = status_file
         for index in range(len(status_data['ID value'])):
+            # checking previously scraped adverts that were 'still active' and seeing if that is still the case.
+            # adverts that are inactive are left alone
             if full_status_dataframe.at[index, 'Status'] == 'still active':
                 print('passed test 2')
-                full_status_dataframe.at[index, 'Status'] = check_if_ad_is_still_active(full_status_dataframe.at[index, 'ID value'])[0]
+                full_status_dataframe.at[index, 'Status'] = \
+                check_if_ad_is_still_active(full_status_dataframe.at[index, 'ID value'])[0]
                 time.sleep(1)
             else:
                 pass
