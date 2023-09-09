@@ -395,7 +395,7 @@ def main():
             # checking previously scraped adverts that were 'still active' and seeing if that is still the case.
             # adverts that are inactive are left alone
             if full_status_dataframe.at[index, 'Status'] == 'still active':
-                print('passed test 2')
+                print('checking: ' , status_data['ID value'][index])
                 full_status_dataframe.at[index, 'Status'] = \
                 check_if_ad_is_still_active(full_status_dataframe.at[index, 'ID value'])[0]
                 time.sleep(1)
