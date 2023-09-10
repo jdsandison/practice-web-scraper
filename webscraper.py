@@ -402,6 +402,8 @@ def main():
             else:
                 pass
 
+        full_status_dataframe.to_csv('status-file.csv', index=False, encoding='utf-8')
+
 
 if __name__ == "__main__":
     main()
