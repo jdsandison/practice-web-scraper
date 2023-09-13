@@ -28,7 +28,7 @@ user_agents = ['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KH
                                                                'X) AppleWebKit/605.1.15 (KHTML, like Gecko) '
                                                                'Version/14.0.2 Mobile/15E148 Safari/604.1']
 
-# reading in data file from previous scraping
+# reading in data file and status file from previous scape
 data_file = pd.read_csv(r'data.csv')
 status_file = pd.read_csv(r'status-file.csv')
 
@@ -49,6 +49,13 @@ def get_soup(url):
 
 
 def get_advert_html(current_id, mode):
+    """
+    :param current_id: The ID we are scraping
+    :param mode: either request_type_web: regular scraping from the web
+                or request_type_local: scrapes data from a locally saved version of the html
+                or request_type_web_with_save: scrapes the html of the website and saves it locally
+    :return: the html to be scraped, using beautiful soup
+    """
     global base_url, request_type_web, request_type_local, request_type_web_with_save
 
     retval = "no file"
