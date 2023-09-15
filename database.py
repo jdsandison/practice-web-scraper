@@ -30,25 +30,28 @@ def main():
     for row in range(number_of_rows):
         fuel_name = file.iat[row, column]
         mycursor.execute("SELECT * FROM fuel_types WHERE fuel_type = '" + fuel_name + "' LIMIT 1")
-        mycursor.fetchone()
+        record = mycursor.fetchone()
 
         if mycursor.rowcount != 1:
-            #mycursor.reset()
+            # run an insert statement to create this fuel type fuel_name
+            # set fuel_type_id by reading the inserted id
+
             statement = "INSERT INTO `webscraper`.`fuel_types` (`fuel_type`) VALUES ('" + fuel_name + "');"
             mycursor.execute(statement)
-            #mydb.commit()
-            print(statement)
-                # run an insert statement to create this fuel type fuel_name
-                # set fuel_type_id by reading the inserted id
+            fuel_type_id = mycursor.lastrowid
 
         else:
             # fuel type exists get the id
-            for x in mycursor:
-                fuel_type_id = x[0]
+            print(record[0])
+            # for x in record:
+            #    print(x)
+            fuel_type_id = record[0]
+            #    print('bob' + fuel_type_id)
+
 
         # at this point, we have fuel_type_id, so insert a row into DATA with this fuel type ID.
-
-
+        statement = "INSERT INTO `webscraper`.`dataset` (`Make and model`, fuel_type_id) VALUES ('" + file.iat[row, 0] +"'," + str(fuel_type_id) +")"
+        mycursor.execute(statement)
 if __name__ == "__main__":
     main()
 
