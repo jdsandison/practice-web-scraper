@@ -1,7 +1,6 @@
 import mysql.connector
 import pandas as pd
 import os
-
 file = pd.read_csv(r'data.csv')
 mysql_password = os.environ.get("MYSQL_PASSWORD")
 
@@ -12,6 +11,7 @@ def main():
         user="root",
         password=mysql_password
     )
+    mydb.autocommit = True
     mycursor = mydb.cursor()
     mycursor.execute("USE webscraper")
     mycursor.execute("SELECT * FROM manufacturers WHERE manufacturer_name = 'jaguar'")
@@ -29,18 +29,22 @@ def main():
     number_of_rows = len(file['ID value'])
     for row in range(number_of_rows):
         fuel_name = file.iat[row, column]
-        mycursor.execute("SELECT * FROM fuel_types WHERE fuel_type = '" + fuel_name + "'")
-        if mycursor.rowcount == 1:
-            # fuel type exists get the id
-            for x in mycursor:
-                print(x[0])
-                fuel_type_id = x[0]
-        else:
-            print('create this')
-            for x in mycursor:
-                print(x)
+        mycursor.execute("SELECT * FROM fuel_types WHERE fuel_type = '" + fuel_name + "' LIMIT 1")
+        mycursor.fetchone()
+
+        if mycursor.rowcount != 1:
+            #mycursor.reset()
+            statement = "INSERT INTO `webscraper`.`fuel_types` (`fuel_type`) VALUES ('" + fuel_name + "');"
+            mycursor.execute(statement)
+            #mydb.commit()
+            print(statement)
                 # run an insert statement to create this fuel type fuel_name
                 # set fuel_type_id by reading the inserted id
+
+        else:
+            # fuel type exists get the id
+            for x in mycursor:
+                fuel_type_id = x[0]
 
         # at this point, we have fuel_type_id, so insert a row into DATA with this fuel type ID.
 
