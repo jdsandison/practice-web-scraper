@@ -18,18 +18,54 @@ def main():
     for x in mycursor:
         print(x)
 
-    mycursor.execute("DESCRIBE data")
-    for x in mycursor:
-        print(x)
     fuel_name = ""
+    manufacturer = ""
     fuel_type_id = 0
     body_type_id = 0
+    model_id = 0
+    manufacturer_id = 0
     row = 0
     column_fuel = 5
     column_body_types = 8
 
     number_of_rows = len(file['ID value'])
     for row in range(number_of_rows):
+        # the following is to split the makes_and_models column into separate makes and models columns
+        model = ""
+        make_and_model = file.iat[row, 0]
+        # this is to catch the exceptions to brands with a space in the name
+        if make_and_model.split(' ', 1) == 'Land' or 'Aston' or 'Alfa':
+            manufacturer = make_and_model.split(' ', 2)[0]
+            for i in range(len(make_and_model.split(' ', 2))-1):
+                model = model + ' ' + make_and_model.split(' ', 2)[i+1]
+                model = model.lstrip()
+
+        else:
+            manufacturer = make_and_model.split(' ', 1)[0]
+            for i in range(len(make_and_model.split(' ', 2))-1):
+                model = model + ' ' + make_and_model.split(' ', 2)[i+1]
+                model = model.lstrip()
+
+        mycursor.execute("SELECT * FROM manufacturers WHERE manufacturer_name = '" + manufacturer + "' LIMIT 1")
+        record_manufacturer = mycursor.fetchone()
+        if record_manufacturer is None:
+            statement_manufacturer = "INSERT INTO `webscraper`.`manufacturers` (manufacturer_name) VALUES ('" + manufacturer +"');"
+            mycursor.execute(statement_manufacturer)
+            manufacturer_id = mycursor.lastrowid
+
+        else:
+            manufacturer_id = record_manufacturer[0]
+
+        mycursor.execute("SELECT * FROM models WHERE model_name = '" + model + "' LIMIT 1")
+        record_model = mycursor.fetchone()
+        if record_model is None:
+            statement_model = "INSERT INTO `webscraper`.`models` (`model_name`) VALUES ('" + model + "');"
+            mycursor.execute(statement_model)
+            model_id = mycursor.lastrowid
+
+        else:
+            model_id = record_model[0]
+
         fuel_name = file.iat[row, column_fuel]
         mycursor.execute("SELECT * FROM fuel_types WHERE fuel_type = '" + fuel_name + "' LIMIT 1")
         record = mycursor.fetchone()
@@ -53,24 +89,18 @@ def main():
 
         body_type_name = file.iat[row, column_body_types]
         mycursor.execute("SELECT * FROM body_types WHERE body_type = '" + body_type_name + "' LIMIT 1")
-        record2 = mycursor.fetchone()
+        record_body = mycursor.fetchone()
 
-        # if LIMIT is 1 then mycursor.rowcount is always 1? Therefore, we should see when record2 is not present?
-        if record2 is None:
+        if record_body is None:
             statement = "INSERT INTO `webscraper`.`body_types` (`body_type`) VALUES ('" + body_type_name + "');"
             mycursor.execute(statement)
             body_type_id = mycursor.lastrowid
 
         else:
-            body_type_id = record2[0]
+            body_type_id = record_body[0]
 
-
-        print('body type id: ' + str(body_type_id))
-
-        statement2 = "INSERT INTO `webscraper`.`dataset` (`Make and model`, fuel_type_id, body_type_id) VALUES ('" + file.iat[row, 0] + "'," + str(fuel_type_id) +", " + str(body_type_id) + ")"
-        mycursor.execute(statement2)
-    # similarly with the body type column, include a table of id's with respective body tpes (coupe, hatchback ect)
-    # then split the make and model column into makes, models. And then create a table of each that number them with respective ids.
+        final_statement = "INSERT INTO `webscraper`.`dataset` (manufacturer_id, model_id ,fuel_type_id, body_type_id) VALUES (" + str(manufacturer_id) + "," + str(model_id) + ","+ str(fuel_type_id) +"," + str(body_type_id) + ")"
+        mycursor.execute(final_statement)
 
 
 if __name__ == "__main__":
