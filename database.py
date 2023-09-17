@@ -24,6 +24,8 @@ def main():
     body_type_id = 0
     model_id = 0
     manufacturer_id = 0
+    transmission_id = 0
+    wheel_drive_id = 0
     row = 0
     column_fuel = 5
     column_body_types = 8
@@ -99,7 +101,33 @@ def main():
         else:
             body_type_id = record_body[0]
 
-        final_statement = "INSERT INTO `webscraper`.`dataset` (manufacturer_id, model_id ,fuel_type_id, body_type_id) VALUES (" + str(manufacturer_id) + "," + str(model_id) + ","+ str(fuel_type_id) +"," + str(body_type_id) + ")"
+        # transmission column of the dataset
+        transmission_name = file.iat[row, 6]
+        mycursor.execute("SELECT * FROM transmission_types WHERE transmission_type = '" + transmission_name + "' LIMIT 1")
+        record_transmission = mycursor.fetchone()
+
+        if record_transmission is None:
+            statement = "INSERT INTO `webscraper`.`transmission_types` (`transmission_type`) VALUES ('" + transmission_name + "');"
+            mycursor.execute(statement)
+            transmisison_id = mycursor.lastrowid()
+
+        else:
+            transmission_id = record_transmission[0]
+
+        # Wheel drive column of the dataset
+        wheel_drive_name = file.iat[row, 10]
+        mycursor.execute("SELECT * FROM wheel_drive WHERE wheel_drive_type = '" + wheel_drive_name + "' LIMIT 1")
+        record_wheel = mycursor.fetchone()
+
+        if record_wheel is None:
+            statement = "INSERT INTO `webscraper`.`wheel_drive` (`wheel_drive_type`) VALUES ('" + wheel_drive_name + "');"
+            mycursor.execute(statement)
+            wheel_drive_id = mycursor.lastrowid
+
+        else:
+            wheel_drive_id = record_wheel[0]
+
+        final_statement = "INSERT INTO `webscraper`.`dataset` (manufacturer_id, model_id ,fuel_type_id, body_type_id, transmission_type_id, wheel_drive_type_id) VALUES (" + str(manufacturer_id) + "," + str(model_id) + ","+ str(fuel_type_id) +"," + str(body_type_id) + "," + str(transmission_id) + "," + str(wheel_drive_id) + ")"
         mycursor.execute(final_statement)
 
 
