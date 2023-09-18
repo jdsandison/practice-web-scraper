@@ -48,6 +48,12 @@ def main():
     column_fuel = 5
     column_body_types = 8
 
+    truncate_dataset = "TRUNCATE `webscraper`.`dataset`"
+    truncate_status = "TRUNCATE `webscraper`.`status_and_price`"
+    mycursor.execute(truncate_dataset)
+    mycursor.execute(truncate_status)
+
+
     number_of_rows = len(file['ID value'])
     for row in range(number_of_rows):
         print(row)
@@ -161,22 +167,21 @@ def main():
         co2 = file.iat[row, 16]
         tank_range = file.iat[row, 17]
 
+        if ',' in tank_range:
+            tank_range = tank_range.replace(',', '')
+
         mileage = mileage.replace(",", "")
         mileage = int(mileage)
 
-        final_statement = "INSERT INTO `webscraper`.`dataset` (manufacturer_id, model_id ,fuel_type_id, body_type_id, transmission_type_id, wheel_drive_type_id, `ID value`, Year, `Engine size (litres)`, `Colour`, Mpg, Doors, Seats, `Top speed (mph)`, `Acceleration (0-62 mph) (seconds)`, `CO2 rating (g/km)`, `Tank range (miles)`, `Engine power (bhp)`, `Mileage (miles)`) VALUES (" + str(manufacturer_id) + "," + str(model_id) + ","+ str(fuel_type_id) +"," + str(body_type_id) + "," + str(transmission_id) + "," + str(wheel_drive_id) + "," + str(id_value) + "," + str(year) + "," + str(engine_size) + ",'" + colour_of_car + "'," + str(mpg) + "," + str(doors) + "," + str(seats) + "," + str(top_speed) + "," + str(acceleration) + "," + str(co2) + "," + str(tank_range) + "," + str(engine_power) + ","+ str(mileage) + ")"
-
-        test_statement = "INSERT INTO `webscraper`.`dataset` (`ID value` , Year , `Engine size (litres)` , `Mileage (miles)`) VALUES (" + str(id_value) + "," + str(year) + "," + str(engine_size) + "," + str(mileage) + ")"
-
-        test_2_statement = "INSERT INTO `webscraper`.`dataset` (`Mileage (miles)`) VALUES ("+ str(mileage) + ")"
+        final_statement = "INSERT INTO `webscraper`.`dataset` (advert_id , Year , `Engine size (litres)`,`Mileage (miles)`, Colour, fuel_type_id, transmission_type_id, body_type_id, manufacturer_id, model_id, Mpg, wheel_drive_type_id, Doors, Seats, `Engine power (bhp)`, `Top speed (mph)`, `Acceleration (0-62 mph) (seconds)`, `CO2 rating (g/km)`, `Tank range (miles)`) VALUES (" + str(id_value) + "," + str(year) + "," + str(engine_size) + ","+ str(mileage) + ",'" + colour_of_car + "'," + str(fuel_type_id) + "," + str(transmission_id) + "," + str(body_type_id) + "," + str(manufacturer_id) + "," + str(model_id) + "," + str(mpg) + "," + str(wheel_drive_id) + "," + str(doors) + "," + str(seats) + "," + str(engine_power) + "," + str(top_speed) + "," + str(acceleration) + "," + str(co2) + "," + str(tank_range) + ")"
 
         list2 = [id_value, year, engine_size, mileage, colour_of_car, mpg, doors, seats, engine_power, top_speed, acceleration, co2, tank_range]
         print(id_value, year, engine_size, mileage, colour_of_car, mpg, doors, seats, engine_power, top_speed, acceleration, co2, tank_range, len(list2))
 
-        #mycursor.execute(final_statement)
+        mycursor.execute(final_statement)
+
 
         # status-file data:
-
         if status_file.iat[row, 1] == 'still active':
             status = None
         else:
@@ -186,8 +191,12 @@ def main():
         price = price.replace(",", "")
         price = int(price)
 
-        status_statement = "INSERT INTO `webscraper`.`status_and_price` (advert_id, status, price) VALUES (" + str(id_value) + ", " + ("'" + str(status) + "'" if status is not None else "NULL") + ", " + str(price) + ")"
+        status_statement = "INSERT INTO `webscraper`.`status_and_price` (advert_id, status, price) VALUES (" + str(id_value) + "," + ("'" + str(status) + "'" if status is not None else "NULL") + ", " + str(price) + ")"
         mycursor.execute(status_statement)
+
+    query = " SELECT dataset.*, status_and_price.status, status_and_price.price FROM dataset LEFT JOIN status_and_price ON dataset.advert_id = status_and_price.advert_id "
+    print(query)
+    mycursor.execute(query)
 
 if __name__ == "__main__":
     main()
