@@ -135,7 +135,7 @@ def main():
         if record_transmission is None:
             statement = "INSERT INTO `webscraper`.`transmission_types` (`transmission_type`) VALUES ('" + transmission_name + "');"
             mycursor.execute(statement)
-            transmisison_id = mycursor.lastrowid()
+            transmission_id = mycursor.lastrowid
         else:
             transmission_id = record_transmission[0]
 
@@ -194,9 +194,13 @@ def main():
         status_statement = "INSERT INTO `webscraper`.`status_and_price` (advert_id, status, price) VALUES (" + str(id_value) + "," + ("'" + str(status) + "'" if status is not None else "NULL") + ", " + str(price) + ")"
         mycursor.execute(status_statement)
 
+    # joining the two tables and printing the result
     query = " SELECT dataset.*, status_and_price.status, status_and_price.price FROM dataset LEFT JOIN status_and_price ON dataset.advert_id = status_and_price.advert_id "
-    print(query)
     mycursor.execute(query)
+    rows = mycursor.fetchall()
+    for r in rows:
+        print(r)
+
 
 if __name__ == "__main__":
     main()
