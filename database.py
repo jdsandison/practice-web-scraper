@@ -2,6 +2,7 @@ import mysql.connector
 import pandas as pd
 import os
 file = pd.read_csv(r'data.csv')
+status_file = pd.read_csv(r'status-file.csv')
 mysql_password = os.environ.get("MYSQL_PASSWORD")
 
 
@@ -31,7 +32,7 @@ def main():
     year = 0
     engine_size = 0
     mileage = 0
-    colour = 0
+    colour_of_car = ""
     mpg = 0
     doors = 0
     seats = 0
@@ -40,12 +41,17 @@ def main():
     acceleration = 0
     co2 = 0
     tank_range = 0
+    status = ""
+    price = ""
+
     row = 0
     column_fuel = 5
     column_body_types = 8
 
     number_of_rows = len(file['ID value'])
     for row in range(number_of_rows):
+        print(row)
+
         # the following is to split the makes_and_models column into separate makes and models columns
         model = ""
         make_and_model = file.iat[row, 0]
@@ -124,7 +130,6 @@ def main():
             statement = "INSERT INTO `webscraper`.`transmission_types` (`transmission_type`) VALUES ('" + transmission_name + "');"
             mycursor.execute(statement)
             transmisison_id = mycursor.lastrowid()
-
         else:
             transmission_id = record_transmission[0]
 
@@ -142,13 +147,47 @@ def main():
             wheel_drive_id = record_wheel[0]
 
         # inserting the rest of the data
+        id_value = file.iat[row, 1]
+        year = file.iat[row, 2]
+        engine_size = file.iat[row, 3]
+        mileage = file.iat[row, 4]
+        colour_of_car = file.iat[row, 7]
+        mpg = file.iat[row, 9]
+        doors = file.iat[row, 11]
+        seats = file.iat[row, 12]
+        engine_power = file.iat[row, 13]
+        top_speed = file.iat[row, 14]
+        acceleration = file.iat[row, 15]
+        co2 = file.iat[row, 16]
+        tank_range = file.iat[row, 17]
 
+        mileage = mileage.replace(",", "")
+        mileage = int(mileage)
 
+        final_statement = "INSERT INTO `webscraper`.`dataset` (manufacturer_id, model_id ,fuel_type_id, body_type_id, transmission_type_id, wheel_drive_type_id, `ID value`, Year, `Engine size (litres)`, `Colour`, Mpg, Doors, Seats, `Top speed (mph)`, `Acceleration (0-62 mph) (seconds)`, `CO2 rating (g/km)`, `Tank range (miles)`, `Engine power (bhp)`, `Mileage (miles)`) VALUES (" + str(manufacturer_id) + "," + str(model_id) + ","+ str(fuel_type_id) +"," + str(body_type_id) + "," + str(transmission_id) + "," + str(wheel_drive_id) + "," + str(id_value) + "," + str(year) + "," + str(engine_size) + ",'" + colour_of_car + "'," + str(mpg) + "," + str(doors) + "," + str(seats) + "," + str(top_speed) + "," + str(acceleration) + "," + str(co2) + "," + str(tank_range) + "," + str(engine_power) + ","+ str(mileage) + ")"
 
+        test_statement = "INSERT INTO `webscraper`.`dataset` (`ID value` , Year , `Engine size (litres)` , `Mileage (miles)`) VALUES (" + str(id_value) + "," + str(year) + "," + str(engine_size) + "," + str(mileage) + ")"
 
-        final_statement = "INSERT INTO `webscraper`.`dataset` (manufacturer_id, model_id ,fuel_type_id, body_type_id, transmission_type_id, wheel_drive_type_id) VALUES (" + str(manufacturer_id) + "," + str(model_id) + ","+ str(fuel_type_id) +"," + str(body_type_id) + "," + str(transmission_id) + "," + str(wheel_drive_id) + ")"
-        mycursor.execute(final_statement)
+        test_2_statement = "INSERT INTO `webscraper`.`dataset` (`Mileage (miles)`) VALUES ("+ str(mileage) + ")"
 
+        list2 = [id_value, year, engine_size, mileage, colour_of_car, mpg, doors, seats, engine_power, top_speed, acceleration, co2, tank_range]
+        print(id_value, year, engine_size, mileage, colour_of_car, mpg, doors, seats, engine_power, top_speed, acceleration, co2, tank_range, len(list2))
+
+        #mycursor.execute(final_statement)
+
+        # status-file data:
+
+        if status_file.iat[row, 1] == 'still active':
+            status = None
+        else:
+            status = status_file.iat[row, 1]
+
+        price = status_file.iat[row, 2]
+        price = price.replace(",", "")
+        price = int(price)
+
+        status_statement = "INSERT INTO `webscraper`.`status_and_price` (advert_id, status, price) VALUES (" + str(id_value) + ", " + ("'" + str(status) + "'" if status is not None else "NULL") + ", " + str(price) + ")"
+        mycursor.execute(status_statement)
 
 if __name__ == "__main__":
     main()

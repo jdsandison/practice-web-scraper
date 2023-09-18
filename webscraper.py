@@ -304,8 +304,8 @@ def check_if_ad_is_still_active(ad_id):
 def main():
     global base_url
 
-    still_searching = False  # boolean: when false the task is complete and the scraper will stop
-    check_if_still_active = True  # boolean: separate scraper to find whether an ad is still active or not
+    still_searching = True  # boolean: when false the task is complete and the scraper will stop
+    check_if_still_active = False  # boolean: separate scraper to find whether an ad is still active or not
 
     # the consecutive amount of blank results we can get before considering all future adverts are blank/not created yet
     max_consecutive_inactive_ids = 1000  # this number can be changed depending on how strict we are
@@ -403,9 +403,9 @@ def main():
             # checking previously scraped adverts that were 'still active' and seeing if that is still the case.
             # adverts that are inactive are left alone
             if full_status_dataframe.at[index, 'Status'] == 'still active':
-                print('checking: ' , status_data['ID value'][index])
+                print('checking: ', status_data['ID value'][index])
                 full_status_dataframe.at[index, 'Status'] = \
-                check_if_ad_is_still_active(full_status_dataframe.at[index, 'ID value'])[0]
+                    check_if_ad_is_still_active(full_status_dataframe.at[index, 'ID value'])[0]
                 time.sleep(1)
             else:
                 pass
