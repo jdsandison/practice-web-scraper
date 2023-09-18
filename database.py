@@ -18,6 +18,7 @@ def main():
     for x in mycursor:
         print(x)
 
+    # initialising variables
     fuel_name = ""
     manufacturer = ""
     fuel_type_id = 0
@@ -26,6 +27,19 @@ def main():
     manufacturer_id = 0
     transmission_id = 0
     wheel_drive_id = 0
+    id_value = 0
+    year = 0
+    engine_size = 0
+    mileage = 0
+    colour = 0
+    mpg = 0
+    doors = 0
+    seats = 0
+    engine_power = 0
+    top_speed = 0
+    acceleration = 0
+    co2 = 0
+    tank_range = 0
     row = 0
     column_fuel = 5
     column_body_types = 8
@@ -126,6 +140,11 @@ def main():
 
         else:
             wheel_drive_id = record_wheel[0]
+
+        # inserting the rest of the data
+
+
+
 
         final_statement = "INSERT INTO `webscraper`.`dataset` (manufacturer_id, model_id ,fuel_type_id, body_type_id, transmission_type_id, wheel_drive_type_id) VALUES (" + str(manufacturer_id) + "," + str(model_id) + ","+ str(fuel_type_id) +"," + str(body_type_id) + "," + str(transmission_id) + "," + str(wheel_drive_id) + ")"
         mycursor.execute(final_statement)

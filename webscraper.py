@@ -5,6 +5,7 @@ import os
 import time
 import random
 from datetime import date
+import mysql.connector
 
 # changed the base url to the ip address:
 base_url = 'http://93.174.10.120/ad/'
@@ -304,7 +305,7 @@ def main():
     global base_url
 
     still_searching = False  # boolean: when false the task is complete and the scraper will stop
-    check_if_still_active = True  # separate scraper to find whether an ad is still active or not
+    check_if_still_active = True  # boolean: separate scraper to find whether an ad is still active or not
 
     # the consecutive amount of blank results we can get before considering all future adverts are blank/not created yet
     max_consecutive_inactive_ids = 1000  # this number can be changed depending on how strict we are
