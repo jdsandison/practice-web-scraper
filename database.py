@@ -49,7 +49,7 @@ def main():
     column_body_types = 8
 
     truncate_dataset = "TRUNCATE `webscraper`.`dataset`"
-    truncate_status = "TRUNCATE `webscraper`.`status_and_price`"
+    truncate_status = "TRUNCATE `webscraper`.`status`"
     mycursor.execute(truncate_dataset)
     mycursor.execute(truncate_status)
 
@@ -112,9 +112,6 @@ def main():
 
 
         # at this point, we have fuel_type_id, so insert a row into DATA with this fuel type ID.
-        #statement = "INSERT INTO `webscraper`.`dataset` (`Make and model`, fuel_type_id) VALUES ('" + file.iat[row, 0] +"'," + str(fuel_type_id) +")"
-        #mycursor.execute(statement)
-
         body_type_name = file.iat[row, column_body_types]
         mycursor.execute("SELECT * FROM body_types WHERE body_type = '" + body_type_name + "' LIMIT 1")
         record_body = mycursor.fetchone()
@@ -173,10 +170,14 @@ def main():
         mileage = mileage.replace(",", "")
         mileage = int(mileage)
 
-        final_statement = "INSERT INTO `webscraper`.`dataset` (advert_id , Year , `Engine size (litres)`,`Mileage (miles)`, Colour, fuel_type_id, transmission_type_id, body_type_id, manufacturer_id, model_id, Mpg, wheel_drive_type_id, Doors, Seats, `Engine power (bhp)`, `Top speed (mph)`, `Acceleration (0-62 mph) (seconds)`, `CO2 rating (g/km)`, `Tank range (miles)`) VALUES (" + str(id_value) + "," + str(year) + "," + str(engine_size) + ","+ str(mileage) + ",'" + colour_of_car + "'," + str(fuel_type_id) + "," + str(transmission_id) + "," + str(body_type_id) + "," + str(manufacturer_id) + "," + str(model_id) + "," + str(mpg) + "," + str(wheel_drive_id) + "," + str(doors) + "," + str(seats) + "," + str(engine_power) + "," + str(top_speed) + "," + str(acceleration) + "," + str(co2) + "," + str(tank_range) + ")"
+        price = status_file.iat[row, 2]
+        price = price.replace(",", "")
+        price = int(price)
 
-        list2 = [id_value, year, engine_size, mileage, colour_of_car, mpg, doors, seats, engine_power, top_speed, acceleration, co2, tank_range]
-        print(id_value, year, engine_size, mileage, colour_of_car, mpg, doors, seats, engine_power, top_speed, acceleration, co2, tank_range, len(list2))
+        final_statement = "INSERT INTO `webscraper`.`dataset` (advert_id , Year , `Engine size (litres)`,`Mileage (miles)`, Colour, fuel_type_id, transmission_type_id, body_type_id, manufacturer_id, model_id, Mpg, wheel_drive_type_id, Doors, Seats, `Engine power (bhp)`, `Top speed (mph)`, `Acceleration (0-62 mph) (seconds)`, `CO2 rating (g/km)`, `Tank range (miles)`, price) VALUES (" + str(id_value) + "," + str(year) + "," + str(engine_size) + ","+ str(mileage) + ",'" + colour_of_car + "'," + str(fuel_type_id) + "," + str(transmission_id) + "," + str(body_type_id) + "," + str(manufacturer_id) + "," + str(model_id) + "," + str(mpg) + "," + str(wheel_drive_id) + "," + str(doors) + "," + str(seats) + "," + str(engine_power) + "," + str(top_speed) + "," + str(acceleration) + "," + str(co2) + "," + str(tank_range) + "," + str(price) +")"
+
+        list2 = [id_value, year, engine_size, mileage, colour_of_car, mpg, doors, seats, engine_power, top_speed, acceleration, co2, tank_range, price]
+        print(id_value, year, engine_size, mileage, colour_of_car, mpg, doors, seats, engine_power, top_speed, acceleration, co2, tank_range, price, len(list2))
 
         mycursor.execute(final_statement)
 
@@ -187,15 +188,11 @@ def main():
         else:
             status = status_file.iat[row, 1]
 
-        price = status_file.iat[row, 2]
-        price = price.replace(",", "")
-        price = int(price)
-
-        status_statement = "INSERT INTO `webscraper`.`status_and_price` (advert_id, status, price) VALUES (" + str(id_value) + "," + ("'" + str(status) + "'" if status is not None else "NULL") + ", " + str(price) + ")"
+        status_statement = "INSERT INTO `webscraper`.`status` (advert_id, status) VALUES (" + str(id_value) + "," + ("'" + str(status) + "'" if status is not None else "NULL") + ")"
         mycursor.execute(status_statement)
 
     # joining the two tables and printing the result
-    query = " SELECT dataset.*, status_and_price.status, status_and_price.price FROM dataset LEFT JOIN status_and_price ON dataset.advert_id = status_and_price.advert_id "
+    query = "SELECT dataset.*, status.status FROM dataset LEFT JOIN status ON dataset.advert_id = status.advert_id"
     mycursor.execute(query)
     rows = mycursor.fetchall()
     for r in rows:
