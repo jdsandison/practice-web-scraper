@@ -191,6 +191,9 @@ def main():
         status_statement = "INSERT INTO `webscraper`.`status` (advert_id, status) VALUES (" + str(id_value) + "," + ("'" + str(status) + "'" if status is not None else "NULL") + ")"
         mycursor.execute(status_statement)
 
+    rover_statement = "UPDATE models SET model_name = SUBSTRING_INDEX(model_name, ' ', -1) WHERE model_name LIKE 'Rover%'"
+    # mycursor.execute(rover_statement)
+
     # joining the two tables and printing the result
     query = "SELECT dataset.*, status.status FROM dataset LEFT JOIN status ON dataset.advert_id = status.advert_id"
     mycursor.execute(query)
