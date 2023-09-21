@@ -192,7 +192,7 @@ def main():
         mycursor.execute(status_statement)
 
     rover_statement = "UPDATE models SET model_name = SUBSTRING_INDEX(model_name, ' ', -1) WHERE model_name LIKE 'Rover%'"
-    # mycursor.execute(rover_statement)
+    mycursor.execute(rover_statement)
 
     # joining the two tables and printing the result
     query = "SELECT dataset.*, status.status FROM dataset LEFT JOIN status ON dataset.advert_id = status.advert_id"
