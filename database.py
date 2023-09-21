@@ -62,17 +62,17 @@ def main():
         model = ""
         make_and_model = file.iat[row, 0]
         # this is to catch the exceptions to brands with a space in the name
-        if make_and_model.split(' ', 1) == 'Land' or 'Aston' or 'Alfa':
-            manufacturer = make_and_model.split(' ', 2)[0]
-            for i in range(len(make_and_model.split(' ', 2))-1):
-                model = model + ' ' + make_and_model.split(' ', 2)[i+1]
-                model = model.lstrip()
-
+        parts = make_and_model.split()
+        if parts[0] in ['Land', 'Aston', 'Alfa']:
+            manufacturer = parts[0] + ' ' + parts[1]
+            model = ' '.join(parts[2:])
         else:
-            manufacturer = make_and_model.split(' ', 1)[0]
-            for i in range(len(make_and_model.split(' ', 2))-1):
-                model = model + ' ' + make_and_model.split(' ', 2)[i+1]
-                model = model.lstrip()
+            manufacturer = parts[0]
+            model = ' '.join(parts[1:])
+
+        # Trim leading and trailing spaces from manufacturer and model
+        manufacturer = manufacturer.strip()
+        model = model.strip()
 
         mycursor.execute("SELECT * FROM manufacturers WHERE manufacturer_name = '" + manufacturer + "' LIMIT 1")
         record_manufacturer = mycursor.fetchone()
@@ -190,9 +190,6 @@ def main():
 
         status_statement = "INSERT INTO `webscraper`.`status` (advert_id, status) VALUES (" + str(id_value) + "," + ("'" + str(status) + "'" if status is not None else "NULL") + ")"
         mycursor.execute(status_statement)
-
-    rover_statement = "UPDATE models SET model_name = SUBSTRING_INDEX(model_name, ' ', -1) WHERE model_name LIKE 'Rover%'"
-    mycursor.execute(rover_statement)
 
     # joining the two tables and printing the result
     query = "SELECT dataset.*, status.status FROM dataset LEFT JOIN status ON dataset.advert_id = status.advert_id"
