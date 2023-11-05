@@ -20,7 +20,7 @@ I have been working on this project during spare time over the summer. I still h
 
 
 ## Data Collection
-Scraped car listings using python packages. The collected data includes information such as car make, model, year, price, and more.
+Scraped car listings using python packages. The collected data includes information such as car makes, models, year, price, and more.
 
 ## Data Storage
 Created a MySQL relational database to store the collected data for better organisation and data retrieval.
