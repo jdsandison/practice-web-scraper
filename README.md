@@ -26,8 +26,8 @@ Scraped car listings using python packages. The collected data includes informat
 Created a MySQL relational database to store the collected data for better organisation and data retrieval.
 
 ## Data Analysis
-Our data analysis includes:
+Features include:
 - Exploratory Data Analysis (EDA) to understand the dataset.
-- Visualisation of price trends, car popularity, and more.
+- Visualisation of pricing trends, car popularity, depreciation rates and more.
 - Planning on capturing the duration of adverts to predict desirability of different features.
 - Aspiring to add predictive elements through machine learning.
